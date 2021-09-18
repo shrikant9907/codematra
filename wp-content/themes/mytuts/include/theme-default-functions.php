@@ -396,3 +396,21 @@ function cm_theme_entry_meta() {
 //        echo $comment_number ;
 
 }
+
+function getBadgeColor($name) {
+    if (!$name ) {
+        return 'bg_green';
+    }
+
+    $name = strtolower($name);
+
+    if ($name == 'php') {
+        return 'bg_secondary';
+    }
+
+    if ($name == 'python') {
+        return 'bg_indigo';
+    }
+
+    return $badgeColor;
+}
