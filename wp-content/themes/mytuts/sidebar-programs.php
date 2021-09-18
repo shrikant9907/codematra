@@ -9,11 +9,17 @@ $term_slug = $term_obj_list['0']->slug;
 ?>
 
 <!-- Programs List -->
-<div class="card cui2">
-    <div class="card-header rounded-0 pb_0">
-        <h3 class="text-primary mb_0">PHP Programs</h3>
+<div class="card cui2 sidebar-listing">
+    <div class="card-header rounded-0 py_20 border-bottom">
+        <?php if ($term_name) {
+            echo '<h3 class="text-primary f18 mb_0 font_bold">'.$term_name.' Programs</h3>';
+        } else {
+            echo '<h3 class="text-primary f18 mb_0 font_bold"> Programs</h3>';
+        }
+        ?>
+        
     </div>
-    <div class="cbody">
+    <div class="cbody p-0">
         <ul class="listing type2">
         <?php
 
@@ -36,8 +42,8 @@ $term_slug = $term_obj_list['0']->slug;
         foreach($phpPrograms as $program) {
             $sn++;
         ?>
-            <li class="px-0">
-                <a class="text_blue" href="<?php echo the_permalink($program->ID); ?>">
+            <li class="">
+                <a class="text-dark" href="<?php echo the_permalink($program->ID); ?>">
                     <span class="text-primary"><?php echo $sn; ?>.</span> <?php echo $program->post_title ?>
                 </a>
             </li>
@@ -49,11 +55,11 @@ $term_slug = $term_obj_list['0']->slug;
     </div>
 </div>
 <!-- Social Icons  -->
-<div class="card cui2">
-    <div class="card-header rounded-0 pb_0">
-        <h3 class="text-primary mb_0">Follow us</h3>
+<div class="card cui2 typography">
+    <div class="card-header rounded-0 py_20 mb_20 border-bottom">
+        <h3 class="text-primary f18 mbi_0 font_bold">Follow us</h3>
     </div>
-    <div class="card-body">
+    <div class="card-body pti_0">
         <ul class="socialicons siconsb"> 
             <li class="facebook"><a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
             <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>

@@ -6,3 +6,8 @@
 .sidebar-ui .wp-block-group__inner-container > h2 {
     color: #FA6C39 !important;
 }
+
+.sidebar-listing .listing li {
+    border-top: 1px dashed #dee2e6!important;
+    line-height: 22px;
+} 

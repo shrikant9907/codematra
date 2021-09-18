@@ -29,9 +29,9 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
           if(have_posts()): 
               while(have_posts()): the_post();  
       ?>
-        <div class="card cui2 noshadow r_0 w-100 typography">
+        <div class="card cui2 w-100 typography">
           <div class="card-body pri_30 pli_30 pbi_30">
-            <h1 class='text-primary'><?php the_title(); ?></h1>
+            <h2 class='text-primary'><?php the_title(); ?></h2>
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
               <?php if(has_post_thumbnail()) { ?>
                 <img class="card-img-top r_0 border mb_20" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
