@@ -16,7 +16,11 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
     $term_slug = $term_obj_list['1']->slug;
 }
 ?>  
-
+<section class="common-section-ui page-breadcrumb bg-light pti_20 pbi_20">
+  <div class="container">
+    <p class="text-muted f14 m-0"><a class="tdn text-primary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <a class="tdn text-primary" href="<?php echo get_term_link( $term_slug, $term_taxonomy ); ?>" class="text-muted"><?php echo $term_name; ?></a> / <?php the_title(); ?></p>
+  </div>
+</section>
 <div class="single-page bg-light common-section-ui pt_70">
   <div class="container">
     <div class="row">

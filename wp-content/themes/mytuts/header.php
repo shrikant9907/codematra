@@ -68,19 +68,29 @@
                   <a class="nav-link text-dark" href="<?php echo site_url('/'); ?>">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Categories</a>
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Programs</a>
                   <div class="dropdown-menu"> 
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/html/'); ?>">HTML</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/css/'); ?>">CSS</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/bootstrap/'); ?>">Bootstrap</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/jquery/'); ?>">jQuery</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/javascript/'); ?>">JavaScript</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/react-js/'); ?>">React JS</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/angular/'); ?>">Angular</a> -->
-                    <a class="dropdown-item" href="<?php echo site_url('/programs/simple-php-program-for-hello-world/'); ?>">PHP</a>
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/wordpress/'); ?>">WordPress</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/python/'); ?>">Python</a> -->
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/django/'); ?>">Django</a> -->
+                  <?php   
+                    // Post Tags
+                    $taxonomies = get_terms( array(
+                            'taxonomy' => 'programs-category', 
+                            'hide_empty' => true,
+                            'parent'=>0,
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        )
+                    );
+
+                    if ( !empty($taxonomies) ) { 
+                        foreach( $taxonomies as $category ) { 
+                        $term_link = get_term_link( $category );
+                            if($category->parent == 0) {
+                                $output.= '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
+                            }
+                        }
+                        echo $output; 
+                    } 
+                    ?> 
                   </div>
                 </li>
                 <!-- <li class="nav-item">

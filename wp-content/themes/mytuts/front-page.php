@@ -245,17 +245,17 @@ get_header();
 
          <!-- Carousel -->
          <div class="ourtutorials four_col_carosusel">
-          <!-- <div class="occ-item px_15 hidei" >
+          <div class="occ-item px_15" >
             <div class="card cui3c mt_10 r_10 py_30 noshadow border-secondary bt5">
               <div class="card-body">
                 <div class="ciconrc ciconb">
-                  <i class="fab fa-wordpress"></i>
+                  <i class="fab fa-python text-secondary"></i>
                 </div>
-                <h5 class="card-title">Python</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h5 class="card-title"><a href="<?php echo site_url('/programs-category/python/'); ?>">Python</a></h5>
+                <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- <div class="occ-item px_15 hidei" >
             <div class="card cui3c mt_10 r_10 py_30 noshadow border-primary bt5">
               <div class="card-body"> 
@@ -304,9 +304,9 @@ get_header();
             <div class="card cui3c mt_10 r_10 py_30 noshadow border-primary bt5">
               <div class="card-body">
                 <div class="ciconrc ciconb">
-                  <i class="fab fa-php"></i>
+                  <i class="fab fa-php text-primary"></i>
                 </div>
-                <h5 class="card-title"><a href="<?php echo site_url('/programs/simple-php-program-for-hello-world/'); ?>">PHP</a></h5>
+                <h5 class="card-title"><a class="text-primary" href="<?php echo site_url('/programs-category/php'); ?>">PHP</a></h5>
                 <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
               </div>
             </div>

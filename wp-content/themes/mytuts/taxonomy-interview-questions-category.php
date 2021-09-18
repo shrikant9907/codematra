@@ -15,6 +15,11 @@ if ($term_name) {
 ?>
 <h1 class="text-center bg-primary mb_0 text-white ptb_40 mont_serrat f30 lh32"><?php echo $term_name; ?></h1>
 <?php } ?>
+<section class="common-section-ui page-breadcrumb bg-light pti_20 pbi_20">
+  <div class="container">
+    <p class="text-muted f14 m-0"><a class="tdn text-primary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php echo $term_name; ?> Interview Questions</p>
+  </div>
+</section>
 <div class="single-page bg-light common-section-ui pt_70">
   <div class="container">
     <div class="row">
