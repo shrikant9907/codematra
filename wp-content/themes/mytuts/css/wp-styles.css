@@ -1,0 +1,8 @@
+.sidebar-ui .card.widget_block ,
+.sidebar-ui .widget_block {
+    padding: 15px 20px !important;
+}
+
+.sidebar-ui .wp-block-group__inner-container > h2 {
+    color: #FA6C39 !important;
+}
