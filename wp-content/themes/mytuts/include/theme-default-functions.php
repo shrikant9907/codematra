@@ -8,6 +8,7 @@ function insertDefaultPages() {
     $pages = array (
         'Landing Page',
         'Blog',
+        'Programs',
         'Categories',
         'Quizzes',
         'Interview',

@@ -352,10 +352,53 @@ get_header();
  </section>
  <!-- Tutorials  Section End -->
 
+
+
+ 	<!-- News and Events Section -->
+ 	<section id="news-and-blog" class="common-section-ui">
+ 		<div class="container">
+      <h2 class="heading_style type2 "><span class="text-secondary">Latest</span> Blog Posts</h2>
+      <div class="row">
+      <?php 
+          $args = array(
+                  'post_type'         =>  'post', 
+                  'posts_per_page'    =>  4, 
+                  'orderby'           =>  'id', 
+                  'order'             =>  'desc', 
+          );  
+          $posts = get_posts($args); 
+          if ($posts) {
+          foreach($posts as $post) {
+          $categories = get_the_terms($post, 'category');
+          $catname = $categories['0']->name;  
+          ?>
+        <div class="col-12 col-sm-6">
+          <div class="card cui2 mbi_15">  
+            <div class="card-body pri_30 pli_30 pti_30">
+              <h5 class="mb_5"><a href="<?php the_permalink($post->ID); ?>" class="text-primary f16"><?php the_title(); ?></a></h5>
+              <p class="d-flex justify-content-between mb_5 f12 text_grey3"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> <?php echo get_the_time('F j, Y'); ?></span></p>
+              <p class="card-text text-dark">
+              <?php echo wp_trim_words($post->post_content, 20); ?>
+              </p>
+            </div>
+          </div>
+        </div>
+        <?php    
+          }} else { ?>
+              <p >No records found.</p>
+            <?php 
+          }    
+          ?>
+      </div>
+      <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui3s">View More Posts</a></p>
+ 		</div>
+ 	</section>
+ 	<!-- News and Events Section End -->
+
 <!-- Recent Programs with Sidebar Start -->
 <div class="blog-index-page common-section-ui bg-light">
 	<div class="container">
-		<h3 class="heading_style type2 text-uppercase mb_20">Latest Programs</h3>
+		<h3 class="heading_style type2 text-uppercase mb_20"><span class="text-secondary">Latest</span> Programs</h3>
 	
 	<div class="row">
 		<div class="col-12">
@@ -363,7 +406,7 @@ get_header();
         <?php 
           $args = array(
                   'post_type'         =>  'programs', 
-                  'posts_per_page'    =>  9, 
+                  'posts_per_page'    =>  6, 
                   'orderby'           =>  'id', 
                   'order'             =>  'desc', 
           );  
@@ -374,26 +417,22 @@ get_header();
           
           $badgeColor = getBadgeColor($progTerms['0']->name);
           ?>
-          	<div class="col-12 col-sm-6 col-md-4">
-              <div class="card cui2 relative f14 pt_15 min_h_250">
+          	<div class="col-12 col-sm-6 col-md-6">
+              <div class="card cui3s relative f14 pt_15 min_h_100 r_0">
               <span class="badge <?php echo $badgeColor; ?> text-white absolute r_0 p_5 fixed_top_right"><?php echo $progTerms['0']->name; ?></span>
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id($progs->ID)) ;  ?>
-              <!-- <?php if(has_post_thumbnail($progs->ID)) { ?>
+              <?php if(has_post_thumbnail($progs->ID)) { ?>
               <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block cimgwr" >
                 <img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               </a>
-              <?php } else { ?>
-              <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block cimgwr" >
-                <img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
-              </a>
-              <?php } ?> -->
+              <?php } ?>
               <div class="card-body ">
                 <div class="f16 mb_10 cheading font_bold lh20">
-                  <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block text-dark" >
+                  <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block text-primary" >
                    <?php echo $progs->post_title; ?>
                   </a>
                 </div>
-                <p class="cdesc"><?php echo wp_trim_words($progs->post_content, 12); ?></p>
+                <p class="cdesc mb_10"><?php echo wp_trim_words($progs->post_content, 12); ?></p>
                 <div class="cmeta text-muted f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> <?php echo get_the_time('F j, Y'); ?></span></div>
               </div>
               </div>
@@ -407,8 +446,9 @@ get_header();
           ?>
 		 	
     </div>
-		</div>
- 
+	  <p class="text-center mt_40"><a href="<?php echo site_url('/programs'); ?>" class="btn btn-primary btnui3s">View More Programs</a></p>
+    </div>
+  
 	</div>
 </div>
 </div>
@@ -669,57 +709,6 @@ get_header();
     </div>
   </div>
 </section>
-
-
- 	<!-- News and Events Section -->
- 	<section id="news-and-blog" class="common-section-ui hide">
- 		<div class="container">
-       <div class="row">
-
-        <div class="col-12 col-sm-6">
-          <h2 class="heading_style type2 "><span class="text-secondary">Latest</span> Blog <span class='text-primary'>Posts</span></h2>
-  
-          <div class="card cui2 mbi_15">  
-            <div class="card-body pri_30 pli_30 pti_30">
-              <h5 class="mb_5"><a href="#" class="text-primary f16">Lorem Ipsum is simply dummy text</a></h5>
-              <p class="d-flex justify-content-between mb_5 f12 text_grey3"><span>Posted by: Shrikant</span> <span>Date: 20 Jan 2020</span></p>
-              <p class="card-text text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...</p>
-            </div>
-          </div>
-          <div class="card cui2 mbi_15">  
-            <div class="card-body pri_30 pli_30 pti_30">
-              <h5 class="mb_5"><a href="#" class="text-primary f16">Lorem Ipsum is simply dummy text</a></h5>
-              <p class="d-flex justify-content-between mb_5 f12 text_grey3"><span>Posted by: Shrikant</span> <span>Date: 20 Jan 2020</span></p>
-              <p class="card-text text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...</p>
-            </div>
-          </div>
-          <div class="card cui2 mbi_15">  
-            <div class="card-body pri_30 pli_30 pti_30">
-              <h5 class="mb_5"><a href="#" class="text-primary f16">Lorem Ipsum is simply dummy text</a></h5>
-              <p class="d-flex justify-content-between mb_5 f12 text_grey3"><span>Posted by: Shrikant</span> <span>Date: 20 Jan 2020</span></p>
-              <p class="card-text text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...</p>
-            </div>
-          </div>
-        </div> 
-               
-        <div class="col-12 col-sm-6">
-          <h2 class="heading_style type2 "><span class="text-secondary">Recent</span> How to <span class='text-primary'>Codes</span></h2>
-              <div class="type4 listing licons">
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-                <a href="#" class="f16 "><i class="fas fa-check text-primary"></i> How to create a search from using HTML and CSS?</a>
-              </div>
-        </div> 
-		    </div>
- 		</div>
- 	</section>
- 	<!-- News and Events Section End -->
   
   <!-- CTA Section -->
  	<section id="cta-section" class="common-section-ui bg-dark pb_80 text-center">
