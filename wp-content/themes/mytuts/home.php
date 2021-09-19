@@ -1,5 +1,4 @@
 <?php get_header(); ?> 
-
 <div class="single-page bg-light common-section-ui pt_0">
 <h1 class="text-center bg-primary mb-5 text-white ptb_40 mont_serrat f30 lh22"><?php _e('Blog'); ?></h1>
     <div class="container">

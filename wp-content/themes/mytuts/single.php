@@ -1,4 +1,17 @@
-<?php get_header(); ?> 
+<?php 
+get_header(); 
+
+$categories = get_the_category();
+            
+?> 
+<h1 class="text-center bg-primary mb_0 text-white ptb_40 f30 lh32"><?php the_title(); ?></h1>
+
+<section class="common-section-ui page-breadcrumb bg-light pti_20 pbi_20">
+  <div class="container">
+    <p class="text-muted f14 m-0"><a class="tdn text-primary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <a class="tdn text-primary" href="<?php echo esc_url( get_category_link( $categories['0']->term_id ) ); ?>" class="text-muted"><?php echo $categories['0']->name; ?></a> / <?php echo the_title(); ?></p>
+  </div>
+</section>
+
 <div class="single-page bg-light common-section-ui pt_70">
   <div class="container">
     <div class="row">
@@ -31,7 +44,24 @@
               <?php the_content(); ?>
             </div>
           </div>
-        </div>                        
+        </div>  
+        <div class="single_posts_nav d-flex justify-content-between">
+            <?php
+            $prev_post = get_previous_post();
+            if (!empty( $prev_post )): ?>
+                <div class='article-prev'>
+                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+            </div>
+            <?php endif ?>
+
+            <?php
+            $next_post = get_next_post();
+            if (!empty( $next_post )): ?>
+            <div class='article-nextpost'>
+                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
+            </div>
+            <?php endif; ?>
+        </div>                      
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <?php get_sidebar(); ?>
