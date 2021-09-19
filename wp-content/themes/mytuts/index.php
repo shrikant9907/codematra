@@ -11,59 +11,37 @@
                             $count = 0;
                             while(have_posts()): the_post();  
                     ?>
-                    <div class="card m_b_30">
-                            <div class="card-header bg-light"><h3 class="f_18_22 m-0"><a class="t_deco_none d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
-                            <div class="card-body f_14_22">
-                                <?php echo wp_trim_words(get_the_content(), 30); ?>
-                                <div class="row text-muted f_12_14 m_t_20">
-                                    <div class="col-6">
-                                        <span><i class="fa fa-bookmark m_r_10"></i> Categories:  
-                                            <?php
-
-                                                $categories = get_the_category();
-                                                $separator = ' ';
-                                                $output = '';
-                                                if ( ! empty( $categories ) ) {
-                                                    foreach( $categories as $category ) {
-                                                        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-                                                    }
-                                                    echo trim( $output, $separator );
-                                                }
-
-                                            ?></span>
-                                    </div>
-                                    <div class="col-6">
-                                        <span><i class="fas fa-tags m_r_10"></i> Tags: 
-                                            <?php
-                                                $tags = get_tags();
-                                                foreach ( $tags as $tag ) {
-                                                    $tag_link = get_tag_link( $tag->term_id );
-                                                             
-                                                    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
-                                                    $html .= "{$tag->name}</a>";
-                                                }
-                                                echo $html;
-                                            ?>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-light f_12_16">
-                                <div class="form-row">
-                                    <div class="col-8">
-                                         <?php if($avatar = get_avatar(get_the_author_meta('ID')) !== FALSE): 
-                                              $author_id =  get_the_author_meta('ID'); ?>
-                                            <span class="w_40 d-inline-block m_r_10"><img src="<?php echo esc_url( get_avatar_url( $author_idD ) ); ?>" class="img-fluid img-thumbnail rounded-circle" alt=""></span>
-                                        <?php endif; ?> 
-                                         <span class="d-inline-block">Posted by: <?php the_author(); ?>, <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-                                    </div>
-                                    <div class="col-4 text-right">
-                                        <div class="m_t_10">Posted on: <?php echo get_the_date(); ?></div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="card cui2 noshadow r_0 w-100 typography">
+                <div class="card-body pri_30 pri_30 pli_30 pbi_30">
+                    <h2 class='text-primary'><a class="text-primary tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+                    <?php if(has_post_thumbnail()) { ?>
+                      <a href="#" class="d-inline-block hidei"><img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
+                    <?php } else { ?>
+                      <a href="#" class="d-inline-block hidei"><img class="card-img-top r_0" src="https://picsum.photos/300/150" alt=""></a>
+                    <?php } ?>
+                    <div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
+                        <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
+                        <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
+                        <?php
+                          $categories = get_the_category();
+                          $separator = ' ';
+                          $output = '';
+                          if ( ! empty( $categories ) ) {
+                              foreach( $categories as $category ) {
+                                  $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                              }
+                              echo trim( $output, $separator );
+                          }
+                        ?></span> 
+                        <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                     </div>
-                         
+                    <div class="f16">
+                    <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btnui3s w-100 text-white text_bold">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
+                    </div>
+                </div>
+              </div>   
+               
                     <?php 
                         endwhile; 
                         theme_pagination();

@@ -85,10 +85,9 @@
                         foreach( $taxonomies as $category ) { 
                         $term_link = get_term_link( $category );
                             if($category->parent == 0) {
-                                $output.= '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
+                                echo '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
                             }
                         }
-                        echo $output; 
                     } 
                     ?> 
                   </div>
@@ -97,16 +96,36 @@
                   <a class="nav-link text-dark" href="<?php echo site_url('/quizzes'); ?>">Quizzes</a>
                 </li> -->
                 <li class="nav-item dropdown">
-                  <a class="nav-link text-dark dropdown-toggle" href="<?php echo site_url('/interview'); ?>">Interview</a>
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Interview</a>
                   <div class="dropdown-menu"> 
                     <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React Js</a>
                     <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress</a>
 
                   </div>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link text-dark" href="<?php echo site_url('/blog'); ?>">Blog</a>
-                </li> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Blog</a>
+                  <div class="dropdown-menu"> 
+                    <?php   
+                      // Post Tags
+                      $categories = get_categories( array(
+                              'hide_empty' => true,
+                              'order' => 'asc',
+                              'orderby' => 'name'
+                          )
+                      );
+                    
+                      if ( !empty($categories) ) {  
+                          foreach( $categories as $cat ) { 
+                          $term_link = get_term_link( $cat );
+                              if(($cat->parent == 0) && ($cat->slug != 'uncategorized')) {
+                                  echo '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $cat->name ) .'</a>';
+                              }
+                          }
+                      } 
+                      ?> 
+                  </div>
+                </li>
                 <li class="nav-item nav-item d-flex justify-content-center align-items-center">
                   <a href="<?php echo site_url('/?s='); ?>" class="search-trigger"><i class="fa fa-search text_primary ml_10" aria-hidden="true"></i></a>
                 </li>
