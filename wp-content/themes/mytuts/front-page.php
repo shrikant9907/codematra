@@ -240,19 +240,19 @@ get_header();
    <div class="container">
      <div class="row">
        <div class="col-12">
-         <h2 class="heading_style type2 text-center text-uppercase">Find online codes here</h2>
+         <h2 class="heading_style type2 text-center text-uppercase"><span class="text-secondary">Find</span> online codes here</h2>
          <p class="text-center mb_40">You can learn <strong>PHP</strong>, <strong>React JS</strong>, <strong>Web Design</strong> and many other popular web programming languages on codematra.com</p>
 
          <!-- Carousel -->
          <div class="ourtutorials four_col_carosusel">
           <div class="occ-item px_15" >
-            <div class="card cui3c mt_10 r_10 py_30 noshadow border-secondary bt5">
+            <div class="card cui3c mt_10 r_10 py_30 noshadow border-primary bt5">
               <div class="card-body">
                 <div class="ciconrc ciconb">
-                  <i class="fab fa-python text-secondary"></i>
+                  <i class="fab fa-python text-primary"></i>
                 </div>
-                <h5 class="card-title"><a href="<?php echo site_url('/programs-category/python/'); ?>">Python</a></h5>
-                <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+                <h5 class="card-title mb-0"><a class="text-primary" href="<?php echo site_url('/programs-category/python/'); ?>">Python</a></h5>
+                <p class="card-text">Programs</p>
               </div>
             </div>
           </div>
@@ -289,39 +289,39 @@ get_header();
               </div>
             </div>
           </div> -->
-          <!-- <div class="occ-item px_15" >
+          <div class="occ-item px_15" >
             <div class="card cui3c mt_10 r_10 py_30 noshadow border-secondary bt5">
               <div class="card-body">
                 <div class="ciconrc ciconb">
                   <i class="fab fa-react"></i>
                 </div>
-                <h5 class="card-title"><a href="<?php echo site_url('/tutorials/react-js'); ?>">React</a></h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h5 class="card-title mbi_0"><a href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React JS</a></h5>
+                <p class="card-text">Interview Questions</p>
               </div>
             </div>
-          </div> -->
+          </div>
           <div class="occ-item px_15" >
             <div class="card cui3c mt_10 r_10 py_30 noshadow border-primary bt5">
               <div class="card-body">
                 <div class="ciconrc ciconb">
                   <i class="fab fa-php text-primary"></i>
                 </div>
-                <h5 class="card-title"><a class="text-primary" href="<?php echo site_url('/programs-category/php'); ?>">PHP</a></h5>
-                <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+                <h5 class="card-title mb-0"><a class="text-primary" href="<?php echo site_url('/programs-category/php'); ?>">PHP</a></h5>
+                <p class="card-text">Programs</p>
               </div>
             </div>
           </div>
-          <!-- <div class="occ-item px_15" >
+          <div class="occ-item px_15" >
             <div class="card cui3c mt_10 r_10 py_30 noshadow border-secondary bt5">
               <div class="card-body">
                 <div class="ciconrc ciconb">
                   <i class="fab fa-wordpress"></i>
                 </div>
-                <h5 class="card-title">WordPress</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h5 class="card-title mb-0"><a class="text-secondary" href="<?php echo site_url('/category/wordpress'); ?>">WordPress</a></h5>
+                <p class="card-text">How To</p>
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- <div class="occ-item px_15 hidei" >
             <div class="card cui3c mt_10 r_10 py_30 noshadow border-primary bt5">
               <div class="card-body">
@@ -357,7 +357,7 @@ get_header();
  	<!-- News and Events Section -->
  	<section id="news-and-blog" class="common-section-ui">
  		<div class="container">
-      <h2 class="heading_style type2 "><span class="text-secondary">Latest</span> Blog Posts</h2>
+      <h2 class="heading_style type2 text-uppercase"><span class="text-secondary">Latest</span> Blog Posts</h2>
       <div class="row">
       <?php 
           $args = array(
@@ -632,7 +632,7 @@ get_header();
 
 <section id="interview" class="common-section-ui pb_40 pt_60">
   <div class="container">
-  <h2 class="heading_style type2 text-uppercase mb_20">Interview Questions</h2>
+  <h2 class="heading_style type2 text-uppercase mb_20"><span class="text-secondary">Interview</span> Questions</h2>
     <div class="row">
         <div class="col-12 col-md-6">
           <div class="card cui2 r_0 box_shw3 pt_20 ">
