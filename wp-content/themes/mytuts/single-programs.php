@@ -87,7 +87,7 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
             </div>
             <?php endif; ?>
         </div>
-                            
+        <?php comment_form(); ?>                    
       </div>
      </div>
   </div>

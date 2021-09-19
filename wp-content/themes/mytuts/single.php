@@ -61,7 +61,8 @@ $categories = get_the_category();
                 <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
             </div>
             <?php endif; ?>
-        </div>                      
+        </div>      
+        <?php comment_form(); ?>                
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <?php get_sidebar(); ?>

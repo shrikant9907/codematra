@@ -1,6 +1,4 @@
-<?php get_header(); 
-//define('CODEPATH', get_template_directory().'/tutscodes/');
-?> 
+<?php get_header(); ?> 
 <div class="single-page bg-light common-section-ui pt_70">
   <div class="container">
     <div class="row">
@@ -9,95 +7,10 @@
           <div class="card-body pti_30 pri_30 pli_30 pbi_30">
             <h1 class='text-primary f30'><?php the_title(); ?></h1>
               <?php if(has_post_thumbnail()) { ?>
-                <a href="#" class="d-inline-block hidei"><img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
-              <?php } else { ?>
-                <a href="#" class="d-inline-block hidei"><img class="card-img-top r_0" src="https://picsum.photos/300/150" alt=""></a>
+                <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               <?php } ?>
             <div class="f16">
               <?php the_content(); ?>
-              <div class="tutorials_article">
-                <?php 
-                  $tutorials = $cfs->get('tutorials_loops'); 
-                  if($tutorials) { ?>
-                    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror.js"></script>
-                    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/xml.js"></script>
-                    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/javascript.js"></script>
-                    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/css.js"></script>
-                    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/clike.js"></script>
-                    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/php.js"></script> 
-                    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/python.js"></script> 
-                    <?php 
-                      $count = 1;
-                      foreach($tutorials as $tutorial){
-                            $title = $tutorial['title'];
-                            $text = $tutorial['_text'];
-                            $image = $tutorial['_image'];
-                            $mode = $tutorial['mode'];
-                            $note = $tutorial['note'];
-                                
-                            if (!$mode) {
-                                $mode = 'php';
-                            }
-                         
-                            $code = htmlspecialchars($tutorial['_code']);
-                            $code2 = htmlspecialchars($tutorial['_code2']);
-                                
-                            if ($title) {
-                                echo "<h4 class='m-0 mb-3 f20 lh22 text-primary'>$title</h4>";
-                            }
-                            
-                            echo $text;
-                            if($code2!=''){   
-                              echo "<textarea id='showcode_1$count'>$code2</textarea>";
-                            ?>
-                            <script>
-
-                            //  Editor 1  
-                                var editor = CodeMirror.fromTextArea(document.getElementById("showcode_1<?php echo $count; ?>"), {
-                                lineNumbers: true,
-                                styleActiveLine: true,
-                                matchBrackets: true,
-                                mode: "<?php echo $mode; ?>",
-                                readOnly: true
-                            });
-
-                            </script> 
-                                    <?php
-                            }
-                            if($code!=''){   
-                                // Get File 
-                                $headerfile = CODEPATH.$code;    
-                                $headercode = htmlspecialchars(file_get_contents($headerfile));  
-
-                                echo "<textarea id='showcode_2$count'>$headercode</textarea>";
-                                        ?>
-                            <script>
-
-                            //  Editor 2  
-                                var editor = CodeMirror.fromTextArea(document.getElementById("showcode_2<?php echo $count; ?>"), {
-                                lineNumbers: true,
-                                styleActiveLine: true,
-                                matchBrackets: true,
-                                mode: "<?php echo $mode; ?>",
-                                readOnly: true
-                            });
-
-                            </script> 
-                                
-                                <?php
-                            }
-                            
-                            if ($note){
-                              echo '<div class="mt_20 alert alert-info alertuis">'.$note.'</div>';
-                            }
-                                
-                            if($image!='') { ?>
-                                <img class="img-fluid" src="<?php echo $image ?>" alt="<?php the_title(); ?>" />
-                            <?php } 
-                            $count++;
-                        }
-                  } ?>                                
-              </div>    
             </div>
             <div class="text-dark bg-light px_10 f12 d-flex justify-content-between">
               <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i><?php the_author_meta('user_nicename',$post->post_author); ?></span>
@@ -116,9 +29,27 @@
               ?></span> 
               <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
             </div>
-  
+            <?php comment_form(); ?>
           </div>
-        </div>                        
+        </div>    
+        <div class="single_posts_nav d-flex justify-content-between">
+            <?php
+            $prev_post = get_previous_post();
+            if (!empty( $prev_post )): ?>
+                <div class='article-prev'>
+                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+            </div>
+            <?php endif ?>
+
+            <?php
+            $next_post = get_next_post();
+            if (!empty( $next_post )): ?>
+            <div class='article-nextpost'>
+                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
+            </div>
+            <?php endif; ?>
+        </div>
+        <?php comment_form(); ?>                    
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <?php get_sidebar(); ?>
