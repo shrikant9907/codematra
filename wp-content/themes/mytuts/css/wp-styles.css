@@ -11,3 +11,37 @@
     border-top: 1px dashed #dee2e6!important;
     line-height: 22px;
 } 
+
+/* Custom Pagination for WP */
+.pagination-ui ul{
+    padding-left: 0;
+}
+
+.pagination-ui li {
+    background-color: #ffffff;
+}
+
+.pagination-ui li:first-child,
+.pagination-ui li:last-child {
+    min-width: 60px;
+}
+
+.pagination-ui li a.prev,
+.pagination-ui li a.next {
+    position: relative;
+    padding: 0 10px;
+}
+
+.pagination-ui li span.current {
+    background-color: #117CA6;
+    border-color: #117CA6;
+    color: #ffffff !important;
+    color: inherit;
+    text-decoration: none;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
