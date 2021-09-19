@@ -294,7 +294,7 @@ $page_format = paginate_links( array(
 ) );
 if( is_array($page_format) ) {
             $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-            echo '<div class="custom_paginations"><ul>';
+            echo '<div class="custom_paginations pagination-ui"><ul>';
             echo '<li><span>'. $paged . ' of ' . $wp_query->max_num_pages .'</span></li>';
             foreach ( $page_format as $page ) {
                     echo "<li>$page</li>";
