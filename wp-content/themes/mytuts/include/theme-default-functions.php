@@ -271,7 +271,7 @@ add_filter( 'body_class', 'add_page_name_class' );
 function searchfilter($query) {
  
     if ($query->is_search && !is_admin() ) {
-        $query->set('post_type',array('tutorial'));
+        $query->set('post_type',array('post', 'programs'));
     }
  
 return $query;
