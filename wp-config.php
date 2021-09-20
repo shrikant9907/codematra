@@ -19,14 +19,28 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'mytuts' );
+if ( $_SERVER["SERVER_ADDR"] == '::1' ) {
+	/** The name of the database for WordPress */
+	define( 'DB_NAME', 'dlsmoxno_wp720' );
 
-/** MySQL database username */
-define( 'DB_USER', 'root' );
+	/** MySQL database username */
+	define( 'DB_USER', 'root' );
 
-/** MySQL database password */
-define( 'DB_PASSWORD', '' );
+	/** MySQL database password */
+	define( 'DB_PASSWORD', '' );
+} else {
+
+	/** The name of the database for WordPress */
+	define( 'DB_NAME', 'dlsmoxno_wp720' );
+
+	/** MySQL database username */
+	define( 'DB_USER', 'dlsmoxno_wp720' );
+
+	/** MySQL database password */
+	define( 'DB_PASSWORD', 'h3SQ.64Q]p' );
+
+}
+
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
