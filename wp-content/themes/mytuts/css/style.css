@@ -418,6 +418,17 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
     height: auto !important;  
 }
 
+.comment-form textarea#comment {
+    width: 100%;
+} 
+ 
+.comment-form #submit {
+    background-color: #008dd2;
+    border: unset;
+    color: #fff;
+    padding: 8px 15px;
+}
+
 /*Responsive*/
 @media all and (max-width: 786px) {
 
