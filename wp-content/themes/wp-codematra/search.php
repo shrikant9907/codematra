@@ -12,16 +12,11 @@
       <div class="row">
           <div class="col-12">
             <div class="cui2 card">
-              <form class="cbody fui fui1" action="" method="get" enctype="multipart/form-data" autocomplete="off">
-                <div class="form-group">
+              <form class="cbody fui fui1 search-box" action="" method="get" enctype="multipart/form-data" autocomplete="off">
                   <div class="search-box">
-                    <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control" required="required" placeholder="Search by keywords. eg. PHP, HTML, Create form etc">
-                    <i class="fa fa-search icon" aria-hidden="true"></i>
+                    <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control" required="required" placeholder="Search Codes, Programs, Tutorials, Interview Questions etc...">
+                    <button type="submit" class="btn btn-primary btnui2 f14i">Search</button>
                   </div> 
-                </div>
-                <div class="form-group text-center m-0">
-                  <input type="submit" value="Search" class="btn-sm btn btn-primary btnui3s w-100" />
-                </div>
               </form>
             </div>
           </div>
@@ -29,7 +24,7 @@
   </div>
   
   <div class="container">
-    <div class="form-row">
+    <div class="row">
       <?php  
       if(have_posts()): 
         $count = 0;
@@ -48,7 +43,7 @@
                <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
               </div>
              <p class=""><?php echo wp_trim_words(get_the_content(), 18) ?></p>
-             <div class="text-center"><a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm  btnui3s"><?php _e('View More Details'); ?> <i class="ml_5 fas fa-angle-double-right    "></i></a></div>  
+             <div class="text-left"><a href="<?php the_permalink(); ?>" class="text-primary tdn"><?php _e('View More Details'); ?> <i class="ml_5 fas fa-angle-double-right    "></i></a></div>  
           </div>
         </div>
       </div>
