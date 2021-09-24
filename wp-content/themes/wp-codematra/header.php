@@ -127,7 +127,7 @@
                   </div>
                 </li>
                 <li class="nav-item nav-item d-flex justify-content-center align-items-center">
-                  <form class="cbody fui fui1p search-box" action="" method="get" enctype="multipart/form-data" autocomplete="off">
+                  <form class="cbody fui fui1p search-box" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
                     <div class="search-box">
                       <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_400" required="required" placeholder="Search Codes, Programs, Tutorials, Interview Questions etc...">
                       <button type="submit" class="btn btn-primary btnui3"><i class="fa fa-search" aria-hidden="true"></i></button>

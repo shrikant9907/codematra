@@ -7,7 +7,7 @@
   </div>
 </section>
 <!-- Banner UI 1 -->
-<section class="common-section-ui bg-light">
+<section class="common-section-ui bg-light pt_0">
   <div class="container">
       <div class="row">
           <div class="col-12">
