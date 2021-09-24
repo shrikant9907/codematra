@@ -6,27 +6,27 @@ add_action('init', 'insertDefaultPages');
 function insertDefaultPages() {
 
     $pages = array (
-        'Landing Page',
+        'Code Matra',
         'Blog',
-        'Programs',
-        'Categories',
-        'Quizzes',
+        // 'Programs',
+        // 'Categories',
+        // 'Quizzes',
         'Interview',
-        'Interview Questions',
-        'FAQs',
-        'MCQ\'s',
+        // 'Interview Questions',
+        // 'FAQs',
+        // 'MCQ\'s',
         'Sitemap',
         'Privacy Policy',
         'Terms and conditions',
-        'Tools',
-        'WordPress',
-        'Angular',
-        'Bootstrap',
-        'HTML and CSS',
-        'Basic of PHP',
-        'Advance PHP',
-        'Basic of Python',
-        'Advance Python',
+        // 'Tools',
+        // 'WordPress',
+        // 'Angular',
+        // 'Bootstrap',
+        // 'HTML and CSS',
+        // 'Basic of PHP',
+        // 'Advance PHP',
+        // 'Basic of Python',
+        // 'Advance Python',
     );
     if ($pages) {
   
@@ -49,8 +49,8 @@ function insertDefaultPages() {
   
           } else {
   
-            // Front Page / Landing Page
-            if ($page == 'Landing Page') {
+            // Front Page / Code Matra
+            if ($page == 'Code Matra') {
               update_option('page_on_front', $pageData->ID);   
             }
   
