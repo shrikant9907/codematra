@@ -68,6 +68,29 @@
                   <a class="nav-link text-dark" href="<?php echo site_url('/'); ?>">Home</a>
                 </li>
                 <li class="nav-item dropdown">
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Codes</a>
+                  <div class="dropdown-menu"> 
+                    <?php   
+                      // Post Tags
+                      $categories = get_categories( array(
+                              'hide_empty' => true,
+                              'order' => 'asc',
+                              'orderby' => 'name'
+                          )
+                      );
+                    
+                      if ( !empty($categories) ) {  
+                          foreach( $categories as $cat ) { 
+                          $term_link = get_term_link( $cat );
+                              if(($cat->parent == 0) && ($cat->slug != 'uncategorized')) {
+                                  echo '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $cat->name ) .'</a>';
+                              }
+                          }
+                      } 
+                      ?> 
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Programs</a>
                   <div class="dropdown-menu"> 
                   <?php   
@@ -103,31 +126,14 @@
 
                   </div>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Blog</a>
-                  <div class="dropdown-menu"> 
-                    <?php   
-                      // Post Tags
-                      $categories = get_categories( array(
-                              'hide_empty' => true,
-                              'order' => 'asc',
-                              'orderby' => 'name'
-                          )
-                      );
-                    
-                      if ( !empty($categories) ) {  
-                          foreach( $categories as $cat ) { 
-                          $term_link = get_term_link( $cat );
-                              if(($cat->parent == 0) && ($cat->slug != 'uncategorized')) {
-                                  echo '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $cat->name ) .'</a>';
-                              }
-                          }
-                      } 
-                      ?> 
-                  </div>
-                </li>
                 <li class="nav-item nav-item d-flex justify-content-center align-items-center">
-                  <a href="<?php echo site_url('/?s='); ?>" class="search-trigger"><i class="fa fa-search text_primary ml_10" aria-hidden="true"></i></a>
+                  <form class="cbody fui fui1p search-box" action="" method="get" enctype="multipart/form-data" autocomplete="off">
+                    <div class="search-box">
+                      <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_400" required="required" placeholder="Search Codes, Programs, Tutorials, Interview Questions etc...">
+                      <button type="submit" class="btn btn-primary btnui3"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div> 
+                  </form>
+                 <!-- <a href="<?php //echo site_url('/?s='); ?>" class="search-trigger"><i class="fa fa-search text_primary ml_10" aria-hidden="true"></i></a> -->
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link btn btn-primary btnui3s" data-toggle="modal" data-target="#basicLoginFromModal" href="#">Login</a>
