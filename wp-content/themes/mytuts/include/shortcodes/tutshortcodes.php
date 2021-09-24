@@ -28,7 +28,7 @@ function code_block_file($atts) {
     ), $atts));
 
 		ob_start();
-    $themeLocation = get_stylesheet_directory() . '/tutscodes/';
+    $themeLocation = ABSPATH . '/tutscodes/';
     $fileLocation = $themeLocation . $file;
 
     if (!file_exists($fileLocation)) {

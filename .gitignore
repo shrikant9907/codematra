@@ -3,6 +3,7 @@
 !.gitignore
 !.htaccess
 !wp-content/
+!tutscodes
 !wp-config.php
 
 # ignore everything in the "wp-content" directory, except:
