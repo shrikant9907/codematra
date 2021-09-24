@@ -1,6 +1,7 @@
 /*Popup UI CSS Start*/
 .codematra-popup-ui .popup-mask,
 .codematra-popup-ui {
+  font-family: Roboto;
   position: fixed;
   top: 0;
   left: 0;
