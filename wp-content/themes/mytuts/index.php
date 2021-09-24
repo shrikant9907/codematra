@@ -18,11 +18,12 @@
 							while(have_posts()): 
 							the_post();  
 							?>
+              <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
 								<div class="card cui2 noshadow r_0 w-100 typography">
 									<div class="card-body pri_30 pri_30 pli_30 pbi_30">
 										<h2 class='text-primary'><a class="text-primary tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<?php if(has_post_thumbnail()) { ?>
-											<a href="<?php the_permalink(); ?>" class="d-inline-block"><img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
+											<a href="<?php the_permalink(); ?>" class="d-inline-block"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
 										<?php } ?>
 											<div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
 													<span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>

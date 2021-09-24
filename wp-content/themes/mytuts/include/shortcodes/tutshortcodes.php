@@ -33,10 +33,10 @@ function code_block_file($atts) {
 
     if (!file_exists($fileLocation)) {
       echo "File not exists.";
-      $newCodeFile = fopen($fileLocation, 'w');
+     /* $newCodeFile = fopen($fileLocation, 'w');
       $newCodeFileText = "<?php // Start writing your code here. ?>";
       fwrite($fileLocation, $newCodeFileText);
-      fclose();
+      fclose(); */
     } else {
       $fileContent = htmlspecialchars(file_get_contents($fileLocation));
       $randCode = rand(5,10);

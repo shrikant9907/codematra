@@ -7,7 +7,7 @@
           <div class="card-body pti_30 pri_30 pli_30 pbi_30">
             <h1 class='text-primary f30'><?php the_title(); ?></h1>
               <?php if(has_post_thumbnail()) { ?>
-                <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                <img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               <?php } ?>
             <div class="f16">
               <?php the_content(); ?>

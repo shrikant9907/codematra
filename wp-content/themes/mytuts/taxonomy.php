@@ -40,6 +40,7 @@ if ($term_name) {
             while(have_posts()): 
                 the_post();
         ?>
+        <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
         <div class="card cui2 w-100 typography">
           <div class="card-body pri_30 pli_30 pbi_30">
             <h2><a href="<?php the_permalink(); ?>" class="text-primary"><?php the_title(); ?></a></h2>
