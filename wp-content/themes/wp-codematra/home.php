@@ -21,7 +21,7 @@
                         <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
                         <?php
                         $categories = get_the_category();
-                        $separator = ' ';
+                        $separator = ', ';
                         $output = '';
                         if ( ! empty( $categories ) ) {
                             foreach( $categories as $category ) {

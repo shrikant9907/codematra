@@ -28,7 +28,7 @@ $categories = get_the_category();
               <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
               <?php
               $categories = get_the_category();
-              $separator = ' ';
+              $separator = ', ';
               $output = '';
               if ( ! empty( $categories ) ) {
                   foreach( $categories as $category ) {
@@ -37,7 +37,8 @@ $categories = get_the_category();
                   echo trim( $output, $separator );
               }
 
-              ?></span> 
+              ?>
+              </span> 
               <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
             </div>
             <div class="f16">
