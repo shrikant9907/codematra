@@ -64,6 +64,116 @@ get_header();
   </div>
 </section>
 
+
+<!-- Blog Featured Posts Start -->
+<div class="blog-index-page common-section-ui pt_60 pb_30 bg-light hidei">
+	<div class="container">
+		<!-- <h3 class="heading_style type2 text-uppercase mb_20">Featured Listing</h3> -->
+		<div class="row">
+		<div class="col-12 col-sm-6 col-md-6">
+			<div class="card cui2 box_shw3 r_0 relative f14 cfeatured">
+			<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
+			<a href="blog-details.html" class="d-inline-block cimgwr" >
+				<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
+				<div class="f18 mb_10 cheading">
+					<small class="mb_5 d-block">March 21 2021</small>
+					Lorem Ipsum is simply dummy text of the printing
+				</div>
+			</a>
+			<!-- <div class="card-body ">
+				<div class="cmeta text-muted px_5 py_5 mb_10 f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> 1 Dec 2020</span></div>
+				<p class="cdesc mb_0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...</p>
+			</div> -->
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-md-6">
+			<div class="card cui2 box_shw3 r_0 relative f14 cfeatured">
+			<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
+			<a href="blog-details.html" class="d-inline-block cimgwr" >
+				<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
+				<div class="f18 mb_10 cheading">
+					<small class="mb_5 d-block">March 21 2021</small>
+					Lorem Ipsum is simply dummy text of the printing
+				</div>
+			</a>
+			<!-- <div class="card-body ">
+				<div class="cmeta text-muted px_5 py_5 mb_10 f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> 1 Dec 2020</span></div>
+				<p class="cdesc mb_0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...</p>
+			</div> -->
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+<!-- Blog Featured Posts End -->
+
+<!-- Recent Posts with Sidebar Start -->
+<div class="blog-index-page common-section-ui pt_60 pb_40">
+	<div class="container">
+		<h3 class="heading_style type2 text-uppercase mb_20">Recent Posts</h3>
+	
+	<div class="row">
+		<div class="col-12">
+			<div class="row">
+      <?php 
+          $args = array(
+                  'post_type'         =>  'post', 
+                  'posts_per_page'    =>  6, 
+                  'orderby'           =>  'id', 
+                  'order'             =>  'desc', 
+          );  
+          $posts = get_posts($args); 
+          if ($posts) {
+          foreach($posts as $post) {
+          $categories = get_the_terms($post, 'category');
+          $catname = $categories['0']->name;  
+          ?>
+          <div class="col-12 col-sm-6 col-md-4">
+					<div class="card cui1 relative f14">
+					<span class="badge bg_indigo text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
+					<a href="<?php the_permalink($post->ID); ?>" class="mb_20 d-inline-block border cimgwr min_h_200" >
+            <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
+            <?php if(has_post_thumbnail()) { ?>
+              <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+            <?php } ?>
+          </a>
+					<div class="card-body ">
+						<div class="f16 mb_10 cheading font_bold lh20">
+							<a href="<?php the_permalink($post->ID); ?>" class="d-inline-block text-dark" >
+							  <?php the_title(); ?>
+							</a>
+         		</div>
+						<div class="cmeta text-muted f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> 1 Dec 2020</span></div>
+						<div class="cdesc mb_0"><?php echo wp_trim_words($post->post_content, 15); ?></div>
+					</div>
+					</div>
+				</div>
+        <?php    
+          }} else { ?>
+              <p >No records found.</p>
+            <?php 
+          }    
+          ?>
+		</div>
+		</div>
+		<div class="col-12 col-sm-6 col-md-3 hide">
+			<div class="card cui2 noshadow r_0 w-100 typography">
+				<div class="">
+				   <h2 class='heading_style type2 text-uppercase f16 mb_10 font_bold'>Top Categories</h2>
+				   <ul class="f16 listing type2">
+						<li><a href="">HTML</a></li>
+						<li><a href="">CSS</a></li>
+						<li><a href="">Web Design</a></li>
+						<li><a href="">React Js</a></li>
+				   </ul>
+				</div>
+			  </div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- Recent Posts with Sidebar Ends -->
+
  <!-- Tutorials  Section -->
  <section id="ourTutorials" class="common-section-ui bg-light f16 pb_20">
    <div class="container">
@@ -113,7 +223,7 @@ get_header();
                 <div class="ciconrc ciconb">
                   <i class="fab fa-angular"></i>
                 </div>
-                <h5 class="card-title mbi_0 text-primary"><a href="<?php echo site_url('/tag/web-design/'); ?>">Web Design</a></h5>
+                <h5 class="card-title mbi_0 text-primary">Web Design</h5>
                 <p class="card-text">How to Code</p>
               </div>
             </div>
@@ -182,18 +292,16 @@ get_header();
  <!-- Tutorials  Section End -->
 
 
-<!-- Recent Posts with Sidebar Start -->
-<div class="blog-index-page common-section-ui pt_60 pb_40">
-	<div class="container">
-		<h2 class="heading_style type2 text-uppercase mb_20">Recent Posts</h2>
-	
-	<div class="row">
-		<div class="col-12">
-			<div class="row">
+
+ 	<!-- News and Events Section -->
+ 	<section id="news-and-blog" class="common-section-ui hidei">
+ 		<div class="container">
+      <h2 class="heading_style type2 text-uppercase">Recent Posts</h2>
+      <div class="row">
       <?php 
           $args = array(
                   'post_type'         =>  'post', 
-                  'posts_per_page'    =>  6, 
+                  'posts_per_page'    =>  4, 
                   'orderby'           =>  'id', 
                   'order'             =>  'desc', 
           );  
@@ -203,56 +311,33 @@ get_header();
           $categories = get_the_terms($post, 'category');
           $catname = $categories['0']->name;  
           ?>
-          <div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui1 relative f14">
-					<span class="badge bg_indigo text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
-					<a href="<?php the_permalink($post->ID); ?>" class="mb_20 d-inline-block border cimgwr min_h_200" >
-            <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
-            <?php if(has_post_thumbnail()) { ?>
-              <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
-            <?php } ?>
-          </a>
-					<div class="card-body ">
-						<h3 class="f16 mb_10 cheading font_bold lh20">
-							<a href="<?php the_permalink($post->ID); ?>" class="d-inline-block text-dark" >
-							  <?php the_title(); ?>
-							</a>
-         		</h3>
-						<div class="cmeta text-muted f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> 1 Dec 2020</span></div>
-						<div class="cdesc mb_0"><?php echo wp_trim_words($post->post_content, 15); ?></div>
-					</div>
-					</div>
-				</div>
+        <div class="col-12 col-sm-6">
+          <div class="card cui2 mbi_15">  
+            <div class="card-body pri_30 pli_30 pti_30">
+              <h5 class="mb_5"><a href="<?php the_permalink($post->ID); ?>" class="text-primary f16"><?php the_title(); ?></a></h5>
+              <p class="d-flex justify-content-between mb_5 f12 text_grey3"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> <?php echo get_the_time('F j, Y'); ?></span></p>
+              <p class="card-text text-dark">
+              <?php echo wp_trim_words($post->post_content, 20); ?>
+              </p>
+            </div>
+          </div>
+        </div>
         <?php    
           }} else { ?>
               <p >No records found.</p>
             <?php 
           }    
           ?>
-		</div>
-		</div>
-		<div class="col-12 col-sm-6 col-md-3 hide">
-			<div class="card cui2 noshadow r_0 w-100 typography">
-				<div class="">
-				   <h2 class='heading_style type2 text-uppercase f16 mb_10 font_bold'>Top Categories</h2>
-				   <ul class="f16 listing type2">
-						<li><a href="">HTML</a></li>
-						<li><a href="">CSS</a></li>
-						<li><a href="">Web Design</a></li>
-						<li><a href="">React Js</a></li>
-				   </ul>
-				</div>
-			  </div>
-		</div>
-	</div>
-</div>
-</div>
-<!-- Recent Posts with Sidebar Ends -->
+      </div>
+      <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui3s">View More Posts</a></p>
+ 		</div>
+ 	</section>
+ 	<!-- News and Events Section End -->
 
 <!-- Recent Programs with Sidebar Start -->
 <div class="blog-index-page common-section-ui bg-light">
 	<div class="container">
-		<h2 class="heading_style type2 text-uppercase mb_20">Recent Programs</h2>
+		<h3 class="heading_style type2 text-uppercase mb_20">Recent Programs</h3>
 	
 	<div class="row">
 		<div class="col-12">
@@ -281,11 +366,11 @@ get_header();
               </a>
               <?php } ?>
               <div class="card-body ">
-                <h3 class="f16 mb_10 cheading font_bold lh20">
+                <div class="f16 mb_10 cheading font_bold lh20">
                   <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block text-primary" >
                    <?php echo $progs->post_title; ?>
                   </a>
-              </h3>
+                </div>
                 <p class="cdesc mb_10"><?php echo wp_trim_words($progs->post_content, 12); ?></p>
                 <div class="cmeta text-muted f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> <?php echo get_the_time('F j, Y'); ?></span></div>
               </div>
@@ -307,15 +392,191 @@ get_header();
 </div>
 </div>
 <!-- Recent Programs with Sidebar Ends -->
- 
+
+ <!-- Categories  Section -->
+ <section id="categories" class='common-section-ui bg-light pt_0 pb_80 hide'>
+  <div class="container max_w_900 bg-white common-section-ui py_40 box_shw2 r_50">
+    <div class="max_w_800 mx-auto w-100">
+    <div class="form-row">
+     <h2 class="heading_style type2 text-center">Code <span class="text-primary">Categories</span> </h2>
+
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">Angular - <span class="text-black">10</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">React JS - <span class="text-black">14</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">Bootstrap - <span class="text-black">25</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">HTML - <span class="text-black">20</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">CSS - <span class="text-black">25</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">jQuery - <span class="text-black">10</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">JavaScript - <span class="text-black">8</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">SCSS - <span class="text-black">12</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">WordPress - <span class="text-black">30</span></span>
+      </div> 
+      <div class="col-3">
+        <span class="w-100 btnui3 border-primary btn mb_30">PHP - <span class="text-black">30</span></span>
+      </div> 
+   
+ </div>
+ </div>
+  </div>
+</section>
+<!-- Categories  Section End -->
+
+
+ <!-- Video Tutorials in Hindi  Section -->
+ <section id="videoTutorials" class="common-section-ui pt_0 hide">
+  <div class="container">
+    <div class="row">
+     <h2 class="heading_style type2 text-center"><span class="">Watch</span> Our Latest Video <span class="text-primary">Tutorials</span></h2>
+      <div class="pb_30 w-100"></div>
+     <div class="col-12 col-sm-6 col-md-4">
+      <div class="card cui2 bg_purple text-white r_0">
+        <a href="#" class="d-inline-block op8"><img class="card-img-top" src="https://picsum.photos/300/150" alt="" /></a>
+        <div class="card-body">
+          <h5 class="card-title "><a href="#" class="text-white">Web Design Crash Course for Beginners</a></h5>
+          <p class="card-text">You will learn creation of a simple landing page using HTML and CSS.</p>
+          <div class="card-text text-center border-top pt_20 d-flex justify-content-between">
+            <div class="star_rating">
+              <i class="fa-star fas"></i>
+              <i class="far fa-star selected fas"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="text-white">Watch Video <i class="ml_5 fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+     </div> 
+
+     <div class="col-12 col-sm-6 col-md-4">
+      <div class="card cui2 bg_primary text-white r_0">
+        <a href="#" class="d-inline-block op8"><img class="card-img-top" src="https://picsum.photos/300/150" alt="" /></a>
+        <div class="card-body">
+          <h5 class="card-title "><a href="#" class="text-white">Web Design Crash Course for Beginners</a></h5>
+          <p class="card-text">You will learn creation of a simple landing page using HTML and CSS.</p>
+          <div class="card-text text-center border-top pt_20 d-flex justify-content-between">
+            <div class="star_rating">
+              <i class="fa-star fas"></i>
+              <i class="far fa-star selected fas"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="text-white">Watch Video <i class="ml_5 fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+     </div> 
+     
+     <div class="col-12 col-sm-6 col-md-4">
+      <div class="card cui2 bg_cyan text-white r_0">
+        <a href="#" class="d-inline-block op8"><img class="card-img-top" src="https://picsum.photos/300/150" alt="" /></a>
+        <div class="card-body">
+          <h5 class="card-title "><a href="#" class="text-white">Web Design Crash Course for Beginners</a></h5>
+          <p class="card-text">You will learn creation of a simple landing page using HTML and CSS.</p>
+          <div class="card-text text-center border-top pt_20 d-flex justify-content-between">
+            <div class="star_rating">
+              <i class="fa-star fas"></i>
+              <i class="far fa-star selected fas"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="text-white">Watch Video <i class="ml_5 fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+     </div> 
+ </div>
+  </div>
+</section>
+<!-- Video Tutorials in Hindi  Section End -->
+
+
+ <!-- Quizzes  -->
+ <section id="test-your-skills" class="common-section-ui text-white bg-primary hide">
+   <div class="container-fluid">
+    <h2 class="heading_style text-center text-white">Test Your Programming Skills</h2>
+    <p class="text-center mb_40">Its time to check your programming skill with multi choice questions (MCQs) and quizzes</p>
+    
+    <!-- Row Start -->
+    <div class="form-row">
+
+      <div class="col">
+        <div class="card cui4b mb_10 text-dark r_0 border text-center">
+          <div class="card-body">
+            <h5 class="card-title mbi_0">Python Quiz</h5>
+            <p class="card-text">35 Questions - 30 min</p>
+          </div>
+        </div>
+      </div>  
+      <div class="col">
+        <div class="card cui4b mb_10 text-dark r_0 border text-center">
+          <div class="card-body">
+            <h5 class="card-title mbi_0">Python Quiz</h5>
+            <p class="card-text">35 Questions - 30 min</p>
+          </div>
+        </div>
+      </div>  
+      <div class="col">
+        <div class="card cui4b mb_10 text-dark r_0 border text-center">
+          <div class="card-body">
+            <h5 class="card-title mbi_0">Python Quiz</h5>
+            <p class="card-text">35 Questions - 30 min</p>
+          </div>
+        </div>
+      </div>  
+      <div class="col">
+        <div class="card cui4b mb_10 text-dark r_0 border text-center">
+          <div class="card-body">
+            <h5 class="card-title mbi_0">Python Quiz</h5>
+            <p class="card-text">35 Questions - 30 min</p>
+          </div>
+        </div>
+      </div>  
+      <div class="col">
+        <div class="card cui4b mb_10 text-dark r_0 border text-center">
+          <div class="card-body">
+            <h5 class="card-title mbi_0">Python Quiz</h5>
+            <p class="card-text">35 Questions - 30 min</p>
+          </div>
+        </div>
+      </div>  
+   
+     
+    </div>
+    <!-- Row End -->
+     
+     
+   </div>
+ </section>
+ <!-- Facts  End -->
+
+
 <section id="interview" class="common-section-ui pb_40 pt_60">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20">Recent Interview Questions</h2>
     <div class="row">
         <div class="col-12 col-md-6">
-          <div class="card cui1 r_0 pt_20 ">
+          <div class="card cui2 r_0 box_shw3 pt_20 ">
             <div class="card-body">
-              <h3 class="card-title text-primary text-uppercase"><span class="text-dark">React Js</span> - Interview Questions</h3>
+              <h5 class=" text-center card-title text-primary text-uppercase"><span class="text-dark">React Js</span> - Interview Questions</h5>
               <ul class="listing type2 licons w-100">
               <?php 
                 $args = array(
@@ -388,21 +649,21 @@ get_header();
   </div>
 </section>
   
-<!-- CTA Section -->
-<section id="cta-section" class="common-section-ui bg-dark pb_80 text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="card cui1 text-white">
-          <h2 class="text-white mb_15 text-uppercase">Tell us if you need anything</h2>
-          <p class="card-text f16">Your suggestions will help us to improve our website for you.</p>
-        </div>
-        <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-primary btnui3s">Contact us</a>
-      </div>    
-  </div>
-  </div>
-</section>
-<!-- CTA Section End -->
+  <!-- CTA Section -->
+ 	<section id="cta-section" class="common-section-ui bg-dark pb_80 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+         <div class="card cui1 text-white">
+            <h2 class="text-white mb_15 text-uppercase">Tell us if you need anything</h2>
+            <p class="card-text f16">Your suggestions will help us to improve our website for you.</p>
+         </div>
+         <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-primary btnui3s">Contact us</a>
+       </div>    
+   </div>
+    </div>
+  </section>
+  <!-- CTA Section End -->
  
 <?php   
 
