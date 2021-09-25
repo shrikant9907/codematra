@@ -104,3 +104,37 @@ function posts_terms_shortcode($atts) {
 
 		return ob_get_clean();
 }
+
+/*
+* Show Categories with posts counts.
+*/
+// [categoriesList show_counts="false" show_heading="false" heading="Categories"]
+add_shortcode('categoriesList', 'categories_list');
+function categories_list($atts) {
+  extract(shortcode_atts(array(
+    'show_counts' => true,
+    'show_heading' => true,
+    'heading' => 'Categories',
+  ), $atts));
+
+  $categories = get_categories(); 
+  if ($show_heading) {
+    $output = '<h2 class="f20 font_bold text-primary">'.$heading.'</h2>';
+  } else {
+    $output = '';
+  }
+  if ( ! empty( $categories ) ) {
+    $output .= '<ul>';
+    foreach( $categories as $category ) {
+      $count = $category->category_count;
+        $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
+        $output .= '<a class="text-dark" href="' . esc_url( get_category_link( $category->term_id ) ) . '" >' . esc_html( $category->name ) . '</a> ';
+        if ($show_counts) {
+          $output .= '<span class="badge bg-primary static">'.$count.'</span>';
+        }
+        $output .= '</li>';
+    }
+    $output .= '</ul>';
+    echo $output;
+  }
+}
