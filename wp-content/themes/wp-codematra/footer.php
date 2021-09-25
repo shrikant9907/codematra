@@ -20,20 +20,16 @@
 	               	<div class="col-6 col-md-3">
                     <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Learn Codes</h3>
                     <ul class="menu">
-                      <!-- <li><a href="<?php echo site_url('/wordpress'); ?>">WordPress</a></li> -->
-                      <!-- <li><a href="<?php echo site_url('/angular'); ?>">Angular</a></li> -->
-                      <!-- <li><a href="<?php echo site_url('/bootstrap'); ?>">Bootstrap</a></li> -->
-                      <!-- <li><a href="<?php echo site_url('/html-and-css'); ?>">HTML and CSS</a></li> -->
+                      <li><a href="<?php echo site_url('/category/wordpress/'); ?>">How to WordPress</a></li>
+                      <li><a href="<?php echo site_url('/category/php/'); ?>">How to PHP</a></li>
+                      <li><a href="<?php echo site_url('/tag/web-design/'); ?>">Web Design</a></li>
                       <li><a href="<?php echo site_url('/programs-category/php/'); ?>">PHP Programs</a></li>
                       <li><a href="<?php echo site_url('/programs-category/python/'); ?>">Python Programs</a></li>
                     </ul>
 	                </div>
 	                <div class="col-6 col-md-3">
-                      <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Knowledge</h3>
+                      <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Interview Q/A</h3>
                       <ul class="menu">
-                          <li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
-                          <!-- <li><a href="<?php echo site_url('/mcqs'); ?>">MCQ's</a></li> -->
-                          <!-- <li><a href="<?php echo site_url('/quizzes'); ?>">Test Quizzes</a></li> -->
                           <li><a href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React JS Questions</a></li>
                           <li><a href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress Questions</a></li>
                           <!-- <li><a href="<?php echo site_url('/tools'); ?>">Tools</a></li> -->
