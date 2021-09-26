@@ -3,17 +3,17 @@ get_header();
 ?>
 
 <!-- Banner UI 1 -->
-<div class="banner-section bg_primary text-white mt_0 min_h_600">
-  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shrikant_yadav_full.jpg" class="op3 overlay_w" />
+<div class="banner-section bg_primary bg_gred_primary text-white mt_0 min_h_400">
   <div class="container">
       <div class="row">
           <div class="col-12">
               <div class="banner-card nobefore">
                   <p class="pre-banner-heading f14 text-uppercase mb_10 ">Welcome to codematra.com</p>
-                  <h1 class="banner-heading f40 mb_10">Free codes and Easy tricks, <br />To learn Programming.</h1>
-                  <p class="banner-description mb_30">Our website is specially designed to make the code learning easy. <br />We created a step by step process to learn codes.</p>
+                  <h1 class="banner-heading f40 mb_10">A online plateform to learn everything from the basics.</h1>
+                  <p class="banner-description mb_30">Code Matra is an online platform to learn code from basic level to advanced. We always try to provide high-quality content and codes to our website visitor.</p>
+                  <!-- <p class="banner-description mb_30">We working here to provide the Tutorials, Codes, Interview Questions and Quizzes for your work and job preparation.</p> -->
                   <div class="banner-actions">
-                      <a href="#" class="btn btn-primary btnui3s"><i class="fas fa-laptop-code mr_10"></i> Start learning! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a>
+                      <a href="#ourTutorials" class="btn btn-secondary btnui3s"><i class="fas fa-laptop-code mr_10"></i> Start learning! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a>
                   </div>
               </div>
           </div>
@@ -21,7 +21,7 @@ get_header();
   </div>
 </div>
 
-<section class="common-section-ui pb_80">
+<section class="common-section-ui pb_80 hidei">
   <div class="container">
     <h2 class="heading_style type2 text-uppercase">How to start learning?</h2>
     <p class="mb_20">Start read the tutorials or watch videos to get the understanding of programming. <br /> 
@@ -313,10 +313,10 @@ get_header();
   <h2 class="heading_style type2 text-uppercase mb_20">Recent Interview Questions</h2>
     <div class="row">
         <div class="col-12 col-md-6">
-          <div class="card cui1 r_0 pt_20 ">
+          <div class="card cui1 r_0 pt_20">
             <div class="card-body">
               <h3 class="card-title text-primary text-uppercase"><span class="text-dark">React Js</span> - Interview Questions</h3>
-              <ul class="listing type2 licons w-100">
+              <ul class="listing type1 licons w-100 mb_20">
               <?php 
                 $args = array(
                         'post_type'         =>  'interview-questions', 
@@ -349,10 +349,10 @@ get_header();
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="card cui2 r_0 box_shw3 pt_20">
+          <div class="card cui1 r_0 pt_20 mb_20">
             <div class="card-body">
-            <h5 class="card-title text-center text-primary text-uppercase"><span class="text-dark">WordPress</span> - Interview Questions</h5>
-              <ul class="listing type2 licons w-100">
+            <h5 class="card-title text-primary text-uppercase"><span class="text-dark">WordPress</span> - Interview Questions</h5>
+              <ul class="listing type1 licons w-100 mb_20">
               <?php 
                 $args = array(
                         'post_type'         =>  'interview-questions', 

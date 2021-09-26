@@ -9,6 +9,10 @@ body {
     box-shadow: 2px 2px 9px 5px #f5f5f5 !important;
 }
 
+.bg_gred_primary {
+  background-image: linear-gradient(to right, #117ca6, #0085bb, #008ed0, #0096e5);
+}
+
 /* Wp CSS  */
 
 .wb-card .card-body,
