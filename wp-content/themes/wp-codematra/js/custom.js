@@ -1,5 +1,17 @@
 jQuery('document').ready(function(){
 
+  // Check if terms and conditions checked
+  var agreetoc = localStorage.getItem('agreetocookie');
+  if (agreetoc != 'true') {
+    console.log('agreetoc', agreetoc);
+    jQuery('.cookienotice-btn').on('click', function(){
+      jQuery(this).parent().hide();
+      localStorage.setItem('agreetocookie', true);
+    });
+  } else {
+    jQuery('.cookienotice').hide();
+  }
+  
 	jQuery('.hamburger').click(function(e){
         e.preventDefault(); 
         jQuery(this).toggleClass('active');
