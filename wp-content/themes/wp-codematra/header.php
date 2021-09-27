@@ -3,20 +3,10 @@
 <head> 
                 
   <title><?php wp_title(); ?></title>
-  <!-- <title>Free online tutorials and codes for students and beginners - codematra.com</title> -->
-
+ 
   <!-- Required meta tags -->
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <meta property="og:title" content="" />
-  <meta property="og:description" content="" />
-
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-
-  <!-- <meta name="google-site-verification" content="" /> -->
-  <!-- <meta name="robots" content="noindex, nofollow" /> -->
 
   <!-- Favicon -->
   <link rel='icon' href='<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png' type='image/x-icon' />
@@ -123,7 +113,13 @@
                   <div class="dropdown-menu"> 
                     <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React Js</a>
                     <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress</a>
-
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Tools</a>
+                  <div class="dropdown-menu"> 
+                    <a class="dropdown-item" href="<?php echo site_url('/base64-encode-and-decode/'); ?>">Base64 Encoder</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/base64-encode-and-decode/?tool=decode'); ?>">Base64 Decoder</a>
                   </div>
                 </li>
                 <li class="nav-item nav-item d-flex justify-content-center align-items-center">
