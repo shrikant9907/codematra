@@ -28,7 +28,7 @@ if ($activeTool == 'encode') {
   $endePlaceholder2 = 'Base64 decoded output will display here...';
   $endeDesc         = 'Base64 decoder is an online free tool to convert base64 encoded code to a string or array etc.';
   $output = base64_decode($input, true);
-  if (!$output) {
+  if (!$output && $input) {
     $endeInvalid = "<p class='alert alert-danger'>Not a valid base64 code.</p>";
   }
 }
