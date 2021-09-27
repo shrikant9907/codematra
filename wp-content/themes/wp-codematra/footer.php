@@ -62,7 +62,7 @@
 	 				 	<p class="f12 lh18 mb_10">&copy; <?php echo date('Y'); ?>. codematra.com | All Rights Reserved.</p>
 	 				 </div>
 	 				 <div class="col">
-	 				 	<p class="f12 lh18 mb_10 text-right">Developed by <a target="_blank" class="text-white" href="javascript:void('0');">Codematra</a></p>
+	 				 	<p class="f12 lh18 mb_10 text-right">Developed by <a class="text-white" href="<?php echo site_url('/'); ?>">Codematra</a></p>
 	 				 </div>
 	 			</div>
 	 		</div>
