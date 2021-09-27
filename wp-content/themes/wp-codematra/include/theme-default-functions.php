@@ -417,7 +417,7 @@ function getBadgeColor($name) {
 }
 
 /*
- * Set visits counts on posts, pages and custom post type.
+ * Set visits counts on posts, pages and custom post type. | site: codematra.com
  */
 add_action('wp_head', 'setVistsCounts');
 function setVistsCounts() {
