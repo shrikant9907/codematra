@@ -47,7 +47,7 @@
 <body <?php body_class(); ?>> 
 
 <!-- Header Start -->
-<header id="main_header" class="header">
+<header id="main_header" class="header sticky">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-3"> 
@@ -127,7 +127,7 @@
                   </div>
                 </li>
                 <li class="nav-item nav-item d-flex justify-content-center align-items-center">
-                  <form class="cbody fui fui1p search-box" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
+                  <form class="cbody fui fui1p search-box max_w_90p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
                     <div class="search-box">
                       <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_400" required="required" placeholder="Search Codes, Programs, Tutorials, Interview Questions etc...">
                       <button type="submit" class="btn btn-primary btnui3"><i class="fa fa-search" aria-hidden="true"></i></button>

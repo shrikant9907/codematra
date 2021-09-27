@@ -2,6 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 26px;
+    padding-top: 70px !important; 
 }
 
 
@@ -434,7 +435,24 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
 }
 
 /*Responsive*/
+@media all and (max-width: 991px) { 
+  header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link{
+    margin: 0 !important;
+    padding: 13px 20px !important;
+  }
+}
+@media all and (max-width: 800px) { 
+  .site_logo {
+    padding-left: 45px;
+  }
+
+  .navbar-toggler {
+    background-color: #008dd2;
+  }
+}
+
 @media all and (max-width: 786px) {
+  
 
     .container {
         max-width: 100%;
