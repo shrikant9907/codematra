@@ -8,7 +8,7 @@ function insertDefaultPages() {
     $pages = array (
         'Code Matra',
         'Blog',
-        // 'Programs',
+        'Base64 Encode and Decode',
         // 'Categories',
         // 'Quizzes',
         'Interview',
