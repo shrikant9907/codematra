@@ -14,6 +14,11 @@ body {
   background-image: linear-gradient(to right, #117ca6, #0085bb, #008ed0, #0096e5);
 }
 
+.header .search-box .form-control {
+  min-height: 35px;
+  padding: 8px 15px;
+}
+
 /* Wp CSS  */
 
 .wb-card .card-body,
@@ -423,8 +428,11 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
     height: auto !important;  
 }
 
+.comment-form input[type="text"],
 .comment-form textarea#comment {
     width: 100%;
+    border-radius: 0;
+    border:1px solid #dee2e6!important;
 } 
  
 .comment-form #submit {
@@ -434,6 +442,18 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
     padding: 8px 15px;
 }
 
+p.comment-form-cookies-consent {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  line-height: 20px;
+}
+
+.comment-form input[type="checkbox"] {
+  margin-top: 3px;
+  margin-right: 6px;
+}
+
 /*Responsive*/
 @media all and (max-width: 991px) { 
   header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link{
@@ -441,6 +461,7 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
     padding: 13px 20px !important;
   }
 }
+
 @media all and (max-width: 800px) { 
   .site_logo {
     padding-left: 45px;
@@ -501,6 +522,37 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
         margin: -8px 2% -4px 2%;
     }
 
+    .common-section-ui {
+      padding: 30px 0;
+    }
+
+    .single-page h2,
+    .common-section-ui h2,
+    .common-section-ui h2.heading_style {
+      font-size: 20px;
+    }
+
+    #interview h3.card-title,
+    .common-section-ui h3.card-title,
+    .common-section-ui h3,
+    .common-section-ui h3.heading_style {
+      font-size: 18px;
+    }
+
+    /* Banner */
+    .banner_section .banner-card, .banner-section .banner-card {
+        padding: 0;
+        text-align: center;
+    }
+    .banner-heading {
+      font-size: 24px;
+    }
+
+    .banner-description p,  
+    p.banner-description {
+      line-height: 22px;
+    }
+
     /*About Section*/
     .section-about img.position-absolute {
         width: 100%;
@@ -513,8 +565,31 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
 
 
     /*Footer*/
-    .section-footer .col-6 {
-        width: 50%;
-        flex: 0 0 50%;
+    .section-footer,
+    .section-footer p.text-right {
+      text-align: center !important;
     }
+    
+    .section-footer .col-6 {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    
+    .footer_style1 ul.socialicons {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .footer_style1 ul.address  {
+      display: inline-block;
+    }
+
+    .ourtutorials .slick-prev {
+      left: 20px;
+      z-index: 99;
+    }
+    .slick-next {
+      right: 29px;
+      z-index: 99;
+    } 
 }

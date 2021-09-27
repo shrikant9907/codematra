@@ -18,7 +18,7 @@ $categories = get_the_category();
       <div class="col-12 col-sm-6 col-md-8">
         <div class="card cui2 w-100 typography">
           <div class="card-body pri_30 pli_30 pbi_30">
-            <h1 class='text-primary'><?php the_title(); ?></h1>
+            <h2 class='text-primary'><?php the_title(); ?></h3>
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
               <?php if(has_post_thumbnail()) { ?>
                 <img class="card-img-top r_0 mb_20 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
