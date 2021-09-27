@@ -201,26 +201,46 @@ get_header();
           if ($posts) {
           foreach($posts as $post) {
           $categories = get_the_terms($post, 'category');
-          $catname = $categories['0']->name;  
+          $separator = ' ';
+          $output = '';
+          if ( ! empty( $categories ) ) {
+              foreach( $categories as $category ) {
+                  $output .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+              }
+          }
+
+          // View Counts
+          $views = get_post_meta($post->ID, 'visit_counts', true);
+          if (!$views) {
+            $views = 0;
+          }
+
+          $catbadges = trim( $output, $separator );  
           ?>
           <div class="col-12 col-sm-6 col-md-4">
 					<div class="card cui1 relative f14">
-					<span class="badge bg_indigo text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
-					<a href="<?php the_permalink($post->ID); ?>" class="mb_20 d-inline-block border cimgwr min_h_200" >
+          <a href="<?php the_permalink($post->ID); ?>" class="mb_20 d-inline-block border cimgwr min_h_200" >
             <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
             <?php if(has_post_thumbnail()) { ?>
               <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
             <?php } ?>
           </a>
-					<div class="card-body ">
+          <div class="card-body ">
 						<h3 class="f16 mb_10 cheading font_bold lh20">
 							<a href="<?php the_permalink($post->ID); ?>" class="d-inline-block text-dark" >
 							  <?php the_title(); ?>
 							</a>
          		</h3>
-						<div class="cmeta text-muted f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> 1 Dec 2020</span></div>
-						<div class="cdesc mb_0"><?php echo wp_trim_words($post->post_content, 15); ?></div>
-					</div>
+					  <div class="d-flex mb_10">
+              <?php echo $catbadges; ?> 
+            </div>
+            <div class="cdesc mb_10"><?php echo wp_trim_words($post->post_content, 15); ?></div>
+						<div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
+              <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
+              <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+              <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+            </div>
+          </div>
 					</div>
 				</div>
         <?php    
@@ -268,12 +288,25 @@ get_header();
           if ($programsList) {
           foreach($programsList as $progs) {
           $progTerms = get_the_terms($progs, 'programs-category');
+
+          $separator = ' ';
+          $proutput = '';
+          if ( ! empty( $progTerms ) ) {
+              foreach( $progTerms as $progTerm ) {
+                  $proutput .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_term_link( $progTerm->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $progTerm->name ) ) . '">' . esc_html( $progTerm->name ) . '</a>' . $separator;
+              }
+          }
           
-          $badgeColor = getBadgeColor($progTerms['0']->name);
+          $termbadges = trim( $proutput, $separator );  
+
+          // View Counts
+          $prviews = get_post_meta($progs->ID, 'visit_counts', true);
+          if (!$prviews) {
+            $prviews = 0;
+          }
           ?>
           	<div class="col-12 col-sm-6 col-md-6">
-              <div class="card cui3s relative f14 pt_15 min_h_100 ">
-              <span class="badge <?php echo $badgeColor; ?> text-white absolute fixed_top_right"><?php echo $progTerms['0']->name; ?></span>
+              <div class="card cui3s border-0 relative f14 pt_15 min_h_100 ">
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id($progs->ID)) ;  ?>
               <?php if(has_post_thumbnail($progs->ID)) { ?>
               <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block cimgwr" >
@@ -282,12 +315,19 @@ get_header();
               <?php } ?>
               <div class="card-body ">
                 <h3 class="f16 mb_10 cheading font_bold lh20">
-                  <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block text-primary" >
+                  <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block text-dark" >
                    <?php echo $progs->post_title; ?>
                   </a>
               </h3>
+              <div class="d-flex mb_10">
+                <?php echo $termbadges; ?> 
+              </div>
                 <p class="cdesc mb_10"><?php echo wp_trim_words($progs->post_content, 12); ?></p>
-                <div class="cmeta text-muted f12 d-flex justify-content-between"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> <?php echo get_the_time('F j, Y'); ?></span></div>
+                <div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
+                  <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $prviews; ?></span>
+                  <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                  <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+                </div>
               </div>
               </div>
             </div>
