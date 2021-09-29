@@ -8,7 +8,7 @@ if (isset($_GET['step']) && ($_GET['step'] <= 3 )) {
   $rmStep = trim($_GET['step']);
 
   if ($rmStep == 2) {
-    $rmTitle = 'Resume Template';
+    $rmTitle = 'Make A Resume';
   }
 
   if ($rmStep == 3) {
@@ -48,9 +48,10 @@ get_header();
 
           <div class="card cui1 step-form-ui">
             <div class="card-title text-primary text-center mbi_30"><?php echo $rmTitle; ?></div>
+            <?php if ($rmStep == 1): ?>
             <form class="fui fui1" action="" method="get" enctype="multipart/form-data">
               <input type="hidden" value="<?php echo ($rmStep + 1); ?>" name="step" />
-              <?php if ($rmStep == 1): ?>
+                <!-- Choose Resume Template Start -->
                 <div class="row rm-choose-row">
                   <div class="col-12 col-sm-6 col-md-4">
                     <div class="form-group selected">
@@ -80,8 +81,129 @@ get_header();
                     </div>
                   </div>
                 </div>
-              <?php endif; ?>
+                <!-- Choose Resume Template End -->
+            
+              <div class="cmbende-actions text-center mt_20">
+                <button type="submit" class="btn btn-primary btnui3s text-uppercase"><?php echo $rmBtnLabel; ?></button>
+              </div>
+            </form>   
+            <?php endif; ?>
+            <?php if ($rmStep == 2): ?>
+              <!-- Resume Section Start -->
+              <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
+                <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 1: Resume Header</h3>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Full Name</label>
+                      <input name="fullname" value="" type="text" class="form-control" placeholder="Enter your name.">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Phone</label>
+                      <input name="phone" value="" type="text" class="form-control" placeholder="Enter your phone number."> 
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input name="email" value="" type="text" class="form-control" placeholder="Enter your email address.">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input name="address" value="" type="text" class="form-control" placeholder="Enter your address.">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Linkedin Profile</label>
+                      <input name="linkedin" value="" type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Github Profile</label>
+                      <input name="github" value="" type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-actions text-right">
+                  <input class="btn btn-primary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                </div>
+              </form>
+              <!-- Resume Section End -->
+              <!-- Experience Section Start -->
+              <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
+                <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 2: Work Experience</h3>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Company Name</label>
+                      <input name="company_name" value="" type="text" class="form-control" placeholder="Enter your name.">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Designation</label>
+                      <input name="designation" value="" type="text" class="form-control" placeholder="Enter your phone number."> 
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Start From</label>
+                      <input name="email" value="" type="text" class="form-control" placeholder="Enter your email address.">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Start End</label>
+                      <input name="email" value="" type="text" class="form-control" placeholder="Enter your email address.">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Work Description</label>
+                      <input name="email" value="" type="text" class="form-control" placeholder="Enter your email address.">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input name="address" value="" type="text" class="form-control" placeholder="Enter your address.">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Linkedin Profile</label>
+                      <input name="linkedin" value="" type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Github Profile</label>
+                      <input name="github" value="" type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-actions text-right">
+                  <input class="btn btn-primary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                </div>
+              </form>
+              <!-- Experience Section End -->
+            <?php endif; ?>
               <?php if ($rmStep == 2): ?>
+                <!-- Resume Template 1 Start -->
                 <div class="rm-doc-ui rm-template-1">
 
                   <div class="rm-block1">
@@ -144,7 +266,7 @@ get_header();
                   <div class="rm-block5 rm-section">
                     <div class="rms-heading">PROJECTS</div>
                     <div class="project-item">
-                      <span class="project-name">Project Name<span>- Front End Lead - React JS</span></span>
+                      <span class="project-name">Project Name<span> - Front End Lead - React JS</span></span>
                       <div class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, voluptates fugiat pariatur porro voluptate itaque veniam quaerat, ipsa explicabo sapiente nihil sunt rerum laborum amet nisi, reprehenderit harum odit deserunt.</div>
                     </div>
                   </div>
@@ -164,11 +286,8 @@ get_header();
                   </div>
 
                 </div>
+                <!-- Resume Template 1 End -->
               <?php endif; ?>
-              <div class="cmbende-actions text-center mt_20">
-                <button type="submit" class="btn btn-primary btnui3s text-uppercase"><?php echo $rmBtnLabel; ?></button>
-              </div>
-            </form>
           </div>
 
         </div>
