@@ -41,6 +41,7 @@
                       <ul class="menu">
                           <li><a href="<?php echo site_url('/base64-encode-and-decode'); ?>">Base64 Encoder</a></li>
                           <li><a href="<?php echo site_url('/base64-encode-and-decode/?base64-encode-and-decode/?tool=decode'); ?>">Base64 Decoder</a></li>
+                          <li><a href="<?php echo site_url('/base64-encode-and-decode/list-to-array-convertor/'); ?>">List to Array</a></li>
                       </ul>
 	                </div>
 	                <div class="col-6 col-md-3">
