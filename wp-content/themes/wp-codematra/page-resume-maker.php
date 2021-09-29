@@ -89,6 +89,7 @@ get_header();
             </form>   
             <?php endif; ?>
             <?php if ($rmStep == 2): ?>
+
               <!-- Resume Section Start -->
               <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
                 <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 1: Resume Header</h3>
@@ -139,6 +140,7 @@ get_header();
                 </div>
               </form>
               <!-- Resume Section End -->
+
               <!-- Experience Section Start -->
               <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
                 <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 2: Work Experience</h3>
@@ -146,53 +148,35 @@ get_header();
                   <div class="col">
                     <div class="form-group">
                       <label>Company Name</label>
-                      <input name="company_name" value="" type="text" class="form-control" placeholder="Enter your name.">
+                      <input name="company_name" value="" type="text" class="form-control" placeholder="Enter company name.">
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label>Designation</label>
-                      <input name="designation" value="" type="text" class="form-control" placeholder="Enter your phone number."> 
+                      <input name="designation" value="" type="text" class="form-control" placeholder="Enter designation."> 
                     </div>
                   </div>
+                </div>
+                <div class="form-row">
                   <div class="col">
                     <div class="form-group">
                       <label>Start From</label>
-                      <input name="email" value="" type="text" class="form-control" placeholder="Enter your email address.">
+                      <input name="email" value="" type="text" class="form-control" placeholder="Enter starting date.">
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label>Start End</label>
-                      <input name="email" value="" type="text" class="form-control" placeholder="Enter your email address.">
+                      <input name="email" value="" type="text" class="form-control" placeholder="Enter end date.">
                     </div>
                   </div>
+                </div>
+                <div class="form-row">
                   <div class="col">
                     <div class="form-group">
                       <label>Work Description</label>
                       <input name="email" value="" type="text" class="form-control" placeholder="Enter your email address.">
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col">
-                    <div class="form-group">
-                      <label>Address</label>
-                      <input name="address" value="" type="text" class="form-control" placeholder="Enter your address.">
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col">
-                    <div class="form-group">
-                      <label>Linkedin Profile</label>
-                      <input name="linkedin" value="" type="text" class="form-control" placeholder="">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-group">
-                      <label>Github Profile</label>
-                      <input name="github" value="" type="text" class="form-control" placeholder="">
                     </div>
                   </div>
                 </div>
@@ -201,6 +185,44 @@ get_header();
                 </div>
               </form>
               <!-- Experience Section End -->
+
+              <!-- Qualification Section Start -->
+              <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
+                <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 3: Qualification</h3>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>University / College Name</label>
+                      <input name="college_name" value="" type="text" class="form-control" placeholder="Enter company name.">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Degree</label>
+                      <input name="degree" value="" type="text" class="form-control" placeholder="Enter designation."> 
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>From</label>
+                      <input name="college_from" value="" type="text" class="form-control" placeholder="Enter starting date.">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>To</label>
+                      <input name="college_to" value="" type="text" class="form-control" placeholder="Enter end date.">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-actions text-right">
+                  <input class="btn btn-primary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                </div>
+              </form>
+              <!-- Qualification Section End -->
+
             <?php endif; ?>
               <?php if ($rmStep == 2): ?>
                 <!-- Resume Template 1 Start -->
