@@ -9,7 +9,7 @@ get_header();
           <div class="col-12">
               <div class="banner-card nobefore">
                   <p class="pre-banner-heading f14 text-uppercase mb_10 ">Welcome to codematra.com</p>
-                  <h1 class="banner-heading f40 mb_10">A online plateform to learn everything from the basics.</h1>
+                  <h1 class="banner-heading f40 mb_10">A online plateform to learn <u>coding</u> from the basics.</h1>
                   <p class="banner-description mb_30">Code Matra is an online platform to learn code from basic level to advanced. We always try to provide high-quality content and codes to our website visitor.</p>
                   <!-- <p class="banner-description mb_30">We working here to provide the Tutorials, Codes, Interview Questions and Quizzes for your work and job preparation.</p> -->
                   <div class="banner-actions">

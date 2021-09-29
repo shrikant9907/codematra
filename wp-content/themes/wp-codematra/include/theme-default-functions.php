@@ -9,6 +9,7 @@ function insertDefaultPages() {
         'Code Matra',
         'Blog',
         'Base64 Encode and Decode',
+        'Resume Maker',
         // 'Categories',
         // 'Quizzes',
         'Interview',
