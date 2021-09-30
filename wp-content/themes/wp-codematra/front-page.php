@@ -181,21 +181,21 @@ get_header();
  </section>
  <!-- Tutorials  Section End -->
 
-
-<!-- Recent Posts with Sidebar Start -->
+<!-- Popular Posts with Sidebar Start -->
 <div class="blog-index-page common-section-ui pt_60 pb_40">
 	<div class="container">
-		<h2 class="heading_style type2 text-uppercase mb_20">Recent Posts</h2>
+		<h2 class="heading_style type2 text-uppercase mb_20">Popular Posts</h2>
 	
 	<div class="row">
 		<div class="col-12">
 			<div class="row">
       <?php 
           $args = array(
-                  'post_type'         =>  'post', 
-                  'posts_per_page'    =>  6, 
-                  'orderby'           =>  'id', 
-                  'order'             =>  'desc', 
+            'post_type'         =>  'post', 
+            'posts_per_page'    =>  6, 
+            'meta_key'          => 'visit_counts', 
+            'order'             => 'DESC',
+            'orderby'           => 'meta_value_num',
           );  
           $posts = get_posts($args); 
           if ($posts) {
@@ -217,9 +217,9 @@ get_header();
 
           $catbadges = trim( $output, $separator );  
           ?>
-          <div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui1 relative f14">
-          <a href="<?php the_permalink($post->ID); ?>" class="mb_20 d-inline-block border bg-light cimgwr min_h_200" >
+          <div class="col-12 col-sm-6">
+					<div class="card cui2 relative f14 mb_40">
+          <a href="<?php the_permalink($post->ID); ?>" class="mb_20 hidei d-inline-block border bg-light cimgwr min_h_200" >
             <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
             <?php if(has_post_thumbnail()) { ?>
               <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
@@ -267,10 +267,88 @@ get_header();
 	</div>
 </div>
 </div>
+<!-- Popular Posts with Sidebar Ends -->
+
+<!-- Recent Posts with Sidebar Start -->
+<div class="blog-index-page common-section-ui pt_60 pb_40 bg-light">
+	<div class="container">
+		<h2 class="heading_style type2 text-uppercase mb_20">Latest Posts</h2>
+	
+	<div class="row">
+		<div class="col-12">
+			<div class="row">
+      <?php 
+          $args = array(
+                  'post_type'         =>  'post', 
+                  'posts_per_page'    =>  6, 
+                  'orderby'           =>  'id', 
+                  'order'             =>  'desc', 
+          );  
+          $posts = get_posts($args); 
+          if ($posts) {
+          foreach($posts as $post) {
+          $categories = get_the_terms($post, 'category');
+          $separator = ' ';
+          $output = '';
+          if ( ! empty( $categories ) ) {
+              foreach( $categories as $category ) {
+                  $output .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+              }
+          }
+
+          // View Counts
+          $views = get_post_meta($post->ID, 'visit_counts', true);
+          if (!$views) {
+            $views = 0;
+          }
+
+          $catbadges = trim( $output, $separator );  
+          ?>
+          <div class="col-12 col-sm-6 col-md-4">
+					<div class="card cui2 relative f14">
+          <a href="<?php the_permalink($post->ID); ?>" class="hidei mb_20 d-inline-block border bg-light cimgwr min_h_200" >
+            <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
+            <?php if(has_post_thumbnail()) { ?>
+              <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+            <?php } ?>
+          </a>
+          <div class="card-body ">
+						<h3 class="f16 mb_10 cheading font_bold lh20">
+							<a href="<?php the_permalink($post->ID); ?>" class="d-inline-block text-dark" >
+							  <?php the_title(); ?>
+							</a>
+         		</h3>
+					  <div class="d-flex mb_10">
+              <?php echo $catbadges; ?> 
+            </div>
+            <div class="cdesc mb_10"><?php echo wp_trim_words($post->post_content, 15); ?></div>
+						<div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
+              <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
+              <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+              <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+            </div>
+          </div>
+					</div>
+				</div>
+        <?php    
+          }} else { ?>
+              <p >No records found.</p>
+            <?php 
+          }    
+          ?>
+		</div>
+		</div>
+ 
+	</div>
+  <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui3s">View More Posts</a></p>
+   
+</div>
+</div>
 <!-- Recent Posts with Sidebar Ends -->
 
+
 <!-- Recent Programs with Sidebar Start -->
-<div class="blog-index-page common-section-ui bg-light">
+<div class="blog-index-page common-section-ui">
 	<div class="container">
 		<h2 class="heading_style type2 text-uppercase mb_20">Recent Programs</h2>
 	
@@ -280,7 +358,7 @@ get_header();
         <?php 
           $args = array(
                   'post_type'         =>  'programs', 
-                  'posts_per_page'    =>  6, 
+                  'posts_per_page'    =>  4, 
                   'orderby'           =>  'id', 
                   'order'             =>  'desc', 
           );  
@@ -348,7 +426,7 @@ get_header();
 </div>
 <!-- Recent Programs with Sidebar Ends -->
  
-<section id="interview" class="common-section-ui pb_40 pt_60">
+<section id="interview" class="common-section-ui pb_40 pt_60 bg-light">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20">Recent Interview Questions</h2>
     <div class="row">
@@ -425,6 +503,25 @@ get_header();
           </div>
         </div>
     </div>
+  </div>
+</section>
+
+<section id="tools" class="common-section-ui pb_40 pt_60">
+  <div class="container">
+  <h2 class="heading_style type2 text-uppercase mb_20">Online Tools</h2>
+  <div class="onlinetools"> 
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/base64-encode-and-decode/'); ?>">Base64 Encoder</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/base64-encode-and-decode/?tool=decode'); ?>">Base64 Decoder</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/list-to-array-convertor/'); ?>">List to Array</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/list-to-html-list-convertor/'); ?>">List to HTML List</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/minify-css/'); ?>">Minify CSS</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/minify-html/'); ?>">Minify HTML</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/minify-js/'); ?>">Minify JS</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/excel-to-array-convertor/'); ?>">Excel To Array</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/excel-to-json-convertor/'); ?>">Excel To JSON</a>
+    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/excel-to-xml-convertor/'); ?>">Excel To XML</a>
+    <a class="btn btn-primary btnui3 mb_20" href="#">Resume Maker - Coming Soon</a>
+  </div>    
   </div>
 </section>
   
