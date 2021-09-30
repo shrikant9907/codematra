@@ -496,7 +496,8 @@ function istl_upload_file_php($xlsfile) {
       $file_size = $xlsfile['size'];
       $file_tmp = $xlsfile['tmp_name'];
       $file_type = $xlsfile['type'];
-      $file_ext=strtolower(end(explode('.',$xlsfile['name'])));
+      $temexplode = explode('.', $file_name);
+      $file_ext = strtolower(end($temexplode));
 
       $expensions= array("xls");
 
