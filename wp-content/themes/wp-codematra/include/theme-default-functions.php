@@ -447,3 +447,153 @@ function setVistsCounts() {
     
   endif;
 }
+
+/*
+ * File Upload Function 
+ */
+function istl_upload_file($xlsfile) {
+        
+  $output = array();
+
+  if($xlsfile) { 
+
+          require_once( ABSPATH . 'wp-admin/includes/image.php' );
+          require_once( ABSPATH . 'wp-admin/includes/file.php' );
+          require_once( ABSPATH . 'wp-admin/includes/media.php' );
+
+          $_FILES = array ("custom_file_upload" => $xlsfile); 
+          $attachment_id = media_handle_upload( 'custom_file_upload', '' ); 
+
+          if ( is_wp_error( $attachment_id ) ) {
+              $output['error'] = 1;
+          } else {
+              
+              $file_path = get_attached_file( $attachment_id );
+              $file_url = wp_get_attachment_url( $attachment_id );
+              
+              $output['error'] = 0;
+              $output['attachment_id'] = $attachment_id; 
+              $output['file_path'] = $file_path;    
+              $output['file_url'] = $file_url;   
+
+          }
+  }  
+  
+  return $output; 
+}
+
+/*
+* File Upload Function 
+*/
+function istl_upload_file_php($xlsfile) {
+  
+  $output = array();
+
+  if($xlsfile) { 
+ 
+      $errors= array();
+      $file_name = $xlsfile['name'];
+      $file_size = $xlsfile['size'];
+      $file_tmp = $xlsfile['tmp_name'];
+      $file_type = $xlsfile['type'];
+      $file_ext=strtolower(end(explode('.',$xlsfile['name'])));
+
+      $expensions= array("xls");
+
+      if(in_array($file_ext,$expensions)=== false){
+         $errors[]="extension not allowed, please choose a Excel or .xls file.";
+      }
+
+      if($file_size > 2097152) {
+         $errors[]='File size must be excately 2 MB';
+      }
+      
+      $upload_dir = wp_upload_dir();
+      $upload_dir_path = $upload_dir['basedir'];   
+
+      if(empty($errors)==true) {
+          move_uploaded_file($file_tmp, $upload_dir_path."/xlsfiles/".$file_name);
+          $output['error'] = 0;
+          $output['attachment_id'] = 0; 
+          $output['file_path'] = $upload_dir_path."/xlsfiles/".$file_name;    
+          $output['file_url'] = '';   
+      }else{
+          $output['error'] = 1;
+          $output['error_message'] = $errors;
+      } 
+  }  
+  
+//         print_r($errors);
+  return $output; 
+}
+
+
+/*
+* Get my IP
+*/
+function istl_get_my_ip() {
+if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+//check ip from share internet
+$ip = $_SERVER['HTTP_CLIENT_IP'];
+} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+//to check ip is pass from proxy
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+$ip = $_SERVER['REMOTE_ADDR'];
+}
+return apply_filters( 'wpb_get_ip', $ip );
+}
+
+/*
+* Format JSON
+*/
+function istl_format_json($json) { 
+
+$result      = '';
+$pos         = 0;
+$strLen      = strlen($json);
+$indentStr   = '  ';
+$newLine     = "\n";
+$prevChar    = '';
+$outOfQuotes = true;
+
+for ($i=0; $i<=$strLen; $i++) {
+
+  // Grab the next character in the string.
+  $char = substr($json, $i, 1);
+
+  // Are we inside a quoted string?
+  if ($char == '"' && $prevChar != '\\') {
+      $outOfQuotes = !$outOfQuotes;
+
+  // If this character is the end of an element,
+  // output a new line and indent the next line.
+  } else if(($char == '}' || $char == ']') && $outOfQuotes) {
+      $result .= $newLine;
+      $pos --;
+      for ($j=0; $j<$pos; $j++) {
+          $result .= $indentStr;
+      }
+  }
+
+  // Add the character to the result string.
+  $result .= $char;
+
+  // If the last character was the beginning of an element,
+  // output a new line and indent the next line.
+  if (($char == ',' || $char == '{' || $char == '[') && $outOfQuotes) {
+      $result .= $newLine;
+      if ($char == '{' || $char == '[') {
+          $pos ++;
+      }
+
+      for ($j = 0; $j < $pos; $j++) {
+          $result .= $indentStr;
+      }
+  }
+
+  $prevChar = $char;
+}
+
+return $result;
+}

@@ -17,6 +17,7 @@ require_once('include/shortcodes/tutshortcodes.php');
 
 // Tool: Minifier 
 include_once('include/tools/minifier/php-html-css-js-minifier.php'); 
+include_once('include/tools/xls-reader-functions.php'); 
 
 
 // Ajax Functions   

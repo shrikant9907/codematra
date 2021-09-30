@@ -6,7 +6,7 @@ function istl_xls_reader($xls_file_url) {
     $xlsrecords = ''; 
 //    $xls_file_url             = get_option('xls_file_url');
      if($xls_file_url!='') {
-         include_once(get_stylesheet_directory().'/include/core/xls-file-reader/excel_reader.php');     // include the class
+         include_once(get_stylesheet_directory().'/include/tools/xls-file-reader/excel_reader.php');     // include the class
          $data = new PhpExcelReader;       
          $data->read($xls_file_url);          
          $sheetsdata = $data->sheets; 
