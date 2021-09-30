@@ -23,6 +23,11 @@ body.admin-bar .header {
   padding: 8px 15px;
 }
 
+.footer_style1 ul li {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 /* Wp CSS  */
 
 .wb-card .card-body,
@@ -407,7 +412,7 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
 .footer_style1 ul.address li i {
     position: absolute;
     left: 5px;
-    top: 9px;
+    top: 6px;
     font-size: 16px;
 }
 
@@ -723,7 +728,7 @@ p.comment-form-cookies-consent {
     .section-footer p.text-right {
       text-align: center !important;
     }
-    
+     
     .section-footer .col-6 {
         width: 100%;
         flex: 0 0 100%;

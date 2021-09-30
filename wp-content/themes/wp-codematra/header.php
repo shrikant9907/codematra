@@ -122,6 +122,12 @@
                     <a class="dropdown-item" href="<?php echo site_url('/base64-encode-and-decode/?tool=decode'); ?>">Base64 Decoder</a>
                     <a class="dropdown-item" href="<?php echo site_url('/list-to-array-convertor/'); ?>">List to Array</a>
                     <a class="dropdown-item" href="<?php echo site_url('/list-to-html-list-convertor/'); ?>">List to HTML List</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/minify-css/'); ?>">Minify CSS</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/minify-html/'); ?>">Minify HTML</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/minify-js/'); ?>">Minify JS</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/excel-to-array-convertor/'); ?>">Excel To Array</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/excel-to-json-convertor/'); ?>">Excel To JSON</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/excel-to-xml-convertor/'); ?>">Excel To XML</a>
                     <!-- <a class="dropdown-item" href="<?php echo site_url('/resume-maker/'); ?>">Resume Maker</a> -->
                   </div>
                 </li>

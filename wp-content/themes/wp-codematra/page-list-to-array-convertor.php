@@ -56,7 +56,7 @@ get_header(); ?>
                 </div>
                 <div class="cmbende-actions flex justify-content-between">
                   <button type="submit" class="btn btn-primary btn-sm btnui1s f20 text-uppercase"><?php echo $endeBtnLabel; ?></button>
-                  <button type="submit" name="clear" class="btn btn-secondary btn-sm btnui1s f20 text-uppercase">Clear</button>
+                  <button type="reset" name="clear" class="btn btn-secondary btn-sm btnui1s f20 text-uppercase">Clear</button>
                 </div>
               </form>
             </div>
