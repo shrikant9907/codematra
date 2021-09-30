@@ -7,14 +7,14 @@
                <!-- <p><img class="footer_logo" src="https://picsum.photos/id/475/300/100" alt="" /></p> -->
 	                    <ul class="address">
                         <!-- <li><i class="fas fa-phone-alt text-primary"></i> <a href="mailto:0000000000">000 000 0000</a></li> -->
-                        <li> <i class="fa fa-envelope text-primary" aria-hidden="true"></i><a href="mailto:info@codematra.com">info@codematra.com</a></li>
+                        <li> <i class="fa fa-envelope text-primary" aria-hidden="true"></i><a href="mailto:codematra@gmail.com">codematra@gmail.com</a></li>
                         <!-- <li><i class="fas fa-map text-primary"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </li> -->
                       </ul>
                       <ul class="socialicons f14 colored siconsc"> 
-                        <li class="facebook"><a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li class="instagram"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li class="youtube"><a href="#" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li class="facebook"><a href="https://www.facebook.com/codematra" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <!-- <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
+                        <!-- <li class="instagram"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
+                        <!-- <li class="youtube"><a href="#" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li> -->
                       </ul>
 	                </div>
 	               	<div class="col-6 col-md-3">
