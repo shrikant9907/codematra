@@ -121,7 +121,7 @@
                     <a class="dropdown-item" href="<?php echo site_url('/base64-encode-and-decode/'); ?>">Base64 Encoder</a>
                     <a class="dropdown-item" href="<?php echo site_url('/base64-encode-and-decode/?tool=decode'); ?>">Base64 Decoder</a>
                     <a class="dropdown-item" href="<?php echo site_url('/list-to-array-convertor/'); ?>">List to Array</a>
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/list-to-html-list-convertor/'); ?>">List to HTML List</a> -->
+                    <a class="dropdown-item" href="<?php echo site_url('/list-to-html-list-convertor/'); ?>">List to HTML List</a>
                     <!-- <a class="dropdown-item" href="<?php echo site_url('/resume-maker/'); ?>">Resume Maker</a> -->
                   </div>
                 </li>
