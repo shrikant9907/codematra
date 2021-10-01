@@ -1,4 +1,104 @@
 <?php
+/*
+* Featured Codes Listing
+*/
+function getfeaturedCategoriesCm() {
+  $array = array(
+    array(
+      'name' => 'Web Design',
+      'desc' => 'Codes',
+      'icon' => 'fas fa-laptop-code',
+      'link' =>'/tag/web-design/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'Bootstrap',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-bootstrap',
+      'link' =>'/tag/web-design/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'HTML',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-html5',
+      'link' =>'/category/html/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'CSS',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-css3',
+      'link' =>'/category/html/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'React Js',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-react',
+      'link' =>'/category/react-js/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'React Js',
+      'desc' => 'Interview Questions',
+      'icon' => 'fab fa-react',
+      'link' =>'/interview-questions-category/react-js/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'Angular',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-react',
+      'link' =>'/category/angular/',
+      'show' => false,
+    ),
+    array(
+      'name' => 'PHP',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-react',
+      'link' =>'/category/php/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'PHP',
+      'desc' => 'Programs',
+      'icon' => 'fab fa-php',
+      'link' =>'/programs-category/php/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'WordPress',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-wordpress',
+      'link' =>'/tag/web-design/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'WordPress',
+      'desc' => 'Interview Questions',
+      'icon' => 'fab fa-wordpress',
+      'link' =>'/interview-questions-category/wordpress/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'Python',
+      'desc' => 'Codes',
+      'icon' => 'fab fa-python',
+      'link' =>'/tag/web-design/',
+      'show' => false,
+    ),
+    array(
+      'name' => 'Python',
+      'desc' => 'Programs',
+      'icon' => 'fab fa-python',
+      'link' =>'/programs-category/python/',
+      'show' => true,
+    ),
+  );
+  return $array;
+}
+
 /* 
 * Insert Default Pages
 */

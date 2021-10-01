@@ -74,94 +74,25 @@ get_header();
 
          <!-- Carousel -->
          <div class="ourtutorials four_col_carosusel">
-          <div class="occ-item px_10" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body">
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-python text-secondary"></i>
+          <?php $fcats = getfeaturedCategoriesCm(); 
+          if ($fcats): 
+            foreach($fcats as $fcat) {
+              if ($fcat['show']) {
+              ?>  
+              <div class="occ-item px_10" >
+                <div class="card cui3c mt_10 r_10 py_20 border-0">
+                  <div class="card-body">
+                    <div class="ciconrc ciconb">
+                      <a class="text-primary" href="<?php echo site_url($fcat['link']); ?>"><i class="<?php echo $fcat['icon']; ?> text-secondary"></i></a>
+                    </div>
+                    <h5 class="card-title mbi_0"><a  class="text-primary" href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h5>
+                    <p class="card-text"><?php echo $fcat['desc']; ?></p>
+                  </div>
                 </div>
-                <h5 class="card-title mb-0"><a class="text-primary" href="<?php echo site_url('/programs-category/python/'); ?>">Python</a></h5>
-                <p class="card-text">Programs</p>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="occ-item px_10 hidei" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body"> 
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-wordpress text-secondary"></i>
-                </div>
-                <h5 class="card-title">Django</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </div> -->
-          <div class="occ-item px_10" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body">
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-angular text-secondary"></i>
-                </div>
-                <h5 class="card-title mbi_0"><a class="text-primary" href="<?php echo site_url('/tag/web-design/'); ?>">Web Design</a></h5>
-                <p class="card-text">How to Code</p>
-              </div>
-            </div>
-          </div>
-          <div class="occ-item px_10" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body">
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-react text-secondary"></i>
-                </div>
-                <h5 class="card-title mbi_0"><a  class="text-primary" href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React JS</a></h5>
-                <p class="card-text">Interview Questions</p>
-              </div>
-            </div>
-          </div>
-          <div class="occ-item px_10" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body">
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-php text-secondary"></i>
-                </div>
-                <h5 class="card-title mb-0"><a class="text-primary" href="<?php echo site_url('/programs-category/php'); ?>">PHP</a></h5>
-                <p class="card-text">Programs</p>
-              </div>
-            </div>
-          </div>
-          <div class="occ-item px_10" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body">
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-wordpress text-secondary"></i>
-                </div>
-                <h5 class="card-title mb-0"><a class="text-primary" href="<?php echo site_url('/category/wordpress'); ?>">WordPress</a></h5>
-                <p class="card-text">How To Code</p>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="occ-item px_10 hidei" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body">
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-wordpress"></i>
-                </div>
-                <h5 class="card-title">JavaScript</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="occ-item px_10 hidei" >
-            <div class="card cui3c mt_10 r_10 py_20 border-0">
-              <div class="card-body">
-                <div class="ciconrc ciconb">
-                  <i class="fab fa-wordpress"></i>
-                </div>
-                <h5 class="card-title">jQuery</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-          </div> -->
+              </div> 
+              <?php } ?>
+            <?php } ?>
+          <?php endif; ?>
         </div>
 
        </div>
@@ -194,7 +125,7 @@ get_header();
           $output = '';
           if ( ! empty( $categories ) ) {
               foreach( $categories as $category ) {
-                  $output .= '<a class="text-dark static mr_5 d-inline badge badge-light border" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                  $output .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
               }
           }
 
@@ -225,9 +156,9 @@ get_header();
             </div>
             <div class="cdesc mb_10"><?php echo wp_trim_words($post->post_content, 15); ?></div>
 						<div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
-              <span title="views"><i class="text-secondary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
-              <span title="Posted on"><i class="text-secondary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-              <span title="Posted by"><i class="text-secondary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+              <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
+              <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+              <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
             </div>
           </div>
 					</div>
@@ -281,7 +212,7 @@ get_header();
           $output = '';
           if ( ! empty( $categories ) ) {
               foreach( $categories as $category ) {
-                  $output .= '<a class="text-dark static mr_5 d-inline badge badge-light border" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                  $output .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
               }
           }
 
@@ -312,9 +243,9 @@ get_header();
             </div>
             <div class="cdesc mb_10"><?php echo wp_trim_words($post->post_content, 15); ?></div>
 						<div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
-              <span title="views"><i class="text-secondary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
-              <span title="Posted on"><i class="text-secondary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-              <span title="Posted by"><i class="text-secondary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+              <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
+              <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+              <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
             </div>
           </div>
 					</div>
@@ -360,7 +291,7 @@ get_header();
           $proutput = '';
           if ( ! empty( $progTerms ) ) {
               foreach( $progTerms as $progTerm ) {
-                  $proutput .= '<a class="text-dark static mr_5 d-inline badge badge-light border" href="' . esc_url( get_term_link( $progTerm->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $progTerm->name ) ) . '">' . esc_html( $progTerm->name ) . '</a>' . $separator;
+                  $proutput .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_term_link( $progTerm->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $progTerm->name ) ) . '">' . esc_html( $progTerm->name ) . '</a>' . $separator;
               }
           }
           
@@ -391,9 +322,9 @@ get_header();
               </div>
                 <p class="cdesc mb_10"><?php echo wp_trim_words($progs->post_content, 12); ?></p>
                 <div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
-                  <span title="views"><i class="text-secondary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $prviews; ?></span>
-                  <span title="Posted on"><i class="text-secondary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-                  <span title="Posted by"><i class="text-secondary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+                  <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $prviews; ?></span>
+                  <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                  <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
                 </div>
               </div>
               </div>
