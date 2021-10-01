@@ -15,7 +15,7 @@ function getfeaturedCategoriesCm() {
       'name' => 'Bootstrap',
       'desc' => 'Codes',
       'icon' => 'fab fa-bootstrap',
-      'link' =>'/tag/web-design/',
+      'link' =>'/category/bootstrap/',
       'show' => true,
     ),
     array(
@@ -29,7 +29,7 @@ function getfeaturedCategoriesCm() {
       'name' => 'CSS',
       'desc' => 'Codes',
       'icon' => 'fab fa-css3',
-      'link' =>'/category/html/',
+      'link' =>'/category/css/',
       'show' => true,
     ),
     array(
@@ -71,7 +71,7 @@ function getfeaturedCategoriesCm() {
       'name' => 'WordPress',
       'desc' => 'Codes',
       'icon' => 'fab fa-wordpress',
-      'link' =>'/tag/web-design/',
+      'link' =>'/category/wordpress/',
       'show' => true,
     ),
     array(
