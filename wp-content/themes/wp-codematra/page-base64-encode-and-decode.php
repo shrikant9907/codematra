@@ -75,7 +75,7 @@ get_header(); ?>
                   <textarea required="required" rows="10" name="endeinput" class="form-control" placeholder="<?php echo $endePlaceholder; ?>"><?php echo $input; ?></textarea>
                 </div>
                 <div class="cmbende-actions">
-                  <button type="submit" class="btn btn-primary btn-sm btnui1s f20 text-uppercase"><?php echo $endeBtnLabel; ?></button>
+                  <button type="submit" class="btn btn-primary btn-sm btnui3s f20 text-uppercase"><?php echo $endeBtnLabel; ?></button>
                 </div>
               </form>
               <hr />

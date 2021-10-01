@@ -52,7 +52,7 @@
                     </div>
 											<div class="f16">
 											<p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
-											<a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm btnui3">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
+											<a href="<?php the_permalink(); ?>" class="btn btn-secondary btn-sm btnui3">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
 											</div>
 									</div>
 								</div>   

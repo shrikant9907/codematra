@@ -65,8 +65,8 @@ if (isset($_POST['clear'])) {
                   </div>
                 </div>
                 <div class="cmbende-actions flex justify-content-between">
-                  <button type="submit" name="uploadexcel" class="btn btn-primary btn-sm btnui1s f20 text-uppercase"><?php echo $excelBtnLabel; ?></button>
-                  <button type="submit" name="clear" class="btn btn-secondary btn-sm btnui1s f20 text-uppercase">Clear</button>
+                  <button type="submit" name="uploadexcel" class="btn btn-primary btn-sm btnui3s f20 text-uppercase"><?php echo $excelBtnLabel; ?></button>
+                  <button type="submit" name="clear" class="btn btn-secondary btn-sm btnui3s f20 text-uppercase">Clear</button>
                 </div>
               </form>
             </div>

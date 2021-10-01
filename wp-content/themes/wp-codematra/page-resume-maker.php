@@ -136,7 +136,7 @@ get_header();
                   </div>
                 </div>
                 <div class="card-actions text-right">
-                  <input class="btn btn-primary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                  <input class="btn btn-secondary btn-sm btnui3s" type="submit" name="submit" value="Save">
                 </div>
               </form>
               <!-- Resume Section End -->
@@ -181,7 +181,7 @@ get_header();
                   </div>
                 </div>
                 <div class="card-actions text-right">
-                  <input class="btn btn-primary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                  <input class="btn btn-secondary btn-sm btnui3s" type="submit" name="submit" value="Save">
                 </div>
               </form>
               <!-- Experience Section End -->
@@ -218,7 +218,7 @@ get_header();
                   </div>
                 </div>
                 <div class="card-actions text-right">
-                  <input class="btn btn-primary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                  <input class="btn btn-secondary btn-sm btnui3s" type="submit" name="submit" value="Save">
                 </div>
               </form>
               <!-- Qualification Section End -->

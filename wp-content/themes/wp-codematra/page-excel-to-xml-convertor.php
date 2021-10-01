@@ -36,7 +36,7 @@ if(!isset($_GET['xml'])):
                   </div>
                  </div>
                 <div class="cmbende-actions flex justify-content-between">
-                  <button type="submit" name="uploadexcel" class="btn btn-primary btn-sm btnui1s f20 text-uppercase"><?php echo $excelBtnLabel; ?></button>
+                  <button type="submit" name="uploadexcel" class="btn btn-primary btn-sm btnui3s f20 text-uppercase"><?php echo $excelBtnLabel; ?></button>
                 </div>
               </form>
             </div>
