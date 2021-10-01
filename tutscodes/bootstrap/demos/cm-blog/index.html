@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
@@ -14,98 +14,196 @@
         
     </head>
   <body>   
-    <section class="jumbotron py-5 bg-light text-center text-dark ">
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand fs-2 fw-bold text-danger" href="#">CM Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Item 2</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Item 3</a></li>
+                  </ul>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li> -->
+              </ul>
+              <form class="d-flex">
+                <input class="form-control rounded-0 me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-danger rounded-0" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="jumbotron py-5 bg-light text-dark ">
       <div class="container">
         <div class="row">
-          <div class="col mb-3">
-            <h2 class='text-uppercase mb-3'>Our Services</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehend consequuntur facilis architecto? Blanditiis recusandae quo at. Beatae!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
+          <div class="col-12 col-xl-8">
+            <div class="row">
+              <div class="col mb-3 text-start">
+                <h2 class='text-uppercase mb-3 fw-bold text-danger'>Featured Post</h2>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
+            <div class="row">
+              <div class="col-12"> 
+                <div class="card shadow-sm border-0 rounded-0 mb-4"> 
+                  <a href="#"><img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap"></a>
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">Lorem ipsum dolor sit amet consectetur </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="card-text d-flex justify-content-between"><small class="text-muted">Posted at 3 mins ago</small> <small class="text-muted">Posted By Shrikant</small></p>
+                    <a href="#" class="btn btn-danger px-4 d-inline-block rounded-pill">View More</a>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class='text-uppercase mb-3 fw-bold text-danger'>Recent Posts</h2>
+              <div class="col-12"> 
+                <div class="card shadow-sm border-0 rounded-0 mb-4 rounded-0"> 
+                  <div class="row g-0">
+                    <div class="col-md-5 h-100 bg-light align-items-center justify-content-center d-flex">
+                      <a href="#"><img class="rounded-0 h-100 img-fluid" src="../images/placeholder_500x300.jpg" alt="Card image cap"></a>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body text-start">
+                        <h5 class="card-title text-danger mb-1">Lorem ipsum dolor sit amet consectetur </h5>
+                        <p class="card-text mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="card-text d-flex justify-content-between"><small class="text-muted">Posted at 3 mins ago</small> <small class="text-muted">Posted By Shrikant</small></p>
+                        <a href="#" class="btn btn-danger btn-sm px-4 d-inline-block rounded-pill">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card shadow-sm border-0 rounded-0 mb-4 rounded-0"> 
+                  <div class="row g-0">
+                    <div class="col-md-5 h-100 bg-light align-items-center justify-content-center d-flex">
+                      <a href="#"><img class="rounded-0 h-100 img-fluid" src="../images/placeholder_500x300.jpg" alt="Card image cap"></a>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body text-start">
+                        <h5 class="card-title text-danger mb-1">Lorem ipsum dolor sit amet consectetur </h5>
+                        <p class="card-text mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="card-text d-flex justify-content-between"><small class="text-muted">Posted at 3 mins ago</small> <small class="text-muted">Posted By Shrikant</small></p>
+                        <a href="#" class="btn btn-danger btn-sm px-4 d-inline-block rounded-pill">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card shadow-sm border-0 rounded-0 mb-4 rounded-0"> 
+                  <div class="row g-0">
+                    <div class="col-md-5 h-100 bg-light align-items-center justify-content-center d-flex">
+                      <a href="#"><img class="rounded-0 h-100 img-fluid" src="../images/placeholder_500x300.jpg" alt="Card image cap"></a>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body text-start">
+                        <h5 class="card-title text-danger mb-1">Lorem ipsum dolor sit amet consectetur </h5>
+                        <p class="card-text mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="card-text d-flex justify-content-between"><small class="text-muted">Posted at 3 mins ago</small> <small class="text-muted">Posted By Shrikant</small></p>
+                        <a href="#" class="btn btn-danger btn-sm px-4 d-inline-block rounded-pill">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <div class="card shadow-sm border-0 rounded-0 mb-4 rounded-0"> 
+                  <div class="row g-0">
+                    <div class="col-md-5 h-100 bg-light align-items-center justify-content-center d-flex">
+                      <a href="#"><img class="rounded-0 h-100 img-fluid" src="../images/placeholder_500x300.jpg" alt="Card image cap"></a>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body text-start">
+                        <h5 class="card-title text-danger mb-1">Lorem ipsum dolor sit amet consectetur </h5>
+                        <p class="card-text mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="card-text d-flex justify-content-between"><small class="text-muted">Posted at 3 mins ago</small> <small class="text-muted">Posted By Shrikant</small></p>
+                        <a href="#" class="btn btn-danger btn-sm px-4 d-inline-block rounded-pill">View More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <nav class=" text-center d-flex justify-content-center">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link text-danger" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link text-danger" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-danger" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-danger" href="#">3</a></li>
+                <li class="page-item"><a class="page-link text-danger" href="#">Next</a></li>
+              </ul>
+            </nav>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
+          <div class="col-12 col-xl-4">
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body p-4">
+                <h3 class="bg-white border-0 pt-0 px-0 card-header fw-bold text-danger text-uppercase fs-6">About</h3>
+                <p class="fs-6 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iste excepturi corrupti corporis ullam omnis eaque dolor ducimus quod, voluptatum ipsa laborum natus, illum sapiente eveniet id aliquid provident enim?</p>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body p-4">
+                <h3 class="bg-white border-0 pt-0 px-0 card-header fw-bold text-danger text-uppercase fs-6">Recent Posts</h3>
+                <ul class="list-group list-group-flush mb-0">
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">Lorem ipsum dolor sit amet cons</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">Lorem ipsum dolor sit amet cons</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">Lorem ipsum dolor sit amet cons</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">Lorem ipsum dolor sit amet cons</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">Lorem ipsum dolor sit amet cons</a></li>
+                </ul>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-xl-3"> 
-            <div class="card shadow-sm border-0 rounded-0 mb-4"> 
-              <img class="card-img-top rounded-0" src="../images/placeholder_500x300.jpg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="btn btn-outline-primary btn-sm px-2 d-inline-block">View More</a>
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body p-4">
+                <h3 class="bg-white border-0 pt-0 px-0 card-header fw-bold text-danger text-uppercase fs-6">Categories</h3>
+                <ul class="list-group list-group-flush mb-0">
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">HTML</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">CSS</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">React</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">Angular</a></li>
+                  <li class="list-group-item"><a class="text-dark text-decoration-none" href="#">Python</a></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <footer class="bg-dark bg-gradient py-3 text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            Copyright &copy; 2021. All Rights Reserved.
+          </div>
+          <div class="col-12 col-md-6 text-end">
+            Designed by <a class="link-light" href="https://codematra.com/">Code Matra</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!--Scripts-->
     <script type="text/javascript" src="../js/jquery.min.js"></script>   
