@@ -28,6 +28,19 @@ body.admin-bar .header {
   padding-bottom: 0;
 }
 
+.wp-block-tag-cloud a,
+.wp-block-latest-posts li a{
+  color: inherit;
+}
+
+.wp-block-tag-cloud a {
+  background-color: rgba(0,0,0,0.1);
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
 /* Wp CSS  */
 
 .wb-card .card-body,
@@ -78,6 +91,7 @@ body.admin-bar .header {
   list-style: none;
   padding-left: 0;
 }
+
 .wb-card ol li,
 .wb-card ul li,
 .widget_block ol li,

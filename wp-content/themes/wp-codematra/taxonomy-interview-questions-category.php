@@ -24,7 +24,6 @@ if ($term_name) {
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-6 col-md-8">
-      <div class="accordion bg-light accordion-ui2" id="accordion2">
           
       <?php
         $args   =   array(
@@ -47,21 +46,22 @@ if ($term_name) {
             while(have_posts()): 
                 the_post();
         ?>
+        <div class="accordion bg-light accordion-ui2" id="accordion2">
           <div class="card cui2 typography r_10">
             <h3 class="card-header mbi_0" role="tab" id="heading<?php the_ID(); ?>">
               <a class="text-primary" href="#aiqui<?php the_ID(); ?>" data-toggle="collapse" data-parent="#accordion2" aria-expanded="true" data-target="#aiqui<?php the_ID(); ?>" aria-controls="aiqui<?php the_ID(); ?>"><span class="card-title"><?php echo $count .'. '; the_title(); ?></span> <i class="fas fa-caret-down"></i> <i class="fas fa-caret-left"></i></a>
             </h3>
-            <div class="card-body collapse pbi_10 pti_0" id="aiqui<?php the_ID(); ?>" role="tabpanel" aria-labelledby="heading<?php the_ID(); ?>" data-parent="#accordion2">
+            <div class="card-body collapse show pbi_10 pti_0" id="aiqui<?php the_ID(); ?>" role="tabpanel" aria-labelledby="heading<?php the_ID(); ?>" data-parent="#accordion2">
               <?php the_content(); ?>
             </div>	
           </div>	
-	    
+        </div>                  
+      
     <?php
     $count++;
     endwhile; 
     endif; ?>         
-  		  </div>                  
-      </div>
+  		</div>
       <div class="col-12 col-sm-6 col-md-4">
         <?php get_sidebar(); ?>
       </div>
