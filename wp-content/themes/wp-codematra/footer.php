@@ -11,10 +11,10 @@
                         <!-- <li><i class="fas fa-map text-primary"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </li> -->
                       </ul>
                       <ul class="socialicons f14 colored siconsc"> 
-                        <li class="facebook"><a href="https://www.facebook.com/codematra" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <!-- <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
                         <!-- <li class="instagram"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
-                        <!-- <li class="youtube"><a href="#" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li> -->
+                        <li class="youtube"><a href="https://www.youtube.com/channel/UCbD6k-T54c8I-8UI0vqQ79Q" title="Code Matra - Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
                       </ul>
 	                </div>
 	               	<div class="col-6 col-md-3">
