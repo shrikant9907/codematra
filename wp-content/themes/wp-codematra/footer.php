@@ -19,8 +19,9 @@
                       </ul>
 	                </div>
 	               	<div class="col-6 col-md-3">
-                    <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Learn Codes</h3>
+                    <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Learn</h3>
                     <ul class="menu">
+                      <li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
                       <li><a href="<?php echo site_url('/category/wordpress/'); ?>">How to WordPress</a></li>
                       <li><a href="<?php echo site_url('/category/php/'); ?>">How to PHP</a></li>
                       <li><a href="<?php echo site_url('/tag/web-design/'); ?>">Web Design</a></li>
@@ -53,9 +54,12 @@
                       </ul>
 	                </div>
 	                <div class="col-6 col-md-3">
-                      <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Resources</h3>
+                      <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Templates</h3>
                       <ul class="menu">
-                          <li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
+                          <li><a href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template</a></li>
+                      </ul>
+                      <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Information</h3>
+                      <ul class="menu">
                           <li><a href="<?php echo site_url('/sitemap_index.xml'); ?>">Sitemap</a></li>
                           <li><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
                           <li><a href="<?php echo site_url('/terms-and-conditions'); ?>">Terms and Conditions</a></li>

@@ -38,7 +38,7 @@
 
 <!-- Header Start -->
 <header id="main_header" class="header sticky">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-3"> 
           <div class="site_logo with_image">
@@ -113,6 +113,12 @@
                   <div class="dropdown-menu"> 
                     <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React Js</a>
                     <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Templates</a>
+                  <div class="dropdown-menu"> 
+                    <a class="dropdown-item" href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
