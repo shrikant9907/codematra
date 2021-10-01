@@ -40,9 +40,16 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
               <?php if(has_post_thumbnail()) { ?>
                 <img class="card-img-top r_0 border mb_20" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               <?php } ?>
+              <?php
+              $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
+              if (!$visitsCount) {
+                $visitsCount = 0;
+              }
+              ?>
             <div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
+              <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+              <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
               <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author_meta('user_nicename',$post->post_author); ?></span>
-               
               <?php
               $categories = get_the_terms(get_the_ID(), 'programs-category');
               $separator = ' ';
@@ -56,7 +63,6 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
               }
 
               ?></span> 
-              <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
             </div>
             <div class="f16">
               <?php the_content(); ?>

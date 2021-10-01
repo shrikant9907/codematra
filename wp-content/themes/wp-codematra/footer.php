@@ -10,7 +10,7 @@
                         <li> <i class="fa fa-envelope text-primary" aria-hidden="true"></i><a href="mailto:codematra@gmail.com">codematra@gmail.com</a></li>
                         <!-- <li><i class="fas fa-map text-primary"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </li> -->
                       </ul>
-                      <ul class="socialicons f14 colored siconsc"> 
+                      <ul class="socialicons siconsb"> 
                         <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                         <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
                         <li class="youtube"><a href="https://www.youtube.com/channel/UCbD6k-T54c8I-8UI0vqQ79Q" title="Code Matra - Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>

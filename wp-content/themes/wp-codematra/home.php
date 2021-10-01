@@ -14,24 +14,32 @@
                 <div class="card-body pri_30 pri_30 pli_30 pbi_30">
                     <h2 class='text-primary'><a class="text-primary tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
                     <?php if(has_post_thumbnail()) { ?>
-                      <a href="<?php the_permalink(); ?>" class="d-inline-block hidei"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
+                      <a href="<?php the_permalink(); ?>" class="d-inline-block"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
                     <?php } ?>
+                    <?php 
+                      $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
+                      if (!$visitsCount) {
+                        $visitsCount = 0;
+                      }
+                      ?>
                     <div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
-                        <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
-                        <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
-                        <?php
-                        $categories = get_the_category();
-                        $separator = ', ';
-                        $output = '';
-                        if ( ! empty( $categories ) ) {
-                            foreach( $categories as $category ) {
-                                $output .= '<a class="text-dark" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-                            }
-                            echo trim( $output, $separator );
-                        }
+                      <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+                      <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                      <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
+                      <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
+                      <?php
+                      $categories = get_the_category();
+                      $separator = ', ';
+                      $output = '';
+                      if ( ! empty( $categories ) ) {
+                          foreach( $categories as $category ) {
+                              $output .= '<a class="text-dark" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                          }
+                          echo trim( $output, $separator );
+                      }
 
-                        ?></span> 
-                        <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                      ?>
+                      </span> 
                     </div>
                     <div class="f16">
                     <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
