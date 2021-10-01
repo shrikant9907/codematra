@@ -67,7 +67,7 @@ function code_block_file($atts) {
 /*
 * Shortcode interview questions
 */
-
+// [showPostTerms post_type="" category="" taxonomy="" /]
 add_shortcode('showPostTerms', 'posts_terms_shortcode');
 function posts_terms_shortcode($atts) {
 

@@ -21,6 +21,7 @@ function insertDefaultPages() {
         // 'Categories',
         // 'Quizzes',
         'Interview',
+        'Programs',
         // 'Interview Questions',
         // 'FAQs',
         // 'MCQ\'s',
