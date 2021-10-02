@@ -35,7 +35,6 @@ function cm_button($atts = array()) {
 /*
 * Shortcode to display code files.
 */
-
 add_shortcode('CodeBlockFile', 'code_block_file');
 function code_block_file($atts) {
 
@@ -243,4 +242,66 @@ function posts_listing($atts) {
     $output .= '</ul>';
     return $output;
   }
+}
+
+/*
+* Related Posts Shortcode
+*/
+add_shortcode('showRelatedPosts' ,'showRelatedPosts');
+function showRelatedPosts() {
+
+  extract(shortcode_atts(array(
+    'show_counts' => true,
+    'show_heading'    => true,
+    'post_type'       => 'post',
+    'heading'         => __( '<span class="text-secondary">Related</span> Posts', 'codematra' ),
+    'posts_per_page'  => 4,
+  ), $atts));
+
+  ob_start();
+  $categories = get_the_category();
+  if ( $categories ) { ?>
+    <div class="cm-related-posts mb_20">
+      <h3 class="heading_style type2 text-uppercase text-primary"><?php echo $heading; ?></h3>
+      <div class="row">
+        <?php
+        $first_category = esc_attr( $categories[0]->term_id );
+        $args = array(
+          'cat'                   => array($first_category),
+          'post__not_in'          => array($post->ID),
+          'posts_per_page'        => $posts_per_page,
+          'ignore_sticky_posts'   => true
+        );
+        $related_posts = new WP_Query($args);       
+        if( $related_posts->have_posts() ) :
+          while ($related_posts->have_posts()) : $related_posts->the_post(); 
+          $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  
+          ?>
+            <div class="col-12 col-sm-6">
+              <div class="cm_related_post mb_20 card cui2">
+              <div class="card-body">
+                <a class="link-primary border mb_10 d-block min_h_150" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                  <?php if(has_post_thumbnail()) { ?>
+                    <img class="img-fluid" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                  <?php } ?>
+                </a>
+                <h4 class="cm_related_post-title  mb_10">
+                  <a class="text-primary f18 lh22" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+                    <?php the_title(); ?>
+                  </a>
+                </h4>
+                <p class="cm_related_post_text"><?php echo wp_trim_words(get_the_content(), 10); ?></p>
+              </div>
+              </div>
+            </div>
+          <?php
+          endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+      </div>
+    </div>
+  <?php
+  }
+  return ob_get_clean();
 }
