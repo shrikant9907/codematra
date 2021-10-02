@@ -1,6 +1,6 @@
 <?php 
 /*
-* Shortcode for alerts
+* Shortcode for alerts | Site: https://codematra.com/
 */ 
 add_shortcode('tutsAlert', 'tuts_alert');
 function tuts_alert($atts = array(), $content = null) {
@@ -15,7 +15,7 @@ function tuts_alert($atts = array(), $content = null) {
 }
 
 /*
-* Shortcode for Buttons
+* Shortcode for Buttons | Site: https://codematra.com/
 */ 
 // [Button link="#" label="Demo"]
 add_shortcode('cmButton', 'cm_button');
