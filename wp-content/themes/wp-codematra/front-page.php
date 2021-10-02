@@ -456,7 +456,7 @@ get_header();
                 ?>
               </ul>
             </div>
-            <p class="text-center"><a class="btn btn-sm btn-secondary btnui3" href="<?php echo site_url('interview-questions-category/wordpress/'); ?>">More Questions</a></p>
+            <p class="text-center"><a class="btn btn-sm btn-secondary btnui3" href="<?php echo site_url('interview-questions-category/php/'); ?>">More Questions</a></p>
           </div>
         </div>
     </div>
