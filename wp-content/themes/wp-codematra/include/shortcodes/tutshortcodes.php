@@ -2,7 +2,6 @@
 /*
 * Shortcode for alerts
 */ 
-
 add_shortcode('tutsAlert', 'tuts_alert');
 function tuts_alert($atts = array(), $content = null) {
   extract(shortcode_atts(array(
@@ -12,6 +11,24 @@ function tuts_alert($atts = array(), $content = null) {
   $content = do_shortcode($content);
   ob_start();
   echo '<div class="alert alert-'.$type.' '.$uitype.'">'.$content.'</div>';
+  return ob_get_clean();
+}
+
+/*
+* Shortcode for Buttons
+*/ 
+// [Button link="#" label="Demo"]
+add_shortcode('cmButton', 'cm_button');
+function cm_button($atts = array()) {
+  extract(shortcode_atts(array(
+    'label' => 'Button',
+    'classes' => 'btn btn-primary btnui3',
+    'link' => '#',
+    'target' => '_self',
+    ), $atts));
+
+  ob_start();
+  echo "<a class='$classes' target='$target' href='$href'>$label</a>";
   return ob_get_clean();
 }
 
