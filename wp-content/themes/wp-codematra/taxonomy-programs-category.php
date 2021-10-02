@@ -69,7 +69,7 @@ if ($term_name) {
   		  </div>                  
       </div>
       <div class="col-12 col-sm-6 col-md-4">
-        <?php get_sidebar('programs'); ?>
+        <?php get_sidebar(); ?>
       </div>
     </div>
   </div>
