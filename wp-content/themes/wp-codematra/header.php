@@ -111,8 +111,26 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Interview</a>
                   <div class="dropdown-menu"> 
-                    <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React Js</a>
-                    <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress</a>
+                  <?php   
+                    // Post Tags
+                    $taxonomies = get_terms( array(
+                            'taxonomy' => 'interview-questions-category', 
+                            'hide_empty' => true,
+                            'parent'=> 0,
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        )
+                    );
+
+                    if ( !empty($taxonomies) ) { 
+                        foreach( $taxonomies as $category ) { 
+                        $term_link = get_term_link( $category );
+                            if($category->parent == 0) {
+                                echo '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
+                            }
+                        }
+                    } 
+                    ?> 
                   </div>
                 </li>
                 <li class="nav-item dropdown">
