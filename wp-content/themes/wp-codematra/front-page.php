@@ -351,7 +351,7 @@ get_header();
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Interview Questions and Answers</h2>
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <div class="card cui1 r_0 pt_20">
             <div class="card-body">
               <h3 class="card-title text-primary text-uppercase"><span class="text-dark">React Js</span></h3>
@@ -387,7 +387,7 @@ get_header();
             <p class="text-center"><a class="btn btn-sm btn-secondary btnui3" href="<?php echo site_url('interview-questions-category/react-js/'); ?>">More Questions</a></p>
           </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-4">
           <div class="card cui1 r_0 pt_20 mb_20">
             <div class="card-body">
             <h5 class="card-title text-primary text-uppercase"><span class="text-dark">WordPress</span></h5>
@@ -403,6 +403,42 @@ get_header();
                                                             'taxonomy' => 'interview-questions-category',
                                                             'field' => 'slug',
                                                             'terms' => 'wordpress', 
+                                                            'include_children' => false
+                                                    )
+                                                ) 
+                        );  
+                $wpQuestions = get_posts($args); 
+                if ($wpQuestions) {
+                foreach($wpQuestions as $top) {
+                ?>
+                    <li class="list-item"><a href="<?php the_permalink($top->ID); ?>"><i class="fa fa-angle-right text-secondary" aria-hidden="true"></i><?php echo $top->post_title; ?></a></li>
+                <?php    
+                }} else { ?>
+                    <li class="list-item text-center">No records found.</li>
+                  <?php 
+                }    
+                ?>
+              </ul>
+            </div>
+            <p class="text-center"><a class="btn btn-sm btn-secondary btnui3" href="<?php echo site_url('interview-questions-category/wordpress/'); ?>">More Questions</a></p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card cui1 r_0 pt_20 mb_20">
+            <div class="card-body">
+            <h5 class="card-title text-primary text-uppercase"><span class="text-dark">PHP</span></h5>
+              <ul class="listing type1 licons w-100 mb_20">
+              <?php 
+                $args = array(
+                        'post_type'         =>  'interview-questions', 
+                        'posts_per_page'    =>  5, 
+                        'orderby'           =>  'id', 
+                        'order'             =>  'asc', 
+                        'tax_query'         =>  array(
+                                                    array(
+                                                            'taxonomy' => 'interview-questions-category',
+                                                            'field' => 'slug',
+                                                            'terms' => 'php', 
                                                             'include_children' => false
                                                     )
                                                 ) 
