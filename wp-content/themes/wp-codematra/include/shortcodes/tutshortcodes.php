@@ -266,6 +266,7 @@ function showRelatedPosts() {
       <div class="row">
         <?php
         $first_category = esc_attr( $categories[0]->term_id );
+        $first_name = esc_attr( $categories[0]->name );
         $args = array(
           'cat'                   => array($first_category),
           'post__not_in'          => array($post->ID),
@@ -276,13 +277,22 @@ function showRelatedPosts() {
         if( $related_posts->have_posts() ) :
           while ($related_posts->have_posts()) : $related_posts->the_post(); 
           $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  
+          // View Counts
+          $prviews = get_post_meta(get_the_ID(), 'visit_counts', true);
+          if (!$prviews) {
+            $prviews = 0;
+          }
           ?>
             <div class="col-12 col-sm-6">
               <div class="cm_related_post mb_20 card cui2">
               <div class="card-body">
-                <a class="link-primary border mb_10 d-block min_h_150" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                <a class="link-primary tdn border mb_10 d-block min_h_150" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                   <?php if(has_post_thumbnail()) { ?>
                     <img class="img-fluid" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                  <?php } else { ?>
+                    <div class="img-altnative font_bold f30 bg-primary text-white flex center_center min_h_150">
+                      <?php echo $first_name; ?>
+                    </div>
                   <?php } ?>
                 </a>
                 <h4 class="cm_related_post-title  mb_10">
@@ -291,6 +301,11 @@ function showRelatedPosts() {
                   </a>
                 </h4>
                 <p class="cm_related_post_text"><?php echo wp_trim_words(get_the_content(), 10); ?></p>
+                <div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
+                  <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $prviews; ?></span>
+                  <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                  <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+                </div>
               </div>
               </div>
             </div>
