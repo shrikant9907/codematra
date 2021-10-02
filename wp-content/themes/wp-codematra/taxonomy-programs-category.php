@@ -46,12 +46,18 @@ if ($term_name) {
         if($query->have_posts()):
             while($query->have_posts()): 
               $query->the_post();
+              $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
+              if (!$visitsCount) {
+                $visitsCount = 0;
+              }
         ?>
-          <div class="card cui2 mbi_10">
+          <div class="card cui2 mbi_20">
             <h3 class="card-header">
-              <a class="text_dark f18" href="<?php the_permalink(); ?>">
-                <?php echo '<span class="text-primary">'.$count.'.</span> '; the_title(); ?>
+              <a class="text_dark f18 d-flex justify-content-between" href="<?php the_permalink(); ?>">
+                <span><?php echo '<span class="text-primary">'.$count.'.</span> '; the_title(); ?></span>
+                <span class="text-primary f14 d-flex flex center_center" title="views"><i class="static fa fa-eye mr_5" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
               </a>
+              
             </h3>
           </div>	
 	    
@@ -63,7 +69,7 @@ if ($term_name) {
   		  </div>                  
       </div>
       <div class="col-12 col-sm-6 col-md-4">
-        <?php get_sidebar(); ?>
+        <?php get_sidebar('programs'); ?>
       </div>
     </div>
   </div>

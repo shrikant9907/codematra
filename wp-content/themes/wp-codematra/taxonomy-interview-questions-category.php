@@ -45,6 +45,10 @@ if ($term_name) {
         if(have_posts()):
             while(have_posts()): 
                 the_post();
+                $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
+                if (!$visitsCount) {
+                  $visitsCount = 0;
+                }
         ?>
         <div class="accordion bg-light accordion-ui2" id="accordion2">
           <div class="card cui2 typography r_10">
@@ -53,6 +57,9 @@ if ($term_name) {
             </h3>
             <div class="card-body collapse show pbi_10 pti_0" id="aiqui<?php the_ID(); ?>" role="tabpanel" aria-labelledby="heading<?php the_ID(); ?>" data-parent="#accordion2">
               <?php the_content(); ?>
+              <div class="flex hidei">
+                <span class="text-primary f14 d-flex flex center_center" title="views"><i class="static fa fa-eye mr_5" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+              </div>
             </div>	
           </div>	
         </div>                  
