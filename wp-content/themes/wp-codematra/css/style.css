@@ -15,8 +15,9 @@ body.admin-bar .header {
 }
 
 .bg_gred_primary {
-  background-image: linear-gradient(to right, #117ca6, #0085bb, #008ed0, #0096e5);
+  background-image: linear-gradient(to bottom, #117ca6, #0094b3, #00abb6, #00c0ae, #4ad49d);
 }
+
 
 .header .search-box .form-control {
   min-height: 35px;
@@ -26,6 +27,47 @@ body.admin-bar .header {
 .footer_style1 ul li {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.decocircle2,
+.decocircle3,
+.decocircle4,
+.decocircle {
+  border-radius: 100%;
+  background-color: rgb(17 124 166 / 10%);
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  position: absolute;
+  right: -145px;
+  top: -104px;
+}
+
+.decocircle2 {
+  top: unset;
+  bottom: -243px;
+  left: -142px;
+  width: 400px;
+  border-radius: 19px;
+  background-color: rgb(17 124 166 / 5%);
+}
+
+.decocircle3 {
+  left: 237px;
+  background-color: rgb(17 124 166 / 5%);
+  top: 52px;
+  width: 100px;
+  height: 100px;
+}
+
+.decocircle4 {
+  right: 100px;
+  background-color: rgb(17 124 166 / 5%);
+  top:unset;
+  bottom: -200px;
+  border-radius: 0;
+  transform: rotateZ(
+45deg);
 }
 
 .wp-block-tag-cloud a,
