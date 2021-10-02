@@ -65,12 +65,12 @@ get_header();
 </section>
 
  <!-- Tutorials  Section -->
- <section id="ourTutorials" class="common-section-ui bg-light f16 pb_20">
+ <section id="ourTutorials" class="common-section-ui bg-light f16">
    <div class="container">
      <div class="row">
        <div class="col-12">
-         <h2 class="heading_style type2 text-uppercase text-primary"><span class="text-secondary">What</span> are you looking for?</h2>
-         <p class="mb_20">You can learn <strong>PHP</strong>, <strong>React JS</strong>, <strong>Web Design</strong> and many other popular web programming languages on codematra.com</p>
+         <h2 class="heading_style text-center type2 text-uppercase text-primary"><span class="text-secondary">What</span> are you looking for?</h2>
+         <p class="mb_20 text-center">Choose the topics from the following categories.</p>
 
          <!-- Carousel -->
          <div class="ourtutorials four_col_carosusel">
@@ -87,6 +87,7 @@ get_header();
                     </div>
                     <h5 class="card-title mbi_0"><a  class="text-primary" href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h5>
                     <p class="card-text"><?php echo $fcat['desc']; ?></p>
+                    <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-primary btnui3s text-uppercase">Start Learning <i class='ml_5 fas fa-angle-right'></i></a>
                   </div>
                 </div>
               </div> 

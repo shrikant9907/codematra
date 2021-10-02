@@ -1,5 +1,23 @@
 <?php
 /*
+* Templates Array
+*/
+function getSiteTemplatesCm() {
+  $array = array(
+    array(
+      'name' => 'CM Blog',
+      'desc' => 'This is a simple Blog Template designed using Boostrap 5.1.',
+      'imgurl' => 'https://codematra.com/wp-content/uploads/2021/10/cm-blog-bootstrap-template-code-matra.png',
+      'link' =>'https://codematra.com/templates/cm-blog-bootstrap/',
+      'demo' =>'https://shrikant9907.github.io/cm-blog-template-code-matra/cm-blog/',
+      'download' =>'https://github.com/shrikant9907/cm-blog-template-code-matra/archive/refs/heads/main.zip',
+      'show' => true,
+    ),
+  );
+  return $array;
+}
+
+/*
 * Featured Codes Listing
 */
 function getfeaturedCategoriesCm() {
