@@ -41,15 +41,15 @@ function code_block_file($atts) {
       $fileContent = htmlspecialchars(file_get_contents($fileLocation));
       $randCode = rand(5,10);
     ?> 
-      <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror.js"></script>
+      <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror.js"></script>
       <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/xml.js"></script>
       <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/javascript.js"></script>
       <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/css.js"></script>
       <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/clike.js"></script>
       <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/php.js"></script> 
-      <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/python.js"></script> 
+      <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/python.js"></script>  -->
 
-      <textarea id='<?php echo $randCode; ?>'><?php echo $fileContent; ?></textarea>
+      <textarea class="codeview" id='<?php echo $randCode; ?>'><?php echo $fileContent; ?></textarea>
       <script>
         var editor = CodeMirror.fromTextArea(document.getElementById("<?php echo $randCode; ?>"), {
           lineNumbers: true,
