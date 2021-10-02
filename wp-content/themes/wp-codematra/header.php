@@ -118,7 +118,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Templates</a>
                   <div class="dropdown-menu"> 
-                    <a class="dropdown-item" href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template <span class="badge badge-secondary r_0 ">New!</span></a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -138,9 +138,9 @@
                   </div>
                 </li>
                 <li class="nav-item nav-item d-flex justify-content-center align-items-center">
-                  <form class="cbody fui fui1p search-box max_w_90p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
+                  <form class="cbody fui fui1p search-box max_w_100p px_15" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
                     <div class="search-box">
-                      <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_400" required="required" placeholder="Search Codes, Programs, Tutorials, Interview Questions etc...">
+                      <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
                       <button type="submit" class="btn btn-primary btnui3"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div> 
                   </form>

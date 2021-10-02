@@ -267,6 +267,7 @@ header .full-menu .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
     background-color:  #f34423;
 }
 
+.badge-secondary,
 .bg_secondary,
 .bg-secondary {
     background-color:  #f34423 !important;
@@ -306,8 +307,28 @@ a.text-primary:focus, a.text-primary:hover {
     border-color:  #117CA6 !important;
 }
 
+header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu:after {
+  display: none;
+}
+
 header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu {
   top: 58px !important;
+  background: #ffffff;
+  padding: 0;
+  min-width: 200px;
+  left: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header .navbar.navbar-expand-lg .navbar-nav .nav-item .badge {
+  font-size: 12px;
+  padding: 4px;
+  margin-left: 5px;
+  font-weight: normal;
 }
 
 .btn-primary:hover {
