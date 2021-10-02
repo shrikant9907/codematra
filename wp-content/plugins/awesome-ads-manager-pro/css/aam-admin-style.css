@@ -1,0 +1,131 @@
+
+
+.aam_settings_wrapper textarea,
+.aam_settings_wrapper select,
+.aam_settings_wrapper input[type="text"]{
+  max-width: 500px;
+  width: 100%;
+}
+
+.aam_settings_wrapper textarea {
+  font-size: 11px;
+  max-width: 100%;
+  min-height: 100px;
+}
+ 
+.aam_settings_wrapper input[type="radio"], .aam_settings_wrapper input[type="checkbox"] {
+  margin: 0 4px 0 0;
+  position: relative;
+  top: 1px;
+}
+
+.awesome-ads-settings-button-wr {
+    text-align: right;
+}
+
+.awesome-ads-settings-button-wr {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+  padding: 20px 0;
+  text-align: right;
+}
+
+.aam_inline_list > li {
+  display: inline-block;
+  margin: 0;
+  text-transform: capitalize;
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+ul.aam_inline_list {
+  margin: 0;
+}
+
+.aam_preview_ads {
+  margin: 10px 0 0;
+}
+
+.ads_select_option  li,
+.aam_ad_position li{
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: top;
+  width: 200px;
+} 
+
+.aam_meta_box_wr .aam_row textarea {
+  width: 100%;
+  margin: 0 0 10px 0;
+  min-height: 100px;
+}
+
+.aam_row label {
+  display: inline-block;
+  font-weight: bold;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.aam-custom-ads-options input[type="text"] {
+        display:inline-block; 
+    padding:5px;
+    width:100%;
+    margin: 5px 0
+}
+
+.aam_banner_image img {
+  border: 1px solid #eee;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 5px;
+  width: 100px;
+}
+
+.aam_disabled {
+  background: #e9e9e9 none repeat scroll 0 0!important;
+  color: #a3a3a3 !important;
+  cursor: default !important;
+  pointer-events: none !important;
+}
+
+#set_banner_image {
+  margin-bottom: 9px;
+ }
+ 
+ .aam_ad_type li {
+  display: inline-block;
+  width: 150px;
+}
+
+.aam_ad_type li label, 
+.ads_select_option li label,
+.aam_ad_position li label
+{
+    font-weight: normal;
+    width: auto;
+}
+
+.aam_ad_type li input[type="radio"], 
+.ads_select_option li input[type="radio"],
+.aam_ad_position li input[type="radio"]
+{
+    margin-bottom: -4px;
+}
+
+
+
+.post-type-aam_create_ad #edit-slug-box {
+  display: none;
+}
+
+.aam_row {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 10px;
+}
+
+ul.aam_ad_type,ul.ads_select_option {
+  margin: 0;
+}

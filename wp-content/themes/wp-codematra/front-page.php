@@ -102,7 +102,7 @@ get_header();
  <!-- Tutorials  Section End -->
 
 <!-- Popular Posts with Sidebar Start -->
-<div class="blog-index-page common-section-ui pt_60 pb_40">
+<div class="popular-posts-section common-section-ui pt_60 pb_40">
 	<div class="container">
 		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Popular</span> Posts</h2>
 	
@@ -190,7 +190,7 @@ get_header();
 <!-- Popular Posts with Sidebar Ends -->
 
 <!-- Recent Posts with Sidebar Start -->
-<div class="blog-index-page common-section-ui pt_60 pb_40 bg-light">
+<div class="recent-posts-section common-section-ui pt_60 pb_40 bg-light">
 	<div class="container">
 		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Posts</h2>
 	
@@ -268,7 +268,7 @@ get_header();
 
 
 <!-- Recent Programs with Sidebar Start -->
-<div class="blog-index-page common-section-ui">
+<div class="recent-programs-section common-section-ui">
 	<div class="container">
 		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Programs</h2>
 	

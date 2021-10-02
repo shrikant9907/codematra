@@ -325,10 +325,20 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu {
   font-size: 50px;
 } 
 
+.recent-posts-section .card.cui2:hover,
+.popular-posts-section .card.cui2:hover,
 .ourtutorials .card:hover {
   box-shadow: 0 0 5px 5px rgba(17, 124, 166, 0.2) !important;
 }
 
+
+.recent-programs-section .card.cui3s {
+  border: 1px solid #ffffff !important;
+}
+
+.recent-programs-section .card.cui3s:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
 
 .btn-outline-primary {
     background-color: #ffffff !important;
