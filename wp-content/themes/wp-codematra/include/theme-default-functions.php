@@ -1,5 +1,84 @@
 <?php
 /*
+* Tools Array
+*/
+function getToolsList() {
+  $array = array(
+    array(
+      'name' => __('Base64 Encoder'),
+      'desc' => ' ',
+      'color' => 'bc_green text_green',
+      'link' => '/base64-encode-and-decode/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('Base64 Decoder'),
+      'desc' => ' ',
+      'color' => 'bc_purple text_purple',
+      'link' => '/base64-encode-and-decode/?tool=decode',
+      'show' => true,
+    ),
+    array(
+      'name' => __('List to Array Convertor'),
+      'desc' => ' ',
+      'color' => 'bc_dark text_dark',
+      'link' => '/list-to-array-convertor/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('List to HTML List Convertor'),
+      'desc' => ' ',
+      'color' => 'bc_yellow text_yellow',
+      'link' => '/list-to-html-list-convertor/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('Minify CSS'),
+      'desc' => ' ',
+      'color' => 'bc_indigo text_indigo',
+      'link' => '/minify-css/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('Minify HTML'),
+      'desc' => ' ',
+      'color' => 'bc_teal text_teal',
+      'link' => '/minify-html/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('Minify JS'),
+      'desc' => ' ',
+      'color' => 'bc_cyan text_cyan',
+      'link' => '/minify-js/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('Excel To Array Convertor'),
+      'desc' => ' ',
+      'color' => 'bc_orange text_orange',
+      'link' => '/excel-to-array-convertor/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('Excel To JSON Convertor'),
+      'desc' => ' ',
+      'color' => 'bc_pink text_pink',
+      'link' => '/excel-to-json-convertor/',
+      'show' => true,
+    ),
+    array(
+      'name' => __('Excel To XML Convertor'),
+      'desc' => ' ',
+      'color' => 'bc_blue text_blue',
+      'link' => '/excel-to-xml-convertor/',
+      'show' => true,
+    ),
+  );
+  return $array;
+}
+
+/*
 * Templates Array
 */
 function getSiteTemplatesCm() {

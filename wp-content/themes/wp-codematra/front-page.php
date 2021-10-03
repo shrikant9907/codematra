@@ -459,18 +459,20 @@ get_header();
 <section id="tools" class="common-section-ui pb_40 pt_60">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Online</span> Tools</h2>
-  <div class="onlinetools"> 
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/base64-encode-and-decode/'); ?>">Base64 Encoder</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/base64-encode-and-decode/?tool=decode'); ?>">Base64 Decoder</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/list-to-array-convertor/'); ?>">List to Array</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/list-to-html-list-convertor/'); ?>">List to HTML List</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/minify-css/'); ?>">Minify CSS</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/minify-html/'); ?>">Minify HTML</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/minify-js/'); ?>">Minify JS</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/excel-to-array-convertor/'); ?>">Excel To Array</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/excel-to-json-convertor/'); ?>">Excel To JSON</a>
-    <a class="btn btn-primary btnui3 mb_20" href="<?php echo site_url('/excel-to-xml-convertor/'); ?>">Excel To XML</a>
-    <a class="btn btn-primary btnui3 mb_20" href="#">Resume Maker - Coming Soon</a>
+  <div class="onlinetools row">
+    <?php
+      $tools = getToolsList();
+      if ($tools) {
+        foreach($tools as $tool) {
+          extract($tool);
+          ?>
+          <div class="col-12 col-sm-4 col-md-3">
+            <a class="<?php echo $color; ?> tdn card cui3c font_bold f26 flex center_center min_h_200" href="<?php echo site_url($link); ?>"><?php echo $name; ?></a>
+          </div>
+          <?php
+        }
+      }
+    ?>  
   </div>    
   </div>
 </section>
