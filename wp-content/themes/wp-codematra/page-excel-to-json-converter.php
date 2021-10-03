@@ -1,9 +1,9 @@
 <?php 
 $outpuarray = array();
-$toolTitle = 'Excel (.xls) to Array Convertor Online';
-$arrayOutputplaceholder = "Array output goes here.";
-$excelBtnLabel = "Convert To Array";
-$endeDesc = $errorMessage = '' ;
+$toolTitle = 'Excel (.xls) to JSON Converter Online';
+$arrayOutputplaceholder = "JSON output goes here.";
+$excelBtnLabel = "Convert To JSON";
+$errorMessage = $toolDesc = '';
 
 $current_ip = istl_get_my_ip(); 
 $current_ip_str = str_replace('.', '_', $current_ip); 
@@ -23,7 +23,9 @@ $filedata = get_option($current_ip_str.'_xls');
 if($filedata) {            
   if($filedata['error'] == 0) {
     $attachment_id = $filedata['attachment_id'];
-    $outpuarray = istl_xls_reader($filedata['file_path']);               
+    $outpuarray = istl_xls_reader($filedata['file_path']);    
+    $outputjson = json_encode($outpuarray); // Unformatted
+    $outputjson = istl_format_json($outputjson); // Formatted
     unlink($filedata['file_path']);  
     delete_option( $current_ip_str.'_xls' ); 
   }                        
@@ -32,6 +34,7 @@ if($filedata) {
 <?php 
 if (isset($_POST['clear'])) {
   $outpuarray = array();
+  $errorMessage = $outputjson = '';
 }
 ?> 
 <?php get_header(); ?>
@@ -45,7 +48,7 @@ if (isset($_POST['clear'])) {
         <div class="cm-base64-ende">
           <div class="card cui1">
             <div class="card-body">
-              <div class="card-text text-center mb_30">
+                <div class="card-text text-center mb_30">
                 <?php echo $toolDesc; ?>
               </div>
               <?php echo $errorMessage; ?>
@@ -59,8 +62,8 @@ if (isset($_POST['clear'])) {
                   </div>
                   <div class="col-12">
                     <div class="form-group">
-                      <label class="text_bold mb_5" for="">Output: Array</label>
-                      <textarea rows="10" class="form-control" placeholder="<?php echo $arrayOutputplaceholder; ?>"><?php print_r($outpuarray); ?></textarea>
+                      <label class="text_bold mb_5" for="">Output: JSON</label>
+                      <textarea rows="5" class="form-control" placeholder="<?php echo $arrayOutputplaceholder; ?>"><?php echo $outputjson; ?></textarea>
                     </div>
                   </div>
                 </div>

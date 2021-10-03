@@ -12,7 +12,7 @@ $term_slug = $term_obj_list['0']->slug;
 <div class="card cui2 sidebar-listing">
     <div class="card-header rounded-0 py_20 border-bottom">
         <?php if ($term_name) {
-            echo '<h3 class="text-primary f18 mb_0 font_bold">'.$term_name.' Programs</h3>';
+            echo '<h3 class="text-primary f18 mb_0 font_bold">'.$term_name.'</h3>';
         } else {
             echo '<h3 class="text-primary f18 mb_0 font_bold"> Programs</h3>';
         }

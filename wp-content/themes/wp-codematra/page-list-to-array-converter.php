@@ -1,27 +1,21 @@
 <?php
 $input = $output  = $endeInvalid = '';
-$listType = 'unordered';
-$endeTitle        = 'Online List to HTML List Convertor';
-$endeBtnLabel     = 'Convert List to HTML List';
+$activeTool       = 'listtoarray';
+$endeTitle        = 'Online List to Array Converter';
+$endeBtnLabel     = 'Convert List to Array';
 $endePlaceholder  = 'Item 1 
 Item 2
 Item 3
 ';
-$endePlaceholder2 = 'HTML list output goes here.';
-$endeDesc         = 'List to HTML list convertor is an online tool to convert list of items to HTML ordered or unordered list.';
+$endePlaceholder2 = 'Array output will display here.';
+$endeDesc         = 'List to array Converter is an online tool to convert list of items to array.';
 
 if (isset($_POST['listitems'])) {
   if ($_POST['listitems']=='') {
     $endeInvalid = "<p class='alert alert-danger'>Input box should not be empty</p>";
   } else {
     $input = stripslashes(trim($_POST['listitems']));
-    if (isset($_POST['listtype']) && ($_POST['listtype'] == 'ordered')) {
-      $listType = $_POST['listtype'];
-      $output = '<ol><br /><li>'.trim(str_replace(array("\r\n"), '</li><br /><li>', $input)).'</li><br /></ol>';
-    } else {
-      $output = '<ul><br /><li>'.trim(str_replace(array("\r\n"), '</li><br /><li>', $input)).'</li><br /></ul>';
-    }
-    $output = str_replace('<br />', "\r\n", $output);
+    $output = '$array = array("'.trim(str_replace(array("\r\n"), '", "', $input)).'");';
   }
 }
 
@@ -51,25 +45,18 @@ get_header(); ?>
                 <div class="form-row">
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
-                      <label class="text_bold mb_5" for="">Input: List (One Item per line)</label>
+                      <label class="text_bold mb_5" for="">List (One Item per line)</label>
                       <textarea required="required" rows="10" name="listitems" class="form-control" placeholder="<?php echo $endePlaceholder; ?>"><?php echo $input; ?></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label class="text_bold mb_5" for="">Select List Type: </label>
-                      <select class="form-control" name="listtype">
-                        <option value="unordered">Unorderd List</option>
-                        <option value="ordered">Orders List</option>
-                      </select>
                     </div>
                   </div>
                   <div class="col-12 col-sm-6">
-                    <label class="text_bold mb_5" for="">Output: HTML <?php echo $listType; ?> list </label>
+                    <label class="text_bold mb_5" for="">PHP Array</label>
                     <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $output; ?></textarea>
                   </div>
                 </div>
                 <div class="cmbende-actions flex justify-content-between">
                   <button type="submit" class="btn btn-primary btn-sm btnui3s f20 text-uppercase"><?php echo $endeBtnLabel; ?></button>
-                  <button type="submit" name="clear" class="btn btn-secondary btn-sm btnui3s f20 text-uppercase">Clear</button>
+                  <button type="reset" name="clear" class="btn btn-secondary btn-sm btnui3s f20 text-uppercase">Clear</button>
                 </div>
               </form>
             </div>

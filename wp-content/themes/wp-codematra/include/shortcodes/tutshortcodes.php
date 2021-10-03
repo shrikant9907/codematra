@@ -109,7 +109,7 @@ function posts_terms_shortcode($atts) {
         <div class="col-12 col-sm-6 col-md-3">
           <div class="card relative cui2 text-uppercase min_h_200">
             <div class="cbody">
-              <a class="d-block tdn f20 font_bold text-white overlay_b absolute d-flex flex center_center" href="<?php echo $termLink; ?>"><span><?php echo $termname; ?></span></a>
+              <a class="d-block text-center tdn f20 font_bold text-white overlay_b absolute d-flex flex center_center" href="<?php echo $termLink; ?>"><span><?php echo $termname; ?></span></a>
             </div>
           </div>
         </div>

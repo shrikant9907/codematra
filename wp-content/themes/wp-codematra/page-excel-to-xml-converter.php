@@ -2,7 +2,7 @@
 ob_start(); 
 if(!isset($_GET['xml'])):
   $outputarray = array();
-  $toolTitle = 'Excel (.xls) to XML Convertor Online';
+  $toolTitle = 'Excel (.xls) to XML Converter Online';
   $excelBtnLabel = "Convert To XML";
   $errorMessage = $toolDesc = '';
 
@@ -26,7 +26,7 @@ if(!isset($_GET['xml'])):
                 <?php echo $toolDesc; ?>
               </div>
               <?php echo $errorMessage; ?>
-              <form class="fui fui1" action="<?php echo site_url('/excel-to-xml-convertor/?xml=1'); ?>" method="post" enctype="multipart/form-data">
+              <form class="fui fui1" action="<?php echo site_url('/excel-to-xml-Converter/?xml=1'); ?>" method="post" enctype="multipart/form-data">
                 <div class="form-row">
                   <div class="col-12">
                     <div class="form-group">

@@ -78,11 +78,11 @@ function xls_reader_settings_callback() {
 } 
 
 /*
- * XLS to Array Convertor Shortcode
+ * XLS to Array Converter Shortcode
  */  
 //[show_xls_to_array]
-add_shortcode('show_xls_to_array','istl_xls_to_array_convertor');
-function istl_xls_to_array_convertor() {
+add_shortcode('show_xls_to_array','istl_xls_to_array_Converter');
+function istl_xls_to_array_Converter() {
     
     ?> 
 
