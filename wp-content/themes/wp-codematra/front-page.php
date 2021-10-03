@@ -85,7 +85,7 @@ get_header();
                     <div class="ciconrc ciconb">
                       <a class="text-primary" href="<?php echo site_url($fcat['link']); ?>"><i class="<?php echo $fcat['icon']; ?> text-secondary"></i></a>
                     </div>
-                    <h5 class="card-title mbi_0"><a  class="text-primary" href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h5>
+                    <h3 class="card-title mbi_0"><a  class="text-primary f22 " href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h3>
                     <p class="card-text"><?php echo $fcat['desc']; ?></p>
                     <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-primary btnui3s text-uppercase">Start Learning <i class='ml_5 fas fa-angle-right'></i></a>
                   </div>
@@ -125,11 +125,10 @@ get_header();
           $separator = ' ';
           $output = '';
           if ( ! empty( $categories ) ) {
-              foreach( $categories as $category ) {
-                  $output .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-              }
+            foreach( $categories as $category ) {
+              $output .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+            }
           }
-
           // View Counts
           $views = get_post_meta($post->ID, 'visit_counts', true);
           if (!$views) {
@@ -138,30 +137,37 @@ get_header();
 
           $catbadges = trim( $output, $separator );  
           ?>
-          <div class="col-12 col-sm-6">
-					<div class="card cui2 relative f14 mb_40">
-          <a href="<?php the_permalink($post->ID); ?>" class="mb_20 hidei d-inline-block border bg-light cimgwr min_h_200" >
-            <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
-            <?php if(has_post_thumbnail()) { ?>
-              <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
-            <?php } ?>
-          </a>
-          <div class="card-body ">
-						<h3 class="f16 mb_10 cheading font_bold lh20">
-            <a href="<?php the_permalink($post->ID); ?>" class="d-inline-block text-primary" >
-							  <?php the_title(); ?>
-							</a>
-         		</h3>
-					  <div class="d-flex mb_10">
-              <?php echo $catbadges; ?> 
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="card cui2 relative r_0 f14 mb_40 hs_11">
+            <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border cimgwr min_h_200" >
+              <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
+              <?php if(has_post_thumbnail()) { ?>
+                <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+              <?php } else {  ?>
+                <div class="img-altnative font_bold f30 bg-primary text-white flex center_center min_h_200">
+                  <?php echo $categories['0']->name; ?>
+                </div>
+              <?php } ?>
+            </a>
+            <div class="card-body ">
+              <h3 class="f20 mb_10 cheading font_bold lh28">
+              <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block text-primary" >
+                  <?php the_title(); ?>
+                </a>
+              </h3>
+              <div class="d-flex mb_10">
+                <?php echo $catbadges; ?> 
+              </div>
+              <div class="cmeta mb_10 text-muted f12 d-flex justify-content-between">
+                <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
+                <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
+              </div>
+              <div class="cdesc mb_10"><?php echo wp_trim_words(do_shortcode($post->post_content), 15); ?></div>
+              <div class="cdesc">
+                <a class="link-primary text-secondary tdn font_bold" href="<?php the_permalink(); ?>">Continue Reading...</a>
+              </div>
             </div>
-            <div class="cdesc mb_10"><?php echo wp_trim_words($post->post_content, 15); ?></div>
-						<div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
-              <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
-              <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-              <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
-            </div>
-          </div>
 					</div>
 				</div>
         <?php    
@@ -171,19 +177,6 @@ get_header();
           }    
           ?>
 		</div>
-		</div>
-		<div class="col-12 col-sm-6 col-md-3 hide">
-			<div class="card cui2 noshadow r_0 w-100 typography">
-				<div class="">
-				   <h2 class='heading_style type2 text-uppercase f16 mb_10 font_bold'>Top Categories</h2>
-				   <ul class="f16 listing type2">
-						<li><a href="">HTML</a></li>
-						<li><a href="">CSS</a></li>
-						<li><a href="">Web Design</a></li>
-						<li><a href="">React Js</a></li>
-				   </ul>
-				</div>
-			  </div>
 		</div>
 	</div>
 </div>
