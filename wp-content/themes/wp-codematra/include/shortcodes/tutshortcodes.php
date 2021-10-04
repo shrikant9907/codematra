@@ -286,11 +286,11 @@ function showRelatedPosts() {
             <div class="col-12 col-sm-6">
               <div class="cm_related_post mb_20 card cui2">
               <div class="card-body">
-                <a class="link-primary tdn border mb_10 d-block min_h_150" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+                <a class="link-primary tdn border mb_10 d-block min_h_150 h_150 overflow_hidden" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                   <?php if(has_post_thumbnail()) { ?>
                     <img class="img-fluid" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
                   <?php } else { ?>
-                    <div class="img-altnative font_bold f30 bg-primary text-white flex center_center min_h_150">
+                    <div class="img-altnative font_bold f30 bg-primary text-white flex center_center min_h_150 h_150 overflow_hidden">
                       <?php echo $first_name; ?>
                     </div>
                   <?php } ?>

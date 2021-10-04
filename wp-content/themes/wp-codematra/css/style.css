@@ -5,6 +5,10 @@ body {
     padding-top: 70px !important; 
 }
 
+.container {
+  max-width: 1300px;
+}
+
 body.admin-bar .header {
   padding-top: 32px !important;
 }

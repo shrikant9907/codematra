@@ -73,10 +73,10 @@
 	 		<div class="container">
 	 			<div class="row">
 	 				 <div class="col">
-	 				 	<p class="f12 lh18 mb_10">&copy; <?php echo date('Y'); ?>. codematra.com | All Rights Reserved.</p>
+	 				 	<p class="f12 lh18 mb_10">Copyright &copy; <?php echo date('Y'); ?> CodeMatra.com | All Rights Reserved.</p>
 	 				 </div>
 	 				 <div class="col">
-	 				 	<p class="f12 lh18 mb_10 text-right">Developed by <a class="text-white" href="<?php echo site_url('/'); ?>">Codematra</a></p>
+	 				 	<p class="f12 lh18 mb_10 text-right">Developed by <a class="text-white" href="<?php echo site_url('/author/shrikant'); ?>">Shrikant</a></p>
 	 				 </div>
 	 			</div>
 	 		</div>
@@ -87,63 +87,8 @@
   <div class="text-center fixed_bottom px_20 py_5 cookienotice bg_black text-white">This website uses cookies to ensure you get the best user experience on your website. <a href="<?php echo site_url('/privacy-policy'); ?>">Learn more</a> <button class="cookienotice-btn ml_5 btn btn-sm btn-secondary min_w_25">OK</button></div>
 
  	<a href="#" class="gotoparrow"><i class="fas fa-arrow-up"></i></a>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="basicLoginFromModal" tabindex="-1" role="dialog" aria-labelledby="basicLoginFromModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <form class="fui fui1p w-100" action="" method="post" enctype="multipart/form-data">
-      <div class="mui muic mui2 muis modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="basicLoginFromModalLabel">Login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-          <div class="alert alert-success alertrcs dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="form-group">
-            <input name="email" value="" type="text" class="form-control" placeholder="Enter your email" /> 
-          </div>
-          <div class="form-group">
-            <input name="password" value="" type="password" class="form-control" placeholder="Enter your password" />
-          </div>
-          <div class="d-flex justify-content-between">
-            <div class="rememberme m-0">
-              <label for="rememberme" class="d-flex align-items-center"><input class="mr_5 min_h_0" id="rememberme" name="rememberme" value="yes" type="checkbox" /> Remember me</label>
-            </div>
-            <a href="#" class="link">Forgot Password?</a>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary btnui3" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary btnui3">Sign in</button>
-        </div>
-      </form>
-      </div>
-    </div>
-  </div>
-
+ 
   <?php wp_footer(); ?>
-
-  <!-- jQuery --> 
-	<!-- <script src="<?php //echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js" type="text/javascript"></script>  -->
-
-  <!-- Popper JS -->
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/popper.min.js" type="text/javascript"></script>
-
-	<!-- Bootstrap -->
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!-- Slick Slider -->
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/slick.min.js"></script>
-
-    <!-- Custom Script -->
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
 
 </body>
 </html>  

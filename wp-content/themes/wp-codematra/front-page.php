@@ -139,7 +139,7 @@ get_header();
           ?>
           <div class="col-12 col-sm-6 col-md-4">
             <div class="card cui2 relative r_0 f14 mb_40 hs_11">
-            <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border cimgwr min_h_200" >
+            <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border cimgwr min_h_200 h_200 overflow_hidden" >
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
               <?php if(has_post_thumbnail()) { ?>
                 <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
