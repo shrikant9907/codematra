@@ -1,5 +1,9 @@
 <?php get_header();
-
+?>
+<script>
+  window.location.href="<?php echo site_url('/'); ?>";
+</script>
+<?php 
 wp_redirect(site_url('/'));
 die();
 ?>

@@ -726,9 +726,9 @@ p.comment-form-cookies-consent {
 }
 
 /*Responsive*/
-@media all and (max-width: 1360px) { 
+@media all and (max-width: 1400px) { 
   .container {
-    max-width: 1140px;
+    max-width: 1240px;
   }  
 }
 @media all and (max-width: 991px) { 
