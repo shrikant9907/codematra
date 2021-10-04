@@ -101,6 +101,7 @@
     -moz-user-select: none; 
     -ms-user-select: none;
     user-select: none; 
+    cursor: pointer;
   }
 
   .code-matra-calculator-ui .cm-row .btn:hover {
@@ -116,44 +117,78 @@
     width: 50%;
   }
 
+  .code-matra-calculator-ui .cm-row .btn-clear {
+    width: 75%;
+  }
+
   /* Site URL */
   .code-matra-calculator-ui .siteurl {
     font-size: 10px;
+    margin-top:10px;
     color: #cccccc;
+  }
+
+  /* Alerts */
+  .code-matra-calculator-ui .cm-danger{
+    text-align: center;
+    color: #f34423;
+    font-size: 12px;
+    margin-bottom: 10px; 
+    font-weight: normal;
   }
 </style>
 
 <?php
 // Initial value
-$op1 = $_REQUEST['operand1'];
-$op2 = $_REQUEST['operand2'];
-$optr = $_REQUEST['operator'];
+$op1 = isset($_REQUEST['operand1']) ? $_REQUEST['operand1'] : '';
+$op2 = isset($_REQUEST['operand2']) ? $_REQUEST['operand2'] : '';
+$optr = isset($_REQUEST['operator']) ? $_REQUEST['operator'] : '';
 
-// Validate and pass field value
+//Validation 1: adding operator before operand 1 then clear it.
+if (!$op1 && $optr) {
+  $optr = '';
+}
+
+//Validation 2: If adding dot before operand 1
+if (!$op1 && $op2 == '.') {
+  $op1 = 0; // add zero prefix 
+}
+
+// Validation 3: Check if the last value of field is not operator 
+if ($optr) {
+  $lastVal = substr($op1, -1);
+  $operators = array('+','-','*','/','.');
+  if (in_array($lastVal, $operators)) {
+    $optr = '';
+  }
+}
+
+// Validation 4:  Check if that field value is not result of last calculation
 if (strpos($op1, '=') === false) {
   $output = $op1.$optr.$op2; 
 } else {
   $output = $op2;
 }
 
-// Calculate result
+// If everything fine then calculate the result
 if (isset($_REQUEST['result']) && ($_REQUEST['result'] == 1)) {
   $output =  '= ' . eval('return '.$output.';'); 
 }
 
-// If clicks on clear button then clear all values
+// Clear all values if user clicks on clear button
 if (isset($_REQUEST['clear']) && ($_REQUEST['clear'] == 1)) {
-  $output = $op1 = $op2 = $oprd = '';
+  $output = $op1 = $op2 = $optr = '';
 }
 ?>
 
 <!-- Calculator Layout UI Start -->
 <form method="post" class="code-matra-calculator-ui" action="">
-
   <!-- Calculator Header -->
   <div class="cm-header">
     <h3>Calculator <span>using PHP</span></h3>
   </div>
+
+  <?php echo $errorMsg; ?> 
 
   <!-- Calculator Field -->
   <div class="cm-field">
@@ -163,9 +198,7 @@ if (isset($_REQUEST['clear']) && ($_REQUEST['clear'] == 1)) {
   <!-- Calculator Keys -->
   <div class="cm-keys">
       <div class="cm-row">
-        <button name="clear" value="1" type="submit" class="btn">C</button>
-        <button type="submit" class="btn"></button>
-        <button type="submit" class="btn"></button>
+        <button name="clear" value="1" type="submit" class="btn btn-clear">Clear</button>
         <button name="operator" value="/" type="submit" class="btn">/</button>
       </div>
       <div class="cm-row">
@@ -189,7 +222,7 @@ if (isset($_REQUEST['clear']) && ($_REQUEST['clear'] == 1)) {
       <div class="cm-row">
         <button name="operand2" value="0" type="submit" class="btn">0</button>
         <button name="operand2" value="." type="submit" class="btn">.</button>
-        <button name="result" value="1" type="submit" class="btn btn-secondary">=</button>
+        <button name="result" value="1" type="<?php echo $op2 ? 'submit' : 'button'; ?>" class="btn btn-secondary">=</button>
       </div>
   </div>
 
