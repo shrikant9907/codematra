@@ -1,6 +1,7 @@
 <?php get_header();
 
-// wp_redirect(site_url('/'));
+wp_redirect(site_url('/'));
+die();
 ?>
 
 <section class="page-section common-section-ui bg-light">
