@@ -188,24 +188,32 @@ function categories_list($atts) {
   ), $atts));
 
   $categories = get_categories(); 
-  if ($show_heading) {
-    $output = '<h2 class="f20 font_bold text-primary">'.$heading.'</h2>';
-  } else {
-    $output = '';
-  }
+  $output = '';
   if ( ! empty( $categories ) ) {
-    $output .= '<ul>';
-    foreach( $categories as $category ) {
-      $count = $category->category_count;
-        $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
-        $output .= '<a class="text-dark" href="' . esc_url( get_category_link( $category->term_id ) ) . '" >' . esc_html( $category->name ) . '</a> ';
-        if ($show_counts) {
-          $output .= '<span class="badge bg-primary static">'.$count.'</span>';
-        }
-        $output .= '</li>';
-    }
-    $output .= '</ul>';
-    return $output;
+    ?>
+    <div class="card cui2 sidebar-listing r_0 mb_20">
+      <?php if ($show_heading) { ?>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+      <?php } ?>
+      <div class="cbody p-0">
+        <ul class="listing type2">
+          <?php 
+          foreach( $categories as $category ) {
+            $count = $category->category_count;
+            $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
+            $output .= '<a class="text-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" >' . esc_html( $category->name ) . '</a> ';
+            if ($show_counts) {
+              $output .= '<span class="badge bg-primary static">'.$count.'</span>';
+            }
+            $output .= '</li>';
+          }
+          echo $output;
+        ?>
+        </ul> 
+      </div>
+    </div> 
+    <?php 
+    return ob_get_clean();
   }
 }
 
@@ -231,26 +239,35 @@ function popular_posts_listing($atts) {
     'orderby'         => 'meta_value_num',
   ));
   
-  if ($show_heading) {
-    $output = '<h2 class="f20 font_bold text-primary">'.$heading.'</h2>';
-  } else {
-    $output = '';
-  }
+  $output = '';
   if ( ! empty( $posts ) ) {
-    $output .= '<ul>';
-    foreach( $posts as $post ) {
-      $postID = $post->ID;
-      $postTitle = $post->post_title;
-      $visitsCount = get_post_meta($postID, 'visit_counts', true);
-      $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
-      $output .= '<a class="text-dark" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
-      if ($show_counts) {
-        $output .= '<span class="badge bg-primary static"><i class="fas fa-eye mr_5"></i>'.$visitsCount.'</span>';
-      }
-      $output .= '</li>';
-    }
-    $output .= '</ul>';
-    return $output;
+    ob_start();
+    ?>
+    <div class="card cui2 sidebar-listing r_0 mb_20">
+      <?php if ($show_heading) { ?>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+      <?php } ?>
+      <div class="cbody p-0">
+        <ul class="listing type2">
+        <?php 
+        foreach( $posts as $post ) {
+          $postID = $post->ID;
+          $postTitle = $post->post_title;
+          $visitsCount = get_post_meta($postID, 'visit_counts', true);
+          $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
+          $output .= '<a class="text-primary" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
+          if ($show_counts) {
+            $output .= '<span class="badge bg-primary static"><i class="fas fa-eye mr_5"></i>'.$visitsCount.'</span>';
+          }
+          $output .= '</li>';
+        }
+        echo $output;
+      ?>
+      </ul> 
+    </div>
+  </div>
+  <?php 
+    return ob_get_clean();
   }
 }
 
@@ -275,26 +292,36 @@ function posts_listing($atts) {
     'orderby'         => 'id',
   ));
   
-  if ($show_heading) {
-    $output = '<h2 class="f20 font_bold text-primary">'.$heading.'</h2>';
-  } else {
-    $output = '';
-  }
+  $output = '';
   if ( ! empty( $posts ) ) {
-    $output .= '<ul>';
-    foreach( $posts as $post ) {
-      $postID = $post->ID;
-      $postTitle = $post->post_title;
-      $visitsCount = get_post_meta($postID, 'visit_counts', true);
-      $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
-      $output .= '<a class="text-dark" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
-      if ($show_counts) {
-        $output .= '<span class="badge bg-primary static"><i class="fas fa-eye mr_5"></i>'.$visitsCount.'</span>';
-      }
-      $output .= '</li>';
-    }
-    $output .= '</ul>';
-    return $output;
+    ob_start();
+    ?>
+    <div class="card cui2 sidebar-listing r_0 mb_20">
+      <?php if ($show_heading) { ?>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+      <?php } ?>
+      <div class="cbody p-0">
+        <ul class="listing type2">
+        <?php 
+        $output .= '<ul>';
+        foreach( $posts as $post ) {
+          $postID = $post->ID;
+          $postTitle = $post->post_title;
+          $visitsCount = get_post_meta($postID, 'visit_counts', true);
+          $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
+          $output .= '<a class="text-primary" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
+          if ($show_counts) {
+            $output .= '<span class="badge bg-primary static"><i class="fas fa-eye mr_5"></i>'.$visitsCount.'</span>';
+          }
+          $output .= '</li>';
+        }
+      echo $output;
+      ?>
+      </ul> 
+    </div>
+  </div>
+  <?php 
+    return ob_get_clean();
   }
 }
 

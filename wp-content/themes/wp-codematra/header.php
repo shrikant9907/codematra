@@ -40,10 +40,10 @@
 <header id="main_header" class="header sticky">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-md-3"> 
+        <div class="col-12 col-md-2"> 
           <div class="site_logo with_image">
             <a class="logo_link" href="<?php echo site_url('/'); ?>">
-              <img class="logo_image"  src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-logo.png" alt="" />
+              <img class="logo_image img-fluid"  src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-logo.png" alt="" />
             </a>
           </div>
         </div>

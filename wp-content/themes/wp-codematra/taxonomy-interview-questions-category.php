@@ -19,7 +19,7 @@ if ($term_name) { ?>
     <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php echo $term_name; ?> Interview Questions</p>
   </div>
 </section>
-<div class="interview-page common-section-ui pt_60">
+<div class="interview-page common-section-ui">
   <div class="container">
     <div class="form-row">
       <div class="col-12 col-sm-6 col-md-3">
@@ -51,9 +51,9 @@ if ($term_name) { ?>
                 $visitsCount = 0;
               }
               ?>
-              <div class="card cui3 r_0">
+              <div class="card cui3 r_0 typography">
                 <div class="card-body pbi_0">
-                  <h3 class="mb_20 text-primary f24"><?php the_title(); ?></h3>
+                  <h2 class="mb_20 text-primary f24"><?php the_title(); ?></h2>
                   <?php the_content(); ?>
                 </div>	
               </div>	
