@@ -13,33 +13,20 @@ body.admin-bar .header {
   padding-top: 32px !important;
 }
 
-.fui input:not([type=submit]), .fui textarea, .fui select, .fui .form-control, .fui1 input:not([type=submit]), .fui1 textarea, .fui1 select, .fui1 .form-control,
+
 .card.cui4, .card.cui3, .card.cui3c, .card.cui2c, .card.cui2 {
-  border: 1px solid #dee2e6 !important;
+    box-shadow: 2px 2px 9px 5px #f5f5f5 !important;
 }
 
 .bg_gred_primary {
   background-image: linear-gradient(to bottom, #117ca6, #0094b3, #00abb6, #00c0ae, #4ad49d);
 }
 
-.header {
-  box-shadow: 0 2px 10px 1px rgb(0 0 0 / 10%);
-}
 
 .header .search-box .form-control {
   min-height: 35px;
   padding: 8px 15px;
 }
-
-/* .scrolled header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
-  margin: 0 0 !important;
-  padding: 10px 15px !important;
-}
-
-.scrolled header .site_logo.with_image a img {
-  height: 39px !important;
-  margin: 0;
-} */
 
 .footer_style1 ul li {
   padding-top: 0;
@@ -108,13 +95,12 @@ body.admin-bar .header {
 }
 
 .wp-block-tag-cloud a {
-  background-color: rgb(17 124 166 / 5%);
-  padding: 2px 10px;
+  background-color: rgba(0,0,0,0.1);
+  padding: 5px 10px;
   display: inline-block;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-bottom: 5px;
   text-decoration: none;
-  color: #117CA6;
 }
 /* Wp CSS  */
 
@@ -229,50 +215,15 @@ body.admin-bar .header {
     margin-right: 5px;
   }
 
-
+.typography p,
 .typography h1,
 .typography h2,
 .typography h3,
 .typography h4,
 .typography h5,
 .typography h6{
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
-.typography p {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-.typography h1,
-.typography h2,
-.typography h3,
-.typography h4,
-.typography h5,
-.typography h6{
-  color: #117CA6;
-}
-
-.typography h3 {
-  font-size: 24px;
-}
-
-.typography h3 {
-  font-size: 20px;
-}
-
-.typography h4 {
-  font-size: 18px;
-}
-
-.typography h5 {
-  font-size: 16px;
-}
-
-.typography h6 {
-  font-size: 14px;
-}
-
 
 .listing ul {
     list-style: none;
@@ -281,14 +232,14 @@ body.admin-bar .header {
 }
 
 h1, h2, h3, h4, h5, h6, .heading, .title, .main_heading {
-  font-family: 'Lato', sans-serif;
-  font-weight: 800;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
 }
 
 .site_logo.with_image a img {
-  max-width: 100%;
-  height: auto !important;
-  margin: 9px 0;
+    max-width: unset;
+    height: 53px;
+    margin: 3px 0;
 }
 
 header .full-menu .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
@@ -777,7 +728,7 @@ p.comment-form-cookies-consent {
 /*Responsive*/
 @media all and (max-width: 1400px) { 
   .container {
-    max-width: 1200px;
+    max-width: 1240px;
   }  
 }
 @media all and (max-width: 991px) { 

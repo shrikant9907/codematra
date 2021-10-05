@@ -13,20 +13,19 @@ $post_type = $post->post_type;
 
 if ($term_name) {
 ?>
-<h1 class="text-center mb_0 text-secondary border-top border-bottom ptb_40 f30 lh32"><?php echo $term_name; ?></h1>
+<h1 class="text-center bg-primary mb_0 text-white ptb_40 f30 lh32"><?php echo $term_name; ?></h1>
 <?php } ?>
-<section class="common-section-ui page-breadcrumb border-bottom pti_10 pbi_10">
+<section class="common-section-ui page-breadcrumb bg-light pti_20 pbi_20">
   <div class="container">
-    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php echo $term_name; ?></p>
+    <p class="text-muted f14 m-0"><a class="tdn text-primary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php echo $term_name; ?> Programs</p>
   </div>
 </section>
-<div class="single-page common-section-ui">
+<div class="single-page bg-light common-section-ui pt_70">
   <div class="container">
-    <div class="form-row">
-      <div class="col-12 col-sm-6 col-md-3">
-        <?php get_sidebar('program-left'); ?>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-8 mx-auto">
+      <div class="accordion bg-light accordion-ui2" id="accordion2">
+          
       <?php
         $args   =   array(
                             'post_type'         =>  $post_type,
@@ -52,12 +51,13 @@ if ($term_name) {
                 $visitsCount = 0;
               }
         ?>
-          <div class="card cui2 r_0 mbi_20">
+          <div class="card cui2 mbi_20">
             <h3 class="card-header">
-              <a class="text_primary font_normal tdn f14 d-flex justify-content-between" href="<?php the_permalink(); ?>">
-                <span><?php echo '<span class="text-dark">'.$count.'.</span> '; the_title(); ?></span>
-                <span class="text-primary font_normal f14 d-flex flex center_center" title="views"><i class="static fa fa-eye mr_5" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+              <a class="text_dark f18 d-flex justify-content-between" href="<?php the_permalink(); ?>">
+                <span><?php echo '<span class="text-primary">'.$count.'.</span> '; the_title(); ?></span>
+                <span class="text-primary f14 d-flex flex center_center" title="views"><i class="static fa fa-eye mr_5" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
               </a>
+              
             </h3>
           </div>	
 	    
@@ -66,9 +66,10 @@ if ($term_name) {
     endwhile;
     wp_reset_query(); 
     endif; ?>         
+  		  </div>                  
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <?php get_sidebar('program-right'); ?>
+      <div class="col-12 col-sm-6 col-md-4">
+        <?php get_sidebar(); ?>
       </div>
     </div>
   </div>
