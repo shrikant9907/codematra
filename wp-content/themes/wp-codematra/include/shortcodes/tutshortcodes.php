@@ -1,5 +1,33 @@
 <?php 
 /*
+* Shortcode for Social Icons | Site: https://codematra.com/
+*/ 
+add_shortcode('cmSocial', 'cm_social');
+function cm_social($atts = array(), $content = null) {
+  extract(shortcode_atts(array(
+    'type' => 'info',
+    'heading' => "Like / Follow / Subscribe"
+  ), $atts));
+  $content = do_shortcode($content);
+  ob_start();
+  ?>
+  <div class="card cui2 r_0 mb_20">
+    <div class="cbody p-0">
+      <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+      <ul class="socialicons siconsb px_15 pt_10 pb_5"> 
+        <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
+        <li class="youtube"><a href="https://www.youtube.com/channel/UCbD6k-T54c8I-8UI0vqQ79Q" title="Code Matra - Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        <!-- <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
+        <!-- <li class="instagram"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
+      </ul>
+    </div>  
+  </div>
+  <?php 
+  return ob_get_clean();
+}
+
+/*
 * Shortcode for alerts | Site: https://codematra.com/
 */ 
 add_shortcode('tutsAlert', 'tuts_alert');
@@ -91,6 +119,8 @@ function posts_terms_shortcode($atts) {
       'post_type' => 'interview-questions',
       'category' => 'wordpress',
     	'taxonomy' => 'interview-questions-category',
+      'uitype' => 'block',
+      'heading' => 'Interview Questions',
     ), $atts));
 
 		ob_start();
@@ -101,21 +131,45 @@ function posts_terms_shortcode($atts) {
     ) );
      
     if($terms) {
-      echo '<div class="row">';
-      foreach($terms as $term) {
-        $termname = $term->name;
-        $termLink = get_term_link($term);
-        ?>
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="card relative cui2 text-uppercase min_h_200">
-            <div class="cbody">
-              <a class="d-block text-center tdn f20 font_bold text-white overlay_b absolute d-flex flex center_center" href="<?php echo $termLink; ?>"><span><?php echo $termname; ?></span></a>
+      if ($uitype == 'block')  {
+        echo '<div class="row">';
+        foreach($terms as $term) {
+          $termname = $term->name;
+          $termLink = get_term_link($term);
+          ?>
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="card relative cui2 text-uppercase min_h_200">
+              <div class="cbody">
+                <a class="d-block text-center tdn f20 font_bold text-white overlay_b absolute d-flex flex center_center" href="<?php echo $termLink; ?>"><span><?php echo $termname; ?></span></a>
+              </div>
             </div>
           </div>
+          <?php
+        }
+        echo '</div>';
+      } else { ?>
+        <div class="card cui2 sidebar-listing r_0 mb_20">
+          <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+          <div class="cbody p-0">
+            <ul class="listing type2">
+              <?php 
+              foreach($terms as $term) {
+                $termname = $term->name;
+                $termLink = get_term_link($term);
+                ?>
+                <li class="">
+                  <a class="text-dark" href="<?php echo $termLink; ?>">
+                    <span class="text-primary"><?php echo $termname; ?></span>
+                  </a>
+                </li>
+                <?php
+              }
+              ?>
+            </ul> 
+          </div>
         </div>
-        <?php
+      <?php
       }
-      echo '</div>';
     }
 
 		return ob_get_clean();

@@ -13,9 +13,9 @@ body.admin-bar .header {
   padding-top: 32px !important;
 }
 
-
+.fui input:not([type=submit]), .fui textarea, .fui select, .fui .form-control, .fui1 input:not([type=submit]), .fui1 textarea, .fui1 select, .fui1 .form-control,
 .card.cui4, .card.cui3, .card.cui3c, .card.cui2c, .card.cui2 {
-    box-shadow: 2px 2px 9px 5px #f5f5f5 !important;
+  border: 1px solid #dee2e6 !important;
 }
 
 .bg_gred_primary {
@@ -728,7 +728,7 @@ p.comment-form-cookies-consent {
 /*Responsive*/
 @media all and (max-width: 1400px) { 
   .container {
-    max-width: 1240px;
+    max-width: 1200px;
   }  
 }
 @media all and (max-width: 991px) { 
