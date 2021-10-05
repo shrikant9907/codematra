@@ -17,7 +17,7 @@ function tuts_alert($atts = array(), $content = null) {
 /*
 * Shortcode for Buttons | Site: https://codematra.com/
 */ 
-// [Button link="#" label="Demo"]
+// [Button link="#" label="Demo" target="_blank"]
 add_shortcode('cmButton', 'cm_button');
 function cm_button($atts = array()) {
   extract(shortcode_atts(array(

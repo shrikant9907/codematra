@@ -1,5 +1,5 @@
 <!-- Calculator Layout UI Start by https://codematra.com/ -->
-<div class="code-matra-calculator-ui">  
+<form action="" method="post" class="code-matra-calculator-ui">  
 
   <!-- Calculator Header -->
   <div class="cm-header">
@@ -13,16 +13,36 @@
 
   <!-- Calculator Keys -->
   <div class="cm-keys">
-    <form action="">
-      <div class="cm-row"><button type="button" class="btn">C</button><button type="button" class="btn"></button><button type="button" class="btn"></button><button type="button" class="btn">/</button></div>
-      <div class="cm-row"><button type="button" class="btn">7</button><button type="button" class="btn">8</button><button type="button" class="btn">9</button><button type="button" class="btn">&times;</button></div>
-      <div class="cm-row"><button type="button" class="btn">4</button><button type="button" class="btn">5</button><button type="button" class="btn">6</button><button type="button" class="btn">-</button></div>
-      <div class="cm-row"><button type="button" class="btn">1</button><button type="button" class="btn">2</button><button type="button" class="btn">3</button><button type="button" class="btn">+</button></div>
-      <div class="cm-row"><button type="button" class="btn">0</button><button type="button" class="btn">.</button><button type="submit" class="btn btn-secondary">=</button></div>
-    </form>
+    <div class="cm-row">
+      <button type="button" class="btn btn-clear">Clear</button>
+      <button type="button" class="btn">/</button>
+    </div>
+    <div class="cm-row">
+      <button type="button" class="btn">7</button>
+      <button type="button" class="btn">8</button>
+      <button type="button" class="btn">9</button>
+      <button type="button" class="btn">&times;</button>
+    </div>
+    <div class="cm-row">
+      <button type="button" class="btn">4</button>
+      <button type="button" class="btn">5</button>
+      <button type="button" class="btn">6</button>
+      <button type="button" class="btn">-</button>
+    </div>
+    <div class="cm-row">
+      <button type="button" class="btn">1</button>
+      <button type="button" class="btn">2</button>
+      <button type="button" class="btn">3</button>
+      <button type="button" class="btn">+</button>
+    </div>
+    <div class="cm-row">
+      <button type="button" class="btn">0</button>
+      <button type="button" class="btn">.</button>
+      <button type="submit" class="btn btn-secondary">=</button>
+    </div>
   </div>
 
   <!-- Site Attributes -->
   <div class="siteurl">https://codematra.com</div>
-</div>
+</form>
 <!-- Calculator Layout UI End -->
