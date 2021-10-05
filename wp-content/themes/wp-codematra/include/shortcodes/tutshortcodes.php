@@ -17,18 +17,18 @@ function tuts_alert($atts = array(), $content = null) {
 /*
 * Shortcode for Buttons | Site: https://codematra.com/
 */ 
-// [Button link="#" label="Demo" target="_blank"]
+// [cmButton link="#" label="Demo" target="_blank"]
 add_shortcode('cmButton', 'cm_button');
 function cm_button($atts = array()) {
   extract(shortcode_atts(array(
     'label' => 'Button',
-    'classes' => 'btn btn-primary btnui3',
+    'classes' => 'btn btn-primary btnui3 mb_20',
     'link' => '#',
     'target' => '_self',
     ), $atts));
 
   ob_start();
-  echo "<a class='$classes' target='$target' href='$href'>$label</a>";
+  echo "<a class='$classes' target='$target' href='$link'>$label</a>";
   return ob_get_clean();
 }
 

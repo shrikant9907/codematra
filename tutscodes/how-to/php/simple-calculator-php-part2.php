@@ -8,17 +8,17 @@ $op1 = isset($_REQUEST['operand1']) ? $_REQUEST['operand1'] : '';
 $op2 = isset($_REQUEST['operand2']) ? $_REQUEST['operand2'] : '';
 $optr = isset($_REQUEST['operator']) ? $_REQUEST['operator'] : '';
 
-//Validation 1: adding operator before operand 1 then clear it.
+//Validation 1: Stop user to add operator before adding any number or value
 if (!$op1 && $optr) {
   $optr = '';
 }
 
-//Validation 2: If adding dot before operand 1
+//Validation 2: If the user adds a dot then add a prefix zero before the dot
 if (!$op1 && $op2 == '.') {
   $op1 = 0; // add zero prefix 
 }
 
-// Validation 3: Check if the last value of field is not operator 
+// Validation 3: Don't allow to add multiple operators to add continuously. 
 if ($optr) {
   $lastVal = substr($op1, -1);
   $operators = array('+','-','*','/','.');
@@ -27,7 +27,7 @@ if ($optr) {
   }
 }
 
-// Validation 4:  Check if that field value is not result of last calculation
+// Validation 4:  After the result, Clear the display value with the next input or click.
 if (strpos($op1, '=') === false) {
   $output = $op1.$optr.$op2; 
 } else {
