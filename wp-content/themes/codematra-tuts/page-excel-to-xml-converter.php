@@ -12,12 +12,24 @@ if(!isset($_GET['xml'])):
   }
 ?> 
 <?php get_header(); ?>
-<section class="page-section bg-light">
-  <h1 class="text-center bg-primary mb_30 text-white ptb_40 f30 lh32">
-    <?php echo $toolTitle; ?>
-  </h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32">
+  <?php the_title(); ?>
+</h1>
+<section class="common-section-ui page-breadcrumb border-top border-bottom pti_10 pbi_10">
+  <div class="container">
+    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <a class="tdn text-secondary" href="<?php echo site_url('/tools'); ?>" class="text-muted">Tools</a> / <?php the_title(); ?></p>
+  </div>
+</section>  
+<section class="page-section common-section-ui">
   <div class="container">
     <div class="row">
+    <div class="col-12 col-md-8 text-center mx-auto">
+        <?php 
+        if(have_posts()): while(have_posts()): the_post(); 
+          the_content(); 
+        endwhile; endif; 
+        ?>
+      </div>
       <div class="col-12"> 
         <div class="cm-base64-ende">
           <div class="card cui1">

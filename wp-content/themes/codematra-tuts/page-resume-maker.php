@@ -20,8 +20,8 @@ if (isset($_GET['step']) && ($_GET['step'] <= 3 )) {
 get_header(); 
 ?> 
  
-<section class="page-section bg-light">
-  <h1 class="text-center bg-primary mb_30 text-white ptb_40 f30 lh32">
+<section class="page-section">
+  <h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32">
     <?php the_title(); ?>
   </h1>
   <div class="container">

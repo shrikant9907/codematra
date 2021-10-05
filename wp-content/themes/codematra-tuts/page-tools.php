@@ -1,7 +1,12 @@
 <?php get_header(); ?> 
  
 <h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
-<section id="tools" class="common-section-ui pb_40 pt_20">
+<section class="common-section-ui page-breadcrumb border-bottom pti_10 pbi_10">
+  <div class="container">
+    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php the_title(); ?></p>
+  </div>
+</section> 
+<section id="tools" class="common-section-ui">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Free</span> Tools Online</h2>
   <div class="col-content">

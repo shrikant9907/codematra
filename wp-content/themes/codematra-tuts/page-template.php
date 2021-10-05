@@ -11,8 +11,13 @@ if (!$visitsCount) {
   $visitsCount = 0;
 }
 ?>
-<section class="page-section pb_20">
-<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 border-bottom mont_serrat f30 lh32"><?php the_title(); ?></h1>
+<section class="common-section-ui page-breadcrumb border-bottom pti_10 pbi_10">
+  <div class="container">
+    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php the_title(); ?></p>
+  </div>
+</section>
+<section class="page-section common-section-ui">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-8">
@@ -21,6 +26,9 @@ if (!$visitsCount) {
         <?php } ?>
         <p class="text-muted"><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i> Views: <?php echo $visitsCount; ?></p>
         <?php the_content(); ?>
+      </div>
+      <div class="col-12 col-md-4">
+        <?php get_sidebar(); ?>
       </div>
     </div>
   </div>
