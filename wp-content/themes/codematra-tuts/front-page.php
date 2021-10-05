@@ -3,17 +3,16 @@ get_header();
 ?>
 
 <!-- Banner UI 1 -->
-<div class="banner-section bg_primary bg_gred_primary text-white mt_0 min_h_400">
+<div class="banner-section bg_secondary text-white mt_0 min_h_500">
   <div class="container">
       <div class="row">
-          <div class="col-12">
+          <div class="col-12 col-md-6">
               <div class="banner-card nobefore">
                   <p class="pre-banner-heading f14 text-uppercase mb_10 ">Welcome to codematra.com</p>
                   <h1 class="banner-heading f40 mb_10">A online plateform to learn <u class="text_yellow">coding</u> from the basics.</h1>
-                  <p class="banner-description mb_30">Code Matra is an online platform to learn code from basic level to advanced. We always try to provide high-quality content and codes to our website visitor.</p>
-                  <!-- <p class="banner-description mb_30">We working here to provide the Tutorials, Codes, Interview Questions and Quizzes for your work and job preparation.</p> -->
+                  <p class="banner-description mb_30 f16">Code Matra is an online platform to learn code from basic level to advanced. We always try to provide high-quality content and codes to our website visitor.</p>
                   <div class="banner-actions">
-                      <a href="#ourTutorials" class="btn btn-secondary btnui3s"><i class="fas fa-laptop-code mr_10"></i> Start learning! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a>
+                      <a href="#ourTutorials" class="btn btn-outline-primary text-uppercase btnui3s d-inline-flex flex center_center"><i class="text-secondary fas fa-user-graduate f20 mr_10"></i>Learn Coding <i class="f16 fa fa-angle-right ml_10" aria-hidden="true"></i></a>
                   </div>
               </div>
           </div>
@@ -65,29 +64,29 @@ get_header();
 </section>
 
  <!-- Tutorials  Section -->
- <section id="ourTutorials" class="common-section-ui bg-light f16">
+ <section id="ourTutorials" class="common-section-ui f16 border-bottom">
    <div class="container">
      <div class="row">
        <div class="col-12">
-         <h2 class="heading_style text-center type2 text-uppercase text-primary"><span class="text-secondary">What</span> are you looking for?</h2>
-         <p class="mb_20 text-center">Choose the topics from the following categories.</p>
+         <h2 class="heading_style text-center type2 text-uppercase text-primary"><span class="text-secondary">What</span> do you want to learn?</h2>
+         <p class="mb_30 text-center">Choose the topics from the following categories.</p>
 
          <!-- Carousel -->
-         <div class="ourtutorials four_col_carosusel">
+         <div class="ourtutorials row">
           <?php $fcats = getfeaturedCategoriesCm(); 
           if ($fcats): 
             foreach($fcats as $fcat) {
               if ($fcat['show']) {
               ?>  
-              <div class="occ-item px_10" >
-                <div class="card cui3c mt_10 r_10 py_20 border-0">
+              <div class="col-12 col-sm-6 col-md-3" >
+                <div class="card cui3c r_0 py_30 bg-light noshadow hs_11">
                   <div class="card-body">
                     <div class="ciconrc ciconb">
                       <a class="text-primary" href="<?php echo site_url($fcat['link']); ?>"><i class="<?php echo $fcat['icon']; ?> text-secondary"></i></a>
                     </div>
-                    <h3 class="card-title mbi_0"><a  class="text-primary f22 " href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h3>
-                    <p class="card-text"><?php echo $fcat['desc']; ?></p>
-                    <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-primary btnui3s text-uppercase">Start Learning <i class='ml_5 fas fa-angle-right'></i></a>
+                    <h3 class="card-title mbi_10"><a  class="text-primary f22 " href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h3>
+                    <p class="card-text lh20"><?php echo $fcat['desc']; ?></p>
+                    <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-secondary btnui3s text-uppercase">Start Now! <i class='ml_5 fas fa-angle-right'></i></a>
                   </div>
                 </div>
               </div> 
@@ -103,7 +102,7 @@ get_header();
  <!-- Tutorials  Section End -->
 
 <!-- Popular Posts with Sidebar Start -->
-<div class="popular-posts-section common-section-ui pt_60 pb_40">
+<div class="popular-posts-section common-section-ui bg-light pt_60 pb_40">
 	<div class="container">
 		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Popular</span> Posts</h2>
 	
@@ -138,13 +137,13 @@ get_header();
           $catbadges = trim( $output, $separator );  
           ?>
           <div class="col-12 col-sm-6 col-md-4">
-            <div class="card cui2 relative r_0 f14 mb_40 hs_11">
-            <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border cimgwr min_h_200 h_200 overflow_hidden" >
+            <div class="card cui2 relative r_0 f14 mb_40 noshadow trans_3 ">
+            <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border-bottom cimgwr min_h_200 h_200 overflow_hidden" >
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
               <?php if(has_post_thumbnail()) { ?>
                 <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               <?php } else {  ?>
-                <div class="img-altnative font_bold f30 bg-primary text-white flex center_center min_h_200">
+                <div class="img-altnative font_bold f30 bg-white text-primary op3 flex center_center min_h_200">
                   <?php echo $categories['0']->name; ?>
                 </div>
               <?php } ?>
@@ -163,9 +162,9 @@ get_header();
                 <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                 <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
               </div>
-              <div class="cdesc mb_10"><?php echo wp_trim_words(do_shortcode($post->post_content), 15); ?></div>
+              <div class=" cdesc mb_10"><?php echo wp_trim_words(do_shortcode($post->post_content), 15); ?></div>
               <div class="cdesc">
-                <a class="link-primary text-secondary tdn font_bold" href="<?php the_permalink(); ?>">Continue Reading...</a>
+                <a class="link-primary text-primary tdn" href="<?php the_permalink(); ?>">Read more...</a>
               </div>
             </div>
 					</div>
@@ -184,7 +183,7 @@ get_header();
 <!-- Popular Posts with Sidebar Ends -->
 
 <!-- Recent Posts with Sidebar Start -->
-<div class="recent-posts-section common-section-ui pt_60 pb_40 bg-light">
+<div class="recent-posts-section common-section-ui pt_60 pb_40">
 	<div class="container">
 		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Posts</h2>
 	
@@ -219,7 +218,7 @@ get_header();
           $catbadges = trim( $output, $separator );  
           ?>
           <div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui2 relative f14">
+					<div class="card cui2 relative r_0 f14">
           <a href="<?php the_permalink($post->ID); ?>" class="hidei mb_20 d-inline-block border bg-light cimgwr min_h_200" >
             <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
             <?php if(has_post_thumbnail()) { ?>
@@ -272,24 +271,13 @@ get_header();
         <?php 
           $args = array(
                   'post_type'         =>  'programs', 
-                  'posts_per_page'    =>  4, 
+                  'posts_per_page'    =>  10, 
                   'orderby'           =>  'id', 
                   'order'             =>  'desc', 
           );  
           $programsList = get_posts($args); 
           if ($programsList) {
           foreach($programsList as $progs) {
-          $progTerms = get_the_terms($progs, 'programs-category');
-
-          $separator = ' ';
-          $proutput = '';
-          if ( ! empty( $progTerms ) ) {
-              foreach( $progTerms as $progTerm ) {
-                  $proutput .= '<a class="static mr_5 d-inline badge badge-primary" href="' . esc_url( get_term_link( $progTerm->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $progTerm->name ) ) . '">' . esc_html( $progTerm->name ) . '</a>' . $separator;
-              }
-          }
-          
-          $termbadges = trim( $proutput, $separator );  
 
           // View Counts
           $prviews = get_post_meta($progs->ID, 'visit_counts', true);
@@ -298,24 +286,15 @@ get_header();
           }
           ?>
           	<div class="col-12 col-sm-6 col-md-6">
-              <div class="card cui3s border-0 relative f14 pt_15 min_h_100 ">
+              <div class="card cui3s bg-light border-0 relative f14 r_10">
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id($progs->ID)) ;  ?>
-              <?php if(has_post_thumbnail($progs->ID)) { ?>
-              <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block cimgwr" >
-                <img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
-              </a>
-              <?php } ?>
-              <div class="card-body ">
-                <h3 class="f16 mb_10 cheading font_bold lh20">
-                  <a href="<?php the_permalink($progs->ID); ?>" class="d-inline-block text-primary" >
+              <div class="card-body px_15 py_10">
+                <h3 class="f16 m-0 cheading font_bold lh20">
+                  <a href="<?php the_permalink($progs->ID); ?>" class="tdn d-inline-block text-primary" >
                    <?php echo $progs->post_title; ?>
                   </a>
               </h3>
-              <div class="d-flex mb_10">
-                <?php echo $termbadges; ?> 
-              </div>
-                <p class="cdesc mb_10"><?php echo wp_trim_words($progs->post_content, 12); ?></p>
-                <div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
+                <div class="cmeta mb_0 text-muted f12 d-flex justify-content-between hidei">
                   <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $prviews; ?></span>
                   <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                   <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
@@ -478,7 +457,7 @@ get_header();
 </section>
   
 <!-- CTA Section -->
-<section id="cta-section" class="common-section-ui bg-dark pb_80 text-center">
+<section id="cta-section" class="common-section-ui bg-primary pb_80 text-center">
   <div class="container">
     <div class="row">
       <div class="col-12">
