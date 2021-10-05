@@ -32,22 +32,6 @@
   color: inherit;
 }
 
-.code-matra-calculator-ui .cm-header .cm-close {
-  right: -14px;
-  top: -15px;
-  font-size: 16px;
-  position: absolute;
-  background: #fff;
-  border-radius: 100%;
-  color: #000;
-  width: 30px;
-  height: 30px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 8px 0px #a8a6a6 !important;
-}
-
 /* Calculator Field UI */
 .code-matra-calculator-ui .cm-field input{
   width: 100%;
@@ -94,20 +78,26 @@
   user-select: none; 
 }
 
+.code-matra-calculator-ui .cm-row .btn.btn-clear {
+  width: 75%;
+}
+
 .code-matra-calculator-ui .cm-row .btn:hover {
   background-color: #117CA6;
   border-color: #117CA6;
   color: #ffffff;
 }
 
-.code-matra-calculator-ui .cm-row button[type="submit"].btn {
+.code-matra-calculator-ui .cm-row .btn.btn-secondary {
   background-color: #f34423;
   border-color: #f34423;
   color: #ffffff;
+  width:50%;
 }
 
 /* Site URL */
 .code-matra-calculator-ui .siteurl {
   font-size: 10px;
   color: #cccccc;
+  margin-top: 20px;
 }
