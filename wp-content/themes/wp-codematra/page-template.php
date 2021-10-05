@@ -12,7 +12,7 @@ if (!$visitsCount) {
 }
 ?>
 <section class="page-section pb_20">
-<h1 class="text-center bg-primary mb-5 text-white ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-8">

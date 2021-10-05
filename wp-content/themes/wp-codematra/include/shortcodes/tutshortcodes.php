@@ -365,7 +365,7 @@ function showRelatedPosts() {
           }
           ?>
             <div class="col-12 col-sm-6">
-              <div class="cm_related_post mb_20 card cui2">
+              <div class="cm_related_post mb_20 r_0 card cui2">
               <div class="card-body">
                 <a class="link-primary tdn border mb_10 d-block min_h_150 h_150 overflow_hidden" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                   <?php if(has_post_thumbnail()) { ?>

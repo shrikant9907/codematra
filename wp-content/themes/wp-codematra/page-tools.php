@@ -1,6 +1,6 @@
 <?php get_header(); ?> 
  
-<h1 class="text-center bg-primary mb-5 text-white ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
 <section id="tools" class="common-section-ui pb_40 pt_20">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Free</span> Tools Online</h2>

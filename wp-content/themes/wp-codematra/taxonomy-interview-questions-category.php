@@ -16,7 +16,7 @@ if ($term_name) { ?>
 <?php } ?>
 <section class="common-section-ui page-breadcrumb border-top border-bottom pti_10 pbi_10">
   <div class="container">
-    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php echo $term_name; ?> Interview Questions</p>
+    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php echo $term_name; ?></p>
   </div>
 </section>
 <div class="interview-page common-section-ui">

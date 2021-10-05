@@ -2,7 +2,7 @@
   
 <section class="page-section bg-light pt_60">
 
-<h1 class="text-center bg-primary mb-5 text-white ptb_40 mont_serrat f30 lh32">Blog Posts</h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32">Blog Posts</h1>
 <div class="container">
         <div class="row">
             <div class="col-12 col-sm-4">

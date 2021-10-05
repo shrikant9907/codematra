@@ -37,7 +37,7 @@
 <body <?php body_class(); ?>> 
 
 <!-- Header Start -->
-<header id="main_header" class="header sticky">
+<header id="main_header" class="header sticky text-uppercase">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-2"> 
@@ -47,7 +47,7 @@
             </a>
           </div>
         </div>
-        <div class="col-12 col-md-9">
+        <div class="col-12 col-md-10">
           <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
               <span class="navbar-toggler-icon"></span>
@@ -156,10 +156,10 @@
                   </div>
                 </li>
                 <li class="nav-item nav-item d-flex justify-content-center align-items-center">
-                  <form class="cbody fui fui1p search-box max_w_100p px_15" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
+                  <form class="cbody fui fui1 search-box max_w_100p px_15" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
                     <div class="search-box">
                       <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
-                      <button type="submit" class="btn btn-primary btnui3"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      <button type="submit" class="btn btn-sm btn-primary btnui1"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div> 
                   </form>
                  <!-- <a href="<?php //echo site_url('/?s='); ?>" class="search-trigger"><i class="fa fa-search text_primary ml_10" aria-hidden="true"></i></a> -->

@@ -1,6 +1,11 @@
 <?php get_header(); ?> 
-<div class="single-page bg-light common-section-ui pt_0">
-<h1 class="text-center bg-primary mb-5 text-white ptb_40 mont_serrat f30 lh22"><?php _e('Blog'); ?></h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php _e('Blog'); ?></h1>
+<section class="common-section-ui page-breadcrumb border-top border-bottom pti_10 pbi_10">
+  <div class="container">
+    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php _e('Blog'); ?></p>
+  </div>
+</section>
+<div class="single-page common-section-ui">
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-8">
