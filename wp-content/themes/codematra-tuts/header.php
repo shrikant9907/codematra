@@ -38,7 +38,7 @@
 
 <!-- Header Start -->
 <header id="main_header" class="header sticky text-uppercase">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-12 col-md-2"> 
           <div class="site_logo with_image">
@@ -55,10 +55,10 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link text-dark" href="<?php echo site_url('/'); ?>">Home</a>
+                  <a title="Home" class="nav-link text-dark" href="<?php echo site_url('/'); ?>"><i class="text-primary f20 fas fa-home"></i></a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Codes</a>
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">How to Code</a>
                   <div class="dropdown-menu"> 
                     <?php   
                       // Post Tags
@@ -72,7 +72,7 @@
                       if ( !empty($categories) ) {  
                           foreach( $categories as $cat ) { 
                           $term_link = get_term_link( $cat );
-                              if(($cat->parent == 0) && ($cat->slug != 'uncategorized')) {
+                              if(($cat->parent == 0) && ($cat->slug != 'uncategorized') && ($cat->slug != 'projects')) {
                                   echo '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $cat->name ) .'</a>';
                               }
                           }
@@ -140,6 +140,12 @@
                   </div>
                 </li>
                 <li class="nav-item dropdown">
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Projects</a>
+                  <div class="dropdown-menu"> 
+                    <a class="dropdown-item" href="<?php echo site_url('/templates/projects/'); ?>">Calculator<span class="badge badge-secondary r_0 ">New!</span></a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Tools</a>
                   <div class="dropdown-menu"> 
                     <a class="dropdown-item" href="<?php echo site_url('/base64-encode-and-decode/'); ?>">Base64 Encoder</a>
@@ -155,19 +161,24 @@
                     <!-- <a class="dropdown-item" href="<?php echo site_url('/resume-maker/'); ?>">Resume Maker</a> -->
                   </div>
                 </li>
-                <li class="nav-item nav-item d-flex justify-content-center align-items-center">
-                  <form class="cbody fui fui1 search-box max_w_100p px_15" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
-                    <div class="search-box">
-                      <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
-                      <button type="submit" class="btn btn-sm btn-primary btnui1"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </div> 
-                  </form>
-                 <!-- <a href="<?php //echo site_url('/?s='); ?>" class="search-trigger"><i class="fa fa-search text_primary ml_10" aria-hidden="true"></i></a> -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-dark dropdown-toggle" title="Offers and Deals" href="javascript:void('0');">Deals</a>
+                  <div class="dropdown-menu"> 
+                    <a class="dropdown-item" href="<?php echo site_url('/deals/best-wordpress-themes/'); ?>">Best WordPress Themes<span class="badge badge-secondary r_0 ">New!</span></a>
+                    <a class="dropdown-item" href="<?php echo site_url('/deals/cheap-wordpress-hosting/'); ?>">Cheap WordPress Hosting<span class="badge badge-secondary r_0 ">New!</span></a>
+                  </div>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link btn btn-primary btnui3s" data-toggle="modal" data-target="#basicLoginFromModal" href="#">Login</a>
-                  <a class="nav-link btn btn-primary btnui3s" data-toggle="modal" data-target="#basicLoginFromModal" href="#">Post</a>
-                </li> -->
+                <li class="nav-item dropdown search-dropdown">
+                  <a href="javascript:void('0');" class="nav-link text-dark dropdown-toggle search-trigger"><i class="fa fa-search f18 text-secondary" aria-hidden="true"></i></a>
+                  <div class="dropdown-menu px_0"> 
+                    <form class="cbody fui fui1 search-box max_w_100p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
+                      <div class="search-box">
+                        <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
+                        <button type="submit" class="btn btn-sm btn-primary btnui1"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </div> 
+                    </form>
+                  </div>
+                </li>
               </ul>
             </div>
           </nav>

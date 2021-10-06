@@ -3,13 +3,13 @@ get_header();
 ?>
 
 <!-- Banner UI 1 -->
-<div class="banner-section bg_secondary text-white mt_0 min_h_500">
+<div class="banner-section bg-primary text-white mt_0 min_h_500">
   <div class="container">
       <div class="row">
           <div class="col-12 col-md-6">
               <div class="banner-card nobefore">
-                  <p class="pre-banner-heading f14 text-uppercase mb_10 ">Welcome to codematra.com</p>
-                  <h1 class="banner-heading f40 mb_10">A online plateform to learn <u class="text_yellow">coding</u> from the basics.</h1>
+                  <p class="pre-banner-heading f14 text-uppercase mb_20 ">Welcome to codematra.com</p>
+                  <h1 class="banner-heading f40 lh44 mb_20">A online plateform to learn <u class="text_yellow">coding</u> from the basics.</h1>
                   <p class="banner-description mb_30 f16">Code Matra is an online platform to learn code from basic level to advanced. We always try to provide high-quality content and codes to our website visitor.</p>
                   <div class="banner-actions">
                       <a href="#ourTutorials" class="btn btn-outline-primary text-uppercase btnui3s d-inline-flex flex center_center"><i class="text-secondary fas fa-user-graduate f20 mr_10"></i>Learn Coding <i class="f16 fa fa-angle-right ml_10" aria-hidden="true"></i></a>
@@ -79,10 +79,11 @@ get_header();
               if ($fcat['show']) {
               ?>  
               <div class="col-12 col-sm-6 col-md-3" >
-                <div class="card cui3c r_0 py_30 bg-light noshadow hs_11">
+                <div class="card cui3c r_0 py_30 noshadow hs_11 relative">
+                <a class="tdn overlay_w op0 absolute" href="<?php echo site_url($fcat['link']); ?>"></a>
                   <div class="card-body">
                     <div class="ciconrc ciconb">
-                      <a class="text-primary" href="<?php echo site_url($fcat['link']); ?>"><i class="<?php echo $fcat['icon']; ?> text-secondary"></i></a>
+                      <i class="<?php echo $fcat['icon']; ?> text-secondary"></i>
                     </div>
                     <h3 class="card-title mbi_10"><a  class="text-primary f22 " href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h3>
                     <p class="card-text lh20"><?php echo $fcat['desc']; ?></p>
@@ -102,13 +103,13 @@ get_header();
  <!-- Tutorials  Section End -->
 
 <!-- Popular Posts with Sidebar Start -->
-<div class="popular-posts-section common-section-ui bg-light pt_60 pb_40">
+<div class="popular-posts-section border-bottom common-section-ui bg-light pt_60 pb_40">
 	<div class="container">
-		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Popular</span> Posts</h2>
+		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Most</span> Popular Codes</h2>
 	
 	<div class="row">
 		<div class="col-12">
-			<div class="row">
+			<div class="form-row">
       <?php 
           $args = array(
             'post_type'         =>  'post', 
@@ -141,9 +142,9 @@ get_header();
             <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border-bottom cimgwr min_h_200 h_200 overflow_hidden" >
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
               <?php if(has_post_thumbnail()) { ?>
-                <img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                <img class="card-img-top r_0 hs_12 trans_3 " src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               <?php } else {  ?>
-                <div class="img-altnative font_bold f30 bg-white text-primary op3 flex center_center min_h_200">
+                <div class="img-altnative font_bold f30 hs_12 trans_3  bg-white text-primary op3 flex center_center min_h_200">
                   <?php echo $categories['0']->name; ?>
                 </div>
               <?php } ?>
@@ -164,7 +165,7 @@ get_header();
               </div>
               <div class=" cdesc mb_10"><?php echo wp_trim_words(do_shortcode($post->post_content), 15); ?></div>
               <div class="cdesc">
-                <a class="link-primary text-primary tdn" href="<?php the_permalink(); ?>">Read more...</a>
+                <a class="link-primary text-secondary tdn" href="<?php the_permalink(); ?>">Read more...</a>
               </div>
             </div>
 					</div>
@@ -183,13 +184,13 @@ get_header();
 <!-- Popular Posts with Sidebar Ends -->
 
 <!-- Recent Posts with Sidebar Start -->
-<div class="recent-posts-section common-section-ui pt_60 pb_40">
+<div class="recent-posts-section border-bottom common-section-ui pt_60 pb_40">
 	<div class="container">
-		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Posts</h2>
+		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Codes, Posts and Projects</h2>
 	
 	<div class="row">
 		<div class="col-12">
-			<div class="row">
+			<div class="form-row">
       <?php 
           $args = array(
                   'post_type'         =>  'post', 
@@ -217,7 +218,7 @@ get_header();
 
           $catbadges = trim( $output, $separator );  
           ?>
-          <div class="col-12 col-sm-6 col-md-4">
+          <div class="col-12 col-sm-6">
 					<div class="card cui2 relative r_0 f14">
           <a href="<?php the_permalink($post->ID); ?>" class="hidei mb_20 d-inline-block border bg-light cimgwr min_h_200" >
             <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
@@ -261,19 +262,41 @@ get_header();
 
 
 <!-- Recent Programs with Sidebar Start -->
-<div class="recent-programs-section common-section-ui">
+<div class="recent-programs-section border-bottom common-section-ui">
 	<div class="container">
-		<h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Programs</h2>
-	
+	<h2 class="heading_style type2 text-uppercase mb_40 text-primary"><span class="text-secondary">Recent</span> Programs</h2>
 	<div class="row">
-		<div class="col-12">
-			<div class="row">
+    <?php 
+      // Post Tags
+      $programscat = get_terms( array(
+        'taxonomy' => 'programs-category', 
+        'hide_empty' => true,
+        'parent'=>0,
+        'order' => 'asc',
+        'orderby' => 'name'
+    )
+    );
+
+    if ( !empty($programscat) ) { 
+      foreach( $programscat as $procategory ) { 
+      ?>
+      <div class="col-12 col-md-6">
+      <h3 class="mb_20 text-dark pt_20 text-uppercase"><?php echo $procategory->name; ?></h3>
+
         <?php 
           $args = array(
                   'post_type'         =>  'programs', 
-                  'posts_per_page'    =>  10, 
+                  'posts_per_page'    =>  5, 
                   'orderby'           =>  'id', 
                   'order'             =>  'desc', 
+                  'tax_query'         =>  array(
+                    array(
+                      'taxonomy' => 'programs-category',
+                      'field' => 'slug',
+                      'terms' => $procategory->slug, 
+                      'include_children' => false
+                    )
+                  ) 
           );  
           $programsList = get_posts($args); 
           if ($programsList) {
@@ -285,8 +308,7 @@ get_header();
             $prviews = 0;
           }
           ?>
-          	<div class="col-12 col-sm-6 col-md-6">
-              <div class="card cui3s bg-light border-0 relative f14 r_10">
+              <div class="card cui3s bg-light border-0 relative f14 r_10 w-100">
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id($progs->ID)) ;  ?>
               <div class="card-body px_15 py_10">
                 <h3 class="f16 m-0 cheading font_bold lh20">
@@ -301,7 +323,6 @@ get_header();
                 </div>
               </div>
               </div>
-            </div>
               
           <?php    
           }} else { ?>
@@ -310,20 +331,23 @@ get_header();
           }    
           ?>
 		 	
+	    <p class="text-left mt_40"><a href="<?php echo get_term_link( $procategory );; ?>" class="btn btn-sm btn-secondary btnui3s">View More <?php echo $procategory->name; ?></a></p>
     </div>
-	  <p class="text-center mt_40"><a href="<?php echo site_url('/programs'); ?>" class="btn btn-secondary btnui3s">View More Programs</a></p>
-    </div>
-  
+      <?php
+      }
+    } 
+    ?>
+
 	</div>
 </div>
 </div>
 <!-- Recent Programs with Sidebar Ends -->
  
-<section id="interview" class="common-section-ui pb_40 pt_60 bg-light">
+<section id="interview" class="common-section-ui border-bottom pb_40 pt_60 bg-light">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Interview Questions and Answers</h2>
     <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
           <div class="card cui1 r_0 pt_20">
             <div class="card-body">
               <h3 class="card-title text-primary text-uppercase"><span class="text-dark">React Js</span></h3>
@@ -333,15 +357,15 @@ get_header();
                         'post_type'         =>  'interview-questions', 
                         'posts_per_page'    =>  5, 
                         'orderby'           =>  'id', 
-                        'order'             =>  'asc', 
+                        'order'             =>  'DESC', 
                         'tax_query'         =>  array(
-                                                    array(
-                                                            'taxonomy' => 'interview-questions-category',
-                                                            'field' => 'slug',
-                                                            'terms' => 'react-js', 
-                                                            'include_children' => false
-                                                    )
-                                                ) 
+                            array(
+                              'taxonomy' => 'interview-questions-category',
+                              'field' => 'slug',
+                              'terms' => 'react-js', 
+                              'include_children' => false
+                            )
+                          ) 
                         );  
                 $reactQuestions = get_posts($args); 
                 if ($reactQuestions) {

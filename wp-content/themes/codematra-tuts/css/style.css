@@ -365,16 +365,16 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu:after {
 }
 
 header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu {
-  top: 58px !important;
+  top: 68px !important;
   background: #ffffff;
   padding: 0;
   min-width: 200px;
   left: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu .dropdown-item {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header .navbar.navbar-expand-lg .navbar-nav .nav-item .badge {
@@ -399,16 +399,10 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .badge {
   font-size: 50px;
 } 
 
-.recent-posts-section .card.cui2:hover,
 .ourtutorials .card:hover {
   border:1px solid #f34423 !important;
   background-color: #ffffff !important;
 }
-
-.popular-posts-section .card.cui2:hover {
-  margin-top: -10px;
-}
-
 
 .recent-programs-section .card.cui3s {
   border: 1px solid #ffffff !important;
@@ -458,12 +452,36 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item a.nav-link.btn {
     text-transform: uppercase;
 }
 
-header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
-    margin: 7px 0 !important;
+header .navbar.navbar-expand-lg .navbar-nav .nav-item {
+  border-left: 1px solid #efefef;
 }
 
-.rememberme input{
-    min-height: 0 !important;
+header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
+  padding: 22px 10px !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px;
+}
+
+header .navbar.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
+  color: #f34423 !important;
+}
+
+header .navbar.navbar-expand-lg .navbar-nav .search-dropdown .dropdown-menu {
+  right: 0;
+  left: unset;
+  padding: 10px !important;
+  width: 360px !important;
+}
+
+header .navbar.navbar-expand-lg .navbar-nav .search-dropdown a::after {
+  display: none;
+}
+
+header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  padding: 15px;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 /* Banner section */
