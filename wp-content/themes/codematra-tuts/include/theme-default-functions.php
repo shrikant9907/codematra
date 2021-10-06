@@ -216,6 +216,8 @@ function insertDefaultPages() {
         'List To Array Converter',
         'List To HTML List Converter',
         'Resume Maker',
+        'Deals',
+        'Cheap Web Hosting',
         'Excel To Array Converter',
         'Excel To JSON Converter',
         'Excel To XML Converter',

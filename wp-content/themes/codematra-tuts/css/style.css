@@ -473,11 +473,11 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
 }
 
 header .navbar.navbar-expand-lg .navbar-nav .search-dropdown .dropdown-menu {
-  right: 0;
+  right: 38px;
   left: unset;
   padding: 10px !important;
   width: 360px !important;
-  max-width: 100%;
+  top: 2px !important;
 }
 
 header .navbar.navbar-expand-lg .navbar-nav .search-dropdown a::after {
@@ -933,6 +933,12 @@ p.comment-form-cookies-consent {
 
 /*Mobile Devices*/
 @media all and (max-width: 580px) {
+
+  header .navbar.navbar-expand-lg .navbar-nav .search-dropdown .dropdown-menu {
+    max-width: 100%;
+    top:0;
+    right:0; 
+  }
 
   .metatags span {
     width: auto;
