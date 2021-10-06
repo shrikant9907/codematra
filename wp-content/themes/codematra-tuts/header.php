@@ -142,7 +142,11 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Projects</a>
                   <div class="dropdown-menu"> 
-                    <a class="dropdown-item" href="<?php echo site_url('/templates/projects/'); ?>">Calculator<span class="badge badge-secondary r_0 ">New!</span></a>
+                    <a class="dropdown-item" href="<?php echo site_url('/how-to-create-a-simple-calculator-in-html/'); ?>">Calculator<span class="badge badge-secondary r_0 ">New!</span></a>
+                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Contact Book<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Portfolio Website<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Chat App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Quiz App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -158,14 +162,14 @@
                     <a class="dropdown-item" href="<?php echo site_url('/excel-to-array-Converter/'); ?>">Excel To Array</a>
                     <a class="dropdown-item" href="<?php echo site_url('/excel-to-json-Converter/'); ?>">Excel To JSON</a>
                     <a class="dropdown-item" href="<?php echo site_url('/excel-to-xml-Converter/'); ?>">Excel To XML</a>
-                    <!-- <a class="dropdown-item" href="<?php echo site_url('/resume-maker/'); ?>">Resume Maker</a> -->
+                    <a class="dropdown-item disabled" href="<?php echo site_url('/resume-maker/'); ?>">Resume Maker <span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link text-dark dropdown-toggle" title="Offers and Deals" href="javascript:void('0');">Deals</a>
+                  <a class="nav-link text-dark dropdown-toggle" title="Offers and Deals" href="javascript:void('0');">Deals <span class="badge badge-secondary r_0 "></a>
                   <div class="dropdown-menu deals-dropdown"> 
-                    <a class="dropdown-item" href="<?php echo site_url('/deals/best-wordpress-themes/'); ?>">Best WordPress Themes<span class="badge badge-secondary r_0 ">New!</span></a>
-                    <a class="dropdown-item" href="<?php echo site_url('/deals/cheap-wordpress-hosting/'); ?>">Cheap WordPress Hosting<span class="badge badge-secondary r_0 ">New!</span></a>
+                    <a class="dropdown-item disabled" href="<?php echo site_url('/deals/best-wordpress-themes/'); ?>">Best WordPress Themes<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="<?php echo site_url('/deals/cheap-wordpress-hosting/'); ?>">Cheap WordPress Hosting<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                   </div>
                 </li>
                 <li class="nav-item dropdown search-dropdown">
