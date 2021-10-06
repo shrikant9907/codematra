@@ -102,13 +102,6 @@ function getSiteTemplatesCm() {
 function getfeaturedCategoriesCm() {
   $array = array(
     array(
-      'name' => 'Web Design',
-      'desc' => 'Learn web design to make the stunning web pages.',
-      'icon' => 'fas fa-laptop-code',
-      'link' =>'/tag/web-design/',
-      'show' => true,
-    ),
-    array(
       'name' => 'Bootstrap 5',
       'desc' => 'Learn the latest library of Bootstrap to speed up web design work.',
       'icon' => 'fab fa-bootstrap',
@@ -139,7 +132,7 @@ function getfeaturedCategoriesCm() {
     array(
       'name' => 'PHP',
       'desc' => 'Learn the all the basic of PHP to make a web application.',
-      'icon' => 'fab fa-react',
+      'icon' => 'fab fa-php',
       'link' =>'/category/php/',
       'show' => true,
     ),
@@ -156,6 +149,20 @@ function getfeaturedCategoriesCm() {
       'icon' => 'fab fa-wordpress',
       'link' =>'/interview-questions-category/wordpress/',
       'show' => false,
+    ),
+    array(
+      'name' => 'Web Design',
+      'desc' => 'Learn web design to make the stunning web pages.',
+      'icon' => 'fas fa-laptop-code',
+      'link' =>'/tag/web-design/',
+      'show' => true,
+    ),
+    array(
+      'name' => 'Sample Projects',
+      'desc' => 'Get inspiration and learn coding with basic sample projects.',
+      'icon' => 'fas fa-project-diagram',
+      'link' =>'/category/projects/',
+      'show' => true,
     ),
     array(
       'name' => 'Python',
