@@ -16,6 +16,8 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
     $term_slug = $term_obj_list['1']->slug;
 }
 ?>  
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php echo $term_name; ?></h1>
+
 <section class="common-section-ui page-breadcrumb border-bottom border-top pti_10 pbi_10">
   <div class="container">
     <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <a class="tdn text-secondary" href="<?php echo get_term_link( $term_slug, $term_taxonomy ); ?>" class="text-muted"><?php echo $term_name; ?></a> / <?php the_title(); ?></p>
@@ -45,7 +47,7 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
                     $visitsCount = 0;
                   }
                   ?>
-                <div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
+                <div class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
                   <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
                   <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                   <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author_meta('user_nicename',$post->post_author); ?></span>

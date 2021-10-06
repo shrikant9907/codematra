@@ -4,7 +4,7 @@ get_header();
 $categories = get_the_category();
             
 ?> 
-<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php echo $categories['0']->name; ?></h1>
 
 <section class="common-section-ui page-breadcrumb border-top border-bottom pti_10 pbi_10">
   <div class="container">
@@ -28,7 +28,7 @@ $categories = get_the_category();
               <?php if(has_post_thumbnail()) { ?>
                 <img class="card-img-top r_0 mb_20 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               <?php } ?>
-            <div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
+            <div class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
               <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
               <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
               <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> Shrikant</span>

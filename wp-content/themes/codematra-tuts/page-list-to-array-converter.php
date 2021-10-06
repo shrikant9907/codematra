@@ -62,8 +62,10 @@ get_header(); ?>
                     </div>
                   </div>
                   <div class="col-12 col-sm-6">
-                    <label class="text_bold mb_5" for="">PHP Array</label>
-                    <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $output; ?></textarea>
+                    <div class="form-group">
+                      <label class="text_bold mb_5" for="">PHP Array</label>
+                      <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $output; ?></textarea>
+                    </div>
                   </div>
                 </div>
                 <div class="cmbende-actions flex justify-content-between">

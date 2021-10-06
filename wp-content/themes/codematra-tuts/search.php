@@ -1,21 +1,21 @@
 <?php get_header(); ?> 
-<h1 class="text-center bg-primary mb_0 text-white ptb_40 f30 lh32">Search Result</h1>
+<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php _e('Search Result'); ?> for <?php echo $_GET['s']; ?></h1>
 
-<section class="common-section-ui page-breadcrumb bg-light pti_20 pbi_20">
+<section class="common-section-ui page-breadcrumb border-top border-bottom pti_10 pbi_10">
   <div class="container">
-    <p class="text-muted f14 m-0"><a class="tdn text-primary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / Search Result for <?php echo $_GET['s']; ?></p>
+    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php _e('Search Result'); ?> / <?php echo $_GET['s']; ?></p>
   </div>
 </section>
-<!-- Banner UI 1 -->
-<section class="common-section-ui bg-light pt_0">
+
+<section class="page-section common-section-ui">
   <div class="container">
       <div class="row">
           <div class="col-12">
-            <div class="cui2 card">
+            <div class="cui2 card r_0">
               <form class="cbody fui fui1 search-box" action="" method="get" enctype="multipart/form-data" autocomplete="off">
                   <div class="search-box">
                     <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control" required="required" placeholder="Search Codes, Programs, Tutorials, Interview Questions etc...">
-                    <button type="submit" class="btn btn-primary btnui2 f14i">Search</button>
+                    <button type="submit" class="btn btn-primary btnui1 f14i">Search</button>
                   </div> 
               </form>
             </div>
@@ -24,7 +24,7 @@
   </div>
   
   <div class="container">
-    <div class="row">
+    <div class="form-row">
       <?php  
       if(have_posts()): 
         $count = 0;
@@ -32,7 +32,7 @@
         $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
       ?>
       <div class="col-12 col-sm-6">
-        <div class="card cui2 mbi_15">
+        <div class="card cui2 r_0 mbi_20">
           <?php if(has_post_thumbnail()) { ?>
             <a href="<?php the_title(); ?>" class="d-inline-block hidei"><img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
           <?php } ?>

@@ -78,7 +78,7 @@ get_header();
             foreach($fcats as $fcat) {
               if ($fcat['show']) {
               ?>  
-              <div class="col-12 col-sm-6 col-md-3" >
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3" >
                 <div class="card cui3c r_0 py_30 noshadow hs_11 relative">
                 <a class="tdn overlay_w op0 absolute" href="<?php echo site_url($fcat['link']); ?>"></a>
                   <div class="card-body">
@@ -254,7 +254,7 @@ get_header();
 		</div>
  
 	</div>
-  <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-secondary btnui3s">View More Posts</a></p>
+  <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-secondary btnui3s">View More Posts <i class="ml_5 fas fa-angle-right"></i></a></p>
    
 </div>
 </div>
@@ -331,7 +331,7 @@ get_header();
           }    
           ?>
 		 	
-	    <p class="text-left mt_40"><a href="<?php echo get_term_link( $procategory );; ?>" class="btn btn-sm btn-secondary btnui3s">View More <?php echo $procategory->name; ?></a></p>
+	    <p class="text-left mt_40"><a href="<?php echo get_term_link( $procategory ); ?>" class="btn btn-sm btn-secondary btnui3s">View More <?php echo $procategory->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
     </div>
       <?php
       }
@@ -347,31 +347,45 @@ get_header();
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Recent</span> Interview Questions and Answers</h2>
     <div class="row">
+      <?php 
+        // Post Tags
+        $iqcats = get_terms( array(
+          'taxonomy' => 'interview-questions-category', 
+          'hide_empty' => true,
+          'parent'=>0,
+          'order' => 'asc',
+          'orderby' => 'name'
+      )
+      );
+
+      if ( !empty($iqcats) ) { 
+        foreach( $iqcats as $iqcat ) { 
+        ?>
         <div class="col-12 col-md-6">
           <div class="card cui1 r_0 pt_20">
             <div class="card-body">
-              <h3 class="card-title text-primary text-uppercase"><span class="text-dark">React Js</span></h3>
-              <ul class="listing type1 licons w-100 mb_20">
+              <h3 class="card-title text-primary text-uppercase"><span class="text-dark"><?php echo $iqcat->name; ?></span></h3>
+              <ul class="listing type1 licons w-100 mb_10 bg-transparent">
               <?php 
                 $args = array(
-                        'post_type'         =>  'interview-questions', 
-                        'posts_per_page'    =>  5, 
-                        'orderby'           =>  'id', 
-                        'order'             =>  'DESC', 
-                        'tax_query'         =>  array(
-                            array(
-                              'taxonomy' => 'interview-questions-category',
-                              'field' => 'slug',
-                              'terms' => 'react-js', 
-                              'include_children' => false
-                            )
-                          ) 
-                        );  
+                  'post_type'         =>  'interview-questions', 
+                  'posts_per_page'    =>  5, 
+                  'orderby'           =>  'id', 
+                  'order'             =>  'DESC', 
+                  'tax_query'         =>  array(
+                      array(
+                        'taxonomy' => 'interview-questions-category',
+                        'field' => 'slug',
+                        'terms' => $iqcat->slug, 
+                        'include_children' => false
+                      )
+                    ) 
+                  );  
                 $reactQuestions = get_posts($args); 
                 if ($reactQuestions) {
                 foreach($reactQuestions as $top) {
                 ?>
-                    <li class="list-item"><a href="<?php the_permalink($top->ID); ?>"><i class="fa fa-angle-right text-secondary" aria-hidden="true"></i><?php echo $top->post_title; ?></a></li>
+                    <li class="list-item bg-white mb_10"><a href="<?php the_permalink($top->ID); ?>"><i class="fa fa-angle-right text-secondary" aria-hidden="true"></i><?php echo $top->post_title; ?></a></li>
                 <?php    
                 }} else { ?>
                     <li class="list-item">No records found.</li>
@@ -380,81 +394,13 @@ get_header();
                 ?>
               </ul>
             </div>
-            <p class="text-center"><a class="btn btn-sm btn-secondary btnui3" href="<?php echo site_url('interview-questions-category/react-js/'); ?>">More Questions</a></p>
+            <p class="text-left"><a href="<?php echo get_term_link( $iqcat ); ?>" class="btn btn-sm btn-secondary btnui3s">View More <?php echo $iqcat->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card cui1 r_0 pt_20 mb_20">
-            <div class="card-body">
-            <h5 class="card-title text-primary text-uppercase"><span class="text-dark">WordPress</span></h5>
-              <ul class="listing type1 licons w-100 mb_20">
-              <?php 
-                $args = array(
-                        'post_type'         =>  'interview-questions', 
-                        'posts_per_page'    =>  5, 
-                        'orderby'           =>  'id', 
-                        'order'             =>  'asc', 
-                        'tax_query'         =>  array(
-                                                    array(
-                                                            'taxonomy' => 'interview-questions-category',
-                                                            'field' => 'slug',
-                                                            'terms' => 'wordpress', 
-                                                            'include_children' => false
-                                                    )
-                                                ) 
-                        );  
-                $wpQuestions = get_posts($args); 
-                if ($wpQuestions) {
-                foreach($wpQuestions as $top) {
-                ?>
-                    <li class="list-item"><a href="<?php the_permalink($top->ID); ?>"><i class="fa fa-angle-right text-secondary" aria-hidden="true"></i><?php echo $top->post_title; ?></a></li>
-                <?php    
-                }} else { ?>
-                    <li class="list-item text-center">No records found.</li>
-                  <?php 
-                }    
-                ?>
-              </ul>
-            </div>
-            <p class="text-center"><a class="btn btn-sm btn-secondary btnui3" href="<?php echo site_url('interview-questions-category/wordpress/'); ?>">More Questions</a></p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="card cui1 r_0 pt_20 mb_20">
-            <div class="card-body">
-            <h5 class="card-title text-primary text-uppercase"><span class="text-dark">PHP</span></h5>
-              <ul class="listing type1 licons w-100 mb_20">
-              <?php 
-                $args = array(
-                        'post_type'         =>  'interview-questions', 
-                        'posts_per_page'    =>  5, 
-                        'orderby'           =>  'id', 
-                        'order'             =>  'asc', 
-                        'tax_query'         =>  array(
-                                                    array(
-                                                            'taxonomy' => 'interview-questions-category',
-                                                            'field' => 'slug',
-                                                            'terms' => 'php', 
-                                                            'include_children' => false
-                                                    )
-                                                ) 
-                        );  
-                $wpQuestions = get_posts($args); 
-                if ($wpQuestions) {
-                foreach($wpQuestions as $top) {
-                ?>
-                    <li class="list-item"><a href="<?php the_permalink($top->ID); ?>"><i class="fa fa-angle-right text-secondary" aria-hidden="true"></i><?php echo $top->post_title; ?></a></li>
-                <?php    
-                }} else { ?>
-                    <li class="list-item text-center">No records found.</li>
-                  <?php 
-                }    
-                ?>
-              </ul>
-            </div>
-            <p class="text-center"><a class="btn btn-sm btn-secondary btnui3" href="<?php echo site_url('interview-questions-category/php/'); ?>">More Questions</a></p>
-          </div>
-        </div>
+        <?php
+        }
+      } 
+      ?>
     </div>
   </div>
 </section>
@@ -462,14 +408,14 @@ get_header();
 <section id="tools" class="common-section-ui pb_40 pt_60">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Online</span> Tools</h2>
-  <div class="onlinetools row">
+  <div class="onlinetools form-row">
     <?php
       $tools = getToolsList();
       if ($tools) {
         foreach($tools as $tool) {
           extract($tool);
           ?>
-          <div class="col-12 col-sm-4 col-md-3">
+          <div class="col-4 col-md-3">
             <a class="<?php echo $color; ?> tdn card cui3c font_bold f26 flex center_center min_h_200" href="<?php echo site_url($link); ?>"><?php echo $name; ?></a>
           </div>
           <?php

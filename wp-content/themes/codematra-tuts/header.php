@@ -39,10 +39,10 @@
 <!-- Header Start -->
 <header id="main_header" class="header sticky text-uppercase">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-2"> 
+      <div class="row no-gutters">
+        <div class="col-12 col-xl-2"> 
           <div class="site_logo with_image">
-            <a class="logo_link" href="<?php echo site_url('/'); ?>">
+            <a title="Code Matra" class="logo_link" href="<?php echo site_url('/'); ?>">
               <img class="logo_image img-fluid"  src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-logo.png" alt="" />
             </a>
           </div>
@@ -163,7 +163,7 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" title="Offers and Deals" href="javascript:void('0');">Deals</a>
-                  <div class="dropdown-menu"> 
+                  <div class="dropdown-menu deals-dropdown"> 
                     <a class="dropdown-item" href="<?php echo site_url('/deals/best-wordpress-themes/'); ?>">Best WordPress Themes<span class="badge badge-secondary r_0 ">New!</span></a>
                     <a class="dropdown-item" href="<?php echo site_url('/deals/cheap-wordpress-hosting/'); ?>">Cheap WordPress Hosting<span class="badge badge-secondary r_0 ">New!</span></a>
                   </div>

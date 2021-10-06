@@ -23,7 +23,7 @@
 									<div class="card-body pri_30 pri_30 pli_30 pbi_30">
 										<h2 class='text-primary'><a class="text-primary tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<?php if(has_post_thumbnail()) { ?>
-											<a href="<?php the_permalink(); ?>" class="d-inline-block"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
+											<a href="<?php the_permalink(); ?>" class="mb_15 d-inline-block"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
 										<?php } ?>
                     <?php 
                       $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
@@ -31,7 +31,7 @@
                         $visitsCount = 0;
                       }
                       ?>
-                    <div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
+                    <div class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
                       <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
                       <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                       <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
