@@ -1,9 +1,11 @@
 <?php 
+global $post;
+$pageslug = $post->post_name;
 $outpuarray = array();
 $toolTitle = 'Excel (.xls) to Array Converter Online';
 $arrayOutputplaceholder = "Array output goes here.";
 $excelBtnLabel = "Convert To Array";
-$endeDesc = $errorMessage = '' ;
+$toolDesc = $errorMessage = '' ;
 
 $current_ip = istl_get_my_ip(); 
 $current_ip_str = str_replace('.', '_', $current_ip); 
@@ -47,19 +49,31 @@ if (isset($_POST['clear'])) {
 <section class="page-section common-section-ui">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-8 text-center mx-auto">
-        <?php 
-        if(have_posts()): while(have_posts()): the_post(); 
-          the_content(); 
-        endwhile; endif; 
-        ?>
-      </div>
       <div class="col-12"> 
         <div class="cm-base64-ende">
+          <div class="tabs flex center_center mb_30">
+            <a href="<?php echo site_url('/excel-to-array-converter/'); ?>" class="btn <?php echo ($pageslug == 'excel-to-array-converter') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
+              Excel To Array
+            </a>
+            <a href="<?php echo site_url('/excel-to-json-converter/'); ?>" class="btn <?php echo ($pageslug == 'excel-to-json-converter') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
+              Excel To JSON
+            </a>
+            <a href="<?php echo site_url('/excel-to-xml-converter/'); ?>" class="btn <?php echo ($pageslug == 'excel-to-xml-converter') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
+              Excel To XML
+            </a>
+          </div>
           <div class="card cui1">
             <div class="card-body">
               <div class="card-text text-center mb_30">
-                <?php echo $toolDesc; ?>
+                <?php 
+                  if(have_posts()): while(have_posts()): the_post(); 
+                    if(get_the_content()) {
+                      the_content();
+                    } else {
+                      echo $toolDesc;
+                    } 
+                  endwhile; endif; 
+                ?>
               </div>
               <?php echo $errorMessage; ?>
               <form class="fui fui1" action="" method="post" enctype="multipart/form-data">
@@ -89,6 +103,26 @@ if (isset($_POST['clear'])) {
       </div>
 
     </div>
+  </div>
+</section>
+<section id="tools" class="common-section-ui pb_40 pt_60 bg-light">
+  <div class="container">
+  <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Want to try </span> some more tools...</h2>
+  <div class="onlinetools form-row">
+    <?php
+      $tools = getToolsList();
+      if ($tools) {
+        foreach($tools as $tool) {
+          extract($tool);
+          ?>
+          <div class="col-4 col-md-3">
+            <a class="<?php echo $color; ?> tdn card cui3c font_bold f26 flex center_center min_h_200" href="<?php echo site_url($link); ?>"><?php echo $name; ?></a>
+          </div>
+          <?php
+        }
+      }
+    ?>  
+  </div>    
   </div>
 </section>
 <?php get_footer(); ?> 

@@ -45,15 +45,6 @@ get_header(); ?>
 <section class="page-section common-section-ui">
   <div class="container">
     <div class="row">
-
-      <div class="col-12 col-md-8 text-center mx-auto">
-        <?php 
-        if(have_posts()): while(have_posts()): the_post(); 
-          the_content(); 
-        endwhile; endif; 
-        ?>
-      </div>
-
       <div class="col-12"> 
         <div class="cm-base64-ende">
 
@@ -69,8 +60,16 @@ get_header(); ?>
           <div class="card cui2 r_0 py_20 px_20">
             <div class="card-body">
               <div class="card-title text-primary text-center mbi_5"><?php echo $endeTitle; ?></div>
-              <div class="card-text text-center">
-                <?php echo $endeDesc; ?>
+              <div class="max_w_800 mx-auto text-center">
+                <?php   
+                  if(have_posts()): while(have_posts()): the_post(); 
+                    if(get_the_content()) {
+                      the_content();
+                    } else {
+                      echo $toolDesc;
+                    } 
+                  endwhile; endif; 
+                ?>
               </div>
               <?php echo $endeInvalid; ?>
               <form class="fui fui1" action="" method="post" enctype="multipart/form-data">
@@ -94,6 +93,26 @@ get_header(); ?>
       </div>
 
     </div>
+  </div>
+</section>
+<section id="tools" class="common-section-ui pb_40 pt_60 bg-light">
+  <div class="container">
+  <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Want to try </span> some more tools...</h2>
+  <div class="onlinetools form-row">
+    <?php
+      $tools = getToolsList();
+      if ($tools) {
+        foreach($tools as $tool) {
+          extract($tool);
+          ?>
+          <div class="col-4 col-md-3">
+            <a class="<?php echo $color; ?> tdn card cui3c font_bold f26 flex center_center min_h_200" href="<?php echo site_url($link); ?>"><?php echo $name; ?></a>
+          </div>
+          <?php
+        }
+      }
+    ?>  
+  </div>    
   </div>
 </section>
       
