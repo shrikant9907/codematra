@@ -52,6 +52,8 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
+<script data-ad-client="ca-pub-7518025352548928" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>> 
