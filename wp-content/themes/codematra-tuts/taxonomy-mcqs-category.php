@@ -81,9 +81,9 @@ if ($term_name) { ?>
                     <input id="option4<?php the_ID(); ?>" class="mr_10" type="radio" value="option4" name="mcqoption<?php the_ID(); ?>" />
                     <label class="m-0" for="option4<?php the_ID(); ?>"><?php echo $option4; ?></label>
                   </p>
-                    <div class="card cui1">
+                    <div class="card cui1 mbi_0">
                       <div id="heading<?php the_ID(); ?>">
-                        <button type="button" class="btn btn-sm mb_20 btn-secondary btnui3s collapsed" data-toggle="collapse" data-target="#collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="collapseTwo">Correct Answer</button>
+                        <button type="button" class="btn btn-sm mb_20 btn-secondary btnui3s collapsed" data-toggle="collapse" data-target="#collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="collapseTwo">Check Correct Answer</button>
                       </div>
                       <div id="collapse<?php the_ID(); ?>" class="alert alert-info collapse" aria-labelledby="heading<?php the_ID(); ?>" data-parent="#accordion">
                         <?php echo $answer; ?>
