@@ -62,14 +62,14 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
 <header id="main_header" class="header sticky text-uppercase">
     <div class="container">
       <div class="row no-gutters">
-        <div class="col-12 col-xl-2"> 
+        <div class="col-12 col-md-3 col-xl-2"> 
           <div class="site_logo with_image">
             <a title="Code Matra" class="logo_link" href="<?php echo site_url('/'); ?>">
               <img class="logo_image img-fluid"  src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-logo.png" alt="" />
             </a>
           </div>
         </div>
-        <div class="col-12 col-md-10">
+        <div class="col-12 col-md-9 col-xl-10">
           <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
               <span class="navbar-toggler-icon"></span>
@@ -190,10 +190,10 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Projects</a>
                   <div class="dropdown-menu"> 
                     <a class="dropdown-item" href="<?php echo site_url('/write-a-program-to-create-a-simple-calculator-using-php//'); ?>">Calculator<span class="badge badge-secondary r_0 ">New!</span></a>
-                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Contact Book<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
-                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Portfolio Website<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
-                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Chat App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
-                    <a class="dropdown-item disabled" href="<?php echo site_url('/templates/simple-contact-book/'); ?>">Quiz App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Contact Book<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Portfolio Website<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Chat App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Quiz App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -216,7 +216,7 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
                   <a class="nav-link text-dark dropdown-toggle" title="Offers and Deals" href="javascript:void('0');">Deals <span class="badge badge-secondary r_0 "></a>
                   <div class="dropdown-menu deals-dropdown"> 
                     <a class="dropdown-item" href="<?php echo site_url('/deals/cheap-web-hosting/'); ?>">Cheap Web Hosting</a>
-                    <a class="dropdown-item disabled" href="<?php echo site_url('/deals/best-wordpress-themes/'); ?>">Best WordPress Themes<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item disabled" href="<?php //echo site_url('/deals/best-wordpress-themes/'); ?>">Best WordPress Themes<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                   </div>
                 </li>
                 <li class="nav-item dropdown search-dropdown">
@@ -233,34 +233,6 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
               </ul>
             </div>
           </nav>
-        </div>
-      </div>
-    </div>
-    <div class="full-menu bg-dark hide-sm hide">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
-              <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-              </button> -->
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mx-auto d-flex"> 
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/html/'); ?>">HTML</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/css/'); ?>">CSS</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/bootstrap/'); ?>">Bootstrap</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/jquery/'); ?>">jQuery</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/javascript/'); ?>">JavaScript</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/react-js/'); ?>">React JS</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/angular/'); ?>">Angular</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/php/'); ?>">PHP</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/wordpress/'); ?>">WordPress</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/python/'); ?>">Python</a></li>
-                  <li class="nav-item"><a class="nav-link text-white" href="<?php echo site_url('/programs-category/django/'); ?>">Django</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
         </div>
       </div>
     </div>
