@@ -5,6 +5,12 @@ body {
     padding-top: 70px !important; 
 }
 
+pre {
+  line-height: 1.6;
+  border: 1px solid #efefef;
+  background-color: #fbfbfb;
+}
+
 header.sticky, header.fixed {
   z-index: 1001;
 }

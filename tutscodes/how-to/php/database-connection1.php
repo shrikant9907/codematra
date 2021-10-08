@@ -1,17 +1,17 @@
 <?php 
-/*
-* Required Variable for database connection | Site - codematra.com
-*/
+  /*
+  * Required Variable for database connection | Site - codematra.com
+  */
 
-// Hostname (For the localserver using localhost)
-$hostname = 'localhost'; 
+  // Hostname (For the localserver using localhost)
+  $hostname = 'localhost'; 
 
-// Database username (For localserver `root` is default server name)
-$dbusername = 'root';  
+  // Database username (For localserver `root` is default server name)
+  $dbusername = 'root';  
 
-// Database Password (For localserver leave it empty)
-$dbpassword = '';  
+  // Database Password (For localserver leave it empty)
+  $dbpassword = '';  
 
-// Database name (add database that you created from http://localhost/phpmyadmin/)
-$databasename = 'mydatabase'; 
+  // Database name (add database that you created from http://localhost/phpmyadmin/)
+  $databasename = 'mydatabase'; 
 ?>

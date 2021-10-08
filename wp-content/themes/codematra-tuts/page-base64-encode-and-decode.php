@@ -42,7 +42,7 @@ get_header(); ?>
     <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <a class="tdn text-secondary" href="<?php echo site_url('/tools'); ?>" class="text-muted">Tools</a> / <?php the_title(); ?></p>
   </div>
 </section> 
-<section class="page-section common-section-ui">
+<section class="page-section common-section-ui pb_0">
   <div class="container">
     <div class="row">
       <div class="col-12"> 
@@ -95,6 +95,7 @@ get_header(); ?>
     </div>
   </div>
 </section>
+<?php echo do_shortcode('[aam_display_ad ad_id="854"]'); ?>
 <section id="tools" class="common-section-ui pb_40 pt_60 bg-light">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Want to try </span> some more tools...</h2>

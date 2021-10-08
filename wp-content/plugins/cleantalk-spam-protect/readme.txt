@@ -4,7 +4,7 @@ Tags: spam, antispam, anti-spam, comments, firewall
 Requires at least: 3.0
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 5.162
+Stable tag: 5.163
 License: GPLv2
 
 Spam protection, anti-spam, firewall, premium plugin. No spam comments & users, no spam contact form & WooCommerce anti-spam.
@@ -59,14 +59,22 @@ Native spam protection for WordPress, JetPack comments and any other comment plu
 
 = Spam filter for contact forms =
 
-= Ninja forms contact form spam filter =
-Plugin extends Ninja forms contact form to provide spam protection. It filters spam signups, leads as well as general contact messages.
-
 = Contact Form by WPForms spam filter =
 Plugin extends Contact Form by WPForms to provide spam protection. It filters spam submissions for each type of forms - simple contact form, marketing form, request a quote and etc.
 
+= Elementor Website Builder filter =
+Plugin extends spam protection for Elementor Website Builder. It filters spam submisssions and tested for contact form type.
+
+= Gravity forms spam filter =
+Plugin extends spam protection for Gravity forms. It filters spam submisssions for any type of forms.
+
+= Formidable Form Builder spam filter =
+Plugin extends spam protection for Formidable Form Builder. It filters spam submisssions for any type of forms - Contact Form, Survey & Quiz Forms.
+
 = Contact Form 7 spam filter =
-Plugin extends spam protection for Contact Form 7 (CF7). It can be used with any other third-party spam filters. 
+Plugin extends spam protection for Contact Form 7 (CF7). It can be used with any other third-party spam filters.
+
+= Ninja forms contact form spam filter =
 
 = WooCommerce spam filter =
 Anti-spam by CleanTalk filters spam registrations and spam reviews for WooCommerce. The plugin is fully compatible with WooCommerce 2.1 and higher.
@@ -586,6 +594,43 @@ If your website has forms that send data to external sources, you can enable opt
 12. SpamFireWall log.
 
 == Changelog ==
+
+= 5.163 Oct 07 2021 =
+ * New: State. errorExists method implemented.
+ * New: SFW. Disabling SFW when the database was outdated.
+ * New: Settings templates. Saving template to the several blogs implemented.
+ * New: Settings. WPMS settings always show now.
+ * New: WPMS. No show any sub-sites errors on wpms mode 2.
+ * New: WPMS. Plugin settings are disabled on sub-sites on wpms mode 2.
+ * Mod: Remote Calls using POST instead of GET request type.
+ * Mod: Helper. No cache GET parameter renamed.
+ * Mod: Cron. Transactions implemented #2.
+ * Mod: Settings. "URL Exclusions" description updated.
+ * Upd: Getting JS. AJAX handler type selecting updated.
+ * Fix: Added lost info about total comments in CommentChecker::ctAjaxInfo
+ * Fix: add subscriber to skip list.
+ * Fix: Changed the plugin name in the list of plugins when enabling White Label
+ * Fix: Changed the plugin name in the admin bar when enabling White Label
+ * Fix: Feedback. Comments feedback description fixed.
+ * Fix: Hide information about Security in admin bar if it is not main site.
+ * Fix: SFW. Error toggle used instead of error add/delete.
+ * Fix: Alt cookies. Selecting type of alt cookies bug fixed.
+ * Fix: protect logged users in gravity.
+ * Fix: Updated the condition for showing a link to the security installation in the admin bar.
+ * Fix: reverse condition for WL security link.
+ * Fix: WPMS. Addition WL info link fixed.
+ * Changed plugin name in plugin settings multisite__white_label__plugin_name.
+ * Fix: rename plugin name after search plugins if WL is on.
+ * Fix: Renamed Antispam by Cleantalk to Anti-spam by Cleantalk
+ * Fix: add elementor-pro to skip save action.
+ * Fix: WPMS. Sanitize api key during getting key fixed.
+ * Fix: Cron. Cron results errors handling fixed.
+ * Fix: WPMS. Migrate old WPMS to the new wpms mode.
+ * Fix: WPMS. Using main site data on wpms_mode=2.
+ * Fix: Helper. Hard use https for the curl requests.
+ * Fix: WPMS. Sanitize network settings fixed.
+ * Fix: WPMS. Applying settings for selected blogs fixed.
+ * Fix: Getting key. Sync after getting key fixed.
 
 = 5.162 Sep 23 2021 =
  * New. SFW. Fall back updating system implemented.

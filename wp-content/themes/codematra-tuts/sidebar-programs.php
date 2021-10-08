@@ -51,3 +51,4 @@ $term_slug = $term_obj_list['0']->slug;
     </div>
 </div>
 <?php echo do_shortcode('[cmSocial]'); ?>
+<?php echo do_shortcode('[aam_display_ad ad_id="851"]'); ?>  

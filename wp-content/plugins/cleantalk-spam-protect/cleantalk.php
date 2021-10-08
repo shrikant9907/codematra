@@ -4,7 +4,7 @@
   Plugin Name: Anti-Spam by CleanTalk
   Plugin URI: https://cleantalk.org
   Description: Max power, all-in-one, no Captcha, premium anti-spam plugin. No comment spam, no registration spam, no contact spam, protects any WordPress forms.
-  Version: 5.162
+  Version: 5.163
   Author: СleanTalk <welcome@cleantalk.org>
   Author URI: https://cleantalk.org
   Text Domain: cleantalk-spam-protect
@@ -31,7 +31,7 @@ use Cleantalk\ApbctWP\Variables\Cookie;
 use Cleantalk\Common\DNS;
 use Cleantalk\Common\Firewall;
 use Cleantalk\Common\Schema;
-use Cleantalk\Variables\Get;
+use Cleantalk\Variables\Request;
 use Cleantalk\Variables\Server;
 
 global $apbct, $wpdb, $pagenow;
@@ -149,19 +149,19 @@ function apbct_alt_session__save__WP_AJAX()
     Cleantalk\ApbctWP\Variables\AltSessions::setFromRemote();
 }
 
+// Get JS via WP ajax handler
+add_action('wp_ajax_nopriv_apbct_js_keys__get', 'apbct_js_keys__get__ajax');
+add_action('wp_ajax_apbct_js_keys__get', 'apbct_js_keys__get__ajax');
+
 // Database prefix
 global $wpdb;
 $apbct->db_prefix = ! APBCT_WPMS || $apbct->allow_custom_key || $apbct->white_label ? $wpdb->prefix : $wpdb->base_prefix;
 $apbct->db_prefix = ! $apbct->white_label && defined('CLEANTALK_ACCESS_KEY') ? $wpdb->base_prefix : $wpdb->prefix;
 
-// Set some defines
-State::setDefinitions();
-
 /** @todo HARDCODE FIX */
 if ( $apbct->plugin_version === '1.0.0' ) {
     $apbct->plugin_version = '5.100';
 }
-
 // Do update actions if version is changed
 apbct_update_actions();
 
@@ -180,11 +180,11 @@ add_action('init', function () {
     ) {
         $cron_res = $ct_cron->runTasks($tasks_to_run);
         if ( is_array($cron_res) ) {
-            foreach ( $cron_res as $task => $res ) {
+            foreach ( $cron_res as $_task => $res ) {
                 if ( $res === true ) {
-                    $apbct->errorDelete($task, 'save_data', 'cron');
+                    $apbct->errorDelete('cron', 'save_data');
                 } else {
-                    $apbct->errorAdd($task, $res, 'cron');
+                    $apbct->errorAdd('cron', $res);
                 }
             }
         }
@@ -533,7 +533,7 @@ if ( is_admin() || is_network_admin() ) {
             2
         );
 
-        add_filter('plugin_row_meta', 'apbct_admin__register_plugin_links', 10, 2);
+        add_filter('plugin_row_meta', 'apbct_admin__register_plugin_links', 10, 3);
     }
 // Public pages actions
 } else {
@@ -635,6 +635,22 @@ function apbct_sfw__check()
 
     // update mode - skip checking
     if ( isset($apbct->fw_stats['update_mode']) && $apbct->fw_stats['update_mode'] === 1 ) {
+        return;
+    }
+
+    // Checking if database was outdated
+    $is_sfw_outdated = $apbct->stats['sfw']['last_update_time'] + $apbct->stats['sfw']['update_period'] * 3 < time();
+
+    $apbct->errorToggle(
+        $is_sfw_outdated,
+        'sfw_outdated',
+        esc_html__(
+            'SpamFireWall database is outdated. Please, try to synchronize with the cloud.',
+            'cleantalk-spam-protect'
+        )
+    );
+
+    if ( $is_sfw_outdated ) {
         return;
     }
 
@@ -820,6 +836,15 @@ function apbct_sfw_update__init($delay = 0)
         return array('error' => 'SFW UPDATE INIT: KEY_IS_NOT_VALID');
     }
 
+    // Get update period for server
+    $update_period = DNS::getRecord('spamfirewall-ttl-txt.cleantalk.org', true, DNS_TXT);
+    $update_period = isset($update_period['txt']) ? $update_period['txt'] : 0;
+    $update_period = (int)$update_period > 14400 ? (int)$update_period : 14400;
+    if ( $apbct->stats['sfw']['update_period'] != $update_period ) {
+        $apbct->stats['sfw']['update_period'] = $update_period;
+        $apbct->save('stats');
+    }
+
     $apbct->fw_stats['updating_folder'] = APBCT_DIR_PATH . DIRECTORY_SEPARATOR . 'fw_files_for_blog_' . get_current_blog_id() . DIRECTORY_SEPARATOR;
 
     $prepare_dir__result = apbct_prepare_upd_dir();
@@ -879,8 +904,8 @@ function apbct_sfw_update__worker($checker_work = false)
 
     if ( ! $checker_work ) {
         if (
-            Get::equal('firewall_updating_id', '') ||
-            ! Get::equal('firewall_updating_id', $apbct->fw_stats['firewall_updating_id'])
+            Request::equal('firewall_updating_id', '') ||
+            ! Request::equal('firewall_updating_id', $apbct->fw_stats['firewall_updating_id'])
         ) {
             return array('error' => 'Worker: WRONG_UPDATE_ID');
         }
@@ -930,7 +955,7 @@ function apbct_sfw_update__worker($checker_work = false)
     }
 
     // This is the repeat stage request, do not generate any new RC
-    if ( stripos(Get::get('stage'), 'Repeat') !== false ) {
+    if ( stripos(Request::get('stage'), 'Repeat') !== false ) {
         return true;
     }
 
@@ -1296,12 +1321,8 @@ function apbct_sfw_update__end_of_update($is_direct_update = false)
     // Delete update errors
     $apbct->errorDelete('sfw_update', 'save_settings');
 
-    // Get update period for server
-    $update_period = DNS::getRecord('spamfirewall-ttl-txt.cleantalk.org', true, DNS_TXT);
-    $update_period = isset($update_period['txt']) ? $update_period['txt'] : 0;
-    $update_period = (int)$update_period > 14400 ? (int)$update_period : 14400;
-    $cron          = new Cron();
-    $cron->updateTask('sfw_update', 'apbct_sfw_update__init', $update_period);
+    $cron = new Cron();
+    $cron->updateTask('sfw_update', 'apbct_sfw_update__init', $apbct->stats['sfw']['update_period']);
     $cron->removeTask('sfw_update_checker');
 
     /**

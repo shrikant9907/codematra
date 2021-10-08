@@ -105,6 +105,7 @@ get_header(); ?>
     </div>
   </div>
 </section>
+<?php echo do_shortcode('[aam_display_ad ad_id="854"]'); ?>
 <section id="tools" class="common-section-ui pb_40 pt_60 bg-light">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Want to try </span> some more tools...</h2>

@@ -25,3 +25,4 @@
     <?php echo do_shortcode('[yikes-mailchimp form="1"]'); ?>
   </div>
 </div>
+<?php echo do_shortcode('[aam_display_ad ad_id="850"]'); ?>

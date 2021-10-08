@@ -120,14 +120,6 @@ function apbct_base_call($params = array(), $reg_flag = false)
 
     global $apbct;
 
-    // Fields exclusions
-    if ( ! empty($params['message']) && is_array($params['message']) ) {
-        $params['message'] = apbct_array($params['message'])
-            ->getKeys($apbct->settings['exclusions__fields'], $apbct->settings['exclusions__fields__use_regexp'])
-            ->delete();
-    }
-    /* End of Exclusions */
-
     $cleantalk_executed = true;
 
     /* Request ID rotation */
@@ -611,7 +603,7 @@ function ct_get_checkjs_value()
     } elseif (
         $apbct->settings['data__use_static_js_key'] == -1 &&
         (apbct_is_cache_plugins_exists() ||
-         (apbct_is_post() && $apbct->data['cache_detected'] == 1)
+         (apbct_is_post() && isset($apbct->data['cache_detected']) && $apbct->data['cache_detected'] == 1)
         )
     ) {
         $key = hash('sha256', $apbct->api_key . ct_get_admin_email() . $apbct->salt);
