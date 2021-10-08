@@ -113,40 +113,72 @@ function mcqs_taxonomy2() {
 /*
  * MCQs Meta Box
  */
-//add_action( 'add_meta_boxes', 'mcqs_meta_box' );
+add_action( 'add_meta_boxes', 'mcqs_meta_box' );
 function mcqs_meta_box(){
-    add_meta_box( 'mcqs-details', 'MCQs Details', 'mcqs_metabox_cb', 'MCQs', 'normal', 'default');
+  add_meta_box( 'mcqs-details', 'MCQs Details', 'mcqs_metabox_cb', 'MCQs', 'normal', 'default');
 }
  
 function mcqs_metabox_cb($post){
  
-    $profolio_metafields = array(
+    $mcq_metadata = array(
             array(
-                'name'=>'mcqs_client',
-                'label'=>'Client Name',
+                'name'=>'option1',
+                'label'=>'Option 1',
                 'classes'=>'mcqs-field'
             ), 
             array(
-                'name'=>'mcqs_location',
-                'label'=>'Location',
+                'name'=>'option2',
+                'label'=>'Option 2',
                 'classes'=>'mcqs-field'
             ), 
             array(
-                'name'=>'mcqs_url',
-                'label'=>'URL',
+                'name'=>'option3',
+                'label'=>'Option 3',
                 'classes'=>'mcqs-field'
+            ),
+            array(
+              'name'=>'option4',
+              'label'=>'Option 4',
+              'classes'=>'mcqs-field'
+            ),
+            array(
+              'name'=>'correctanswer',
+              'label'=>'Answer',
+              'classes'=>'mcqs-field'
+            ),
+            array(
+              'name'=>'answerdesc',
+              'label'=>'Description',
+              'classes'=>'mcqs-field'
             )
         );    
     $html = '';
-    if($profolio_metafields) { 
-        foreach($profolio_metafields as $profolio) {
-            $values = get_post_meta( $post->ID, $profolio['name'], true );
-            $value = isset( $values ) ? esc_attr( $values ) : "";
-            $html .= '<label>'.$profolio['label'].'</label>'; 
-            $html .= '<input type="text" name="'.$profolio['name'].'" id="'.$profolio['name'].'" style=" margin-bottom:15px; width:100%;" value="'.$value.'" />';          
-        }
+    if($mcq_metadata) { 
+      foreach($mcq_metadata as $$mcq) {
+        $values = get_post_meta( $post->ID, $$mcq['name'], true );
+        $value = isset( $values ) ? esc_attr( $values ) : "";
+        $html .= '<label>'.$$mcq['label'].'</label>'; 
+        $html .= '<input type="text" name="'.$$mcq['name'].'" id="'.$$mcq['name'].'" style=" margin-bottom:15px; width:100%;" value="'.$value.'" />';          
+      }
     }
    
     echo $html;
 }
 
+
+/*
+ * Save MCQ Meta Fields Value
+ */
+add_action( 'save_post', 'mcq_save_meta_box' );
+function mcq_save_meta_box($post_id){   
+  if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+  if( !current_user_can( 'edit_post' ) ) return;
+  $mcqsfields = array('option1', 'option2', 'option3', 'option4', 'correctanswer', 'answerdesc' );  
+  if($mcqsfields) {   
+    foreach($mcqsfields as $mcqf) {    
+      if(isset( $_POST[$mcqf] ) ) {
+        update_post_meta( $post_id, $mcqf, $_POST[$mcqf]);
+      }  
+    }
+  }    
+} 
