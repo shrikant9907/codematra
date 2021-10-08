@@ -26,6 +26,7 @@ if ($term_name) { ?>
         <?php get_sidebar('mcqs-left'); ?>
       </div>
       <div class="col-12 col-sm-6 col-md-6">
+        <div id="accordion" class="mti_0">
         <form action="" method="post">
         <?php
           $args = array(
@@ -55,6 +56,7 @@ if ($term_name) { ?>
               $option2 = get_post_meta(get_the_ID(), 'option2', true);
               $option3 = get_post_meta(get_the_ID(), 'option3', true);
               $option4 = get_post_meta(get_the_ID(), 'option4', true);
+              $answer = get_post_meta(get_the_ID(), 'correctanswer', true);
               ?>
               <div class="card cui3 r_0 typography">
                 <div class="card-body">
@@ -79,15 +81,24 @@ if ($term_name) { ?>
                     <input id="option4<?php the_ID(); ?>" class="mr_10" type="radio" value="option4" name="mcqoption<?php the_ID(); ?>" />
                     <label class="m-0" for="option4<?php the_ID(); ?>"><?php echo $option4; ?></label>
                   </p>
-                </div>	
+                    <div class="card cui1">
+                      <div id="heading<?php the_ID(); ?>">
+                        <button type="button" class="btn btn-sm mb_20 btn-secondary btnui3s collapsed" data-toggle="collapse" data-target="#collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="collapseTwo">Correct Answer</button>
+                      </div>
+                      <div id="collapse<?php the_ID(); ?>" class="alert alert-info collapse" aria-labelledby="heading<?php the_ID(); ?>" data-parent="#accordion">
+                        <?php echo $answer; ?>
+                      </div>
+                    </div>
+                  </div>
               </div>	
             <?php
             $count++;
           endwhile; 
         endif; ?>
-        <p>Submit to check the result.</p>
-        <p class="text-center"><button class="btn btn-primary btnui3s" type="submit" name="mcq" value="submit">Submit</button></p>         
+        <!-- <p>Submit to check the result.</p> -->
+        <!-- <p class="text-center"><button class="btn btn-primary btnui3s" type="submit" name="mcq" value="submit">Submit</button></p>          -->
   		  </form>
+        </div>	
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <?php get_sidebar('interview-right'); ?>

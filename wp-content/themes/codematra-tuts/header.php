@@ -129,6 +129,31 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
                   <a class="nav-link text-dark" href="<?php echo site_url('/quizzes'); ?>">Quizzes</a>
                 </li> -->
                 <li class="nav-item dropdown">
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">MCQs</a>
+                  <div class="dropdown-menu"> 
+                  <?php   
+                    // Post Tags
+                    $taxonomies = get_terms( array(
+                            'taxonomy' => 'mcqs-category', 
+                            'hide_empty' => true,
+                            'parent'=> 0,
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        )
+                    );
+
+                    if ( !empty($taxonomies) ) { 
+                        foreach( $taxonomies as $category ) { 
+                        $term_link = get_term_link( $category );
+                            if($category->parent == 0) {
+                                echo '<a class="dropdown-item" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
+                            }
+                        }
+                    } 
+                    ?> 
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Interview</a>
                   <div class="dropdown-menu"> 
                   <?php   
