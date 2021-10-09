@@ -15,7 +15,7 @@
               <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
               <li class="youtube"><a href="https://www.youtube.com/channel/UCbD6k-T54c8I-8UI0vqQ79Q" title="Code Matra - Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
               <!-- <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
-              <!-- <li class="instagram"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
+              <li class="instagram"><a href="https://www.instagram.com/codematra/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
               </ul>
             </div>
          </div>
