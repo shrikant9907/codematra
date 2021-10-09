@@ -49,19 +49,16 @@ get_header(); ?>
       <div class="col-12"> 
         <div class="cm-base64-ende">
           <div class="tabs flex center_center mb_30">
-            <a href="<?php echo site_url('/minify-css/'); ?>" class="btn <?php echo ($pageslug == 'minify-css') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
-              Minify CSS
+            <a href="<?php echo site_url('/list-to-array-converter/'); ?>" class="btn <?php echo ($pageslug == 'list-to-array-converter') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
+              List to Array
             </a>
-            <a href="<?php echo site_url('/minify-html/'); ?>" class="btn <?php echo ($pageslug == 'minify-html') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
-              Minify HTML
-            </a>
-            <a href="<?php echo site_url('/minify-js/'); ?>" class="btn <?php echo ($pageslug == 'minify-js') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
-              Minify JS
+            <a href="<?php echo site_url('/list-to-html-list-converter/'); ?>" class="btn <?php echo ($pageslug == 'list-to-html-list-Converter/') ? 'btn-primary' : 'btn-light'; ?> btnui1s">
+              List to HTML List
             </a>
           </div>
           <div class="card cui1">
             <div class="card-body">
-              <div class="card-title text-primary text-center mbi_5"><?php echo $endeTitle; ?></div>
+              <!-- <div class="card-title text-primary text-center mbi_5"><?php echo $endeTitle; ?></div> -->
               <div class="card-text text-center mb_30">
               <div class="card-text text-center mb_30">
                 <?php 
@@ -80,13 +77,13 @@ get_header(); ?>
                 <div class="form-row">
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
-                      <label class="text_bold mb_5" for="">List (One Item per line)</label>
+                      <label class="text_bold mb_5" for="">List Input Box (One Item per line)</label>
                       <textarea required="required" rows="10" name="listitems" class="form-control" placeholder="<?php echo $endePlaceholder; ?>"><?php echo $input; ?></textarea>
                     </div>
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
-                      <label class="text_bold mb_5" for="">PHP Array</label>
+                      <label class="text_bold mb_5" for="">PHP Output Array</label>
                       <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $output; ?></textarea>
                     </div>
                   </div>
@@ -105,6 +102,51 @@ get_header(); ?>
     </div>
   </div>
 </section>
+<section id="whatisthetool" class="common-section-ui pb_40 pt_60 bg-light border-top f16">
+    <div class="container">
+      <h2 class="heading_style text-center type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Frequently </span> asked questions</h2>
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+          <div id="accordion2" class="accordion accordion-ui2">
+            <div class="card">
+              <h3 class="card-header" role="tab" id="heading3">
+                <a href="#acccoll1" data-toggle="collapse" data-parent="#accordion2" aria-expanded="true" aria-controls="acccoll1"><span class="card-title f20 font_bold">
+                Q.1 How to use List to Array Convertor?
+                </span> <i class="fas fa-plus"></i> <i class="fas fa-minus"></i></a>
+              </h3>
+              <div class="card-body collapse f16 lh24" id="acccoll1" role="tabpanel" aria-labelledby="heading3" data-parent="#accordion2">
+                <p>These are the steps to use this tool.</p>
+                <p><strong>Step1:</strong> Add your list of items in the left list input box. Each items per line.</p>
+                <p><strong>Step2:</strong> Click on the "Convert To List Array" button given below the list input field.</p>
+                <p><strong>Step3:</strong> The PHP Array will be generated in the right PHP output array box. You can copy that and use in coding.</p>
+              </div>	
+            </div>	
+            <div class="card">
+              <h3 class="card-header" role="tab" id="heading3">
+                <a href="#acccoll2" data-toggle="collapse" data-parent="#accordion2" aria-expanded="true" aria-controls="acccoll2"><span class="card-title f20 font_bold">
+                Q.2 Why should be use List to Array Convertor?
+                </span> <i class="fas fa-plus"></i> <i class="fas fa-minus"></i></a>
+              </h3>
+              <div class="card-body collapse f16 lh24" id="acccoll2" role="tabpanel" aria-labelledby="heading3" data-parent="#accordion2">
+                <p>We can use list to array convertor. When we have bulk amount on list items that we want to use as an array in PHP.</p>
+                <p>For example, We have list of peoples names and want to create a select option with it in PHP. Then we need an array of names.</p>
+              </div>	
+            </div>	
+            <div class="card">
+              <h3 class="card-header" role="tab" id="heading3">
+                <a href="#acccoll3" data-toggle="collapse" data-parent="#accordion2" aria-expanded="true" aria-controls="acccoll3"><span class="card-title f20 font_bold">
+                Q.3 How does it work?
+                </span> <i class="fas fa-plus"></i> <i class="fas fa-minus"></i></a>
+              </h3>
+              <div class="card-body collapse f16 lh24" id="acccoll3" role="tabpanel" aria-labelledby="heading3" data-parent="#accordion2">
+                <p>It take items for each line and convert that to array items and return the full array at the end of execution.</p>
+              </div>	
+            </div>	
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <?php echo do_shortcode('[aam_display_ad ad_id="854"]'); ?>
 <section id="tools" class="common-section-ui pb_40 pt_60 bg-light">
   <div class="container">
