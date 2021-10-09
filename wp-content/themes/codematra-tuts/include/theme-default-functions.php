@@ -591,8 +591,10 @@ function setVistsCounts() {
     $visitKey = 'visit_counts';
     $visitCounts = get_post_meta($postID, $visitKey, true);
     if ($visitCounts != '' && $visitCounts >= 0):
-      $visitCounts++;
-      update_post_meta($postID, $visitKey, $visitCounts);
+      if (!is_user_logged_in()):
+        $visitCounts++;
+        update_post_meta($postID, $visitKey, $visitCounts);
+      endif;
     else:
       $visitCounts = 1;
       delete_post_meta($postID, $visitKey);

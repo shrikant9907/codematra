@@ -1,43 +1,62 @@
 <footer class="section-footer footer_style1 f14 border-top">
  		<div class="footer_top pt_60 pb_20">
 	 		<div class="container">
+         <div class="col-12 text-center">
+            <div class="card cui1c d-inline-block">
+              <h3 class="text-primary f16 lh18 mb_20 text-uppercase text_bold">Get in touch</h3>
+              <!-- <p><img class="footer_logo" src="https://picsum.photos/id/475/300/100" alt="" /></p> -->
+              <ul class="address ">
+              <!-- <li><i class="fas fa-phone-alt text-primary"></i> <a href="mailto:0000000000">000 000 0000</a></li> -->
+              <li> <i class="fa fa-envelope text-primary" aria-hidden="true"></i><a href="mailto:codematra@gmail.com">codematra@gmail.com</a></li>
+              <!-- <li><i class="fas fa-map text-primary"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </li> -->
+              </ul>
+              <ul class="socialicons siconsb mb_20 flex center_center"> 
+              <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
+              <li class="youtube"><a href="https://www.youtube.com/channel/UCbD6k-T54c8I-8UI0vqQ79Q" title="Code Matra - Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
+              <!-- <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
+              <!-- <li class="instagram"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
+              </ul>
+            </div>
+         </div>
 	 			<div class="row">
  				  	<div class="col-6 col-md-3">
-                 <h3 class="text-primary f16 lh18 mb_20 text-uppercase text_bold">Get in touch</h3>
-               <!-- <p><img class="footer_logo" src="https://picsum.photos/id/475/300/100" alt="" /></p> -->
-	                    <ul class="address">
-                        <!-- <li><i class="fas fa-phone-alt text-primary"></i> <a href="mailto:0000000000">000 000 0000</a></li> -->
-                        <li> <i class="fa fa-envelope text-primary" aria-hidden="true"></i><a href="mailto:codematra@gmail.com">codematra@gmail.com</a></li>
-                        <!-- <li><i class="fas fa-map text-primary"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </li> -->
-                      </ul>
-                      <ul class="socialicons siconsb"> 
-                        <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
-                        <li class="youtube"><a href="https://www.youtube.com/channel/UCbD6k-T54c8I-8UI0vqQ79Q" title="Code Matra - Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                        <!-- <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
-                        <!-- <li class="instagram"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
-                      </ul>
-	                </div>
-	               	<div class="col-6 col-md-3">
-                    <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Learn</h3>
-                    <ul class="menu">
-                      <li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
-                      <li><a href="<?php echo site_url('/category/wordpress/'); ?>">How to WordPress</a></li>
-                      <li><a href="<?php echo site_url('/category/php/'); ?>">How to PHP</a></li>
-                      <li><a href="<?php echo site_url('/tag/web-design/'); ?>">Web Design</a></li>
-                      <li><a href="<?php echo site_url('/programs-category/php/'); ?>">PHP Programs</a></li>
-                      <li><a href="<?php echo site_url('/programs-category/python/'); ?>">Python Programs</a></li>
-                    </ul>
-                    <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Interview Q/A</h3>
+              <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Learn to Code</h3>
+              <ul class="menu">
+                <li><a href="<?php echo site_url('/category/react-js/'); ?>">How to React Js</a></li>
+                <li><a href="<?php echo site_url('/category/wordpress/'); ?>">How to WordPress</a></li>
+                <li><a href="<?php echo site_url('/category/php/'); ?>">How to PHP</a></li>
+                <li><a href="<?php echo site_url('/category/html/'); ?>">How to HTML</a></li>
+                <li><a href="<?php echo site_url('/category/css/'); ?>">How to CSS</a></li>
+                <li><a href="<?php echo site_url('/category/bootstrap/'); ?>">How to Bootstrap 5</a></li>
+                <li><a href="<?php echo site_url('/tag/web-design/'); ?>">Web Design</a></li>
+              </ul>
+              <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Programs</h3>
+              <ul class="menu">
+                <li><a href="<?php echo site_url('/programs-category/php/'); ?>">PHP Programs</a></li>
+                <li><a href="<?php echo site_url('/programs-category/python/'); ?>">Python Programs</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3">
+              <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Interview Q/A</h3>
+              <ul class="menu">
+                <li><a href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React JS Questions</a></li>
+                <li><a href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress Questions</a></li>
+                <li><a href="<?php echo site_url('/interview-questions-category/php/'); ?>">PHP Questions</a></li>
+                <li><a href="<?php echo site_url('/interview-questions-category/html/'); ?>">HTML Questions</a></li>
+                <!-- <li><a href="#">Request a quote</a></li> -->
+                <!-- <li><a href="#">Hire a developer</a></li> -->
+              </ul>
+              <h3 class="text-primary f18 lh22 mb_20 text-uppercase">MCQs</h3>
                       <ul class="menu">
-                          <li><a href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React JS Questions</a></li>
-                          <li><a href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress Questions</a></li>
-                          <!-- <li><a href="<?php //echo site_url('/tools'); ?>">Tools</a></li> -->
-                          <!-- <li><a href="#">Support</a></li> -->
-                          <!-- <li><a href="#">Request a quote</a></li> -->
-                          <!-- <li><a href="#">Hire a developer</a></li> -->
+                          <li><a href="<?php echo site_url('/mcqs-category/react-js-multiple-choice-questions/'); ?>">React JS MCQs</a></li>
                       </ul>
-                  </div>
+                      <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Templates</h3>
+                      <ul class="menu">
+                          <li><a href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template</a></li>
+                      </ul>
+                     
+            </div>
 	                <div class="col-6 col-md-3">
                       <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Tools</h3>
                       <ul class="menu">
@@ -54,12 +73,11 @@
                       </ul>
 	                </div>
 	                <div class="col-6 col-md-3">
-                      <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Templates</h3>
-                      <ul class="menu">
-                          <li><a href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template</a></li>
-                      </ul>
                       <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Information</h3>
                       <ul class="menu">
+                          <li><a href="<?php echo site_url('/about-code-matra'); ?>">About Us</a></li>
+                          <li><a href="<?php echo site_url('/contact-us'); ?>">Contact Us</a></li>
+                          <li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
                           <li><a href="<?php echo site_url('/sitemap_index.xml'); ?>">Sitemap</a></li>
                           <li><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
                           <li><a href="<?php echo site_url('/terms-and-conditions'); ?>">Terms and Conditions</a></li>

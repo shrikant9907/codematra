@@ -1,6 +1,6 @@
 <?php get_header(); ?> 
  
-<section class="page-section bg-light">
+<section class="page-section">
 <h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
     <div class="container">
         <div class="row">
