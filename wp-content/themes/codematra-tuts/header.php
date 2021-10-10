@@ -189,9 +189,9 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
                 <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Projects</a>
                   <div class="dropdown-menu"> 
-                    <a class="dropdown-item" href="<?php echo site_url('/write-a-program-to-create-a-simple-calculator-using-php//'); ?>">Calculator<span class="badge badge-secondary r_0 ">New!</span></a>
-                    <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Contact Book<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
-                    <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Portfolio Website<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item" href="<?php echo site_url('/write-a-program-to-create-a-simple-calculator-using-php/'); ?>">Simple Calculator</a>
+                    <a class="dropdown-item" href="<?php echo site_url('/learn-to-create-a-simple-contact-book-project-in-php/'); ?>">Basic Contact Book<span class="badge badge-secondary r_0 ">New!</span></a>
+                    <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Portfolio<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                     <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Chat App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                     <a class="dropdown-item disabled" href="#<?php //echo site_url('/templates/simple-contact-book/'); ?>">Quiz App<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                   </div>
