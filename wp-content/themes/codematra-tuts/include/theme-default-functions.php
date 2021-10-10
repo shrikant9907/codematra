@@ -225,7 +225,7 @@ function insertDefaultPages() {
         'Interview',
         'Programs',
         'Deals',
-        'Deals',
+        'Do You Know',
         'Cheap Web Hosting',
         'Best WordPress Theme',
         'Templates',

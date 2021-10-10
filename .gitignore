@@ -3,6 +3,7 @@
 !.gitignore
 !.htaccess
 !wp-content/
+!tuts-images
 !tutscodes
 !wp-config.php
 
