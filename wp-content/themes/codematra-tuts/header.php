@@ -216,7 +216,7 @@ src="https://www.facebook.com/tr?id=558744968667398&ev=PageView&noscript=1"
                   <a class="nav-link text-dark dropdown-toggle" title="Offers and Deals" href="javascript:void('0');">Deals <span class="badge badge-secondary r_0 "></a>
                   <div class="dropdown-menu deals-dropdown"> 
                     <a class="dropdown-item" href="<?php echo site_url('/deals/cheap-web-hosting/'); ?>">Cheap Web Hosting</a>
-                    <a class="dropdown-item disabled" href="<?php //echo site_url('/deals/best-wordpress-themes/'); ?>">Best WordPress Themes<span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
+                    <a class="dropdown-item" href="<?php echo site_url('/deals/best-wordpress-theme/'); ?>">Best WordPress Theme</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown search-dropdown">
