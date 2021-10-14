@@ -114,7 +114,7 @@ get_header();
               if ($fcat['show']) {
               ?>  
               <div class="col-12 col-sm-6 col-md-4 col-xl-3" >
-                <div class="card cui3c r_0 py_30 noshadow hs_11 relative">
+                <div class="card cui3c r_0 py_30 noshadow relative">
                 <a class="tdn overlay_w op0 absolute" href="<?php echo site_url($fcat['link']); ?>"></a>
                   <div class="card-body">
                     <div class="ciconrc ciconb">
@@ -122,7 +122,7 @@ get_header();
                     </div>
                     <h3 class="card-title mbi_10"><a  class="text-primary f22 " href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h3>
                     <p class="card-text lh20"><?php echo $fcat['desc']; ?></p>
-                    <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-secondary btnui3s text-uppercase">Start Now! <i class='ml_5 fas fa-angle-right'></i></a>
+                    <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-primary btnui3s text-uppercase">Start Now! <i class='ml_5 fas fa-angle-right'></i></a>
                   </div>
                 </div>
               </div> 
@@ -289,7 +289,7 @@ get_header();
 		</div>
  
 	</div>
-  <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-secondary btnui3s">View More Posts <i class="ml_5 fas fa-angle-right"></i></a></p>
+  <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui3s">View More Posts <i class="ml_5 fas fa-angle-right"></i></a></p>
    
 </div>
 </div>
@@ -366,7 +366,7 @@ get_header();
           }    
           ?>
 		 	
-	    <p class="text-left mt_40"><a href="<?php echo get_term_link( $procategory ); ?>" class="btn btn-sm btn-secondary btnui3s">View More <?php echo $procategory->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
+	    <p class="text-left mt_40"><a href="<?php echo get_term_link( $procategory ); ?>" class="btn btn-sm btn-primary btnui3s">View More <?php echo $procategory->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
     </div>
       <?php
       }
@@ -429,7 +429,7 @@ get_header();
                 ?>
               </ul>
             </div>
-            <p class="text-left"><a href="<?php echo get_term_link( $iqcat ); ?>" class="btn btn-sm btn-secondary btnui3s">View More <?php echo $iqcat->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
+            <p class="text-left"><a href="<?php echo get_term_link( $iqcat ); ?>" class="btn btn-sm btn-primary btnui3s">View More <?php echo $iqcat->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
           </div>
         </div>
         <?php
@@ -470,7 +470,7 @@ get_header();
           <h2 class="text-white mb_15 text-uppercase">Tell us if you need anything</h2>
           <p class="card-text f16">Your suggestions will help us to improve our website for you.</p>
         </div>
-        <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-secondary btnui3s">Contact us</a>
+        <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-primary btnui3s">Contact us</a>
       </div>    
   </div>
   </div>

@@ -1,3 +1,11 @@
+* {
+  outline: unset !important;
+}
+
+.form-control:focus {
+  box-shadow: unset !important;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -419,8 +427,8 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .badge {
 } 
 
 .ourtutorials .card:hover {
-  border:1px solid #f34423 !important;
-  background-color: #ffffff !important;
+  border:1px solid #117CA6 !important;
+  background-color: #f6fdff !important;
 }
 
 .recent-programs-section .card.cui3s {

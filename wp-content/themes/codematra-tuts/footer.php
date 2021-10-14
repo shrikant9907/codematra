@@ -94,7 +94,7 @@
 	 				 	<p class="f12 lh18 mb_10">Copyright &copy; <?php echo date('Y'); ?> CodeMatra.com | All Rights Reserved.</p>
 	 				 </div>
 	 				 <div class="col">
-	 				 	<p class="f12 lh18 mb_10 text-right">Developed by <a class="text-white tdn" href="javascript:void('0');">Shrikant</a></p>
+	 				 	<p class="f12 lh18 mb_10 text-right">Developed by <a class="text-white tdn" target="_blank" href="https://shrikant9907.github.io/portfolio/">Shrikant Yadav</a></p>
 	 				 </div>
 	 			</div>
 	 		</div>
