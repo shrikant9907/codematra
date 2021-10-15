@@ -312,13 +312,14 @@ function posts_listing($atts) {
 * Related Posts Shortcode
 */
 add_shortcode('showRelatedPosts' ,'showRelatedPosts');
-function showRelatedPosts() {
+function showRelatedPosts($atts) {
 
   extract(shortcode_atts(array(
     'show_counts' => true,
+    'columns' => 'col-md-4',
     'show_heading'    => true,
     'post_type'       => 'post',
-    'heading'         => __( '<span class="text-secondary">Related</span> Posts', 'codematra' ),
+    'heading'         => __( '<span class="text-secondary text-normal">You</span> may also like this...', 'codematra' ),
     'posts_per_page'  => 4,
   ), $atts));
 
@@ -327,7 +328,7 @@ function showRelatedPosts() {
   if ( $categories ) { ?>
     <div class="cm-related-posts mb_20">
       <h3 class="heading_style type2 text-uppercase text-primary"><?php echo $heading; ?></h3>
-      <div class="row">
+      <div class="form-row">
         <?php
         $first_category = esc_attr( $categories[0]->term_id );
         $first_name = esc_attr( $categories[0]->name );
@@ -347,7 +348,7 @@ function showRelatedPosts() {
             $prviews = 0;
           }
           ?>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 <?php echo $columns; ?>">
               <div class="cm_related_post mb_20 r_0 card cui2">
               <div class="card-body">
                 <a class="link-primary tdn border mb_10 d-block min_h_150 h_150 overflow_hidden" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
@@ -373,7 +374,7 @@ function showRelatedPosts() {
               </div>
               </div>
             </div>
-          <?php
+          <?php 
           endwhile;
         endif;
         wp_reset_postdata();

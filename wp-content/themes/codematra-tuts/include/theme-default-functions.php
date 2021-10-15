@@ -341,7 +341,7 @@ function cm_related_posts() {
   $categories = get_the_category();
   if ( $categories ) { ?>
     <div class="cm-related-posts">
-      <h2><?php _e( 'Related Posts', 'codematra' ); ?></h2>
+      <h2><?php _e( 'You may also like...', 'codematra' ); ?></h2>
       <div class="form-row">
         <?php
         $first_category = esc_attr( $categories[0]->term_id );

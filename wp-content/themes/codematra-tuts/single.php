@@ -52,7 +52,6 @@ $categories = get_the_category();
             </div>
           </div>
         </div>  
-        <?php echo do_shortcode('[showRelatedPosts]'); ?>
         <div class="single_posts_nav d-flex justify-content-between mb_20">
             <?php
             $prev_post = get_previous_post();
@@ -80,6 +79,7 @@ $categories = get_the_category();
         <?php get_sidebar(); ?>
       </div>
     </div>
+    <?php echo do_shortcode('[showRelatedPosts columns=" col-md-3"]'); ?>
   </div>
 </div>
        
