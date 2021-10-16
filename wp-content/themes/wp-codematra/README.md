@@ -1,1 +1,0 @@
-# sy-tutorials-theme
