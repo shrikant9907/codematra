@@ -10,6 +10,7 @@ require_once('include/theme-default-functions.php');
 require_once('include/post-types/post-type-tutorials.php');
 require_once('include/post-types/post-type-programs.php');
 require_once('include/post-types/post-type-mcqs.php');
+require_once('include/post-types/post-type-posts.php');  
 
 // require_once('include/post-types/post-type-examples.php');
 require_once('include/post-types/post-type-interview-questions.php');
