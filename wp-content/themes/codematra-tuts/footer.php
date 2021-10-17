@@ -1,25 +1,7 @@
 <footer class="section-footer footer_style1 f14 border-top">
  		<div class="footer_top pt_60 pb_20">
 	 		<div class="container">
-         <div class="col-12 text-center">
-            <div class="card cui1c d-inline-block">
-              <h3 class="text-primary f16 lh18 mb_20 text-uppercase text_bold">Get in touch</h3>
-              <!-- <p><img class="footer_logo" src="https://picsum.photos/id/475/300/100" alt="" /></p> -->
-              <ul class="address ">
-              <!-- <li><i class="fas fa-phone-alt text-primary"></i> <a href="mailto:0000000000">000 000 0000</a></li> -->
-              <li> <i class="fa fa-envelope text-primary" aria-hidden="true"></i><a href="mailto:codematra@gmail.com">codematra@gmail.com</a></li>
-              <!-- <li><i class="fas fa-map text-primary"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </li> -->
-              </ul>
-              <ul class="socialicons siconsb mb_20 flex center_center"> 
-              <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
-              <li class="youtube"><a href="https://www.youtube.com/channel/UCbD6k-T54c8I-8UI0vqQ79Q" title="Code Matra - Youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
-              <!-- <li class="twitter"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
-              <li class="instagram"><a href="https://www.instagram.com/codematra/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              </ul>
-            </div>
-         </div>
-	 			<div class="row">
+ 	 			<div class="row">
  				  	<div class="col-6 col-md-3">
               <h3 class="text-primary f18 lh22 mb_20 text-uppercase">Learn to Code</h3>
               <ul class="menu">

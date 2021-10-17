@@ -155,14 +155,14 @@ function getfeaturedCategoriesCm() {
       'desc' => 'Learn web design to make the stunning web pages.',
       'icon' => 'fas fa-laptop-code',
       'link' =>'/tag/web-design/',
-      'show' => true,
+      'show' => false,
     ),
     array(
       'name' => 'Sample Projects',
       'desc' => 'Get inspiration and learn coding with basic sample projects.',
       'icon' => 'fas fa-project-diagram',
       'link' =>'/category/projects/',
-      'show' => true,
+      'show' => false,
     ),
     array(
       'name' => 'Python',
@@ -237,7 +237,7 @@ function insertDefaultPages() {
     );
     if ($pages) {
   
-      update_option('show_on_front', 'page'); 
+      update_option('show_on_front', 'post'); 
   
       foreach($pages as $page) {
           $pageData = get_page_by_title( $page );

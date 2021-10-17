@@ -1,17 +1,17 @@
 <div class="card cui2 sidebar-listing r_0 mb_20">
   <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">
-    Latest Posts
+    Featured Posts
   </h3>
-  <a href="<?php echo site_url('/blog/page/2/'); ?>" class="text-secondary tdn absolute top_11 right_15">More Posts <i class="ml_5 fas fa-angle-right"></i></a>
-
   <div class="cbody p-0">
     <ul class="listing type2">
       <?php 
           $args = array(
             'post_type'         =>  'post', 
             'posts_per_page'    =>  5, 
-            'orderby'           =>  'id', 
-            'order'             =>  'desc', 
+            'meta_key'          => 'featured', 
+            'meta_value'        => 1, 
+            'order'             => 'DESC',
+            'orderby'           => 'id',
           );  
           $posts = get_posts($args); 
           if ($posts) {

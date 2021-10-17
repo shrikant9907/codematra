@@ -1,17 +1,16 @@
 <div class="card cui2 sidebar-listing r_0 mb_20">
   <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">
-    Latest Posts
+    Popular Posts
   </h3>
-  <a href="<?php echo site_url('/blog/page/2/'); ?>" class="text-secondary tdn absolute top_11 right_15">More Posts <i class="ml_5 fas fa-angle-right"></i></a>
-
   <div class="cbody p-0">
     <ul class="listing type2">
       <?php 
           $args = array(
             'post_type'         =>  'post', 
             'posts_per_page'    =>  5, 
-            'orderby'           =>  'id', 
-            'order'             =>  'desc', 
+            'meta_key'          => 'visit_counts', 
+            'order'             => 'DESC',
+            'orderby'           => 'meta_value_num',
           );  
           $posts = get_posts($args); 
           if ($posts) {
@@ -26,6 +25,12 @@
           }
 
           $catbadges = trim( $output, $separator );  
+
+          // View Counts
+          $views = get_post_meta($post->ID, 'visit_counts', true);
+          if (!$views) {
+            $views = 0;
+          }
           ?>
             <li class="relative d-flex align-items-center">
               <div class="cminleft mr_10 my_5">
@@ -42,8 +47,9 @@
                     <?php the_title(); ?>
                   </a>
                 </h3>
-                <div class="cmeta mb_0 text-muted f12 d-flex align-items-center" title="Categories">
-                  <i class="text-muted fa fa-tag" aria-hidden="true"></i> <?php echo $catbadges; ?>
+                <div class="cmeta mb_0 text-muted f12 d-flex align-items-center justify-content-start w-100">
+                  <span class="mr_10" title="Views"><i class="text-muted fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $views; ?></span>
+                  <span class="d-flex align-items-center" title="Categories"><i class="text-muted fa fa-tag" aria-hidden="true"></i> <?php echo $catbadges; ?></span>
                 </div>
               </div>
             </li>
