@@ -59,7 +59,6 @@
                       <ul class="menu">
                           <li><a href="<?php echo site_url('/about-code-matra'); ?>">About Us</a></li>
                           <li><a href="<?php echo site_url('/contact-us'); ?>">Contact Us</a></li>
-                          <li><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
                           <li><a href="<?php echo site_url('/sitemap_index.xml'); ?>">Sitemap</a></li>
                           <li><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
                           <li><a href="<?php echo site_url('/terms-and-conditions'); ?>">Terms and Conditions</a></li>

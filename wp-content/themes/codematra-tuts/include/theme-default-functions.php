@@ -237,7 +237,7 @@ function insertDefaultPages() {
     );
     if ($pages) {
   
-      update_option('show_on_front', 'post'); 
+      update_option('show_on_front', 'posts'); 
   
       foreach($pages as $page) {
           $pageData = get_page_by_title( $page );
