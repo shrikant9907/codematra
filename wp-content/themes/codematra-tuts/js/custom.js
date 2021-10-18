@@ -1,5 +1,11 @@
 jQuery('document').ready(function(){
 
+  // hide Loader
+  setTimeout(function(){ 
+    jQuery('.site-loader').fadeOut();
+  }, 500);
+  
+
   // Subscription modal
   var subnl = localStorage.getItem('subnl');
   if (subnl != 'true') {

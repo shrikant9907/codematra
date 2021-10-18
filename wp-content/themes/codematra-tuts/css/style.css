@@ -172,6 +172,12 @@ body.admin-bar .header {
   display: none;
 }
 
+/* Site Loader */
+.site-loader {
+  z-index: 999999;
+  background-color: #ffffff !important;
+}
+
 /* Wp CSS  */
 
 .wb-card .card-body,
