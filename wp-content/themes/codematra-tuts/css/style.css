@@ -143,6 +143,35 @@ body.admin-bar .header {
   text-decoration: none;
   color: #117CA6;
 }
+
+
+/* Subscription Modal */
+
+#subscriptionModal .close {
+  position: absolute;
+  right: 35px;
+  top: 14px;
+}
+
+#subscriptionModal  .yikes-easy-mc-email {
+  background: #fff;
+  border: 1px solid #dee2e6;
+}
+
+#subscriptionModal .form-field-description {
+  display: none;
+}
+
+#subscriptionModal button {
+  border-radius: 0;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+#subscriptionModal span.EMAIL-label {
+  display: none;
+}
+
 /* Wp CSS  */
 
 .wb-card .card-body,

@@ -1,3 +1,4 @@
+<?php get_template_part( 'template-parts/modal', 'subscription' ); ?>
 <footer class="section-footer footer_style1 f14 border-top">
  		<div class="footer_top pt_60 pb_20">
 	 		<div class="container">

@@ -1,9 +1,22 @@
 jQuery('document').ready(function(){
 
+  // Subscription modal
+  var subnl = localStorage.getItem('subnl');
+  if (subnl != 'true') {
+    setTimeout(function(){ 
+      jQuery('#subscriptionModal').modal('show');
+      jQuery('#subscribe-1').on('submit', function(){
+        localStorage.setItem('subnl', true);
+        setTimeout(function(){ 
+          jQuery('#subscriptionModal').modal('hide');
+        }, 20000);
+      });
+    }, 10000);
+  }
+  
   // Check if terms and conditions checked
   var agreetoc = localStorage.getItem('agreetocookie');
   if (agreetoc != 'true') {
-    console.log('agreetoc', agreetoc);
     jQuery('.cookienotice-btn').on('click', function(){
       jQuery(this).parent().hide();
       localStorage.setItem('agreetocookie', true);
