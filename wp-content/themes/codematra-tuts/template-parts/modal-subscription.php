@@ -12,7 +12,7 @@
       </div>
       <div class="modal-body pt-0">
         <p class="text-center"><i class="f100 text-secondary far fa-envelope-open"></i></p>
-        <i class="text-center d-block">To get the latest tutorials, codes, mcqs, interview questions updates in your email.</i>
+        <i class="text-center d-block">Subscribe now! to get the latest tutorials, codes, mcqs, interview questions updates in your email.</i>
         <?php echo do_shortcode('[yikes-mailchimp form="1"]'); ?>
       </div>
     </div>
