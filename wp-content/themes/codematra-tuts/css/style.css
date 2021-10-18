@@ -416,18 +416,18 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .badge {
 }
 
 .ourtutorials .card .ciconrc {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
   border:unset !important;
 }
 
 .ourtutorials .card .ciconrc i,
 .ourtutorials .card .ciconrc svg {
-  font-size: 50px;
+  font-size: 30px;
 } 
 
 .ourtutorials .card:hover {
-  border:1px solid #117CA6 !important;
   background-color: #f6fdff !important;
 }
 
@@ -520,6 +520,11 @@ header .navbar.navbar-expand-lg .navbar-nav .deals-dropdown {
 
 
 /* Banner section */
+
+.banner_section .banner-card, .banner-section .banner-card {
+  padding: 0 0 20px 0;
+}
+
 .banner-heading span{
     font-weight: 700;
 }
@@ -534,7 +539,7 @@ header .navbar.navbar-expand-lg .navbar-nav .deals-dropdown {
   padding: 10px;
   border-radius: 10px;
   display: inline-flex;
-  margin: 10px;
+  margin: 0 10px 10px 0;
   color: rgb(161 227 253);
   border: unset;
 }
@@ -542,10 +547,10 @@ header .navbar.navbar-expand-lg .navbar-nav .deals-dropdown {
 .banner-icons .card img,
 .banner-icons .card svg,
 .banner-icons .card i{
-  max-height: 80px;
-  max-width: 100px;
+  max-height: 40px;
+  max-width: 50px;
   width: auto;
-  font-size: 80px;
+  font-size: 40px;
 }
 
 .card-contact-details {
@@ -952,6 +957,9 @@ p.comment-form-cookies-consent {
       margin-bottom: 10px;
     }
 
+    .metatags {
+      display: block !important;
+    }
 }
 
 /*Mobile Devices*/
@@ -995,7 +1003,7 @@ p.comment-form-cookies-consent {
   .common-section-ui h3.card-title,
   .common-section-ui h3,
   .common-section-ui h3.heading_style {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   /* Banner */

@@ -1,10 +1,59 @@
 <?php get_header(); ?> 
-<h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php _e('Blog'); ?></h1>
-<section class="common-section-ui page-breadcrumb border-top border-bottom pti_10 pbi_10">
+<!-- Banner UI 1 -->
+<div class="banner-section bg-primary text-white mt_0 min_h_500  relative">
   <div class="container">
-    <p class="text-muted f14 m-0"><a class="tdn text-secondary" href="<?php echo site_url(); ?>" class="text-muted">Home</a> / <?php _e('Blog'); ?></p>
+    <div class="row">
+      <div class="col-12">
+        <div class="banner-card nobefore">
+          <p class="pre-banner-heading f14 text-uppercase mb_20 ">Welcome to codematra.com</p>
+          <h1 class="banner-heading f40 lh44 mb_20">An online plateform to learn <u class="text_yellow">coding</u> from the basics.</h1>
+          <p class="banner-description mb_30 f16">
+            Learn with free online articles on latest technologies, Programs, Interview Questions and MCQs.<br />
+            Basic projects and templates to get an understanding of the flow and file structures.
+          </p>
+          <!-- <div class="banner-actions">
+              <a href="#ourTutorials" class="btn mb_20 btn-outline-primary text-uppercase btnui3s d-inline-flex flex center_center"><i class="text-secondary fas fa-user-graduate f20 mr_10"></i>Learn Coding <i class="f16 fa fa-angle-right ml_10" aria-hidden="true"></i></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-12 d-none d-md-block">
+        <p class="pre-banner-heading f16 mb_20">Technologies you will learning here.</p>
+        <div class="banner-icons mb_20">
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-bootstrap"></i>
+          </div>
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-css3"></i>
+          </div>
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-php"></i>
+          </div>
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-wordpress"></i>
+          </div>
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-python"></i>
+          </div>
+          <!-- <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-angular"></i>
+          </div> -->
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="card cbody noshadow flex center_center w_60 h_60">
+            <i class="fab fa-js"></i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 <div class="single-page common-section-ui">
     <div class="container">
         <div class="row">
@@ -19,7 +68,7 @@
                 <div class="card-body pri_30 pri_30 pli_30 pbi_30">
                     <h2 class='text-primary'><a class="text-primary tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
                     <?php if(has_post_thumbnail()) { ?>
-                      <a href="<?php the_permalink(); ?>" class="d-inline-block"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
+                      <a href="<?php the_permalink(); ?>" class="d-inline-block mb_20 w-100"><img class="card-img-top img-fluid r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
                     <?php } ?>
                     <?php 
                       $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
@@ -27,7 +76,7 @@
                         $visitsCount = 0;
                       }
                       ?>
-                    <div class="text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
+                    <div class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
                       <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
                       <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                       <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
@@ -48,18 +97,22 @@
                     </div>
                     <div class="f16">
                     <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btnui3s w-100 text-white text_bold">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm btnui3s text-white text_bold">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
                     </div>
                 </div>
               </div>                        
               <?php 
                 endwhile; 
-                theme_pagination();
+                ?>
+                <div class="text-center">
+                  <?php theme_pagination(); ?>
+                </div>
+                <?php
                 endif; 
               ?>   
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-                <?php get_sidebar(); ?>
+                <?php get_sidebar('frontpage'); ?>
             </div>
         </div>
     </div>
