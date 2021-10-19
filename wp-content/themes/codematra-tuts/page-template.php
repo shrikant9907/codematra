@@ -11,7 +11,7 @@ if (!$visitsCount) {
   $visitsCount = 0;
 }
 
-$downloadCount = get_post_meta(get_the_ID(), 'download_count', true);
+$downloadCount = get_post_meta(get_the_ID(), 'template_download_count', true);
 if (!$downloadCount) {
   $downloadCount = 0;
 }
@@ -38,7 +38,7 @@ if (!$downloadCount) {
         </div>
         <p class="text-muted d-flex justify-content-between">
           <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
-          <span><i class="fa fa-download mr_5 text-primary" title="Downloads" aria-hidden="true"></i> <?php echo $downloadCount; ?></span>
+          <span><i class="fa fa-download mr_5 text-primary" title="Downloads" aria-hidden="true"></i> <span class="downloadcounts"><?php echo $downloadCount; ?></span></span>
         </p>
         <?php the_content(); ?>
       </div>

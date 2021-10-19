@@ -10,8 +10,8 @@ $templateUpdated = get_post_meta($postid, 'template_last_updated', true);
 $templateDownloads = get_post_meta($postid, 'template_download_count', true);
 ?>
 
-<a data-id="<?php echo $postid; ?>" class="trackdownloads f20 font_bold btn btn-secondary hs_11 w-100 btnui3s mb_30" href="https://github.com/shrikant9907/cm-blog-template-code-matra/archive/refs/heads/main.zip" target="_blank" rel="noopener">
-  <i class="fas fa-download mr_10"></i>Free Download
+<a data-id="<?php echo $postid; ?>" data-downloads="<?php echo $templateDownloads; ?>" data-template="<?php echo $templateName; ?>" class="trackdownloads f16 btn btn-secondary hs_11 w-100 btnui3s mb_30" href="https://github.com/shrikant9907/cm-blog-template-code-matra/archive/refs/heads/main.zip" download rel="noopener">
+  <i class="fas fa-download mr_10"></i>Free Download 
 </a>
 
 <!-- About Template -->
@@ -38,7 +38,7 @@ $templateDownloads = get_post_meta($postid, 'template_download_count', true);
         <span>Last Update</span><span><?php echo $templateUpdated; ?></span>
       </li>
       <li class="list-item d-flex justify-content-between">
-        <span>Downloads</span><span><?php echo $templateDownloads; ?></span>
+        <span>Downloads</span><span class="downloadcounts"><?php echo $templateDownloads; ?></span>
       </li>
       
     </ul>

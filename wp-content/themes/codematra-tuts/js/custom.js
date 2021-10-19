@@ -1,5 +1,30 @@
 jQuery('document').ready(function(){
 
+  // Download Template Track
+  jQuery('.trackdownloads').click(function(e){
+      var el = jQuery(this);
+      var fileid = el.data('id');
+      var filename = el.data('template');
+      var newdownloadcount = el.data('downloads');
+      jQuery.ajax({
+          type: 'POST',
+          url: LOCOBJ.ajaxurl,
+          data: {
+              action: 'download_counter',
+              id: fileid,
+              name: filename,
+          },
+      })
+      .done(function(res){
+        newdownloadcount = newdownloadcount + 1;
+      jQuery('.downloadcounts').text(newdownloadcount);
+        console.log("downloaded");
+      })
+      .fail(function(xhr){
+        console.log(xhr);
+      })
+  });
+
   // hide Loader
   setTimeout(function(){ 
     jQuery('.site-loader').fadeOut();

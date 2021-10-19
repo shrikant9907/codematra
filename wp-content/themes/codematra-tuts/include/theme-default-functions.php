@@ -500,23 +500,23 @@ function jscript_redirect($url) {	?>
 /*
 * Admin Script and Styles
 */
-function codematra_admin_enqueue_scripts() {
+function codematra_enqueue_scripts() {
     wp_enqueue_script('jquery'); 
-  // wp_enqueue_media();
-
+    // wp_enqueue_media();
     // wp_enqueue_script('jquery-ui-datepicker');
-    // wp_localize_script( 'code-matra-scripts', 'LOCOBJ', array( 
-    //   'ajax_url' => admin_url( 'admin-ajax.php' ),
-    //   'tic_security' => wp_create_nonce( 'tic_setting_nonce_action' ),
-    // )); 
 
     wp_enqueue_script( 'popper', get_stylesheet_directory_uri().'/js/popper.min.js');
     wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri().'/js/bootstrap.min.js');
     wp_enqueue_script( 'slick', get_stylesheet_directory_uri().'/js/slick.min.js');
     wp_enqueue_script( 'code-matra-scripts', get_stylesheet_directory_uri().'/js/custom.js', array( 'jquery'), 'oct42021', true );
-  
+
+    wp_localize_script( 'code-matra-scripts', 'LOCOBJ', array( 
+      'ajaxurl' => admin_url( 'admin-ajax.php' ),
+      'cm_security' => wp_create_nonce( 'cm_setting_nonce_action' ),
+    )); 
+
 } 
-add_action( 'wp_footer', 'codematra_admin_enqueue_scripts' );  
+add_action( 'wp_footer', 'codematra_enqueue_scripts' );  
 
 /*
  * Function Actived Links

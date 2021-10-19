@@ -1,40 +1,19 @@
 <?php 
 
-add_action( 'wp_ajax_apply_for_job', 'apply_for_job_function' );
-add_action( 'wp_ajax_nopriv_apply_for_job', 'apply_for_job_function' );
-
-function apply_for_job_function() {
+add_action( 'wp_ajax_download_counter', 'download_counter_function' );
+add_action( 'wp_ajax_nopriv_download_counter', 'download_counter_function' );
+function download_counter_function() {
     
-    $jobid = $_POST['jobid']; 
-    $cuid = get_current_user_id();
+    $postid = $_POST['id']; 
+    $downloadCount = get_post_meta($postid,'template_download_count',true);
     
-    $appliedby = get_post_meta($jobid,'applied_by',true);
-    $appliedto = get_user_meta($cuid,'my_applied_jobs',true);
-     
-    
-    // Update in Job
-    if(is_array($appliedby)) {
-        if(!in_array($cuid,$appliedby)) {
-            $appliedby[] = $cuid;
-            update_post_meta($jobid,'applied_by',$appliedby);       
-        }
+    if($downloadCount) {
+      $downloadCount++;
+      update_post_meta($postid,'template_download_count',$downloadCount);       
     } else { 
-        $appliedby = array();
-        $appliedby[] = $cuid;
-        update_post_meta($jobid,'applied_by',$appliedby);
+      update_post_meta($postid,'template_download_count', 1);       
     }
-     
-    // Update in User
-    if(is_array($appliedto)) {
-        if(!in_array($jobid,$appliedto)) {
-            $appliedto[] = $jobid;
-            update_user_meta($cuid,'my_applied_jobs',$appliedto);       
-        }
-    } else {
-        $appliedto = array();
-        $appliedto[] = $jobid;
-        update_user_meta($cuid,'my_applied_jobs',$appliedto);
-    }
-     
+
+    return $downloadCount;
     wp_die();
 }
