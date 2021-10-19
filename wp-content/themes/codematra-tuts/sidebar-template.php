@@ -1,6 +1,17 @@
+<?php
+global $post;
+$postid = $post->ID;
+$templateName = get_post_meta($postid, 'template_name', true);
+$templateLicense = get_post_meta($postid, 'template_license', true);
+$templateVersion = get_post_meta($postid, 'template_version', true);
+$bootstrapVersion = get_post_meta($postid, 'bs_version', true);
+$templateRelease = get_post_meta($postid, 'template_release_date', true);
+$templateUpdated = get_post_meta($postid, 'template_last_updated', true);
+$templateDownloads = get_post_meta($postid, 'template_download_count', true);
+?>
 
-<a class="trackdownloads f20 font_bold btn btn-secondary hs_11 w-100 btnui3s mb_30" href="https://github.com/shrikant9907/cm-blog-template-code-matra/archive/refs/heads/main.zip" target="_blank" rel="noopener">
-<i class="fas fa-download mr_10"></i>Free Download
+<a data-id="<?php echo $postid; ?>" class="trackdownloads f20 font_bold btn btn-secondary hs_11 w-100 btnui3s mb_30" href="https://github.com/shrikant9907/cm-blog-template-code-matra/archive/refs/heads/main.zip" target="_blank" rel="noopener">
+  <i class="fas fa-download mr_10"></i>Free Download
 </a>
 
 <!-- About Template -->
@@ -9,25 +20,25 @@
   <div class="cbody p-0">
     <ul class="listing type2">
       <li class="list-item d-flex justify-content-between">
-        <span>Template Name</span><span>CM Blog Template</span>
+        <span>Template Name</span><span><?php echo $templateName; ?></span>
       </li>
       <li class="list-item d-flex justify-content-between">
-        <span>License</span><span>MIT License</span>
+        <span>License</span><span><a target="_blank" href="<?php echo $templateLicense; ?>">MIT License</a></span>
       </li>
       <li class="list-item d-flex justify-content-between">
-        <span>Version</span><span>1.0.0</span>
+        <span>Version</span><span><?php echo $templateVersion; ?></span>
       </li>
       <li class="list-item d-flex justify-content-between">
-        <span>Bootstrap Version</span><span>5.1.0</span>
+        <span>Bootstrap Version</span><span><?php echo $bootstrapVersion; ?></span>
       </li>
       <li class="list-item d-flex justify-content-between">
-        <span>Released</span><span>OCT, 19, 2021</span>
+        <span>Released</span><span><?php echo $templateRelease; ?></span>
       </li>
       <li class="list-item d-flex justify-content-between">
-        <span>Last Update</span><span>OCT, 19, 2021</span>
+        <span>Last Update</span><span><?php echo $templateUpdated; ?></span>
       </li>
       <li class="list-item d-flex justify-content-between">
-        <span>Downloads</span><span>84</span>
+        <span>Downloads</span><span><?php echo $templateDownloads; ?></span>
       </li>
       
     </ul>
