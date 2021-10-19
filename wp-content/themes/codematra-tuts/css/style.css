@@ -178,6 +178,28 @@ body.admin-bar .header {
   background-color: #ffffff !important;
 }
 
+/* Template Preview Card */
+.template-preview-card {
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #efefef;
+  position: relative;
+}
+
+.template-preview-card:hover .overlay {
+  cursor: pointer;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.template-preview-card .btn {
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+}
+
 /* Wp CSS  */
 
 .wb-card .card-body,
