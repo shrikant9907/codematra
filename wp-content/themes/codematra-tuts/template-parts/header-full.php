@@ -20,7 +20,7 @@
                   <a title="Home" class="nav-link text-dark" href="<?php echo site_url('/'); ?>"><i class=" f20 fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');"><i class=" f20 fas fa-book-reader"></i> Learn</a>
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Learn</a>
                   <div class="dropdown-menu ddfmu"> 
                     <div class="container">
                     <div class="row">
@@ -157,7 +157,6 @@
                     <a class="dropdown-item" href="<?php echo site_url('/excel-to-array-Converter/'); ?>">Excel To Array</a>
                     <a class="dropdown-item" href="<?php echo site_url('/excel-to-json-Converter/'); ?>">Excel To JSON</a>
                     <a class="dropdown-item" href="<?php echo site_url('/excel-to-xml-Converter/'); ?>">Excel To XML</a>
-                    <a class="dropdown-item disabled" href="<?php echo site_url('/resume-maker/'); ?>">Resume Maker <span class="badge badge-secondary r_0 ">Coming Soon!</span></a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -167,18 +166,13 @@
                     <a class="dropdown-item" href="<?php echo site_url('/deals/best-wordpress-theme/'); ?>">Best WordPress Theme</a>
                   </div>
                 </li>
-                <li class="nav-item dropdown search-dropdown">
-                  <a href="javascript:void('0');" class="nav-link text-dark dropdown-toggle search-trigger"><i class="fa fa-search f18 text-primary" aria-hidden="true"></i></a>
-                  <div class="dropdown-menu px_0"> 
-                    <form class="cbody fui fui1 search-box max_w_100p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
-                      <div class="search-box">
-                        <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
-                        <button type="submit" class="btn btn-sm btn-primary btnui1"><i class="fa fa-search" aria-hidden="true"></i></button>
-                      </div> 
-                    </form>
-                  </div>
-                </li>
               </ul>
+              <form class="cbody fui fui1 search-box max_w_100p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
+                <div class="search-box">
+                  <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
+                  <button type="submit" class="btn btn-sm btn-primary btnui1"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div> 
+              </form>
             </div>
           </nav>
         </div>
