@@ -1,0 +1,1 @@
+<div class="text-center"><a href="#" class="btn btn-primary btn-lg fs-6 rounded-pill px-4">Choose Plan</a></div>
