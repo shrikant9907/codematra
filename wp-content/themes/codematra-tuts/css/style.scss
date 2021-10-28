@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 pre {
@@ -104,7 +104,7 @@ header {
           width: 100%;
           left: 0;
           right: 0;
-          padding: 20px 0;
+          padding: 40px 0 10px 0;
           background-color: $primaryLightColor;
       
           .ncheading {
@@ -132,8 +132,7 @@ header {
 }
 
 .footer_style1 ul li {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 10px;
 }
 
 .codeview {
@@ -714,19 +713,6 @@ header .navbar.navbar-expand-lg .navbar-nav .deals-dropdown {
     background: #d6d4d4;
 }
 
-.footer_style1 ul.address li {
-    padding-left: 34px;
-    position: relative;
-}
-
-.footer_style1 ul.address li svg,
-.footer_style1 ul.address li i {
-    position: absolute;
-    left: 5px;
-    top: 6px;
-    font-size: 16px;
-}
-
 .go_top_arrow {
     display: none;
 }
@@ -738,14 +724,6 @@ header .navbar.navbar-expand-lg .navbar-nav .deals-dropdown {
 .slick-prev:before, .slick-next:before {
     color: #117CA6 !important;
     font-size: 30px;
-}
-
-/* Code Mirror  */
-.CodeMirror {
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 22px;
-    height: auto !important;  
 }
 
 .comment-form input[type="text"],
@@ -1093,26 +1071,6 @@ p.comment-form-cookies-consent {
       padding: 0 0px 30px 0;
   }
 
-
-  /*Footer*/
-  .section-footer,
-  .section-footer p.text-right {
-    text-align: center !important;
-  }
-    
-  .section-footer .col-6 {
-      width: 100%;
-      flex: 0 0 100%;
-  }
-  
-  .footer_style1 ul.socialicons {
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .footer_style1 ul.address  {
-    display: inline-block;
-  }
 
   .ourtutorials .slick-prev {
     left: 20px;
