@@ -11,20 +11,22 @@
         </div>
         <div class="col-12 col-md-9 col-xl-10">
           <nav class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler hamburger_icon toggleMenu collapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a title="Home" class="nav-link text-dark" href="<?php echo site_url('/'); ?>"><i class=" f20 fas fa-home"></i> Home</a>
+                  <a title="Home" class="nav-link text-dark" href="<?php echo site_url('/'); ?>"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Learn</a>
                   <div class="dropdown-menu ddfmu"> 
                     <div class="container">
                     <div class="row">
-                      <div class="col-md-3">
+                      <div class="col-12 col-lg-3">
                         <div class="card cui1"> 
                           <h4 class="ncheading">Learn To Code</h4>
                           <?php   
@@ -47,7 +49,7 @@
                             ?> 
                         </div>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-12 col-lg-3">
                         <div class="card cui1"> 
                           <h4 class="ncheading">Programs for Practice</h4>
                           <?php   
@@ -72,7 +74,7 @@
                             ?> 
                         </div>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-12 col-lg-3">
                         <div class="card cui1"> 
                           <h4 class="ncheading">MCQs - Test your skills</h4>
                             <?php   
@@ -97,7 +99,7 @@
                             ?> 
                         </div>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-12 col-lg-3">
                         <div class="card cui1"> 
                           <h4 class="ncheading">Interview Questions</h4>
                           <?php   
@@ -167,7 +169,7 @@
                   </div>
                 </li>
               </ul>
-              <form class="cbody fui fui1 search-box max_w_100p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
+              <form class="cbody fui search-form fui1 max_w_100p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
                 <div class="search-box">
                   <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
                   <button type="submit" class="btn btn-sm btn-primary btnui1"><i class="fa fa-search" aria-hidden="true"></i></button>

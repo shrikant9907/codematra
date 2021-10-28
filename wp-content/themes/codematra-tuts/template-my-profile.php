@@ -23,7 +23,6 @@
           <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.min.css" />
 
           <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" />
-          <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/responsive.css" />
  
           <?php if(is_page('starcss') || is_singular('tutorial')) { ?>
             <!-- Code Mirror CSS -->

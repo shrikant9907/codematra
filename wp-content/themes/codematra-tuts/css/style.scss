@@ -46,7 +46,7 @@ body.admin-bar .header {
 }
 
 .bg_gred_primary {
-  background-image: linear-gradient(to bottom, #117ca6, #0094b3, #00abb6, #00c0ae, #4ad49d);
+  background-image: linear-gradient(to right, #117ca6, #0094b3, #00abb6, #00c0ae, #4ad49d);
 }
 
 header {
@@ -439,9 +439,35 @@ h1, h2, h3, h4, h5, h6, .heading, .title, .main_heading {
   margin: 9px 0;
 }
 
-.hamburger {
-  left: 16px;
-  top: 24px;
+/*Hamburger Icon CSS Start*/
+.hamburger_icon {
+  position: fixed;
+  top: 15px;
+  left: unset;
+  right: 15px;
+  z-index: 9999;
+  min-width: 24px;
+  width: 24px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1px;
+  padding: 0;
+  border:unset;
+  span.hamburger-line {
+    background: #ffffff;
+    height: 2px;
+    display: inline-block; 
+    width: 100%;
+    margin: 3px 0;
+    &:nth-child(2) {
+      width: 70%;
+    }
+  }
+  &.collapsed {
+    span.hamburger-line {
+      background: $primaryColor;
+    }  
+  }
 }
 
 .ourtutorials .card-title,
@@ -912,42 +938,53 @@ p.comment-form-cookies-consent {
 
 /*Responsive*/
 @media all and (max-width: 991px) { 
+  
+  body {
+    padding-top: 56px !important;
+  }
+
+  .site_logo.with_image a img {
+    max-width: 100%;
+    height: auto !important;
+    margin: 2px 0 0 0;
+    width: 200px;
+  }
+
+  .navbar.navbar-expand-lg .navbar-collapse ul.navbar-nav {
+    overflow-y: auto;
+  }
 
   .navbar.navbar-expand-lg .navbar-collapse.show {
     z-index: 1000;
   }
-  header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link{
+  .scrolled header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link,
+  header .navbar.navbar-expand-lg .navbar-nav .nav-item .nav-link {
     margin: 0 !important;
     padding: 10px 20px !important;
   }
 
-  .site_logo.with_image a img {
-    margin-left:50px;
-  }
-    
-  .navbar-toggler {
-    background-color: #117CA6;
-    border: 0;
-    width: 40px;
-    height: 40px;
-    top: 8px;
-    padding: 9px !important;
-    border-radius: 0;
-    z-index: 1001;
+  header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu {
+    position: static;
+    padding: 10px 0 0 0;
+    margin: 0px;
+    .card.cui1c, .card.cui1 {
+      margin-bottom: 10px;
+    }
   }
 
   header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu .dropdown-item {
     padding: 8px 15px 8px 30px;
     font-size: 12px;
   }
-}
 
-@media all and (max-width: 800px) { 
-  .site_logo.with_image a img {
-    max-width: 100%;
-    height: auto !important;
-    margin: 2px 0 0 60px;
-    width: 200px;
+  header {
+    .search-form {
+      position: absolute;
+      width: 100%;
+      padding: 8px;
+      top: 0;
+      left: 0;
+    }
   }
 }
 
@@ -1000,6 +1037,11 @@ p.comment-form-cookies-consent {
 
     .metatags {
       display: block !important;
+    }
+
+    .footer_style1 ul.menu {
+      display: block !important;
+      text-align: center;
     }
 }
 

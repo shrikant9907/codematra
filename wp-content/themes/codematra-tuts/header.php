@@ -31,7 +31,6 @@
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/utils.css" />
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css?ver=<?php echo $timestamp; ?>" />
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/wp-styles.css?ver=<?php echo $timestamp; ?>" />
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/responsive.css?ver=<?php echo $timestamp; ?>" /> 
 
   <?php wp_head(); ?>
 

@@ -1,5 +1,5 @@
 <div class="card cui2 sidebar-listing r_0 mb_20">
-  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">
+  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold">
     Featured Posts
   </h3>
   <div class="cbody p-0">

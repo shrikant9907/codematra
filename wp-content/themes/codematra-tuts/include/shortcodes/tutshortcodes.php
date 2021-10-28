@@ -13,7 +13,7 @@ function cm_social($atts = array(), $content = null) {
   ?>
   <div class="card cui2 r_0 mb_20">
     <div class="cbody p-0">
-      <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+      <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <ul class="socialicons siconsb px_15 pt_10 pb_5"> 
         <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
         <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
@@ -132,7 +132,7 @@ function posts_terms_shortcode($atts) {
         echo '</div>';
       } else { ?>
         <div class="card cui2 sidebar-listing r_0 mb_20">
-          <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+          <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
           <div class="cbody p-0">
             <ul class="listing type2">
               <?php 
@@ -176,7 +176,7 @@ function categories_list($atts) {
     ?>
     <div class="card cui2 sidebar-listing r_0 mb_20">
       <?php if ($show_heading) { ?>
-        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <?php } ?>
       <div class="cbody p-0">
         <ul class="listing type2">
@@ -228,7 +228,7 @@ function popular_posts_listing($atts) {
     ?>
     <div class="card cui2 sidebar-listing r_0 mb_20">
       <?php if ($show_heading) { ?>
-        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <?php } ?>
       <div class="cbody p-0">
         <ul class="listing type2">
@@ -281,7 +281,7 @@ function posts_listing($atts) {
     ?>
     <div class="card cui2 sidebar-listing r_0 mb_20">
       <?php if ($show_heading) { ?>
-        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <?php } ?>
       <div class="cbody p-0">
         <ul class="listing type2">

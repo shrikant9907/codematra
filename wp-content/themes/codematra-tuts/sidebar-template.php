@@ -16,7 +16,7 @@ $templateDownloads = get_post_meta($postid, 'template_download_count', true);
 
 <!-- About Template -->
 <div class="card cui2 noshadow cteam py_0 px_0 mb_20 f14 r_0 border">
-  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">Template Details</h3>
+  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold">Template Details</h3>
   <div class="cbody p-0">
     <ul class="listing type2">
       <li class="list-item d-flex justify-content-between">

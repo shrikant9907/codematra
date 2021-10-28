@@ -1,6 +1,6 @@
 <?php get_header(); ?> 
 <!-- Banner UI 1 -->
-<div class="banner-section bg-primary text-white mt_0 min_h_500  relative">
+<div class="banner-section bg-primary bg_gred_primary text-white mt_0 min_h_500  relative">
   <div class="container">
     <div class="row">
       <div class="col-12">
