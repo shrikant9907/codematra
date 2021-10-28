@@ -1,5 +1,6 @@
 $primaryColor: #117CA6;
 $primaryLightColor: #F2F8FB;
+$secondaryColor: #f34423;
 
 * {
   outline: unset !important;
@@ -109,19 +110,20 @@ header {
       
           .ncheading {
             font-size: 16px;
-            font-weight: normal;
-            color: $primaryColor;
+            color: $secondaryColor;
             padding-bottom: 10px;
+            letter-spacing: 0.5;
+            font-weight: normal;
             margin-bottom: 10px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
           }
 
           .ahpri {
-            color: inherit;
             font-size: 14px;
+            color: $primaryColor;
 
             &:hover {
-              color: $primaryColor;
+              color: inherit;
             }
           }
         }

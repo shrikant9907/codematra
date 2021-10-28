@@ -99,18 +99,19 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu {
 }
 header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu .ncheading {
   font-size: 16px;
-  font-weight: normal;
-  color: #117CA6;
+  color: #f34423;
   padding-bottom: 10px;
+  letter-spacing: 0.5;
+  font-weight: normal;
   margin-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu .ahpri {
-  color: inherit;
   font-size: 14px;
+  color: #117CA6;
 }
 header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu .ahpri:hover {
-  color: #117CA6;
+  color: inherit;
 }
 
 .footer_style1 ul li {
