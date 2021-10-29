@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 14px;
   line-height: 26px;
   padding-top: 70px !important;
@@ -412,8 +412,7 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu .ahpr
 }
 
 h1, h2, h3, h4, h5, h6, .heading, .title, .main_heading {
-  font-family: "Lato", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .site_logo.with_image a img {

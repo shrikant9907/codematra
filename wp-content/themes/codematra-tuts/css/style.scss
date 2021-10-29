@@ -11,10 +11,8 @@ $secondaryColor: #f34423;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    line-height: 26px;
-    padding-top: 70px !important; 
+  font-family: 'Noto Sans', sans-serif;
+  padding-top: 70px !important; 
 }
 
 .container {
@@ -433,8 +431,7 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6, .heading, .title, .main_heading {
-  font-family: 'Lato', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .site_logo.with_image a img {
