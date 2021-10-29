@@ -36,6 +36,10 @@ body.admin-bar .header {
   padding-top: 32px !important;
 }
 
+.hljs-ln td {
+  padding-right: 10px !important;
+}
+
 .fui input:not([type=submit]), .fui textarea, .fui select, .fui .form-control, .fui1 input:not([type=submit]), .fui1 textarea, .fui1 select, .fui1 .form-control,
 .card.cui4, .card.cui3, .card.cui3c, .card.cui2c, .card.cui2 {
   border: 1px solid #dee2e6 !important;
