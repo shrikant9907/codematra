@@ -15,7 +15,9 @@
   
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/animate/aos.js"></script>
   <script>
+    AOS.init();
     hljs.highlightAll();
     hljs.initLineNumbersOnLoad();
   </script>

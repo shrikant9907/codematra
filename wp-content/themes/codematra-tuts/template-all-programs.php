@@ -12,7 +12,7 @@ $post_type = $post->post_type;
 <section class="page-section bg-light pt_60">
     <h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php the_title(); ?></h1>
     <div class="container">
-        <div class="form-row">
+        <div class="row">
             <div class="col-12 col-sm-7">
                 <div class="right_side">
                     <?php 

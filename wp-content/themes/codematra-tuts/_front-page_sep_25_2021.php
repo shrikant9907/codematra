@@ -397,7 +397,7 @@ get_header();
  <section id="categories" class='common-section-ui bg-light pt_0 pb_80 hide'>
   <div class="container max_w_900 bg-white common-section-ui py_40 box_shw2 r_50">
     <div class="max_w_800 mx-auto w-100">
-    <div class="form-row">
+    <div class="row">
      <h2 class="heading_style type2 text-center">Code <span class="text-primary">Categories</span> </h2>
 
       <div class="col-3">
@@ -516,7 +516,7 @@ get_header();
     <p class="text-center mb_40">Its time to check your programming skill with multi choice questions (MCQs) and quizzes</p>
     
     <!-- Row Start -->
-    <div class="form-row">
+    <div class="row">
 
       <div class="col">
         <div class="card cui4b mb_10 text-dark r_0 border text-center">

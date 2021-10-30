@@ -3,7 +3,7 @@
 <section class="page-section bg-light">
 <h1 class="text-center bg-primary mb-5 text-white ptb_40 mont_serrat f20 lh22"><?php the_title(); ?></h1>
     <div class="container">
-        <div class="form-row">
+        <div class="row">
              <div class="col-12 col-md-6">
                
                 <?php

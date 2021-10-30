@@ -505,9 +505,7 @@ function codematra_enqueue_scripts() {
     // wp_enqueue_media();
     // wp_enqueue_script('jquery-ui-datepicker');
 
-    wp_enqueue_script( 'popper', get_stylesheet_directory_uri().'/js/popper.min.js');
-    wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri().'/js/bootstrap.min.js');
-    wp_enqueue_script( 'slick', get_stylesheet_directory_uri().'/js/slick.min.js');
+    wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri().'/assets/bootstrap/js/bootstrap.bundle.min.js');
     wp_enqueue_script( 'code-matra-scripts', get_stylesheet_directory_uri().'/js/custom.js', array( 'jquery'), 'oct42021', true );
 
     wp_localize_script( 'code-matra-scripts', 'LOCOBJ', array( 

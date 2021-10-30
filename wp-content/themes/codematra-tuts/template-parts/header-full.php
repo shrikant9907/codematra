@@ -1,29 +1,37 @@
 <!-- Header Start -->
-<header id="main_header" class="header sticky">
+<header id="main_header" class="header site-header sticky">
     <div class="container">
       <div class="row no-gutters">
-        <div class="col-12 col-md-3 col-xl-2"> 
+        <div class="col-12 col-md-3 col-xl-2">  
           <div class="site_logo with_image">
             <a title="Code Matra" class="logo_link" href="<?php echo site_url('/'); ?>">
-              <img class="logo_image img-fluid"  src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-logo.png" alt="" />
+              <img class="max_h_45 logo_image img-fluid"  src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-logo.png" alt="" />
             </a>
           </div>
         </div>
         <div class="col-12 col-md-9 col-xl-10">
           <nav class="navbar navbar-expand-lg">
-            <span class="navbar-toggler hamburger_icon toggleMenu collapsed" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
+            <span class="d-lg-none hamburger toggleMenu collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
             </span>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <form class="cbody fui mr_10 search-form fui1 w-100" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
+                <div class="search-box w-100">
+                  <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w-100" required="required" placeholder="What do you want to learn?">
+                  <button type="submit" class="btn">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div> 
+              </form>
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a title="Home" class="nav-link text-dark" href="<?php echo site_url('/'); ?>"><i class="fas fa-home"></i> Home</a>
+                  <a class="nav-link" href="<?php echo site_url('/'); ?>"><i class="f16 mr_5 bi bi-house-door"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Learn</a>
-                  <div class="dropdown-menu ddfmu"> 
+                  <div class="dropdown-menu ddmfull"> 
                     <div class="container">
                     <div class="row">
                       <div class="col-12 col-lg-3">
@@ -169,12 +177,7 @@
                   </div>
                 </li>
               </ul>
-              <form class="cbody fui search-form fui1 max_w_100p" action="<?php echo site_url(); ?>" method="get" enctype="multipart/form-data" autocomplete="off">
-                <div class="search-box">
-                  <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control w_300" required="required" placeholder="Search...">
-                  <button type="submit" class="btn btn-sm btn-primary btnui1"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </div> 
-              </form>
+              
             </div>
           </nav>
         </div>

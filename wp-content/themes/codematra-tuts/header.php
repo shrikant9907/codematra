@@ -19,17 +19,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- required CSS -->
-  <?php $timestamp = date('timestamp'); ?>
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css" />
+  <!-- Assets CSS -->
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/animate/animate.min.css" />
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/github-hljs.css">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/all.min.css" />
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/slick.css" />
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/slick-theme.css" />
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/components.css" />
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/utils.css" />
+
+  <!-- Theme CSS -->
+  <?php $timestamp = date('timestamp'); ?>
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css?ver=<?php echo $timestamp; ?>" />
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/wp-styles.css?ver=<?php echo $timestamp; ?>" />
 
   <?php wp_head(); ?>
 

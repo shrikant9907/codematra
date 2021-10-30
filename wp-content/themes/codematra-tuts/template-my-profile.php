@@ -174,7 +174,7 @@ if(is_array($show_about) && in_array('Yes',$show_about)) {
                     <p class="m_b_20"><?php echo $about_description; ?></p>
                 
                     <h3 class="m_b_10 f_20_26">Skills</h3>
-                    <div class="form-row">
+                    <div class="row">
                         <?php if($about_skills) { 
                             foreach($about_skills as $skill) { ?>
                             <div class="col-12 col-md-6">
@@ -345,7 +345,7 @@ if(is_array($show_portfolio) && in_array('Yes',$show_portfolio)) {
         
 
         <div class="w_1000 mx-auto">
-            <div class="form-row">
+            <div class="row">
                 <?php if($portfolio_items) {
                     foreach($portfolio_items as $portfolio_item) {
                         ?>

@@ -1,4 +1,4 @@
-<footer class="section-footer footer_style1 f14 border-top bg-primary text-white">
+<footer class="section-footer footer_style1 f14 border-top bg_secondary text-white">
   <div class="footer_top pt_60 pb_20">
     <div class="container">
       <div class="row">

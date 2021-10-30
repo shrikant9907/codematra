@@ -1,11 +1,3 @@
-* {
-  outline: unset !important;
-}
-
-.form-control:focus {
-  box-shadow: unset !important;
-}
-
 body {
   font-family: "Noto Sans", sans-serif;
   font-size: 14px;
@@ -14,22 +6,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-}
-
-pre {
-  line-height: 1.6;
-  border: 1px solid #efefef;
-  background-color: #fbfbfb;
-}
-
-code {
-  color: #f34423;
-}
-
-pre.mycode {
-  padding: 10px;
-  color: #f34423;
+  max-width: 1100px;
 }
 
 body.admin-bar .header {
@@ -40,8 +17,7 @@ body.admin-bar .header {
   padding-right: 10px !important;
 }
 
-.fui input:not([type=submit]), .fui textarea, .fui select, .fui .form-control, .fui1 input:not([type=submit]), .fui1 textarea, .fui1 select, .fui1 .form-control,
-.card.cui4, .card.cui3, .card.cui3c, .card.cui2c, .card.cui2 {
+.fui input:not([type=submit]), .fui textarea, .fui select, .fui .form-control, .fui1 input:not([type=submit]), .fui1 textarea, .fui1 select, .fui1 .form-control {
   border: 1px solid #dee2e6 !important;
 }
 
@@ -180,16 +156,6 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu .ahpr
 .wp-block-tag-cloud a,
 .wp-block-latest-posts li a {
   color: inherit;
-}
-
-.wp-block-tag-cloud a {
-  background-color: rgba(17, 124, 166, 0.05);
-  padding: 2px 10px;
-  display: inline-block;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  text-decoration: none;
-  color: #117CA6;
 }
 
 /* Subscription Modal */
@@ -421,71 +387,19 @@ h1, h2, h3, h4, h5, h6, .heading, .title, .main_heading {
   margin: 9px 0;
 }
 
-/*Hamburger Icon CSS Start*/
-.hamburger_icon {
-  position: fixed;
-  top: 15px;
-  left: unset;
-  right: 15px;
-  z-index: 9999;
-  min-width: 24px;
-  width: 24px;
-  cursor: pointer;
-  text-align: center;
-  line-height: 1px;
-  padding: 0;
-  border: unset;
-}
-.hamburger_icon span.hamburger-line {
-  background: #ffffff;
-  height: 2px;
-  display: inline-block;
-  width: 100%;
-  margin: 3px 0;
-}
-.hamburger_icon span.hamburger-line:nth-child(2) {
-  width: 70%;
-}
-.hamburger_icon.collapsed span.hamburger-line {
-  background: #117CA6;
-}
-
 .ourtutorials .card-title,
 .text-black,
 .heading_style {
   color: #290001;
 }
 
-.text_secondary,
-.text-secondary {
-  color: #f34423 !important;
-}
-
-.btn-secondary:hover,
-.btn-secondary,
-.bg_secondary,
-.bg-secondary {
-  background-color: #f34423;
-}
-
-.badge-secondary,
-.bg_secondary,
-.bg-secondary {
+.badge-secondary {
   background-color: #f34423 !important;
-}
-
-.border-secondary,
-.btn-secondary:hover,
-.btn-secondary {
-  border-color: #f34423 !important;
 }
 
 .link,
 .gotoparrow,
-.text-primary,
-.btn-outline-primary,
-.ourtutorials .card .ciconrc,
-.text_primary {
+.ourtutorials .card .ciconrc {
   color: #117CA6 !important;
 }
 
@@ -493,23 +407,13 @@ a.text-primary:focus, a.text-primary:hover {
   color: #117CA6 !important;
 }
 
-.socialicons.bg_dark, .socialicons.bg-dark,
-.btn-primary,
-.badge-primary,
-.bg_primary,
-.bg-primary {
+.badge-primary {
   background-color: #117CA6 !important;
 }
 
-.border-primary,
-.btn-primary,
 .ourtutorials .card .ciconrc,
 .heading_style.type2:before {
   border-color: #117CA6 !important;
-}
-
-.btn-primary:hover {
-  background: #117CA6 !important;
 }
 
 .ourtutorials .card .ciconrc {
@@ -604,16 +508,6 @@ header .navbar.navbar-expand-lg .navbar-nav .deals-dropdown {
 
 .banner-heading .text_green {
   color: #14ff49 !important;
-}
-
-.banner-icons .card {
-  background-color: #ffffff09;
-  padding: 10px;
-  border-radius: 10px;
-  display: inline-flex;
-  margin: 0 10px 10px 0;
-  color: #a1e3fd;
-  border: unset;
 }
 
 .banner-icons .card img,
@@ -913,6 +807,26 @@ p.comment-form-cookies-consent {
   padding: 0 15px;
 }
 
+.sidebar-ui .card.widget_block ,
+.sidebar-ui .widget_block {
+    padding: 15px 20px !important;
+}
+
+.sidebar-ui .wp-block-group__inner-container > h2 {
+    color: #117CA6 !important;
+}
+
+.sidebar-listing .listing li {
+    border-top: 1px dashed #dee2e6!important;
+    line-height: 22px;
+} 
+
+#sfsi_floater {
+  margin-left: 0px;
+  position: fixed !important;
+  top: calc(50% - 80px) !important;
+}
+
 /*Responsive*/
 @media all and (max-width: 991px) {
   body {
@@ -1095,5 +1009,3 @@ p.banner-description {
     z-index: 99;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

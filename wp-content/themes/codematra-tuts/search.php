@@ -24,7 +24,7 @@
   </div>
   
   <div class="container">
-    <div class="form-row">
+    <div class="row">
       <?php  
       if(have_posts()): 
         $count = 0;

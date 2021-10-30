@@ -53,7 +53,7 @@ if(!isset($_GET['xml'])):
               </div>
               <?php echo $errorMessage; ?>
               <form class="fui fui1" action="<?php echo site_url('/excel-to-xml-Converter/?xml=1'); ?>" method="post" enctype="multipart/form-data">
-                <div class="form-row">
+                <div class="row">
                   <div class="col-12">
                     <div class="form-group">
                       <label class="text_bold mb_5" for="">Upload Excel File (.xls)</label>
@@ -78,7 +78,7 @@ if(!isset($_GET['xml'])):
 <section id="tools" class="common-section-ui pb_40 pt_60 bg-light">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Want to try </span> some more tools...</h2>
-  <div class="onlinetools form-row">
+  <div class="onlinetools row">
     <?php
       $tools = getToolsList();
       if ($tools) {

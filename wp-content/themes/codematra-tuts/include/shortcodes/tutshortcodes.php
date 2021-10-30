@@ -328,7 +328,7 @@ function showRelatedPosts($atts) {
   if ( $categories ) { ?>
     <div class="cm-related-posts mb_20">
       <h3 class="heading_style type2 text-uppercase text-primary"><?php echo $heading; ?></h3>
-      <div class="form-row">
+      <div class="row">
         <?php
         $first_category = esc_attr( $categories[0]->term_id );
         $first_name = esc_attr( $categories[0]->name );
@@ -361,7 +361,7 @@ function showRelatedPosts($atts) {
                   <?php } ?>
                 </a>
                 <h4 class="cm_related_post-title  mb_10">
-                  <a class="text-primary f18 lh22" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+                  <a class="text-secondary f18 lh22" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
                     <?php the_title(); ?>
                   </a>
                 </h4>

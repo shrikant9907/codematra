@@ -74,7 +74,7 @@ get_header(); ?>
               </div>
               <?php echo $endeInvalid; ?>
               <form class="fui fui1" action="" method="post" enctype="multipart/form-data">
-                <div class="form-row">
+                <div class="row">
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
                       <label class="text_bold mb_5" for="">List Input Box (One Item per line)</label>
@@ -151,7 +151,7 @@ get_header(); ?>
 <section id="tools" class="common-section-ui pb_40 pt_60 bg-light">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Want to try </span> some more tools...</h2>
-  <div class="onlinetools form-row">
+  <div class="onlinetools row">
     <?php
       $tools = getToolsList();
       if ($tools) {

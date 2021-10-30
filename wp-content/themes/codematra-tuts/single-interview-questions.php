@@ -1,7 +1,7 @@
 <?php get_header(); ?> 
 <div class="single-page bg-light common-section-ui pt_70">
   <div class="container">
-    <div class="form-row row">
+    <div class="row row">
       <div class="col-12 col-sm-6 col-md-3">
         <?php get_sidebar('interview-left'); ?>
       </div>

@@ -1,7 +1,7 @@
 <!-- Popular Posts with Sidebar Start -->
-<div class="popular-posts-section ">
+<div data-aos="fade-up" class="popular-posts-section ">
   <h2 class="heading_style type2 f30 text-uppercase mb_20 text-primary"><span class="text-secondary">Popular </span>Posts</h2>
-  <div class="form-row">
+  <div class="row">
     <?php 
         $args = array(
           'post_type'         =>  'post', 

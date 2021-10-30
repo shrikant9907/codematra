@@ -195,7 +195,7 @@ Try more programs with more examples to improve your programming skills and logi
 
                     <!-- Lower Section -->
                     <div class="mx-auto max_w_100p w_800 text-center">
-                        <div class="form-row">
+                        <div class="row">
                         <?php if($banner_social_links) { ?>
                           <?php foreach($banner_social_links as $links) { ?>
                             <div class="col">

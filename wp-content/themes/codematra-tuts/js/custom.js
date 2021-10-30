@@ -1,4 +1,4 @@
-jQuery('document').ready(function(){
+jQuery('document').ready(function($){
 
   // Download Template Track
   jQuery('.trackdownloads').click(function(e){
@@ -55,50 +55,50 @@ jQuery('document').ready(function(){
   } else {
     jQuery('.cookienotice').hide();
   }
-  
-  // Used On Home page
-	jQuery('.four_col_carosusel').slick({
-		infinite: true,
-		autoplay: true,
-		autoSlide: true,
-		speed: 300,
-		slidesToShow: 5,
-		slidesToScroll: 1,
-		responsive: [ 
-		{
-		  breakpoint: 1024,
-		  settings: {
-		    slidesToShow: 4,
-		    slidesToScroll: 4,
-		    infinite: true,
-		  }
-		},
-		{
-		  breakpoint: 600,
-		  settings: {
-		    slidesToShow: 2,
-		    slidesToScroll: 2
-		  }
-		},
-		{
-		  breakpoint: 480,
-		  settings: {
-		    slidesToShow: 1,
-		    slidesToScroll: 1
-		  }
-		}
-		]
-	});
-
+ 
 });
    
-jQuery(window).scroll(function() {    
-  if (jQuery(window).width() > 767) {
-    var scroll = jQuery(window).scrollTop();
-    if (scroll >= 400) {
-      jQuery("body").addClass("scrolled");
+jQuery(function(){
+  // Hamburger 
+	jQuery('.hamburger').on('click', function(e){
+    // e.preventDefault(); 
+    jQuery(this).toggleClass('active');
+    jQuery('.sidebar').fadeToggle();   
+    jQuery('.sidebar').toggleClass('active');   
+    jQuery('body').toggleClass('noscroll');   
+    jQuery('body').toggleClass('sidebaractive');   
+    console.log('clicked');
+  });
+
+  // Active Sidebar
+	jQuery('.navbar-collapse').on('click', function(e){
+		e.preventDefault();	
+		if (e.target !== this)
+      return;
+    console.log(e.target);
+    jQuery('.hamburger').trigger('click');
+  });
+
+});
+
+// Hide / Show Header for Scroll 
+var lastScrollTop = 0;
+if (jQuery(window).width() > 991) {
+  jQuery( window ).scroll(function() {
+    var currentScrollTop = jQuery(this).scrollTop();
+    if(lastScrollTop < currentScrollTop) {
+      jQuery('.site-header').slideUp('fast');
     } else {
-      jQuery("body").removeClass("scrolled");
+      jQuery('.site-header').slideDown('fast');
     }
-	}  
-});  
+    lastScrollTop = currentScrollTop;
+  });
+}
+ 
+// Tool Tip Bootstrap
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+

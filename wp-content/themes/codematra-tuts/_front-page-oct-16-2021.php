@@ -144,7 +144,7 @@ get_header();
 	
 	<div class="row">
 		<div class="col-12">
-			<div class="form-row">
+			<div class="row">
       <?php 
           $args = array(
             'post_type'         =>  'post', 
@@ -225,7 +225,7 @@ get_header();
 	
 	<div class="row">
 		<div class="col-12">
-			<div class="form-row">
+			<div class="row">
       <?php 
           $args = array(
                   'post_type'         =>  'post', 
@@ -443,7 +443,7 @@ get_header();
 <section id="tools" class="common-section-ui pb_40 pt_60">
   <div class="container">
   <h2 class="heading_style type2 text-uppercase mb_20 text-primary"><span class="text-secondary">Online</span> Tools</h2>
-  <div class="onlinetools form-row">
+  <div class="onlinetools row">
     <?php
       $tools = getToolsList();
       if ($tools) {

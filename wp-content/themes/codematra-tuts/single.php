@@ -18,7 +18,7 @@ $categories = get_the_category();
       <div class="col-12 col-sm-6 col-md-8">
         <div class="card cui2 r_0 w-100 typography">
           <div class="card-body pri_30 pli_30 pbi_30">
-            <h2 class='text-primary'><?php the_title(); ?></h3>
+            <h2 class='text-dark'><?php the_title(); ?></h3>
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  
               $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
               if (!$visitsCount) {
@@ -29,10 +29,10 @@ $categories = get_the_category();
                 <img class="card-img-top r_0 mb_20 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
               <?php } ?>
             <div class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
-              <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
-              <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-              <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> Shrikant</span>
-              <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
+              <span><i class="fa fa-eye mr_5 text-dark" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+              <span><i class="fa fa-clock mr_5 text-dark" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+              <span><i class="fa fa-user mr_5 text-dark" aria-hidden="true"></i> Shrikant</span>
+              <span><i class="fa fa-tag mr_5 text-dark" aria-hidden="true"></i> 
               <?php
               $categories = get_the_category();
               $separator = ', ';
@@ -57,7 +57,7 @@ $categories = get_the_category();
             $prev_post = get_previous_post();
             if (!empty( $prev_post )): ?>
                 <div class='article-prev'>
-                <a class="btn btn-primary btnui3s rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"> <i class="fas fa-angle-left mr_5"></i>Previous <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+                <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"> <i class="fas fa-angle-left mr_5"></i>Previous <?php //echo esc_attr( $prev_post->post_title ); ?></a>
             </div>
             <?php endif ?>
 
@@ -65,7 +65,7 @@ $categories = get_the_category();
             $next_post = get_next_post();
             if (!empty( $next_post )): ?>
             <div class='article-nextpost'>
-                <a class="btn btn-primary btnui3s rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next <i class="fas fa-angle-right ml_5"></i> <?php //echo esc_attr( $next_post->post_title ); ?></a>
+                <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next <i class="fas fa-angle-right ml_5"></i> <?php //echo esc_attr( $next_post->post_title ); ?></a>
             </div>
             <?php endif; ?>
         </div>      

@@ -93,7 +93,7 @@ get_header();
               <!-- Resume Section Start -->
               <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
                 <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 1: Resume Header</h3>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>Full Name</label>
@@ -113,7 +113,7 @@ get_header();
                     </div>
                   </div>
                 </div>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>Address</label>
@@ -121,7 +121,7 @@ get_header();
                     </div>
                   </div>
                 </div>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>Linkedin Profile</label>
@@ -144,7 +144,7 @@ get_header();
               <!-- Experience Section Start -->
               <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
                 <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 2: Work Experience</h3>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>Company Name</label>
@@ -158,7 +158,7 @@ get_header();
                     </div>
                   </div>
                 </div>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>Start From</label>
@@ -172,7 +172,7 @@ get_header();
                     </div>
                   </div>
                 </div>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>Work Description</label>
@@ -189,7 +189,7 @@ get_header();
               <!-- Qualification Section Start -->
               <form class="fui fui4 mb_30" action="" method="post" enctype="multipart/form-data">
                 <h3 class="f16 mb_10 text-primary text-uppercase font_normal">Section 3: Qualification</h3>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>University / College Name</label>
@@ -203,7 +203,7 @@ get_header();
                     </div>
                   </div>
                 </div>
-                <div class="form-row">
+                <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label>From</label>

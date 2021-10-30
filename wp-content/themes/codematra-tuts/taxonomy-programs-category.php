@@ -22,7 +22,7 @@ if ($term_name) {
 </section>
 <div class="single-page common-section-ui">
   <div class="container">
-    <div class="form-row">
+    <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
         <?php get_sidebar('program-left'); ?>
       </div>

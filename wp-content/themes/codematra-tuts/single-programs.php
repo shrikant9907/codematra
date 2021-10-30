@@ -25,7 +25,7 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
 </section>
 <div class="programs-page common-section-ui">
   <div class="container">
-    <div class="form-row">
+    <div class="row">
       <div class="col-12 col-sm-6 col-md-3">
         <?php get_sidebar('programs'); ?>
       </div>

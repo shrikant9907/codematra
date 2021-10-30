@@ -1,4 +1,4 @@
-<div class="card cui2 sidebar-listing r_0 mb_20">
+<div data-aos="fade-up" class="card cui2 sidebar-listing r_0 mb_20">
   <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold">
     Popular Posts
   </h3>
@@ -32,7 +32,7 @@
             $views = 0;
           }
           ?>
-            <li class="relative d-flex align-items-center">
+            <li  data-aos="fade-up" class="relative d-flex align-items-center">
               <div class="cminleft mr_10 my_5">
                 <a href="<?php the_permalink($post->ID); ?>" class="d-inline-block tdn bg-light cimgwr w_50 h_50" >
                   <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
@@ -43,7 +43,7 @@
               </div>
               <div class="cminright">
                 <h3 class="f14 mb_5 font_normal lh20">
-                  <a href="<?php the_permalink($post->ID); ?>" class="d-inline-block tdn text-primary" >
+                  <a href="<?php the_permalink($post->ID); ?>" class="d-inline-block tdn text-dark" >
                     <?php the_title(); ?>
                   </a>
                 </h3>
