@@ -25,9 +25,9 @@
                 </div>
                 <div class="card-body">
                   <div class="card-text"> 
-                    <h3 class="f24 mb_10 text-primary">Delete Zero - Cheap Hosting Plans</h3> 
+                    <h3 class="f24 mb_10 text-dark">Delete Zero - Cheap Hosting Plans</h3> 
                     <p>Delete Zero is providing the cheap hosting plans. Starting from 450 INR / Year. It is a great deal for beginner or startups to start their website in low cast. Check out the best hosting plans now. </p>
-                    <p class="mbi_0"><a class="btn btn-secondary btnui3" href="https://deletezero.com/my-account/aff.php?aff=85">Grab The Deal Now! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a></p>
+                    <p class="mbi_0"><a class="btn btn-primary btnui2" href="https://deletezero.com/my-account/aff.php?aff=85">Grab The Deal Now! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a></p>
                   </div>
                 </div>
               </div>

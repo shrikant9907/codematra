@@ -361,7 +361,7 @@ function showRelatedPosts($atts) {
                   <?php } ?>
                 </a>
                 <h4 class="cm_related_post-title  mb_10">
-                  <a class="text-secondary f16 lh18 font_normal tdn" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+                  <a class="text-dark f16 lh18 font_normal tdn" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
                     <?php the_title(); ?>
                   </a>
                 </h4>

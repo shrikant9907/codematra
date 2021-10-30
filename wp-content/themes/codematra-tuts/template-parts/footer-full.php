@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
           <div class="col-6 col-md-3">
-            <h3 class="text-secondary f16 lh18 font_normal tdn mb_20 text-uppercase">Learn to Code</h3>
+            <h3 class="text-dark f16 lh18 font_normal tdn mb_20 text-uppercase">Learn to Code</h3>
             <ul class="menu">
               <li><a href="<?php echo site_url('/category/react-js/'); ?>">How to React Js</a></li>
               <li><a href="<?php echo site_url('/category/wordpress/'); ?>">How to WordPress</a></li>
@@ -14,14 +14,14 @@
               <li><a href="<?php echo site_url('/category/bootstrap/'); ?>">How to Bootstrap 5</a></li>
               <li><a href="<?php echo site_url('/tag/web-design/'); ?>">Web Design</a></li>
             </ul>
-            <h3 class="text-secondary f16 lh18 font_normal tdn mb_20 text-uppercase">Programs</h3>
+            <h3 class="text-dark f16 lh18 font_normal tdn mb_20 text-uppercase">Programs</h3>
             <ul class="menu">
               <li><a href="<?php echo site_url('/programs-category/php/'); ?>">PHP Programs</a></li>
               <li><a href="<?php echo site_url('/programs-category/python/'); ?>">Python Programs</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-3">
-            <h3 class="text-secondary f16 lh18 font_normal tdn mb_20 text-uppercase">Interview Q/A</h3>
+            <h3 class="text-dark f16 lh18 font_normal tdn mb_20 text-uppercase">Interview Q/A</h3>
             <ul class="menu">
               <li><a href="<?php echo site_url('/interview-questions-category/react-js/'); ?>">React JS Questions</a></li>
               <li><a href="<?php echo site_url('/interview-questions-category/wordpress/'); ?>">WordPress Questions</a></li>
@@ -30,18 +30,18 @@
               <!-- <li><a href="#">Request a quote</a></li> -->
               <!-- <li><a href="#">Hire a developer</a></li> -->
             </ul>
-            <h3 class="text-secondary f16 lh18 font_normal tdn mb_20 text-uppercase">MCQs</h3>
+            <h3 class="text-dark f16 lh18 font_normal tdn mb_20 text-uppercase">MCQs</h3>
                     <ul class="menu">
                         <li><a href="<?php echo site_url('/mcqs-category/react-js-multiple-choice-questions/'); ?>">React JS MCQs</a></li>
                     </ul>
-                    <h3 class="text-secondary f16 lh18 font_normal tdn mb_20 text-uppercase">Templates</h3>
+                    <h3 class="text-dark f16 lh18 font_normal tdn mb_20 text-uppercase">Templates</h3>
                     <ul class="menu">
                         <li><a href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template</a></li>
                     </ul>
                     
           </div>
                 <div class="col-6 col-md-3">
-                    <h3 class="text-secondary f16 lh18 font_normal tdn mb_20 text-uppercase">Tools</h3>
+                    <h3 class="text-dark f16 lh18 font_normal tdn mb_20 text-uppercase">Tools</h3>
                     <ul class="menu">
                         <li><a href="<?php echo site_url('/base64-encode-and-decode'); ?>">Base64 Encoder</a></li>
                         <li><a href="<?php echo site_url('/base64-encode-and-decode/?base64-encode-and-decode/?tool=decode'); ?>">Base64 Decoder</a></li>
@@ -56,7 +56,7 @@
                     </ul>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h3 class="text-secondary f16 lh18 font_normal tdn mb_20 text-uppercase">Information</h3>
+                    <h3 class="text-dark f16 lh18 font_normal tdn mb_20 text-uppercase">Information</h3>
                     <ul class="menu">
                         <li><a href="<?php echo site_url('/about-code-matra'); ?>">About Us</a></li>
                         <li><a href="<?php echo site_url('/contact-us'); ?>">Contact Us</a></li>

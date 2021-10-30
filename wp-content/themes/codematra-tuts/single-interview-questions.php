@@ -16,8 +16,8 @@
               <?php the_content(); ?>
             </div>
             <div class="text-dark bg-light px_10 f12 d-flex justify-content-between">
-              <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i><?php the_author_meta('user_nicename',$post->post_author); ?></span>
-              <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
+              <span><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i><?php the_author_meta('user_nicename',$post->post_author); ?></span>
+              <span><i class="fa fa-tag mr_5 text-secondary" aria-hidden="true"></i> 
               <?php
               $categories = get_the_terms(get_the_ID(), 'interview-questions-category');
               $separator = ' ';
@@ -30,7 +30,7 @@
               }
 
               ?></span> 
-              <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+              <span><i class="fa fa-clock mr_5 text-secondary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
             </div>
             <?php comment_form(); ?>
           </div>

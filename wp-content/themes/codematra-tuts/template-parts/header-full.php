@@ -2,14 +2,14 @@
 <header id="main_header" class="header site-header sticky">
     <div class="container">
       <div class="row no-gutters">
-        <div class="col-12 col-md-3 col-xl-2">  
+        <div class="col-12 col-md-3 col-xl-3">  
           <div class="site_logo with_image">
             <a title="Code Matra" class="logo_link" href="<?php echo site_url('/'); ?>">
               <img class="max_h_45 logo_image img-fluid"  src="<?php echo get_stylesheet_directory_uri(); ?>/images/site-logo.png" alt="" />
             </a>
           </div>
         </div>
-        <div class="col-12 col-md-9 col-xl-10">
+        <div class="col-12 col-md-9 col-xl-9">
           <nav class="navbar navbar-expand-lg">
             <span class="d-lg-none hamburger toggleMenu collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="bar bar1"></span>

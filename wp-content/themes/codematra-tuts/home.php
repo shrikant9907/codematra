@@ -2,7 +2,7 @@
 
 
 <!-- Banner UI 1 -->
-<div class="banner-section m-0 card cui3 nobefore noshadow bg_light_secondary relative px_30 py_40 d-flex min_h_600 justify-content-center">
+<div class="banner-section m-0 bg_light_secondary relative px_30 py_40 d-flex min_h_600 justify-content-center">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-9">
@@ -77,10 +77,10 @@
                       }
                       ?>
                     <div data-aos="fade-up" class="metatags text-dark px_5 py_5 mb_20 f14 d-flex justify-content-between">
-                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted By"><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
-                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted At"><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Number of Views"><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
-                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Categories and Tags"><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
+                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted By"><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i> <?php the_author(); ?></span>
+                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted At"><i class="fa fa-clock mr_5 text-secondary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Number of Views"><i class="fa fa-eye mr_5 text-secondary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Categories and Tags"><i class="fa fa-tag mr_5 text-secondary" aria-hidden="true"></i> 
                       <?php
                       $categories = get_the_category();
                       $separator = ', ';

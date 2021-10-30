@@ -32,10 +32,10 @@
                       }
                       ?>
                     <div class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
-                      <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
-                      <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-                      <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
-                      <span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i> 
+                      <span><i class="fa fa-eye mr_5 text-secondary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+                      <span><i class="fa fa-clock mr_5 text-secondary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                      <span><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i> <?php the_author(); ?></span>
+                      <span><i class="fa fa-tag mr_5 text-secondary" aria-hidden="true"></i> 
                       <?php
                       $categories = get_the_category();
                       $separator = ', ';

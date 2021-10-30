@@ -57,7 +57,7 @@ $categories = get_the_category();
             $prev_post = get_previous_post();
             if (!empty( $prev_post )): ?>
                 <div class='article-prev'>
-                <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"> <i class="fas fa-angle-left mr_5"></i>Previous <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+                <a class="btn btn-outline-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"> <i class="fas fa-angle-left mr_5"></i>Previous <?php //echo esc_attr( $prev_post->post_title ); ?></a>
             </div>
             <?php endif ?>
 
@@ -65,7 +65,7 @@ $categories = get_the_category();
             $next_post = get_next_post();
             if (!empty( $next_post )): ?>
             <div class='article-nextpost'>
-                <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next <i class="fas fa-angle-right ml_5"></i> <?php //echo esc_attr( $next_post->post_title ); ?></a>
+                <a class="btn btn-outline-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next <i class="fas fa-angle-right ml_5"></i> <?php //echo esc_attr( $next_post->post_title ); ?></a>
             </div>
             <?php endif; ?>
         </div>      

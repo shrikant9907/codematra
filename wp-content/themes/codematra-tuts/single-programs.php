@@ -48,15 +48,15 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
                   }
                   ?>
                 <div class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
-                  <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
-                  <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-                  <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author_meta('user_nicename',$post->post_author); ?></span>
+                  <span><i class="fa fa-eye mr_5 text-secondary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+                  <span><i class="fa fa-clock mr_5 text-secondary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+                  <span><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i> <?php the_author_meta('user_nicename',$post->post_author); ?></span>
                   <?php
                   $categories = get_the_terms(get_the_ID(), 'programs-category');
                   $separator = ' ';
                   $output = '';
                   if ( ! empty( $categories ) ) {
-                      echo '<span><i class="fa fa-tag mr_5 text-primary" aria-hidden="true"></i>';
+                      echo '<span><i class="fa fa-tag mr_5 text-secondary" aria-hidden="true"></i>';
                       foreach( $categories as $category ) {
                           $output .= '<a class="text-dark" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'mycourse' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
                       }
@@ -80,14 +80,14 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
           $prev_post = get_previous_post();
           if (!empty( $prev_post )): ?>
             <div class='article-prev'>
-            <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+            <a class="btn btn-outline-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
           </div>
           <?php endif ?>
           <?php
           $next_post = get_next_post();
           if (!empty( $next_post )): ?>
           <div class='article-nextpost'>
-            <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
+            <a class="btn btn-outline-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
           </div>
           <?php endif; ?>
         </div>

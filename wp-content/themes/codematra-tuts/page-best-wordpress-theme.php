@@ -25,9 +25,9 @@
                 </div>
                 <div class="card-body">
                   <div class="card-text"> 
-                    <h3 class="f24 mb_10 text-primary">Divi WordPress Theme by Elegant Themes</h3> 
+                    <h3 class="f24 mb_10 text-dark">Divi WordPress Theme by Elegant Themes</h3> 
                     <p>Divi Theme is one of the most popular WordPress theme in the world. It provide an ultimate page builder to make amazing websites.</p>
-                    <p class="mbi_0"><a class="btn btn-secondary btnui3" href="https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=44948_5_1_18">Get Now! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a></p>
+                    <p class="mbi_0"><a class="btn btn-primary btnui2" href="https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=44948_5_1_18">Get Now! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a></p>
                   </div>
                 </div>
               </div>

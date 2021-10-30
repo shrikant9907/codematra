@@ -37,7 +37,7 @@ if (!$downloadCount) {
           <?php } ?>
         </div>
         <p class="text-muted d-flex justify-content-between">
-          <span><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+          <span><i class="fa fa-eye mr_5 text-secondary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
           <span><i class="fa fa-download mr_5 text-primary" title="Downloads" aria-hidden="true"></i> <span class="downloadcounts"><?php echo $downloadCount; ?></span></span>
         </p>
         <?php the_content(); ?>

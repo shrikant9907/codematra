@@ -39,8 +39,8 @@
           <div class="card-body p-0">
              <div class="text_bold f18 mb_10"><a class="tdn text-primary" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
              <div class="text-dark px_5 py_5 mb_10 f12 d-flex justify-content-between">
-               <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
-               <span><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
+               <span><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i> <?php the_author(); ?></span>
+               <span><i class="fa fa-clock mr_5 text-secondary" aria-hidden="true"></i> <?php //echo get_the_date(); ?> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
               </div>
              <p class=""><?php echo wp_trim_words(get_the_content(), 18) ?></p>
              <div class="text-left"><a href="<?php the_permalink(); ?>" class="text-primary tdn"><?php _e('View More Details'); ?> <i class="ml_5 fas fa-angle-double-right    "></i></a></div>  
