@@ -72,11 +72,10 @@ jQuery(function(){
 
   // Active Sidebar
 	jQuery('.navbar-collapse').on('click', function(e){
-		e.preventDefault();	
-		if (e.target !== this)
-      return;
-    console.log(e.target);
-    jQuery('.hamburger').trigger('click');
+		if (e.target === this) {
+      e.preventDefault();	
+		  jQuery('.hamburger').trigger('click');
+    }
   });
 
 });

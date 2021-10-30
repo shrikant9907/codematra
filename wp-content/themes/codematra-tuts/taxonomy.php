@@ -41,8 +41,8 @@ if ($term_name) {
                 the_post();
         ?>
         <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
-        <div class="card cui2 w-100 typography">
-          <div class="card-body pri_30 pli_30 pbi_30">
+        <div class="card cui3 w-100 typography">
+          <div class="card-body p-0">
             <h2><a href="<?php the_permalink(); ?>" class="text-primary"><?php the_title(); ?></a></h2>
             <?php if(has_post_thumbnail()) { ?>
             <a href="<?php the_permalink(); ?>" class="d-inline-block hidei"><img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
@@ -53,7 +53,7 @@ if ($term_name) {
               <?php echo wp_trim_words(get_the_excerpt(), 50); ?>
             </div>
             <div class="f16">
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary btnui3s text-uppercase"><?php _e('Continue Reading '); ?> <i class="ml_5 f18 lh1 fas fa-angle-right"></i></a>
+                <a href="<?php the_permalink(); ?>" class="btn btn-primary btnui2 text-uppercase"><?php _e('Continue Reading '); ?> <i class="ml_5 f18 lh1 fas fa-angle-right"></i></a>
             </div>
           </div>
         </div>     

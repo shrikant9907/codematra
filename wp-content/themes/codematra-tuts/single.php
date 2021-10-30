@@ -16,8 +16,8 @@ $categories = get_the_category();
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-6 col-md-8">
-        <div class="card cui2 r_0 w-100 typography">
-          <div class="card-body pri_30 pli_30 pbi_30">
+        <div class="card cui1 r_0 w-100 typography">
+          <div class="card-body p-0">
             <h2 class='text-dark'><?php the_title(); ?></h3>
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  
               $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
@@ -69,7 +69,7 @@ $categories = get_the_category();
             </div>
             <?php endif; ?>
         </div>      
-        <div class="mb_20 card cui2 r_0">
+        <div class="mb_20 card cui3 r_0">
           <div class="card-body fui fui3">
               <?php comment_form(); ?>                
           </div>

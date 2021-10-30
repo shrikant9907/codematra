@@ -57,7 +57,7 @@ get_header(); ?>
             </a>
           </div>
 
-          <div class="card cui2 r_0 py_20 px_20">
+          <div class="card cui3 r_0 py_20 px_20">
             <div class="card-body">
               <div class="card-title text-primary text-center mbi_5"><?php echo $endeTitle; ?></div>
               <div class="max_w_800 mx-auto text-center">
@@ -80,7 +80,7 @@ get_header(); ?>
                       <textarea required="required" rows="10" name="endeinput" class="form-control" placeholder="<?php echo $endePlaceholder; ?>"><?php echo $input; ?></textarea>
                     </div>
                     <div class="cmbende-actions">
-                      <button type="submit" class="btn btn-primary btn-sm btnui3s f20 text-uppercase"><?php echo $endeBtnLabel; ?></button>
+                      <button type="submit" class="btn btn-primary btn-sm btnui2 f20 text-uppercase"><?php echo $endeBtnLabel; ?></button>
                     </div>
                   </form>
                 </div>

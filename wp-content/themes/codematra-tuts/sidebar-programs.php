@@ -9,11 +9,11 @@ $term_slug = $term_obj_list['0']->slug;
 ?>
 
 <!-- Programs List -->
-<div class="card cui2 r_0 sidebar-listing">
+<div class="card cui3 r_0 sidebar-listing noshadow">
   <?php if ($term_name) {
-    echo '<h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold">'.$term_name.'</h3>';
+    echo '<h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">'.$term_name.'</h3>';
   } else {
-    echo '<h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"> Programs</h3>';
+    echo '<h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"> Programs</h3>';
   }
   ?>
   

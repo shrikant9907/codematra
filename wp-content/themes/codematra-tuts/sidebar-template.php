@@ -10,13 +10,13 @@ $templateUpdated = get_post_meta($postid, 'template_last_updated', true);
 $templateDownloads = get_post_meta($postid, 'template_download_count', true);
 ?>
 
-<a data-id="<?php echo $postid; ?>" data-downloads="<?php echo $templateDownloads; ?>" data-template="<?php echo $templateName; ?>" class="trackdownloads f16 btn btn-secondary hs_11 w-100 btnui3s mb_30" href="https://github.com/shrikant9907/cm-blog-template-code-matra/archive/refs/heads/main.zip" download rel="noopener">
+<a data-id="<?php echo $postid; ?>" data-downloads="<?php echo $templateDownloads; ?>" data-template="<?php echo $templateName; ?>" class="trackdownloads f16 btn btn-primary hs_11 w-100 btnui2 mb_30 btn_lg" href="https://github.com/shrikant9907/cm-blog-template-code-matra/archive/refs/heads/main.zip" download rel="noopener">
   <i class="fas fa-download mr_10"></i>Free Download 
 </a>
 
 <!-- About Template -->
-<div class="card cui2 noshadow cteam py_0 px_0 mb_20 f14 r_0 border">
-  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold">Template Details</h3>
+<div class="card cui3 noshadow cteam py_0 px_0 mb_20 f14 r_0 border">
+  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">Template Details</h3>
   <div class="cbody p-0">
     <ul class="listing type2">
       <li class="list-item d-flex justify-content-between">

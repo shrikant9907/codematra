@@ -11,9 +11,9 @@ function cm_social($atts = array(), $content = null) {
   $content = do_shortcode($content);
   ob_start();
   ?>
-  <div class="card cui2 r_0 mb_20">
+  <div class="card cui3 r_0 mb_20">
     <div class="cbody p-0">
-      <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+      <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <ul class="socialicons siconsb px_15 pt_10 pb_5"> 
         <li class="facebook"><a href="https://www.facebook.com/codematra" title="Code Matra - Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
         <li class="codepen"><a href="https://codepen.io/codematra" title="Code Pen - Code Matra" target="_blank"><i class="fab fa-codepen"></i></a></li>
@@ -131,8 +131,8 @@ function posts_terms_shortcode($atts) {
         }
         echo '</div>';
       } else { ?>
-        <div class="card cui2 sidebar-listing r_0 mb_20">
-          <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+        <div class="card cui3 sidebar-listing r_0 mb_20 noshadow">
+          <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
           <div class="cbody p-0">
             <ul class="listing type2">
               <?php 
@@ -142,7 +142,7 @@ function posts_terms_shortcode($atts) {
                 ?>
                 <li class="">
                   <a class="text-dark" href="<?php echo $termLink; ?>">
-                    <span class="text-primary"><?php echo $termname; ?></span>
+                    <?php echo $termname; ?>
                   </a>
                 </li>
                 <?php
@@ -174,9 +174,9 @@ function categories_list($atts) {
   $output = '';
   if ( ! empty( $categories ) ) {
     ?>
-    <div class="card cui2 sidebar-listing r_0 mb_20">
+    <div class="card cui3 sidebar-listing r_0 mb_20 noshadow">
       <?php if ($show_heading) { ?>
-        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <?php } ?>
       <div class="cbody p-0">
         <ul class="listing type2">
@@ -184,7 +184,7 @@ function categories_list($atts) {
           foreach( $categories as $category ) {
             $count = $category->category_count;
             $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
-            $output .= '<a class="text-primary" href="' . esc_url( get_category_link( $category->term_id ) ) . '" >' . esc_html( $category->name ) . '</a> ';
+            $output .= '<a class="text-dark" href="' . esc_url( get_category_link( $category->term_id ) ) . '" >' . esc_html( $category->name ) . '</a> ';
             if ($show_counts) {
               $output .= '<span class="badge bg-primary static">'.$count.'</span>';
             }
@@ -226,9 +226,9 @@ function popular_posts_listing($atts) {
   if ( ! empty( $posts ) ) {
     ob_start();
     ?>
-    <div class="card cui2 sidebar-listing r_0 mb_20">
+    <div class="card cui3 sidebar-listing r_0 mb_20 noshadow">
       <?php if ($show_heading) { ?>
-        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <?php } ?>
       <div class="cbody p-0">
         <ul class="listing type2">
@@ -238,7 +238,7 @@ function popular_posts_listing($atts) {
           $postTitle = $post->post_title;
           $visitsCount = get_post_meta($postID, 'visit_counts', true);
           $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
-          $output .= '<a class="text-primary" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
+          $output .= '<a class="text-dark" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
           if ($show_counts) {
             $output .= '<span class="badge bg-primary static"><i class="fas fa-eye mr_5"></i>'.$visitsCount.'</span>';
           }
@@ -279,9 +279,9 @@ function posts_listing($atts) {
   if ( ! empty( $posts ) ) {
     ob_start();
     ?>
-    <div class="card cui2 sidebar-listing r_0 mb_20">
+    <div class="card cui3 sidebar-listing r_0 mb_20 noshadow">
       <?php if ($show_heading) { ?>
-        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
+        <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold"><?php echo $heading; ?></h3>
       <?php } ?>
       <div class="cbody p-0">
         <ul class="listing type2">
@@ -292,7 +292,7 @@ function posts_listing($atts) {
           $postTitle = $post->post_title;
           $visitsCount = get_post_meta($postID, 'visit_counts', true);
           $output .= '<li class="relative d-flex align-items-center justify-content-between" >';
-          $output .= '<a class="text-primary" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
+          $output .= '<a class="text-dark" href="' . esc_url( get_permalink( $postID ) ) . '" >' . esc_html( $postTitle ) . '</a> ';
           if ($show_counts) {
             $output .= '<span class="badge bg-primary static"><i class="fas fa-eye mr_5"></i>'.$visitsCount.'</span>';
           }
@@ -349,7 +349,7 @@ function showRelatedPosts($atts) {
           }
           ?>
             <div class="col-12 col-sm-6 <?php echo $columns; ?>">
-              <div class="cm_related_post mb_20 r_0 card cui2">
+              <div class="cm_related_post mb_20 r_0 card cui3 noshadow">
               <div class="card-body">
                 <a class="link-primary tdn border mb_10 d-block min_h_150 h_150 overflow_hidden" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                   <?php if(has_post_thumbnail()) { ?>
@@ -361,7 +361,7 @@ function showRelatedPosts($atts) {
                   <?php } ?>
                 </a>
                 <h4 class="cm_related_post-title  mb_10">
-                  <a class="text-secondary f18 lh22" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+                  <a class="text-secondary f16 lh18 font_normal tdn" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
                     <?php the_title(); ?>
                   </a>
                 </h4>

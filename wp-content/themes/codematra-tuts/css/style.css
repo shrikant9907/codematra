@@ -440,11 +440,6 @@ a.text-primary:focus, a.text-primary:hover {
   border: 1px solid rgba(0, 0, 0, 0.2) !important;
 }
 
-.btn-outline-primary {
-  background-color: #ffffff !important;
-  border-color: #ffffff !important;
-}
-
 .hamburger div {
   background-color: #fff;
 }

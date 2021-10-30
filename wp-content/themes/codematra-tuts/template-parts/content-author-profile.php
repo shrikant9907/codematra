@@ -1,6 +1,6 @@
 <!-- Profile -->
-<div data-aos="fade-up" class="card cui2 cteam py_0 px_0 text-center mb_20 f14 r_0 border">
-  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold">About The Developer</h3>
+<div data-aos="fade-up" class="card cui3 cteam py_0 px_0 text-center mb_20 f14 r_0 border noshadow">
+  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">About The Developer</h3>
   <div class="cbody px_15">
     <div class="w_150 mx-auto mb_10"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shrikant-profile.jpg" class="r_100p card-img img-thumbnail"></div>
     <div class="f18 mb_0 font_bold"> Shrikant Yadav </div>

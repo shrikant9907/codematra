@@ -1,5 +1,5 @@
-<div data-aos="fade-up" class="card cui2 sidebar-listing r_0 mb_20">
-  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-secondary f16 mb_0 font_bold">
+<div data-aos="fade-up" class="card cui3 sidebar-listing r_0 mb_20 noshadow">
+  <h3 class="card-header rounded-0 py_15 px_15 border-bottom text-uppercase  text-primary f16 mb_0 font_bold">
     Popular Posts
   </h3>
   <div class="cbody p-0">

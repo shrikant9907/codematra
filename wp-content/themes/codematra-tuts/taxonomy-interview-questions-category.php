@@ -53,7 +53,7 @@ if ($term_name) { ?>
               ?>
               <div class="card cui3 r_0 typography">
                 <div class="card-body">
-                  <h2 class="mb_20 text-primary f24"><?php the_title(); ?></h2>
+                  <h2 class="mb_20 text-dark f24"><?php the_title(); ?></h2>
                   <?php the_content(); ?>
                 </div>	
               </div>	

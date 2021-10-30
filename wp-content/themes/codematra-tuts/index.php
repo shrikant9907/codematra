@@ -19,11 +19,11 @@
 							the_post();  
 							?>
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
-								<div class="card cui2 r_0 w-100 typography">
-									<div class="card-body pri_30 pri_30 pli_30 pbi_30">
-										<h2 class='text-primary'><a class="text-primary tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+								<div class="card cui1 r_0 w-100 typography">
+									<div class="card-body p-0">
+										<h2 class='text-primary'><a class="text-dark tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<?php if(has_post_thumbnail()) { ?>
-											<a href="<?php the_permalink(); ?>" class="mb_15 d-inline-block"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
+											<a href="<?php the_permalink(); ?>" class="mb_15 d-block"><img class="card-img-top r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
 										<?php } ?>
                     <?php 
                       $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);

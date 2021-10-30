@@ -32,11 +32,11 @@
         $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
       ?>
       <div class="col-12 col-sm-6">
-        <div class="card cui2 r_0 mbi_20">
+        <div class="card cui3 r_0 mbi_20">
           <?php if(has_post_thumbnail()) { ?>
             <a href="<?php the_title(); ?>" class="d-inline-block hidei"><img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
           <?php } ?>
-          <div class="card-body pri_30 pli_30 pbi_30">
+          <div class="card-body p-0">
              <div class="text_bold f18 mb_10"><a class="tdn text-primary" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
              <div class="text-dark px_5 py_5 mb_10 f12 d-flex justify-content-between">
                <span><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>

@@ -12,7 +12,7 @@ get_header();
           <h1 class="banner-heading f40 lh44 mb_20">A online plateform to learn <u class="text_yellow">coding</u> from the basics.</h1>
           <p class="banner-description mb_30 f16">Code Matra is an online platform to learn code from basic level to advanced. We always try to provide high-quality content and codes to our website visitor.</p>
           <div class="banner-actions">
-              <a href="#ourTutorials" class="btn mb_20 btn-outline-primary text-uppercase btnui3s d-inline-flex flex center_center"><i class="text-secondary fas fa-user-graduate f20 mr_10"></i>Learn Coding <i class="f16 fa fa-angle-right ml_10" aria-hidden="true"></i></a>
+              <a href="#ourTutorials" class="btn mb_20 btn-outline-primary text-uppercase btnui2 d-inline-flex flex center_center"><i class="text-secondary fas fa-user-graduate f20 mr_10"></i>Learn Coding <i class="f16 fa fa-angle-right ml_10" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@ get_header();
                     </div>
                     <h3 class="card-title mbi_10"><a  class="text-primary f22 " href="<?php echo site_url($fcat['link']); ?>"><?php echo $fcat['name']; ?></a></h3>
                     <p class="card-text lh20"><?php echo $fcat['desc']; ?></p>
-                    <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-primary btnui3s text-uppercase">Start Now! <i class='ml_5 fas fa-angle-right'></i></a>
+                    <a href="<?php echo site_url($fcat['link']); ?>" class="btn-sm btn btn-primary btnui2 text-uppercase">Start Now! <i class='ml_5 fas fa-angle-right'></i></a>
                   </div>
                 </div>
               </div> 
@@ -173,7 +173,7 @@ get_header();
           $catbadges = trim( $output, $separator );  
           ?>
           <div class="col-12 col-sm-6 col-md-4">
-            <div class="card cui2 relative r_0 f14 mb_40 noshadow trans_3 ">
+            <div class="card cui3 relative r_0 f14 mb_40 noshadow trans_3 ">
             <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border-bottom cimgwr min_h_200 h_200 overflow_hidden" >
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
               <?php if(has_post_thumbnail()) { ?>
@@ -254,7 +254,7 @@ get_header();
           $catbadges = trim( $output, $separator );  
           ?>
           <div class="col-12 col-sm-6">
-					<div class="card cui2 relative r_0 f14">
+					<div class="card cui3 relative r_0 f14">
           <a href="<?php the_permalink($post->ID); ?>" class="hidei mb_20 d-inline-block border bg-light cimgwr min_h_200" >
             <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
             <?php if(has_post_thumbnail()) { ?>
@@ -289,7 +289,7 @@ get_header();
 		</div>
  
 	</div>
-  <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui3s">View More Posts <i class="ml_5 fas fa-angle-right"></i></a></p>
+  <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui2">View More Posts <i class="ml_5 fas fa-angle-right"></i></a></p>
    
 </div>
 </div>
@@ -366,7 +366,7 @@ get_header();
           }    
           ?>
 		 	
-	    <p class="text-left mt_40"><a href="<?php echo get_term_link( $procategory ); ?>" class="btn btn-sm btn-primary btnui3s">View More <?php echo $procategory->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
+	    <p class="text-left mt_40"><a href="<?php echo get_term_link( $procategory ); ?>" class="btn btn-sm btn-primary btnui2">View More <?php echo $procategory->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
     </div>
       <?php
       }
@@ -429,7 +429,7 @@ get_header();
                 ?>
               </ul>
             </div>
-            <p class="text-left"><a href="<?php echo get_term_link( $iqcat ); ?>" class="btn btn-sm btn-primary btnui3s">View More <?php echo $iqcat->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
+            <p class="text-left"><a href="<?php echo get_term_link( $iqcat ); ?>" class="btn btn-sm btn-primary btnui2">View More <?php echo $iqcat->name; ?> <i class="ml_5 fas fa-angle-right"></i></a></p>
           </div>
         </div>
         <?php
@@ -470,7 +470,7 @@ get_header();
           <h2 class="text-white mb_15 text-uppercase">Tell us if you need anything</h2>
           <p class="card-text f16">Your suggestions will help us to improve our website for you.</p>
         </div>
-        <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-primary btnui3s">Contact us</a>
+        <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-primary btnui2">Contact us</a>
       </div>    
   </div>
   </div>

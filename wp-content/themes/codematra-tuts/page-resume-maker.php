@@ -84,7 +84,7 @@ get_header();
                 <!-- Choose Resume Template End -->
             
               <div class="cmbende-actions text-center mt_20">
-                <button type="submit" class="btn btn-primary btnui3s text-uppercase"><?php echo $rmBtnLabel; ?></button>
+                <button type="submit" class="btn btn-primary btnui2 text-uppercase"><?php echo $rmBtnLabel; ?></button>
               </div>
             </form>   
             <?php endif; ?>
@@ -136,7 +136,7 @@ get_header();
                   </div>
                 </div>
                 <div class="card-actions text-right">
-                  <input class="btn btn-secondary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                  <input class="btn btn-secondary btn-sm btnui2" type="submit" name="submit" value="Save">
                 </div>
               </form>
               <!-- Resume Section End -->
@@ -181,7 +181,7 @@ get_header();
                   </div>
                 </div>
                 <div class="card-actions text-right">
-                  <input class="btn btn-secondary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                  <input class="btn btn-secondary btn-sm btnui2" type="submit" name="submit" value="Save">
                 </div>
               </form>
               <!-- Experience Section End -->
@@ -218,7 +218,7 @@ get_header();
                   </div>
                 </div>
                 <div class="card-actions text-right">
-                  <input class="btn btn-secondary btn-sm btnui3s" type="submit" name="submit" value="Save">
+                  <input class="btn btn-secondary btn-sm btnui2" type="submit" name="submit" value="Save">
                 </div>
               </form>
               <!-- Qualification Section End -->

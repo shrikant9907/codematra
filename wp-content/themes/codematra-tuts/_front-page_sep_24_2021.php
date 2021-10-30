@@ -13,7 +13,7 @@ get_header();
                   <h1 class="banner-heading f40 mb_10">Free codes and Easy tricks, <br />To learn Programming.</h1>
                   <p class="banner-description mb_30">Our website is specially designed to make the code learning easy. <br />We created a step by step process to learn codes.</p>
                   <div class="banner-actions">
-                      <a href="#" class="btn btn-primary btnui3s"><i class="fas fa-laptop-code mr_10"></i> Start learning! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a>
+                      <a href="#" class="btn btn-primary btnui2"><i class="fas fa-laptop-code mr_10"></i> Start learning! <i class="fa fa-angle-right ml_10" aria-hidden="true"></i></a>
                   </div>
               </div>
           </div>
@@ -69,7 +69,7 @@ get_header();
 		<!-- <h3 class="heading_style type2 text-uppercase mb_20">Featured Listing</h3> -->
 		<div class="row">
 		<div class="col-12 col-sm-6 col-md-6">
-			<div class="card cui2 box_shw3 r_0 relative f14 cfeatured">
+			<div class="card cui3 box_shw3 r_0 relative f14 cfeatured">
 			<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 			<a href="blog-details.html" class="d-inline-block cimgwr" >
 				<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -85,7 +85,7 @@ get_header();
 			</div>
 		</div>
 		<div class="col-12 col-sm-6 col-md-6">
-			<div class="card cui2 box_shw3 r_0 relative f14 cfeatured">
+			<div class="card cui3 box_shw3 r_0 relative f14 cfeatured">
 			<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 			<a href="blog-details.html" class="d-inline-block cimgwr" >
 				<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -114,7 +114,7 @@ get_header();
 		<div class="col-12">
 			<div class="row">
 				<div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui2 box_shw3 r_0 relative f14">
+					<div class="card cui3 box_shw3 r_0 relative f14">
 					<span class="badge bg_indigo text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 					<a href="blog-details.html" class="d-inline-block cimgwr" >
 						<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -131,7 +131,7 @@ get_header();
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui2 box_shw3 r_0 relative f14">
+					<div class="card cui3 box_shw3 r_0 relative f14">
 					<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 					<a href="blog-details.html" class="d-inline-block cimgwr" >
 						<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -148,7 +148,7 @@ get_header();
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui2 box_shw3 r_0 relative f14">
+					<div class="card cui3 box_shw3 r_0 relative f14">
 					<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 					<a href="blog-details.html" class="d-inline-block cimgwr" >
 						<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -165,7 +165,7 @@ get_header();
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui2 box_shw3 r_0 relative f14">
+					<div class="card cui3 box_shw3 r_0 relative f14">
 					<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 					<a href="blog-details.html" class="d-inline-block cimgwr" >
 						<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -182,7 +182,7 @@ get_header();
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui2 box_shw3 r_0 relative f14">
+					<div class="card cui3 box_shw3 r_0 relative f14">
 					<span class="badge bg_green text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 					<a href="blog-details.html" class="d-inline-block cimgwr" >
 						<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -199,7 +199,7 @@ get_header();
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-4">
-					<div class="card cui2 box_shw3 r_0 relative f14">
+					<div class="card cui3 box_shw3 r_0 relative f14">
 					<span class="badge bg_blue text-white absolute r_0 p_5 fixed_top_right">Web Design</span>
 					<a href="blog-details.html" class="d-inline-block cimgwr" >
 						<img class="card-img-top r_0" src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder_500x300.jpg" alt="" />
@@ -218,7 +218,7 @@ get_header();
 		</div>
 		</div>
 		<div class="col-12 col-sm-6 col-md-3 hide">
-			<div class="card cui2 noshadow r_0 w-100 typography">
+			<div class="card cui1 noshadow r_0 w-100 typography">
 				<div class="">
 				   <h2 class='heading_style type2 text-uppercase f16 mb_10 font_bold'>Top Categories</h2>
 				   <ul class="f16 listing type2">
@@ -251,7 +251,7 @@ get_header();
                 <div class="ciconrc ciconb">
                   <i class="fab fa-python text-primary"></i>
                 </div>
-                <h5 class="card-title mb-0"><a class="text-primary" href="<?php echo site_url('/programs-category/python/'); ?>">Python</a></h5>
+                <h5 class="card-title mb-0"><a class="text-dark" href="<?php echo site_url('/programs-category/python/'); ?>">Python</a></h5>
                 <p class="card-text">Programs</p>
               </div>
             </div>
@@ -306,7 +306,7 @@ get_header();
                 <div class="ciconrc ciconb">
                   <i class="fab fa-php text-primary"></i>
                 </div>
-                <h5 class="card-title mb-0"><a class="text-primary" href="<?php echo site_url('/programs-category/php'); ?>">PHP</a></h5>
+                <h5 class="card-title mb-0"><a class="text-dark" href="<?php echo site_url('/programs-category/php'); ?>">PHP</a></h5>
                 <p class="card-text">Programs</p>
               </div>
             </div>
@@ -373,7 +373,7 @@ get_header();
           $catname = $categories['0']->name;  
           ?>
         <div class="col-12 col-sm-6">
-          <div class="card cui2 mbi_15">  
+          <div class="card cui3 mbi_15">  
             <div class="card-body pri_30 pli_30 pti_30">
               <h5 class="mb_5"><a href="<?php the_permalink($post->ID); ?>" class="text-primary f16"><?php the_title(); ?></a></h5>
               <p class="d-flex justify-content-between mb_5 f12 text_grey3"><span><i class="fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span> <span><i class="fa fa-calendar mr_5" aria-hidden="true"></i> <?php echo get_the_time('F j, Y'); ?></span></p>
@@ -390,7 +390,7 @@ get_header();
           }    
           ?>
       </div>
-      <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui3s">View More Posts</a></p>
+      <p class="text-center mt_40"><a href="<?php echo site_url('/blog'); ?>" class="btn btn-primary btnui2">View More Posts</a></p>
  		</div>
  	</section>
  	<!-- News and Events Section End -->
@@ -446,7 +446,7 @@ get_header();
           ?>
 		 	
     </div>
-	  <p class="text-center mt_40"><a href="<?php echo site_url('/programs'); ?>" class="btn btn-primary btnui3s">View More Programs</a></p>
+	  <p class="text-center mt_40"><a href="<?php echo site_url('/programs'); ?>" class="btn btn-primary btnui2">View More Programs</a></p>
     </div>
   
 	</div>
@@ -506,7 +506,7 @@ get_header();
      <h2 class="heading_style type2 text-center"><span class="">Watch</span> Our Latest Video <span class="text-primary">Tutorials</span></h2>
       <div class="pb_30 w-100"></div>
      <div class="col-12 col-sm-6 col-md-4">
-      <div class="card cui2 bg_purple text-white r_0">
+      <div class="card cui3 bg_purple text-white r_0">
         <a href="#" class="d-inline-block op8"><img class="card-img-top" src="https://picsum.photos/300/150" alt="" /></a>
         <div class="card-body">
           <h5 class="card-title "><a href="#" class="text-white">Web Design Crash Course for Beginners</a></h5>
@@ -526,7 +526,7 @@ get_header();
      </div> 
 
      <div class="col-12 col-sm-6 col-md-4">
-      <div class="card cui2 bg_primary text-white r_0">
+      <div class="card cui3 bg_primary text-white r_0">
         <a href="#" class="d-inline-block op8"><img class="card-img-top" src="https://picsum.photos/300/150" alt="" /></a>
         <div class="card-body">
           <h5 class="card-title "><a href="#" class="text-white">Web Design Crash Course for Beginners</a></h5>
@@ -546,7 +546,7 @@ get_header();
      </div> 
      
      <div class="col-12 col-sm-6 col-md-4">
-      <div class="card cui2 bg_cyan text-white r_0">
+      <div class="card cui3 bg_cyan text-white r_0">
         <a href="#" class="d-inline-block op8"><img class="card-img-top" src="https://picsum.photos/300/150" alt="" /></a>
         <div class="card-body">
           <h5 class="card-title "><a href="#" class="text-white">Web Design Crash Course for Beginners</a></h5>
@@ -635,7 +635,7 @@ get_header();
   <h2 class="heading_style type2 text-uppercase mb_20"><span class="text-secondary">Interview</span> Questions</h2>
     <div class="row">
         <div class="col-12 col-md-6">
-          <div class="card cui2 r_0 box_shw3 pt_20 ">
+          <div class="card cui3 r_0 box_shw3 pt_20 ">
             <div class="card-body">
               <h5 class=" text-center card-title text-primary text-uppercase"><span class="text-dark">React Js</span> - Interview Questions</h5>
               <ul class="listing type2 licons w-100">
@@ -671,7 +671,7 @@ get_header();
           </div>
         </div>
         <div class="col-12 col-md-6">
-          <div class="card cui2 r_0 box_shw3 pt_20">
+          <div class="card cui3 r_0 box_shw3 pt_20">
             <div class="card-body">
             <h5 class="card-title text-center text-primary text-uppercase"><span class="text-dark">WordPress</span> - Interview Questions</h5>
               <ul class="listing type2 licons w-100">
@@ -719,7 +719,7 @@ get_header();
             <h2 class="text-white mb_15 text-uppercase">Tell us if you need anything</h2>
             <p class="card-text f16">Your suggestions will help us to improve our website for you.</p>
          </div>
-         <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-primary btnui3s">Contact us</a>
+         <a href="<?php echo site_url('contact-us'); ?>" class="btn btn-primary btnui2">Contact us</a>
        </div>    
    </div>
     </div>

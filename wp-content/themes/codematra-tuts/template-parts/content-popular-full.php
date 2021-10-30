@@ -30,7 +30,7 @@
         $catbadges = trim( $output, $separator );  
         ?>
         <div class="col-12 col-md-6">
-          <div class="card cui2 relative r_0 f14 mb_40 noshadow trans_3 ">
+          <div class="card cui3 relative r_0 f14 mb_40 noshadow trans_3 ">
           <a href="<?php the_permalink($post->ID); ?>" class="tdn d-inline-block border-bottom cimgwr min_h_200 h_200 overflow_hidden" >
             <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
             <?php if(has_post_thumbnail()) { ?>

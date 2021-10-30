@@ -60,7 +60,7 @@ if ($term_name) { ?>
               ?>
               <div class="card cui3 r_0 typography">
                 <div class="card-body">
-                  <h2 class="mb_20 text-primary f24">
+                  <h2 class="mb_20 text-dark f24">
                     Q <?php echo $count; ?>. 
                     <?php the_title(); ?>
                   </h2>
@@ -83,7 +83,7 @@ if ($term_name) { ?>
                   </p>
                     <div class="card cui1 mbi_0">
                       <div id="heading<?php the_ID(); ?>">
-                        <button type="button" class="btn btn-sm mb_20 btn-secondary btnui3s collapsed" data-toggle="collapse" data-target="#collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="collapseTwo">Check Correct Answer</button>
+                        <button type="button" class="btn btn-sm mb_20 btn-secondary btnui2 collapsed" data-toggle="collapse" data-target="#collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="collapseTwo">Check Correct Answer</button>
                       </div>
                       <div id="collapse<?php the_ID(); ?>" class="alert alert-info collapse" aria-labelledby="heading<?php the_ID(); ?>" data-parent="#accordion">
                         <?php echo $answer; ?>
@@ -96,7 +96,7 @@ if ($term_name) { ?>
           endwhile; 
         endif; ?>
         <!-- <p>Submit to check the result.</p> -->
-        <!-- <p class="text-center"><button class="btn btn-primary btnui3s" type="submit" name="mcq" value="submit">Submit</button></p>          -->
+        <!-- <p class="text-center"><button class="btn btn-primary btnui2" type="submit" name="mcq" value="submit">Submit</button></p>          -->
   		  </form>
         </div>	
       </div>

@@ -52,9 +52,9 @@ if ($term_name) {
                 $visitsCount = 0;
               }
         ?>
-          <div class="card cui2 r_0 mbi_20">
+          <div class="card cui3 r_0 mbi_20">
             <h3 class="card-header">
-              <a class="text_primary font_normal tdn f14 d-flex justify-content-between" href="<?php the_permalink(); ?>">
+              <a class="text-dark font_normal tdn f14 d-flex justify-content-between" href="<?php the_permalink(); ?>">
                 <span><?php echo '<span class="text-dark">'.$count.'.</span> '; the_title(); ?></span>
                 <span class="text-primary font_normal f14 d-flex flex center_center" title="views"><i class="static fa fa-eye mr_5" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
               </a>

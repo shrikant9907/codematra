@@ -29,7 +29,7 @@
                 </h3>
                 <div class="cdesc lh18 mb_10"><?php echo $desc; ?></div>
                 <div class="cdesc lh18 w-100 text-center">
-                  <a href="<?php echo $link; ?>" class="btn btn-secondary btnui3s btn-sm">Check Demo</a>
+                  <a href="<?php echo $link; ?>" class="btn btn-secondary btnui2 btn-sm">Check Demo</a>
                 </div>
               </div>
               </div>

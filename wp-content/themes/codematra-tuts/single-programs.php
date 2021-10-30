@@ -34,8 +34,8 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
           if(have_posts()): 
             while(have_posts()): the_post();  
             ?>
-            <div class="card cui2 w-100 r_0 typography">
-              <div class="card-body pri_20 pli_20 pti_30 pbi_20">
+            <div class="card cui1 w-100 r_0 typography">
+              <div class="card-body p-0">
                   <h2 class='text-primary f24'><?php the_title(); ?></h2>
                   <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
                   <?php if(has_post_thumbnail()) { ?>
@@ -80,14 +80,14 @@ if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
           $prev_post = get_previous_post();
           if (!empty( $prev_post )): ?>
             <div class='article-prev'>
-            <a class="btn btn-primary btnui3s rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+            <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
           </div>
           <?php endif ?>
           <?php
           $next_post = get_next_post();
           if (!empty( $next_post )): ?>
           <div class='article-nextpost'>
-            <a class="btn btn-primary btnui3s rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
+            <a class="btn btn-primary btnui2 rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
           </div>
           <?php endif; ?>
         </div>

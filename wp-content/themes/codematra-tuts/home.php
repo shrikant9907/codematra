@@ -2,7 +2,7 @@
 
 
 <!-- Banner UI 1 -->
-<div class="banner-section m-0 card cui2 nobefore noshadow bg_light_secondary relative px_30 py_40 d-flex min_h_600 justify-content-center">
+<div class="banner-section m-0 card cui3 nobefore noshadow bg_light_secondary relative px_30 py_40 d-flex min_h_600 justify-content-center">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-9">
@@ -67,19 +67,16 @@
                   while(have_posts()): the_post();  
               ?>
               <?php $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ;  ?>
-              <div class="card cui2 noshadow r_0 w-100 typography">
+              <div class="card cui1 noshadow r_0 w-100 typography">
                 <div class="card-body p-0">
                     <h2 data-aos="fade-up" class='font_bold mb_20'><a class="text_black tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-                    <?php if(has_post_thumbnail()) { ?>
-                      <a data-aos="fade-up" href="<?php the_permalink(); ?>" class="d-inline-block mb_20 w-100"><img class="card-img-top img-fluid r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
-                    <?php } ?>
                     <?php 
                       $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
                       if (!$visitsCount) {
                         $visitsCount = 0;
                       }
                       ?>
-                    <div data-aos="fade-up" class="metatags text-dark px_5 py_5 mb_10 f14 d-flex justify-content-between">
+                    <div data-aos="fade-up" class="metatags text-dark px_5 py_5 mb_20 f14 d-flex justify-content-between">
                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted By"><i class="fa fa-user mr_5 text-primary" aria-hidden="true"></i> <?php the_author(); ?></span>
                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted At"><i class="fa fa-clock mr_5 text-primary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Number of Views"><i class="fa fa-eye mr_5 text-primary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
@@ -98,9 +95,20 @@
                       ?>
                       </span> 
                     </div>
-                    <div class="f16 lh30">
-                        <p data-aos="fade-up"><?php echo wp_trim_words(get_the_content(), 30); ?></p>
-                        <a data-aos="fade-up" href="<?php the_permalink(); ?>" class="btn btn-primary btnui2">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
+                    <div class="row">
+                      <div class="col-12 col-md-4">
+                        <?php if(has_post_thumbnail()) { ?>
+                          <a data-aos="fade-up" href="<?php the_permalink(); ?>" class="d-inline-block mb_10 w-100">
+                            <img class="card-img-top img-fluid r_0 border" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
+                          </a>
+                        <?php } ?>
+                      </div>
+                      <div class="col-12 col-md-8">
+                        <div class="f16 lh30" data-aos="fade-up">
+                            <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
+                            <a href="<?php the_permalink(); ?>" class="mb_20 btn btn-outline-primary btnui2">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </div>
