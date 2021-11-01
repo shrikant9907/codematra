@@ -10,7 +10,7 @@ body {
 }
 
 body.admin-bar .header {
-  padding-top: 32px !important;
+  margin-top: 32px !important;
 }
 
 a.text-dark:hover {
