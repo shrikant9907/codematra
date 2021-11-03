@@ -10,14 +10,17 @@ Item 2
 Item 3
 ';
 $endePlaceholder2 = 'Array output will display here.';
-$toolDesc         = 'List to array Converter is an online tool to convert list of items to array.';
+$toolDesc         = 'List to array Converter is an online tool to convert list of items to PHP Array, JavaScript Array and Python List and Tuples.';
 
 if (isset($_POST['listitems'])) {
   if ($_POST['listitems']=='') {
     $endeInvalid = "<p class='alert alert-danger'>Input box should not be empty</p>";
   } else {
-    $input = stripslashes(trim($_POST['listitems']));
-    $output = '$array = array("'.trim(str_replace(array("\r\n"), '", "', $input)).'");';
+    $input            = stripslashes(trim($_POST['listitems']));
+    $phpArray         = '$items = array("'.trim(str_replace(array("\r\n"), '", "', $input)).'");';
+    $javascriptArray  = 'const items = ["'.trim(str_replace(array("\r\n"), '", "', $input)).'"];';
+    $pythonArray      = 'items = ["'.trim(str_replace(array("\r\n"), '", "', $input)).'"]';
+    $pythonTuple      = 'items = ("'.trim(str_replace(array("\r\n"), '", "', $input)).'")';
   }
 }
 
@@ -83,8 +86,42 @@ get_header(); ?>
                   </div>
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
-                      <label class="text_bold mb_5" for="">PHP Output Array</label>
-                      <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $output; ?></textarea>
+                      <ul class="nav nav-tabs d-flex" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <span class="nav-link px-10 d-inline-block active" id="php-array-tab" data-bs-toggle="tab" data-bs-target="#php-array" type="button" role="tab" aria-controls="php-array" aria-selected="true">
+                          <label class="text_bold" for="">PHP Array</label>
+                          </span>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <span class="nav-link px-10 d-inline-block" id="javascript-array-tab" data-bs-toggle="tab" data-bs-target="#javascript-array" type="button" role="tab" aria-controls="javascript-array" aria-selected="false">
+                            <label class="text_bold" for="">JavaScript Array</label>
+                          </span>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <span class="nav-link px-10 d-inline-block" id="list-array-tab" data-bs-toggle="tab" data-bs-target="#list-array" type="button" role="tab" aria-controls="list-array" aria-selected="false">
+                            <label class="text_bold" for="">Python List</label>
+                          </span>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <span class="nav-link px-10 d-inline-block" id="tuple-array-tab" data-bs-toggle="tab" data-bs-target="#tuple-array" type="button" role="tab" aria-controls="tuple-array" aria-selected="false">
+                            <label class="text_bold" for="">Python Tuple</label>
+                          </span>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="php-array" role="tabpanel" aria-labelledby="php-array-tab">
+                          <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $phpArray; ?></textarea>
+                        </div>
+                        <div class="tab-pane fade" id="javascript-array" role="tabpanel" aria-labelledby="javascript-array-tab">
+                          <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $javascriptArray; ?></textarea>
+                        </div>
+                        <div class="tab-pane fade" id="list-array" role="tabpanel" aria-labelledby="list-array-tab">
+                          <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $pythonArray; ?></textarea>
+                        </div>
+                        <div class="tab-pane fade" id="tuple-array" role="tabpanel" aria-labelledby="tuple-array-tab">
+                          <textarea rows="10" class="form-control" placeholder="<?php echo $endePlaceholder2; ?>"><?php echo $pythonTuple; ?></textarea>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

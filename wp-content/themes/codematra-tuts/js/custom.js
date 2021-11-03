@@ -32,13 +32,14 @@ jQuery('document').ready(function($){
   
 
   // Subscription modal
-  var subnl = localStorage.getItem('subnl');
+  var subnl = sessionStorage.getItem('subnl');
   if (subnl != 'true') {
-    setTimeout(function(){ 
+    var modalTime = setTimeout(function(){ 
       jQuery('#subscriptionModal').modal('show');
+      clearTimeout(modalTime);
       jQuery('#subscribe-1').on('submit', function(){
-        localStorage.setItem('subnl', true);
-        setTimeout(function(){ 
+        sessionStorage.setItem('subnl', true);
+         setTimeout(function(){ 
           jQuery('#subscriptionModal').modal('hide');
         }, 20000);
       });
