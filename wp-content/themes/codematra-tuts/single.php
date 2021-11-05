@@ -1,8 +1,7 @@
 <?php 
 get_header(); 
 
-$categories = get_the_category();
-            
+$categories = get_the_category();            
 ?> 
 <h1 class="text-center mb_0 text-secondary border-top ptb_40 mont_serrat f30 lh32"><?php echo $categories['0']->name; ?></h1>
 
@@ -15,7 +14,12 @@ $categories = get_the_category();
 <div class="single-page common-section-ui">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-6 col-md-8">
+        <?php if (in_category('React Js')) { ?>
+          <div class="col-12 col-sm-6 col-md-4">
+            <?php get_sidebar('tutorials'); ?> 
+          </div>
+        <?php } ?>
+        <div class="col-12 col-sm-6 col-md-8">
         <div class="card cui1 r_0 w-100 typography">
           <div class="card-body p-0">
             <h2 class='text-dark'><?php the_title(); ?></h3>
@@ -75,9 +79,11 @@ $categories = get_the_category();
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-4">
-        <?php get_sidebar(); ?>
-      </div>
+      <?php if (!in_category('React Js')) { ?>
+        <div class="col-12 col-sm-6 col-md-4">
+          <?php get_sidebar(); ?>
+        </div>
+      <?php } ?>
     </div>
     <?php echo do_shortcode('[showRelatedPosts columns=" col-md-3"]'); ?>
   </div>
