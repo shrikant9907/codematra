@@ -60,14 +60,14 @@
           React JS - Cheatsheet <span class="badge badge-secondary static ms-auto">New!</span>
         </a>
       </li>
-      <li  data-aos="fade-up" class="list-item disabled op5">
-        <a href="#" class="d-inline-block tdn text-dark" >
-          Fetch Data From API <span class="badge badge-secondary static ms-auto">Comming Soon!</span>
+      <li  data-aos="fade-up" class="list-item disabled">
+        <a href="#" class="d-inline-block tdn text-dark op5" >
+          Fetch Data From API <span class="badge badge-secondary static ms-auto">Coming Soon!</span>
         </a>
       </li>
-      <li  data-aos="fade-up" class="list-item disabled op5">
-        <a href="#" class="d-inline-block tdn text-dark" >
-          Use AXIO for APIs <span class="badge badge-secondary static ms-auto">Comming Soon!</span>
+      <li  data-aos="fade-up" class="list-item disabled">
+        <a href="#" class="d-inline-block tdn text-dark op5" >
+          Use AXIO for APIs <span class="badge badge-secondary static ms-auto">Coming Soon!</span>
         </a>
       </li>
      </ul>
