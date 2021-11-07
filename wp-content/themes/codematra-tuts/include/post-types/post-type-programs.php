@@ -33,7 +33,7 @@ function programs_post_type() {
 		'has_archive' => false,
                 'menu_icon' => 'dashicons-images-alt2',
 		'rewrite' => array('slug' => 'programs'),
-		'supports' => array('title', 'editor', 'thumbnail'),
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
 		'taxonomies'       => array('programs-category', 'programs-tags')
 	) ); 
 }

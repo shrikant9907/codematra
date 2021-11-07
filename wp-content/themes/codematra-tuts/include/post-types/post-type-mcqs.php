@@ -33,7 +33,7 @@ function mcqs_post_type() {
 		'has_archive' => false,
                 'menu_icon' => 'dashicons-images-alt2',
 		'rewrite' => array('slug' => 'mcqs'),
-		'supports' => array('title', 'editor', 'thumbnail'),
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
 		'taxonomies'       => array('mcqs-category', 'mcqs-tags')
 	) ); 
 }
