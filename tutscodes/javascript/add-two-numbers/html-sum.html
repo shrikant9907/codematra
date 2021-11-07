@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <title>JavaScript Examples - codematra.com</title>
+</head>
+<body>
+  
+  <form action="">
+    <p>Sum Calculator</p>
+    <p>
+      <label>Number1 </label> <br />
+      <input id="inputnum1" type="number" />
+    </p>
+    <p>
+      <label>Number2 </label> <br />
+      <input id="inputnum2" type="number" />
+    </p>
+    <p>
+      <button type="button" onclick="calculateSum();">Calculate Sum</button>
+    </p>
+  </form>
+
+  <div id="sumoutput"></div>
+
+  <!-- JavaScript -->
+  <script>
+    function calculateSum(e) {
+      var num1 = document.getElementById('inputnum1').value;
+      var num2 = document.getElementById('inputnum2').value;
+      if (num1 && num2) {
+        var sum = parseInt(num1) + parseInt(num2); 
+        document.getElementById('sumoutput').innerHTML = "Sum is :" + sum;
+      }
+    }
+  </script>
+</body>
+</html>
