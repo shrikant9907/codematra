@@ -7,7 +7,7 @@
   </div>
 </section>
 
-<section class="page-section common-section-ui">
+<section class="page-section common-section-ui pt_40">
   <div class="container">
       <div class="row">
           <div class="col-12">
@@ -15,7 +15,7 @@
               <form class="cbody fui fui1 search-box" action="" method="get" enctype="multipart/form-data" autocomplete="off">
                   <div class="search-box">
                     <input value="<?php echo $_GET['s']; ?>" name="s" type="text" class="form-control" required="required" placeholder="Search Codes, Programs, Tutorials, Interview Questions etc...">
-                    <button type="submit" class="btn btn-primary btnui1 f14i">Search</button>
+                    <button type="submit" style="width:100px !important;" class="btn w_100 btn-primary btnui1 f14i">Search</button>
                   </div> 
               </form>
             </div>
@@ -32,7 +32,7 @@
         $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
       ?>
       <div class="col-12 col-sm-6">
-        <div class="card cui3 r_0 mbi_20">
+        <div class="card cui1 r_0 mbi_30">
           <?php if(has_post_thumbnail()) { ?>
             <a href="<?php the_title(); ?>" class="d-inline-block hidei"><img class="card-img-top r_0" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" /></a>
           <?php } ?>
@@ -46,6 +46,7 @@
              <div class="text-left"><a href="<?php the_permalink(); ?>" class="text-primary tdn"><?php _e('View More Details'); ?> <i class="ml_5 fas fa-angle-double-right    "></i></a></div>  
           </div>
         </div>
+        <hr />
       </div>
       <?php  
         endwhile; 

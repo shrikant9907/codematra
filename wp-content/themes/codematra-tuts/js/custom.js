@@ -32,19 +32,19 @@ jQuery('document').ready(function($){
   
 
   // Subscription modal
-  var subnl = sessionStorage.getItem('subnl');
+  var subnl = localStorage.getItem('subnl');
   if (subnl != 'true') {
     var modalTime = setTimeout(function(){ 
       jQuery('#subscriptionModal').modal('show');
       clearTimeout(modalTime);
       jQuery('#subscribe-1').on('submit', function(){
-        sessionStorage.setItem('subnl', true);
+        localStorage.setItem('subnl', true);
          setTimeout(function(){ 
           jQuery('#subscriptionModal').modal('hide');
         }, 20000);
       });
-    }, 10000);
-  }
+    }, 100000);
+  } 
   
   // Check if terms and conditions checked
   var agreetoc = localStorage.getItem('agreetocookie');
