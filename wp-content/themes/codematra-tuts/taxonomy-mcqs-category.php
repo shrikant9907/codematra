@@ -52,17 +52,17 @@ if ($term_name) { ?>
               if (!$visitsCount) {
                 $visitsCount = 0;
               }
-              $option1 = get_post_meta(get_the_ID(), 'option1', true);
-              $option2 = get_post_meta(get_the_ID(), 'option2', true);
-              $option3 = get_post_meta(get_the_ID(), 'option3', true);
-              $option4 = get_post_meta(get_the_ID(), 'option4', true);
-              $answer = get_post_meta(get_the_ID(), 'correctanswer', true);
+              $option1 = htmlentities(html_entity_decode(get_post_meta(get_the_ID(), 'option1', true)));
+              $option2 = htmlentities(html_entity_decode(get_post_meta(get_the_ID(), 'option2', true)));
+              $option3 = htmlentities(html_entity_decode(get_post_meta(get_the_ID(), 'option3', true)));
+              $option4 = htmlentities(html_entity_decode(get_post_meta(get_the_ID(), 'option4', true)));
+              $answer = htmlentities(html_entity_decode(get_post_meta(get_the_ID(), 'correctanswer', true)));
               ?>
-              <div class="card cui3 r_0 typography">
-                <div class="card-body">
+              <div class="card cui1 r_0 typography">
+                <div class="card-body px-0">
                   <h2 class="mb_20 text-dark f24">
                     Q <?php echo $count; ?>. 
-                    <?php the_title(); ?>
+                    <?php echo htmlentities(html_entity_decode(get_the_title())); ?>
                   </h2>
                   <?php the_content(); ?>
                   <p class="bg-light px_10 py_5 flex align-items-center">
@@ -83,7 +83,7 @@ if ($term_name) { ?>
                   </p>
                     <div class="card cui1 mbi_0">
                       <div id="heading<?php the_ID(); ?>">
-                        <button type="button" class="btn btn-sm mb_20 btn-secondary btnui2 collapsed" data-toggle="collapse" data-target="#collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="collapseTwo">Check Correct Answer</button>
+                        <button type="button" class="btn btn-sm mb_20 btn-secondary btnui2 collapsed" data-bs-toggle="collapse" data-bs-target="#collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="collapseTwo">Check Correct Answer</button>
                       </div>
                       <div id="collapse<?php the_ID(); ?>" class="alert alert-info collapse" aria-labelledby="heading<?php the_ID(); ?>" data-parent="#accordion">
                         <?php echo $answer; ?>
