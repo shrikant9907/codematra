@@ -349,8 +349,8 @@ function showRelatedPosts($atts) {
           }
           ?>
             <div class="col-12 col-sm-6 <?php echo $columns; ?>">
-              <div class="cm_related_post mb_20 r_0 card cui3 noshadow">
-              <div class="card-body">
+              <div class="cm_related_post mb_20 r_0 card cui1 noshadow">
+              <div class="card-body px-0">
                 <a class="link-primary tdn border mb_10 d-block min_h_150 h_150 overflow_hidden" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                   <?php if(has_post_thumbnail()) { ?>
                     <img class="img-fluid" src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
@@ -369,7 +369,6 @@ function showRelatedPosts($atts) {
                 <div class="cmeta mb_0 text-muted f12 d-flex justify-content-between">
                   <span title="views"><i class="text-primary fa fa-eye mr_5" aria-hidden="true"></i> <?php echo $prviews; ?></span>
                   <span title="Posted on"><i class="text-primary fa fa-clock mr_5" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
-                  <span title="Posted by"><i class="text-primary fa fa-user mr_5" aria-hidden="true"></i> Shrikant</span>
                 </div>
               </div>
               </div>

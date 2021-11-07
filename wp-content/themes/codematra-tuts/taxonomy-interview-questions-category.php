@@ -22,10 +22,10 @@ if ($term_name) { ?>
 <div class="interview-page common-section-ui">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-12 col-sm-6 col-md-4">
         <?php get_sidebar('interview-left'); ?>
       </div>
-      <div class="col-12 col-sm-6 col-md-6">
+      <div class="col-12 col-sm-6 col-md-8">
         <?php
           $args = array(
             'post_type'         =>  $post_type,
@@ -44,6 +44,7 @@ if ($term_name) { ?>
           query_posts($args);
           $count = 1;
           if(have_posts()):
+            echo '<div class="accordion accordion-ui2" id="iqaccordion">';
             while(have_posts()): 
               the_post();
               $visitsCount = get_post_meta(get_the_ID(), 'visit_counts', true);
@@ -51,20 +52,26 @@ if ($term_name) { ?>
                 $visitsCount = 0;
               }
               ?>
-              <div class="card cui3 r_0 typography">
-                <div class="card-body">
-                  <h2 class="mb_20 text-dark f24"><?php the_title(); ?></h2>
+              
+              <div class="accordion-item mb_20 border-top">
+                <h2 class="accordion-header" id="heading<?php echo $count; ?>">
+                  <div class="accordion-button bg-white text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $count; ?>" aria-expanded="true" aria-controls="collapse<?php echo $count; ?>">
+                    <?php the_title(); ?>
+                  </div>
+                </h2>
+                <div id="collapse<?php echo $count; ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $count; ?>" data-bs-parent="#iqaccordion">
+                  <div class="accordion-body typography">
                   <?php the_content(); ?>
-                </div>	
-              </div>	
+                  </div>
+                </div>
+              </div>
+              
             <?php
             $count++;
           endwhile; 
+          echo '</div>';
         endif; ?>         
   		</div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <?php get_sidebar('interview-right'); ?>
-      </div>
     </div>
   </div>
 </div>
