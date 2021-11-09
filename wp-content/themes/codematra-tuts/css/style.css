@@ -5,6 +5,19 @@ body {
   padding-top: 70px !important;
 }
 
+.mycode,
+code,.code {
+  font-size: .875em;
+  color: #117CA6;
+  word-wrap: break-word;
+  background: #f0fbff;
+  padding: 0px 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+
 body.admin-bar .header {
   margin-top: 32px !important;
 }
