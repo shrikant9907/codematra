@@ -61,6 +61,23 @@ function cm_button($atts = array()) {
 }
 
 /*
+* Shortcode to Display Code.
+*/
+add_shortcode('CodeBlock', 'code_block');
+function code_block($atts, $content = null) {
+  extract(shortcode_atts(array(
+    'mode' => 'php',
+  ), $atts));
+
+  ob_start();
+    $fileContent = htmlspecialchars($content);
+  ?> 
+    <pre><code class="language-<?php echo $mode; ?>"><?php echo $fileContent; ?></code></pre>
+  <?php
+  return ob_get_clean();
+} 
+
+/*
 * Shortcode to display code files.
 */
 add_shortcode('CodeBlockFile', 'code_block_file');
