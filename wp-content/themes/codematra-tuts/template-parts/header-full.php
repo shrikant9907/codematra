@@ -169,13 +169,13 @@
                     <a class="dropdown-item" href="<?php echo site_url('/excel-to-xml-Converter/'); ?>">Excel To XML</a>
                   </div>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link text-dark dropdown-toggle" title="Offers and Deals" href="javascript:void('0');">Deals <span class="badge badge-secondary r_0 "></a>
                   <div class="dropdown-menu deals-dropdown"> 
-                    <a class="dropdown-item" href="<?php echo site_url('/deals/cheap-web-hosting/'); ?>">Cheap Web Hosting</a>
-                    <a class="dropdown-item" href="<?php echo site_url('/deals/best-wordpress-theme/'); ?>">Best WordPress Theme</a>
+                    <a class="dropdown-item" href="<?php //echo site_url('/deals/cheap-web-hosting/'); ?>">Cheap Web Hosting</a>
+                    <a class="dropdown-item" href="<?php //echo site_url('/deals/best-wordpress-theme/'); ?>">Best WordPress Theme</a>
                   </div>
-                </li>
+                </li> -->
               </ul>
               
             </div>

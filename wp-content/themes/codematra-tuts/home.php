@@ -2,7 +2,7 @@
 
 
 <!-- Banner UI 1 -->
-<div class="banner-section m-0 bg_light_secondary relative px_30 py_40 d-flex min_h_600 justify-content-center">
+<div class="banner-section m-0 bg_light_secondary relative px_30 py_40 d-flex min_h_400 justify-content-center">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-9">
