@@ -30,21 +30,6 @@ jQuery('document').ready(function($){
     jQuery('.site-loader').fadeOut();
   }, 500);
   
-
-  // Subscription modal
-  var subnl = localStorage.getItem('subnl');
-  if (subnl != 'true') {
-    var modalTime = setTimeout(function(){ 
-      jQuery('#subscriptionModal').modal('show');
-      clearTimeout(modalTime);
-      jQuery('#subscribe-1').on('submit', function(){
-        localStorage.setItem('subnl', true);
-         setTimeout(function(){ 
-          jQuery('#subscriptionModal').modal('hide');
-        }, 20000);
-      });
-    }, 100000);
-  } 
   
   // Check if terms and conditions checked
   var agreetoc = localStorage.getItem('agreetocookie');
