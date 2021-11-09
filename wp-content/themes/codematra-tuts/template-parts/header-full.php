@@ -139,7 +139,7 @@
                 </li>
          
                 <li class="nav-item dropdown">
-                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Templates</a>
+                  <a class="nav-link text-dark dropdown-toggle" href="javascript:void('0');">Free Templates</a>
                   <div class="dropdown-menu"> 
                     <a class="dropdown-item" href="<?php echo site_url('/templates/cm-blog-bootstrap/'); ?>">CM Blog Template <span class="badge badge-secondary r_0 ">New!</span></a>
                   </div>

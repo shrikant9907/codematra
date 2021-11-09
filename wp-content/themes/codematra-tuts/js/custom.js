@@ -31,6 +31,19 @@ jQuery('document').ready(function($){
   }, 500);
   
 
+  // like clicked
+  jQuery('.likeandsave .fa-heart').on('click', function(e){
+    e.preventDefault();
+    var postid = jQuery(this).data('postid');
+    var tooltipid = jQuery(this).attr('aria-describedby');
+    jQuery(this).attr('class', 'fas fa-heart').parent();
+    if (jQuery(this).hasClass('active')) {
+      jQuery(this).removeClass('active');
+    } else {
+      jQuery(this).addClass('active');
+    }
+  });
+
   // Subscription modal
   var subnl = localStorage.getItem('subnl');
   if (subnl != 'true') {

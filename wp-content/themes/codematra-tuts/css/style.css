@@ -5,10 +5,6 @@ body {
   padding-top: 70px !important;
 }
 
-.container {
-  max-width: 1100px;
-}
-
 body.admin-bar .header {
   margin-top: 32px !important;
 }
@@ -828,6 +824,17 @@ p.comment-form-cookies-consent {
   margin-left: 0px;
   position: fixed !important;
   top: calc(50% - 80px) !important;
+}
+
+/* like and Share icons */ 
+.likeandsave i:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.likeandsave .fa-heart.active,
+.likeandsave .fa-heart:hover {
+  color: #C51104;
 }
 
 /*Responsive*/

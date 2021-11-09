@@ -2,23 +2,23 @@
 
 
 <!-- Banner UI 1 -->
-<div class="banner-section m-0 bg_light_secondary relative px_30 py_40 d-flex min_h_400 justify-content-center">
+<div class="banner-section m-0 bg_light_secondary relative px_30 py_40 d-flex min_h_600 justify-content-center">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-9">
         <div class="bcard">
-          <h1 class="pre-banner-heading text-primary f14 text-uppercase mb_20 ">Welcome to codematra.com</h1>
-          <h2 class="banner-heading font_normal f40 lh44 mb_20 text_black">Learn Code From The Basics</h2>
+          <h1 class="pre-banner-heading f14 text-uppercase mb_20 font_normal">Code Matra</h1>
+          <h2 class="banner-heading f40 lh44 mb_20 text_secondary">Learn Code From The Basics</h2>
           <p class="banner-description mb_30 f16">
             Learn with free online articles on latest technologies, Programs, Interview Questions and MCQs.<br />
             Basic projects and templates to get an understanding of the flow and file structures.
           </p>
-          <!-- <div class="banner-actions">
-              <a href="#ourTutorials" class="btn mb_10 btn-primary btnhs text-uppercase btnui2 d-inline-flex flex center_center">
-                Start Now
+          <div class="banner-actions">
+              <a href="<?php echo site_url('/learn'); ?>" class="btn btn-lg mb_10 btn-primary btnhs text-uppercase btnui2 d-inline-flex flex center_center">
+                Start Learning Today
                 <i class="f16 bi bi-chevron-right ml_10"></i>
               </a>
-          </div> -->
+          </div>
         </div>
       </div>
       <div class="col-12 col-md-3 d-none d-md-block">
@@ -78,8 +78,8 @@
                       ?>
                     <div data-aos="fade-up" class="metatags text-dark px_5 py_5 mb_20 f14 d-flex justify-content-between">
                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted By"><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i> <?php the_author(); ?></span>
-                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted At"><i class="fa fa-clock mr_5 text-secondary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Number of Views"><i class="fa fa-eye mr_5 text-secondary" title="Views" aria-hidden="true"></i><?php echo $visitsCount; ?></span>
+                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Posted At"><i class="fa fa-clock mr_5 text-secondary" aria-hidden="true"></i> <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Categories and Tags"><i class="fa fa-tag mr_5 text-secondary" aria-hidden="true"></i> 
                       <?php
                       $categories = get_the_category();
@@ -105,10 +105,14 @@
                       </div>
                       <div class="col-12 col-md-8">
                         <div class="f16 lh30" data-aos="fade-up">
-                            <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
+                            <p><?php echo wp_trim_words(get_the_content(), 52); ?></p>
                             <a href="<?php the_permalink(); ?>" class="mb_20 btn btn-outline-primary btnui2">Continue Reading <i class="ml_5 fas fa-angle-double-right"></i></a>
                         </div>
                       </div>
+                    </div>
+                    <div data-aos="fade-up" class="metatags likeandsave text-muted px_5 pt_10 mb_20 f30 d-flex justify-content-between align-items-center ">
+                        <span data-bs-toggle="tooltip" data-postid="<?php echo get_the_ID(); ?>" data-bs-placement="top" title="Like"><i class="far fa-heart" aria-hidden="true"></i></span>
+                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Save"><i class="far fa-bookmark" aria-hidden="true"></i></span>
                     </div>
                 </div>
               </div>
