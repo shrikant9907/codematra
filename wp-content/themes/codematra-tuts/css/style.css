@@ -5,10 +5,11 @@ body {
   padding-top: 70px !important;
 }
 
+.wp-block-tag-cloud a,
 .mycode,
 code,.code {
   font-size: .875em;
-  color: #117CA6;
+  color: #005274;
   word-wrap: break-word;
   background: #f0fbff;
   padding: 0px 5px;
@@ -16,6 +17,14 @@ code,.code {
   justify-content: center;
   align-items: center;
   border-radius: 7px;
+}
+
+.code code, .code.code, .code.mycode, pre code, pre.code, pre.mycode {
+  color: #005274; 
+}
+
+.wp-block-tag-cloud a {
+  color: #005274;   
 }
 
 body.admin-bar .header {
@@ -166,7 +175,6 @@ header .navbar.navbar-expand-lg .navbar-nav .nav-item .dropdown-menu.ddfmu .ahpr
   transform: rotateZ(45deg);
 }
 
-.wp-block-tag-cloud a,
 .wp-block-latest-posts li a {
   color: inherit;
 }
