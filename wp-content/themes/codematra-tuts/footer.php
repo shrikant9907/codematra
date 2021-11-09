@@ -3,7 +3,7 @@
     get_template_part( 'template-parts/content', 'loader' );
   }
 ?>
-<?php get_template_part( 'template-parts/modal', 'subscription' ); ?>
+<?php get_template_part( 'template-parts/section', 'subscription' ); ?>
 <?php get_template_part( 'template-parts/footer', 'basic' ); ?>
  
   <div class="text-center fixed_bottom px_20 py_5 cookienotice bg_black text-white">This website uses cookies to ensure you get the best user experience on our website. <a href="<?php echo site_url('/privacy-policy'); ?>">Learn more</a> <button class="cookienotice-btn ml_5 btn btn-sm btn-secondary min_w_25">OK</button></div>

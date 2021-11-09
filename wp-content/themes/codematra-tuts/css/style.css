@@ -830,6 +830,20 @@ p.comment-form-cookies-consent {
   top: calc(50% - 80px) !important;
 }
 
+.subscription-section .yikes-easy-mc-form .form-field-description {
+  display: none;
+}
+
+input#yikes-easy-mc-form-1-EMAIL {
+  background: #fff;
+  border: 1px solid #efefef;
+  padding-left: 11px;
+}
+
+.subscription-section .yikes-easy-mc-form .yikes-easy-mc-submit-button {
+  width: auto;
+}
+
 /*Responsive*/
 @media all and (max-width: 991px) {
   body {
