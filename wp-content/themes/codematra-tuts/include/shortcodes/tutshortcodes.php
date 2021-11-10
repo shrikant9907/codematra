@@ -70,7 +70,7 @@ function code_block($atts, $content = null) {
   ), $atts));
 
   ob_start();
-    $fileContent = htmlspecialchars($content);
+    $fileContent = html_entity_decode(htmlspecialchars($content));
   ?> 
     <pre><code class="language-<?php echo $mode; ?>"><?php echo $fileContent; ?></code></pre>
   <?php

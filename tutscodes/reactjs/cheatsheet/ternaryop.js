@@ -1,0 +1,3 @@
+<>
+  { showModal ? <ModalComponent> : '<OtherComponent>' }
+</>

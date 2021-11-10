@@ -1,0 +1,1 @@
+componentWillUnmount() // Invoked before component removes from the DOM

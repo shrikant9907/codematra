@@ -19,7 +19,7 @@
   <script>
     AOS.init();
     hljs.highlightAll();
-    hljs.initLineNumbersOnLoad();
+    // hljs.initLineNumbersOnLoad();
   </script>
 
 </body>
