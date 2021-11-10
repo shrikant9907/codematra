@@ -52,17 +52,17 @@
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/how-to-use-redux-in-react-js-a-complete-guide-2021/" class="d-inline-block tdn text-dark" >
-          Use Redux
+          React - Redux
+        </a>
+      </li>
+      <li  data-aos="fade-up" class="list-item">
+        <a href="#" class="d-inline-block tdn text-dark" >
+          Fetch Data From API <span class="badge badge-secondary static ms-auto">New!</span>
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/react-js-cheatsheet-for-beginners-and-frontend-developers/" class="relative d-inline-block tdn text-dark d-flex align-items-center" >
-          React JS - Cheatsheet <span class="badge badge-secondary static ms-auto">New!</span>
-        </a>
-      </li>
-      <li  data-aos="fade-up" class="list-item disabled">
-        <a href="#" class="d-inline-block tdn text-dark op5" >
-          Fetch Data From API <span class="badge badge-secondary static ms-auto">Coming Soon!</span>
+          React JS - Cheatsheet
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item disabled">
