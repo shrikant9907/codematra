@@ -70,6 +70,26 @@
         CRUD using AXIO <span class="badge badge-secondary static ms-auto">New!</span>
         </a>
       </li>
+      <li  data-aos="fade-up" class="list-item disabled">
+        <a href="#" class="d-inline-block tdn text-dark" >
+        Use Redux, Redux Thunk and Axios <span class="badge badge-secondary static ms-auto">Coming Soon</span>
+        </a>
+      </li>
+      <li  data-aos="fade-up" class="list-item disabled">
+        <a href="#" class="d-inline-block tdn text-dark" >
+        Login and Registration with JWT <span class="badge badge-secondary static ms-auto">Coming Soon</span>
+        </a>
+      </li>
+      <li  data-aos="fade-up" class="list-item disabled">
+        <a href="#" class="d-inline-block tdn text-dark" >
+        Create PWA <span class="badge badge-secondary static ms-auto">Coming Soon</span>
+        </a>
+      </li>
+      <li  data-aos="fade-up" class="list-item disabled">
+        <a href="#" class="d-inline-block tdn text-dark" >
+         React Blog <span class="badge badge-secondary static ms-auto">Coming Soon</span>
+        </a>
+      </li>
      </ul>
   </div>
 </div>  
