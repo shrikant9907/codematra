@@ -56,7 +56,7 @@
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item">
-        <a href="#" class="d-inline-block tdn text-dark" >
+        <a href="https://codematra.com/how-to-fetch-data-from-the-apis-using-fetch-in-react/" class="d-inline-block tdn text-dark" >
           Fetch Data From API <span class="badge badge-secondary static ms-auto">New!</span>
         </a>
       </li>
@@ -65,9 +65,9 @@
           React JS - Cheatsheet
         </a>
       </li>
-      <li  data-aos="fade-up" class="list-item disabled">
-        <a href="#" class="d-inline-block tdn text-dark op5" >
-          Use AXIO for APIs <span class="badge badge-secondary static ms-auto">Coming Soon!</span>
+      <li  data-aos="fade-up" class="list-item">
+        <a href="https://codematra.com/how-to-use-axios-for-crud-operations-in-react-js" class="d-inline-block tdn text-dark" >
+        CRUD using AXIO <span class="badge badge-secondary static ms-auto">New!</span>
         </a>
       </li>
      </ul>
