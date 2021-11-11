@@ -1,0 +1,1 @@
+$author_displayname = get_the_author_meta('display_name');
