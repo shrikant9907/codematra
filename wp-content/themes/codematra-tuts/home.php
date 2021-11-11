@@ -110,7 +110,7 @@
                         </div>
                       </div>
                     </div>
-                    <div data-aos="fade-up" class="metatags d-none likeandsave text-muted px_5 pt_10 mb_20 f30 d-flex justify-content-between align-items-center ">
+                    <div data-aos="fade-up" class="metatags hidei likeandsave text-muted px_5 pt_10 mb_20 f30 d-flex justify-content-between align-items-center ">
                         <span data-bs-toggle="tooltip" data-postid="<?php echo get_the_ID(); ?>" data-bs-placement="top" title="Like"><i class="far fa-heart" aria-hidden="true"></i></span>
                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Save"><i class="far fa-bookmark" aria-hidden="true"></i></span>
                     </div>
