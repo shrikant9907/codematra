@@ -16,7 +16,7 @@
               <?php the_content(); ?>
             </div>
             <div class="text-dark bg-light px_10 f12 d-flex justify-content-between">
-              <span><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i><?php the_author_meta('user_nicename',$post->post_author); ?></span>
+              <span><i class="fa fa-user mr_5 text-secondary" aria-hidden="true"></i><?php the_author_meta('display_name',$post->post_author); ?></span>
               <span><i class="fa fa-tag mr_5 text-secondary" aria-hidden="true"></i> 
               <?php
               $categories = get_the_terms(get_the_ID(), 'interview-questions-category');
