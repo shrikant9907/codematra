@@ -15,6 +15,8 @@ $downloadCount = get_post_meta(get_the_ID(), 'template_download_count', true);
 if (!$downloadCount) {
   $downloadCount = 0;
 }
+$templatePreviewUrl = get_post_meta(get_the_ID(), 'preview_url', true);
+
 ?>
 <h1 class="text-center mb_0 text-secondary border-top ptb_40 border-bottom mont_serrat f30 lh32"><?php the_title(); ?></h1>
 <section class="common-section-ui page-breadcrumb border-bottom pti_10 pbi_10">
@@ -28,7 +30,7 @@ if (!$downloadCount) {
       <div class="col-12 col-md-8">
         <div class="template-preview-card">
           <div class="overlay overlay_b absolute d-none">
-            <a class="btn btn-outline-secondary" href="https://shrikant9907.github.io/blog-template/dist/" target="_blank" rel="noopener">
+            <a class="btn btn-outline-secondary" href="<?php echo $templatePreviewUrl; ?>" target="_blank" rel="noopener">
               <i class="fas fa-link mr_10"></i>Launch Live Preview
             </a>
           </div>
