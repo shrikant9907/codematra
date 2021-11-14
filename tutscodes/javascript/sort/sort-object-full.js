@@ -28,37 +28,37 @@ let users = [
 ];
 
 // Sort by name ASC | Codematra.com
-users = users.sort((a, b) => {
+users.sort((a, b) => {
   return (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1;
 });
 // console.log(users);
 
 // Sort by name DESC | Codematra.com
-users = users.sort((a, b) => {
+users.sort((a, b) => {
   return (a.name.toLowerCase() < b.name.toLowerCase()) ? 1 : -1;
 });
 // console.log(users);
 
 // Sort by age ASC | Codematra.com
-users = users.sort((a, b) => {
+users.sort((a, b) => {
   return (a.age > b.age) ? 1 : -1;
 });
 // console.log(users);
 
 // Sort by age DESC | Codematra.com
-users = users.sort((a, b) => {
+users.sort((a, b) => {
   return (a.age < b.age) ? 1 : -1;
 });
 // console.log(users);
 
 // Sort by Date ASC | Codematra.com
-users = users.sort((a, b) => {
+users.sort((a, b) => {
   return (new Date(b.created) > new Date(a.created)) ? -1 : 1;
 });
 // console.log(users); 
 
 // Sort by Date DESC | Codematra.com
-users = users.sort((a, b) => { 
+users.sort((a, b) => { 
   return (new Date(b.created) < new Date(a.created)) < 0 ? 1 : -1;
 });
 // console.log(users);
