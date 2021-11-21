@@ -234,6 +234,7 @@ function insertDefaultPages() {
         'Privacy Policy',
         'Terms and conditions',
         'Most essential tools for developers',
+        'JavaScript Cheat Sheet'
     );
     if ($pages) {
   

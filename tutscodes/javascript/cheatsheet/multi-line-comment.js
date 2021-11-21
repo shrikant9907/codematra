@@ -1,0 +1,3 @@
+/*
+Multiple Line Comment in JavaScript
+*/

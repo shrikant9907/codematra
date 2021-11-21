@@ -57,7 +57,7 @@
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/how-to-fetch-data-from-the-apis-using-fetch-in-react/" class="d-inline-block tdn text-dark" >
-          Fetch Data From API <span class="badge badge-secondary static ms-auto">New!</span>
+          Fetch Data From API
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item">
@@ -67,7 +67,12 @@
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/how-to-use-axios-for-crud-operations-in-react-js" class="d-inline-block tdn text-dark" >
-        CRUD using AXIO <span class="badge badge-secondary static ms-auto">New!</span>
+        CRUD using AXIO 
+        </a>
+      </li>
+      <li  data-aos="fade-up" class="list-item">
+        <a href="https://codematra.com/how-to-create-a-progressive-web-application-pwa-in-react-js/" class="d-inline-block tdn text-dark" >
+        Create a PWA <span class="badge badge-secondary static ms-auto">New!</span>
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item disabled">
@@ -78,11 +83,6 @@
       <li  data-aos="fade-up" class="list-item disabled">
         <a href="#" class="d-inline-block tdn text-dark" >
         Login and Registration with JWT <span class="badge badge-secondary static ms-auto">Coming Soon</span>
-        </a>
-      </li>
-      <li  data-aos="fade-up" class="list-item disabled">
-        <a href="#" class="d-inline-block tdn text-dark" >
-        Create PWA <span class="badge badge-secondary static ms-auto">Coming Soon</span>
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item disabled">
