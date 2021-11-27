@@ -68,10 +68,10 @@
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/forloopbreak.js"][/CodeBlockFile]'); ?>
               <strong>For Loop with Continue</strong>
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/forloopcontinue.js"][/CodeBlockFile]'); ?>
-              <strong>While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/whileloop.js"][/CodeBlockFile]'); ?>
-              <strong>Do While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/dowhileloop.js"][/CodeBlockFile]'); ?>
+              <!-- <strong>While Loop</strong> -->
+              <!-- <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/whileloop.js"][/CodeBlockFile]'); ?> -->
+              <!-- <strong>Do While Loop</strong> -->
+              <!-- <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/dowhileloop.js"][/CodeBlockFile]'); ?> -->
             </div>
           </div>
 
@@ -82,8 +82,12 @@
             <div class="card-body">
               <strong>Create a Function</strong>
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/create-function.js"][/CodeBlockFile]'); ?>
-              <strong>Built In Functions</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/function.js"][/CodeBlockFile]'); ?>
+              <strong>Create a Function - Example</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/create-function-example.js"][/CodeBlockFile]'); ?>
+              <strong>Arrow Function</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/create-arrow-function.js"][/CodeBlockFile]'); ?>
+              <strong>Arrow Function - Example</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/create-arrow-function-example.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
           
@@ -94,16 +98,6 @@
             <div class="card-body">
               <strong>For Loop</strong>
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/string.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Object</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/integer.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Break</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/boolean.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Continue</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/object.js"][/CodeBlockFile]'); ?>
-              <strong>While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/array.js"][/CodeBlockFile]'); ?>
-              <strong>Do While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/array.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
 
@@ -114,16 +108,6 @@
             <div class="card-body">
               <strong>For Loop</strong>
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/string.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Object</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/integer.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Break</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/boolean.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Continue</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/object.js"][/CodeBlockFile]'); ?>
-              <strong>While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/array.js"][/CodeBlockFile]'); ?>
-              <strong>Do While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/array.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
 
@@ -134,16 +118,6 @@
             <div class="card-body">
               <strong>For Loop</strong>
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/forloop.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Object</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/forloopobject.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Break</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/forloopbreak.js"][/CodeBlockFile]'); ?>
-              <strong>For Loop with Continue</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/forloopcontinue.js"][/CodeBlockFile]'); ?>
-              <strong>While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/whileloop.js"][/CodeBlockFile]'); ?>
-              <strong>Do While Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/dowhileloop.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
 
