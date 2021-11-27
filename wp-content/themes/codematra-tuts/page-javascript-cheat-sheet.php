@@ -13,11 +13,11 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-4">
     
-         <div id="basics" class="card cui2 p_10 mb_20 jsbasics">
-            <div class="card-header">
-              <h3 class='card-title text-primary m-0'>1. Basics of JavaScript</h3>
+          <div id="basics" class="card cui1 p_10 mb_20 jsbasics">
+            <div class="card-header px-0 border-bottom mb-2">
+              <h3 class='card-title text-primary m-0'>1. Basics</h3>
             </div>
             <div class="card-body">
               <strong>External JavaScript File</strong>
@@ -37,8 +37,11 @@
             </div>
           </div>
     
-          <div id="datatypes" class="card cui2 p_10 mb_20 jsdatatypes">
-            <div class="card-header">
+        </div>  
+        <div class="col-12 col-md-4">  
+
+          <div id="datatypes" class="card cui1 p_10 mb_20 jsdatatypes">
+            <div class="card-header px-0 border-bottom mb-2">
               <h3 class='card-title text-primary m-0'>2. Data Types</h3>
             </div>
             <div class="card-body">
@@ -54,9 +57,12 @@
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/array.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
-    
-          <div id="loops" class="card cui2 p_10 mb_20 jsloops">
-            <div class="card-header">
+
+        </div>  
+        <div class="col-12 col-md-4">  
+          
+          <div id="loops" class="card cui1 p_10 mb_20 jsloops">
+            <div class="card-header px-0 border-bottom mb-2">
               <h3 class='card-title text-primary m-0'>3. Loops</h3>
             </div>
             <div class="card-body">
@@ -75,8 +81,11 @@
             </div>
           </div>
 
-          <div id="functions" class="card cui2 p_10 mb_20 jsfunctions">
-            <div class="card-header">
+        </div>  
+        <div class="col-12 col-md-4">  
+
+          <div id="functions" class="card cui1 p_10 mb_20 jsfunctions">
+            <div class="card-header px-0 border-bottom mb-2">
               <h3 class='card-title text-primary m-0'>4. Functions</h3>
             </div>
             <div class="card-body">
@@ -90,40 +99,57 @@
               <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/create-arrow-function-example.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
-          
-          <div id="arrays" class="card cui2 p_10 jsarray">
-            <div class="card-header">
+
+        </div>  
+        <div class="col-12 col-md-4">  
+
+          <div id="arrays" class="card cui1 p_10 jsarray">
+            <div class="card-header px-0 border-bottom mb-2">
               <h3 class='card-title text-primary m-0'>5. Array</h3>
             </div>
             <div class="card-body">
-              <strong>For Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/string.js"][/CodeBlockFile]'); ?>
+              <strong>Simple Array</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/simple-array.js"][/CodeBlockFile]'); ?>
+              <strong>Nested Array</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/nested-array.js"][/CodeBlockFile]'); ?>
+              <strong>Array of Objects</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/array-of-objects.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
 
-          <div id="conditions" class="card cui2 p_10 jsarray">
-            <div class="card-header">
+        </div>  
+        <div class="col-12 col-md-4">  
+
+          <div id="conditions" class="card cui1 p_10 jsarray">
+            <div class="card-header px-0 border-bottom mb-2">
               <h3 class='card-title text-primary m-0'>6. Conditions</h3>
             </div>
             <div class="card-body">
-              <strong>For Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/datatypes/string.js"][/CodeBlockFile]'); ?>
+              <strong>if condition</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/if-condition.js"][/CodeBlockFile]'); ?>
+              <strong>if..else condition</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/if-else-condition.js"][/CodeBlockFile]'); ?>
             </div>
           </div>
 
-          <div id="events" class="card cui2 p_10 jsarray">
-            <div class="card-header">
+        </div>  
+        <div class="col-12 col-md-4">  
+
+          <div id="events" class="card cui1 p_10 jsarray">
+            <div class="card-header px-0 border-bottom mb-2">
               <h3 class='card-title text-primary m-0'>7. Events</h3>
             </div>
             <div class="card-body">
-              <strong>For Loop</strong>
-              <?php echo do_shortcode('[CodeBlockFile mode="javascript" file="javascript/cheatsheet/forloop.js"][/CodeBlockFile]'); ?>
+              <strong>onclick</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="html" file="javascript/cheatsheet/event-onclick.html"][/CodeBlockFile]'); ?>
+              <strong>onchange</strong>
+              <?php echo do_shortcode('[CodeBlockFile mode="html" file="javascript/cheatsheet/event-onchange.html"][/CodeBlockFile]'); ?>
             </div>
           </div>
 
         </div>
 
-        <div class="col-12 col-md-4 relative">
+        <div class="col-12 col-md-4 relative hide">
           <div class="card cui1 noshadow mb_20 r_0" >
               <div class="card-header bg-secondary">
                 <h3 class='card-title text-white m-0'>JavaScript Topics</h3>
