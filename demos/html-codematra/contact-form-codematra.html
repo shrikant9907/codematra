@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Contact Form | Codematra</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Google Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    
+    <style>
+      .contact-from-codematra {
+        font-family: Roboto;
+        background: #fefefe;
+        border: none;
+        box-shadow: 2px 2px 9px 5px #f5f5f5;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 30px;
+        border-radius: 10px; 
+        max-width: 400px;
+        width: 100%;
+        margin: 20px auto 20px auto;
+        border: 1px solid #e8e8e8;
+      }
+
+      .contact-from-codematra .fheading {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      
+      .contact-from-codematra textarea,
+      .contact-from-codematra input[type="email"],
+      .contact-from-codematra input[type="text"] {
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 100%;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        font-family: arial;
+        box-sizing: border-box;
+      }
+      
+      .contact-from-codematra  label {
+        margin-bottom: 5px;
+        display:block;
+      }
+
+      .contact-from-codematra  label .required {
+        color: #ff0000;
+      }
+      
+      .contact-from-codematra .submit-wr {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      .contact-from-codematra  input[type="submit"] {
+        background: #117CA6;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 25px;
+        min-width: 100px;
+        box-shadow: 2px 2px 9px 5px #f5f5f5;
+      }
+      
+      .contact-from-codematra input[type="submit"]:hover {
+        cursor: pointer;
+      }
+      
+  </style>
+    </head>
+    <body>  
+      <h1>Simple Contact Form Using HTML and CSS by Codematra</h1>
+      <p>This is a DEMO page of contact form.</p>
+      <hr />
+         
+      <!--Form HTML Start-->
+      <form class="contact-from-codematra" action="" method="get" autocomplete="off" >
+        <h3 class="fheading">Contact Form</h3>              
+    
+        <label>Name <span class="required">*</span></label>
+        <input type="text" name="name" placeholder="Enter your name." required="required"  />
+        
+        <label>Email <span class="required">*</span></label>
+        <input type="email" name="email" placeholder="Enter your email." required="required" />
+        
+        <label>Contact Number (Optional)</label>
+        <input type="text" name="contact" placeholder="Enter your contact number."  />
+
+        <label>Message <span class="required">*</span></label>
+        <textarea name="message" rows="4" placeholder="Enter your message." required="required"></textarea>
+        
+        <p class="submit-wr"><input type="submit" name="submit" value="Submit" /> </p>
+      </form>
+      <!--Form HTML End-->   
+
+    </body>
+</html>

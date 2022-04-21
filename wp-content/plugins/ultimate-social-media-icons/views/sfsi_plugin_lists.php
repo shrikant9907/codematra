@@ -376,6 +376,8 @@ function sfsi_should_show_loyalty()
 function sfsi_check_banner_criteria($banner, $gallery_plugins, $optimization_plugins, $sharecount_plugins, $google_analytics, $gdpr_plugins,$woocommerce_plugins,$twitter_plugins,$time)
 {
     // var_dump($banner);
+    /*echo '<pre>'; print_r($banner);
+    echo '</pre>';*/
     if (
         ($banner['is_active'] == "yes") &&
         $time >= ($banner['timestamp']) && (!sfsi_check_not_show_other_plugin_settings_page($gallery_plugins, $optimization_plugins, $sharecount_plugins, $google_analytics, $gdpr_plugins,$woocommerce_plugins,$twitter_plugins))

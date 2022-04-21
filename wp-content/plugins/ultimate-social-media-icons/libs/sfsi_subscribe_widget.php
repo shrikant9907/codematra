@@ -1,19 +1,17 @@
 <?php
 // Creating the widget 
-class subscriber_widget extends WP_Widget
-{
+class subscriber_widget extends WP_Widget {
 
-	function __construct()
-	{
+	function __construct() {
 		parent::__construct(
 			// Base ID of your widget
 			'subscriber_widget',
 
 			// Widget name will appear in UI
-			__('Ultimate Social Subscribe Form', 'subscriber_widget_domain'),
+			__( 'Ultimate Social Subscribe Form', 'subscriber_widget_domain' ),
 
 			// Widget description
-			array('description' => __('Ultimate Social Subscribe Form', 'subscriber_widget_domain'),)
+			array('description' => __( 'Ultimate Social Subscribe Form', 'subscriber_widget_domain' ),)
 		);
 	}
 

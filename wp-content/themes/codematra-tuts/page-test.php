@@ -15,7 +15,7 @@
 <span class="decocircle3"></span>
 <span class="decocircle4"></span>
 <div class="cbody text-left">
-<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="http://localhost/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
+<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="https://codematra.com/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
 <h2 class="f20 text-center font_normal text_black  lh40">
 <span class="text_secondary f25 h30 font_bold">JavaScript Cheat Sheet</span>
 </h2>
@@ -41,7 +41,7 @@
 <span class="decocircle3"></span>
 <span class="decocircle4"></span>
 <div class="cbody text-left">
-<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="http://localhost/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
+<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="https://codematra.com/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
 <h2 class="f20 text-center font_normal text_black  lh40">
 <span class="text_secondary f25 h30 font_bold">JavaScript Cheat Sheet</span>
 </h2>
@@ -68,7 +68,7 @@
 <span class="decocircle3"></span>
 <span class="decocircle4"></span>
 <div class="cbody text-left">
-<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="http://localhost/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
+<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="https://codematra.com/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
 <h2 class="f20 text-center font_normal text_black  lh40">
 <span class="text_secondary f25 h30 font_bold">JavaScript Cheat Sheet</span>
 </h2>
@@ -93,7 +93,7 @@
 <span class="decocircle3"></span>
 <span class="decocircle4"></span>
 <div class="cbody text-left">
-<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="http://localhost/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
+<img class="absolute h_35 top_10 left_10 mb_20 logo_image" src="https://codematra.com/wp/codematra/wp-content/themes/codematra-tuts/images/site-logo.png" alt="Online Free Tutorials in PHP Programming.">
 <h2 class="f20 text-center font_normal text_black  lh40">
 <span class="text_secondary f25 h30 font_bold">JavaScript Cheat Sheet</span>
 </h2>

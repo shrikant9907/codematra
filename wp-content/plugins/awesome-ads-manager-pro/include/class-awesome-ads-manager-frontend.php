@@ -27,8 +27,8 @@ if ( ! class_exists( 'Awesome_Ads_Manager_Frontend' ) ) {
         public function __construct() {
 
             // Before and After Content
-            add_filter( 'the_content', array(&$this, 'aam_content_before_after_ads')); 
-            add_filter( 'the_excerpt', array(&$this, 'aam_content_before_after_ads')); 
+            //add_filter( 'the_content', array(&$this, 'aam_content_before_after_ads')); 
+            //d_filter( 'the_excerpt', array(&$this, 'aam_content_before_after_ads')); 
             
             // Before and After Sidebar
             add_action( 'dynamic_sidebar_before', array(&$this, 'aam_sidebar_before_ads'));

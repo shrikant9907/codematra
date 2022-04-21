@@ -17,7 +17,7 @@
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/how-to-add-a-env-environment-file-and-variable-in-react-js-project/" class="d-inline-block tdn text-dark" >
-          Add Environment Files
+          Add Environment Variables and Files
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item">
@@ -52,7 +52,7 @@
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/how-to-use-redux-in-react-js-a-complete-guide-2021/" class="d-inline-block tdn text-dark" >
-          React - Redux
+          Use Redux in React
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item">
@@ -67,15 +67,15 @@
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/how-to-use-axios-for-crud-operations-in-react-js" class="d-inline-block tdn text-dark" >
-        CRUD using AXIO 
+        CRUD Operations using Axios 
         </a>
       </li>
       <li  data-aos="fade-up" class="list-item">
         <a href="https://codematra.com/how-to-create-a-progressive-web-application-pwa-in-react-js/" class="d-inline-block tdn text-dark" >
-        Create a PWA <span class="badge badge-secondary static ms-auto">New!</span>
+        Learn to Create a PWA 
         </a>
       </li>
-      <li  data-aos="fade-up" class="list-item disabled">
+ <!--      <li  data-aos="fade-up" class="list-item disabled">
         <a href="#" class="d-inline-block tdn text-dark" >
         Use Redux, Redux Thunk and Axios <span class="badge badge-secondary static ms-auto">Coming Soon</span>
         </a>
@@ -89,7 +89,7 @@
         <a href="#" class="d-inline-block tdn text-dark" >
          React Blog <span class="badge badge-secondary static ms-auto">Coming Soon</span>
         </a>
-      </li>
+      </li> -->
      </ul>
   </div>
 </div>  

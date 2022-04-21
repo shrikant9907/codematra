@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup Form | Codematra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
+    <style>
+        
+      /*Design the form*/
+      .signup-codematra {
+        font-family: Roboto;
+        background: #ffffff;
+        box-shadow: 2px 2px 9px 5px #f5f5f5;
+        border-radius: 10px;
+        padding: 30px;
+        border-radius: 10px; 
+        max-width: 400px;
+        width: 100%;
+        margin: 20px auto 20px auto;
+        border: 1px solid #e8e8e8;
+      }
+        
+      .signup-codematra a {
+        text-decoration: none;
+        color: #8b8b8b;
+      }
+
+      .signup-codematra a:hover {
+        text-decoration:underline;
+      }
+      
+      .signup-codematra .lheading {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 0;
+      }
+         
+      .signup-codematra input[type="text"],
+      .signup-codematra input[type="email"],
+      .signup-codematra input[type="password"] {
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 100%;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        font-family: arial;
+        box-sizing: border-box;
+      }
+        
+      .signup-codematra label {
+        margin-bottom: 3px;
+        display:block;
+        font-size: 14px;
+      }
+        
+      .signup-codematra .required {
+        color:#ff0000;
+      }
+        
+      .signup-codematra button,
+      .signup-codematra input[type="submit"] {
+        background: #117CA6;
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        padding: 12px 20px;
+        font-size: 15px;
+        border-radius: 3px;
+        width: 100%;
+        margin: 0 auto 30px auto;
+        display: block;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .login-link-wr {
+        text-align: center;
+        font-size: 14px;
+      }
+        
+    </style>
+        
+    </head>
+    <body>  
+      <h1>Signup Form Using HTML and CSS by Codematra</h1>
+      <p>This is a DEMO page of signup form.</p>
+      <hr />
+      
+      <!-- Signup Form HTML Start-->
+      <form action="" class="signup-codematra" method="post" autocomplete="off"> 
+        <h3 class="lheading">Signup</h3>
+      
+        <label>First Name <span class="required">*</span></label> 
+        <input type="text" name="name" required="required" placeholder="Enter your first name." />
+        
+        <label>Last Name <span class="required">*</span></label> 
+        <input type="text" name="user_lname" required="required" placeholder="Enter your last name." />
+        
+        <label>Email <span class="required">*</span></label> 
+        <input type="email" name="user_email" required="required" placeholder="Enter your email or username." />
+        
+        <label>Password <span class="required">*</span></label>  
+        <input type="password" maxlength="10" id="user_password" name="user_password" required="required" placeholder="Enter your password." />
+    
+        <button name="signup" type="submit">Signup</button>
+
+        <div class="login-link-wr"><a href="#">Already have an account? Login</a></div> 
+      </form> 
+      <!-- Signup Form HTML End-->
+        
+    </body>
+</html>

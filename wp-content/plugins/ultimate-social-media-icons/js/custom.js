@@ -188,13 +188,13 @@ SFSI(document).ready(function (s) {
                 t = SFSI("#at15s");
             i.is(s.target) || 0 !== i.has(s.target).length || e.is(s.target) || 0 !== e.has(s.target).length || t.is(s.target) || 0 !== t.has(s.target).length || i.fadeOut();
         }), SFSI("div#sfsiid_linkedin").find(".icon4").find("a").find("img").mouseover(function () {
-            SFSI(this).attr("src", sfsi_icon_ajax_object.plugin_url + "images/visit_icons/linkedIn_hover.svg");
+            SFSI(this).css("opacity", "0.9");
         }), SFSI("div#sfsiid_linkedin").find(".icon4").find("a").find("img").mouseleave(function () {
-            SFSI(this).attr("src", sfsi_icon_ajax_object.plugin_url + "images/visit_icons/linkedIn.svg");
+            SFSI(this).css("opacity", "1");
         }), SFSI("div#sfsiid_youtube").find(".icon1").find("a").find("img").mouseover(function () {
-            SFSI(this).attr("src", sfsi_icon_ajax_object.plugin_url + "images/visit_icons/youtube_hover.svg");
+            SFSI(this).css("opacity", "0.9");
         }), SFSI("div#sfsiid_youtube").find(".icon1").find("a").find("img").mouseleave(function () {
-            SFSI(this).attr("src", sfsi_icon_ajax_object.plugin_url + "images/visit_icons/youtube.svg");
+            SFSI(this).css("opacity", "1");
         }), SFSI("div#sfsiid_facebook").find(".icon1").find("a").find("img").mouseover(function () {
             SFSI(this).css("opacity", "0.9");
         }), SFSI("div#sfsiid_facebook").find(".icon1").find("a").find("img").mouseleave(function () {
@@ -319,6 +319,42 @@ SFSI(document).ready(function (s) {
                 SFSI(".sfsi_widget");
             });
         }, 200);
+
+        /* Admin forum notification */
+        SFSI( '.usm-widget__footer-text-link' ).on( 'click', function () {
+            SFSI( this ).parents( '.usm-widget' ).toggle( 'usm-widget--open' );
+
+            SFSI.ajax({
+                type: "post",
+                dataType: "json",
+                url: sfsi_icon_ajax_object.ajax_url,
+                data : { action: "sfsi_hide_admin_forum_notification" },
+                success: function(){
+                    SFSI( '.usm-widget' ).remove();
+                }
+            });
+        });
+
+        /* Hide Admin forum notification popup */
+        SFSI( '.usm-widget__toggle-btn' ).on( 'click', function () {
+            var currentThis = SFSI( this );
+            currentThis.parents( '.usm-widget' ).toggleClass( 'usm-widget--open' );
+            var toggleStatus = '';
+            if( currentThis.parents( '.usm-widget' ).hasClass( 'usm-widget--open' ) ) {
+                toggleStatus = 'hide';
+            } else {
+                toggleStatus = 'show';
+            }
+            SFSI.ajax({
+                type: "post",
+                dataType: "json",
+                url: sfsi_icon_ajax_object.ajax_url,
+                data : { action: "sfsi_default_hide_admin_notification", status: toggleStatus },
+                success: function(){
+                    currentThis.addClass( 'sfsi-first-click-enabled' );
+                }
+            });
+        });
 });
 
 //hiding popup on close button
@@ -481,7 +517,6 @@ function sfsi_pinterest_modal_images(event, url, title) {
     });
 
     sfsi_pinterest_modal();
-    /*console.log(imgSrc);*/
     if (imgSrc.length == 0) {
         var meta_img = SFSI('meta[property="og:image"]').attr('content');
         if (undefined == meta_img) {
@@ -490,9 +525,7 @@ function sfsi_pinterest_modal_images(event, url, title) {
         SFSI('.sfsi_flex_container').append('<div><a href="http://www.pinterest.com/pin/create/button/?url=' + url + '&media=&description=' + encodeURIComponent(page_title).replace('+', '%20').replace("#", "%23") + '"><div style="width:140px;height:90px;display:inline-block;" ></div><span class="sfsi_pinterest_overlay"><img data-pin-nopin="true" height="30" width="30" src="' + window.sfsi_icon_ajax_object.plugin_url + '/images/pinterest.png" /></span></a></div>')
     } else {
 
-        /*console.log(imgSrc);*/
         SFSI.each(imgSrc, function (index, val) {
-            /*console.log('discrip',val);*/
             SFSI('.sfsi_flex_container').append('<div><a href="http://www.pinterest.com/pin/create/button/?url=' + url + '&media=' + val.src + '&description=' + encodeURIComponent(val.title ? val.title : page_title).replace('+', '%20').replace("#", "%23") + '"><img style="display:inline"  data-pin-nopin="true" src="' + val.src + '"><span class="sfsi_pinterest_overlay" style="width:140px;left:unset;"><img data-pin-nopin="true" height="30" width="30" style="display:inline" src="' + window.sfsi_icon_ajax_object.plugin_url + '/images/pinterest.png" /></span></a></div>');
         });
     }

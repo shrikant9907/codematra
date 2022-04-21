@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search Autocomplete | Codematra</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!--Google Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		
+		<style>				
+			.autocomplete-codematra {
+				max-width: 500px;
+				width: 100%;
+				margin: 50px auto 0 auto;
+				background-color: #117CA6;
+				padding: 1px;
+				overflow: hidden;
+			}
+
+			.autocomplete-codematra input[type='text']{
+				width: 100%;
+				padding: 10px;
+				border: none;
+				font-size: 14px;
+				box-sizing: border-box;
+				outline: unset;
+			}
+				
+			.autocomplete-codematra .cmac-suggestions {
+				display:none;
+			}
+			
+			.autocomplete-codematra .cmac-suggestions p {
+				padding: 8px 7px 1px 3px;
+				margin: 0;
+				font-size: 14px;
+				font-weight: bold;
+				color:#fff;
+			}  
+			
+			.autocomplete-codematra .cmac-suggestions ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				background: #ddd; 
+			}
+			
+			.autocomplete-codematra .cmac-suggestions ul li {
+				padding: 8px;
+				background: #fafafa;
+				border-top: 1px solid #ccc;
+				cursor: pointer;
+				display:none;
+			}
+			
+			.autocomplete-codematra .cmac-suggestions ul li:hover {
+				background: #ffffff;
+			}
+				
+		</style>
+         
+	</head>
+	<body>          
+		<h1>Search Autocomplete Form by Codematra</h1>
+		<p>This is a DEMO page of search autocomplete form.</p>
+		<p>Type any of the city like Bhopal, Indore or Pune in the search field.</p>
+		<hr />
+
+		<!-- Autocomplete HTML Start -->
+		<div class="autocomplete-codematra">
+			<input class="cmacfield" type="text" name="city" placeholder="Enter your keywords... eg. Indore, Pune, Bhopal" autocomplete="off" /> 
+			<div class="cmac-suggestions">  
+				<ul>
+					<li>Indore</li>
+					<li>Bhopal</li>
+					<li>Ujjain</li>
+					<li>Pune</li>
+					<li>Dewas</li>
+					<li>Hoshangabad</li>
+					<li>Babai</li>
+					<li>Itarsi</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Autocomplete HTML End -->
+            
+    <!--jQuery-->
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+    <script>
+			jQuery(document).ready(function(){
+				jQuery(".cmacfield").on("keyup change", function() { 		
+					var searchfield = jQuery(this);
+					var keyword = searchfield.val().toLowerCase();
+					if(keyword.length >= 3) {
+						jQuery('.cmac-suggestions').show();
+            jQuery(".cmac-suggestions ul li").hide();
+						jQuery(".cmac-suggestions ul li").filter(function() {
+							var filtervalue = jQuery(this).text().toLowerCase().indexOf(keyword) > -1;
+							if (filtervalue) {
+								jQuery(this).toggle(filtervalue);  
+							}
+						});
+					} else {
+						jQuery('.cmac-suggestions').hide(); 
+					}
+				});
+			});
+    </script>
+	</body>
+</html>
